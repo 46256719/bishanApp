@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "上报问题",
+  "backgroundColor": "#F2F2F2",
+  "usingComponents": {
+    "mode1": "/components/problemMode/mode1"
+  }
+}

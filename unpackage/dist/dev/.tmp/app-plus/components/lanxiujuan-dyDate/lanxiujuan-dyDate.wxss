@@ -1,0 +1,29 @@
+
+.tx_r.data-v-7409c03c {
+  line-height: 48px;
+  font-size: 15px;
+  font-weight: normal;
+  color: #848b9a;
+}
+.disabled.data-v-7409c03c{
+	color: #b5b8c2;
+}
+.placeholder.data-v-7409c03c {
+  color: #b5b8c2;
+  font-size: 30rpx;
+}
+image.data-v-7409c03c{
+	width: 31rpx;
+	height: 31rpx;
+	position: absolute;
+	right: 0rpx;
+	bottom:0rpx;
+	top:0rpx;
+	left: 0rpx;
+	margin: auto;
+}
+.fa-angle-right.data-v-7409c03c {
+  font-size: 36rpx;
+  padding-left: 12rpx;
+}
+

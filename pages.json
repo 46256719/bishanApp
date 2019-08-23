@@ -1,0 +1,234 @@
+{
+    "pages" : [
+        //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+        {
+            "path" : "pages/login/login",
+            "style" : {
+				"navigationBarTitleText" : "登录",
+				"backgroundColor":"#f2f2f2",
+				"navigationStyle":"custom"
+			}
+        },{
+            "path" : "pages/home/home",
+            "style" : {
+                "navigationBarTitleText" : "首页",
+				"backgroundColor":"#f2f2f2",
+				"navigationStyle":"custom"
+            }
+        },{
+            "path" : "pages/index/index",
+            "style" : {
+                "navigationBarTitleText" : "首页"
+            }
+        },{
+            "path" : "pages/myMission/myMission",
+            "style" : {
+                "navigationBarTitleText" : "任务",
+				"backgroundColor":"#f2f2f2",
+				"app-plus":{
+					"bounce":"none"
+				}
+            }
+        },{
+            "path" : "pages/report/report",
+            "style" : {
+                "navigationBarTitleText" : "上报",
+				"backgroundColor":"#f2f2f2"
+            }
+        },{
+            "path" : "pages/location/location",
+            "style" : {
+                "navigationBarTitleText" : "定位",
+				"backgroundColor":"#f2f2f2"
+            }
+        },{
+            "path" : "pages/workbench/workbench",
+            "style" : {
+                "navigationBarTitleText" : "工作台",
+				"backgroundColor":"#f2f2f2"
+            }
+        },{
+            "path" : "pages/riverMap/riverMap",
+            "style" : {
+				"navigationBarTitleText" : "巡河地图",
+                "app-plus" : {
+                    "subNVues" : [
+                        {
+                            "id" : "checkTypeMap", // 唯一标识  
+                            "path" : "subNvue/checkTypeMap", // 页面路径 
+                            "type" : "popup",
+                            "style" : {
+                                "position" : "absolute",
+                                "dock" : "right",
+                                "width" : "550upx",
+                                "height" : "100%",
+                                "left" : "200upx"
+                            }
+                        },{
+                            "id" : "search", // 唯一标识  
+                            "path" : "subNvue/search", // 页面路径 
+                            "type" : "popup",
+                            "style" : {
+                                "position" : "absolute",
+                                "dock" : "top",
+								"height" : "100%"
+                            }
+                        },{
+                            "id" : "detail", // 唯一标识  
+                            "path" : "subNvue/detail", // 页面路径 
+                            "type" : "popup",
+                            "style" : {
+                                "position" : "absolute",
+                                "dock" : "bottom",
+                                "height" : "200",
+								"bottom":0
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+        ,{
+            "path" : "pages/system/system",
+            "style" : {
+				"navigationBarTitleText" : "系统",
+				"backgroundColor":"#f2f2f2"
+			}
+        }
+        ,{
+            "path" : "pages/contact/contact",
+            "style" : {
+				"navigationBarTitleText" : "联系人",
+				"backgroundColor":"#f2f2f2"
+			}
+        }
+        ,{
+            "path" : "pages/allMission/allMission",
+            "style" : {
+				"navigationBarTitleText" : "任务",
+				"backgroundColor":"#f2f2f2",
+				"app-plus":{
+					"bounce":"none"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/problemList/problemList",
+            "style" : {
+				"navigationBarTitleText" : "问题",
+				"backgroundColor":"#f2f2f2",
+				"app-plus":{
+					"bounce":"none"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/taskDetails/taskDetails",
+            "style" : {
+				"navigationBarTitleText" : "任务详情",
+				"backgroundColor":"#f2f2f2",
+				"app-plus":{
+					"titleNView":{
+						"searchInput":{
+							"borderRadius":"15px",
+							"placeholder": "请输入名称"
+						},
+						"buttons": [ //原生标题栏按钮配置,
+							{
+								"type":"none",
+								"fontSrc":"./static/msyh.ttc",
+								"fontSize":"14px",
+								"text": "搜索" //原生标题栏增加分享按钮，点击事件可通过页面的 onNavigationBarButtonTap 函数进行监听
+							}
+						]
+					},
+					"bounce":"none"
+				}
+			}
+        }
+        ,{
+            "path" : "pages/standardDetail/standardDetail",
+            "style" : {
+				"navigationBarTitleText" : "详情",
+				"backgroundColor":"#f2f2f2"
+			}
+        }
+        ,{
+            "path" : "pages/reportProblem/reportProblem",
+            "style" : {
+				"navigationBarTitleText" : "上报问题",
+				"backgroundColor":"#F2F2F2"
+			}
+        }
+        ,{
+            "path" : "pages/setPassWord/setPassWord",
+            "style" : {
+				"navigationBarTitleText" : "修改密码",
+				"backgroundColor":"#F2F2F2"
+			}
+        }
+        ,{
+            "path" : "pages/completeTask/completeTask",
+            "style" : {
+				"navigationBarTitleText" : "完成巡查任务"
+			}
+        }
+        ,{
+            "path" : "pages/rectificationTaskDetail/rectificationTaskDetail",
+            "style" : {
+				"navigationBarTitleText" : "完成整改任务"
+			}
+        }
+        ,{
+            "path" : "pages/rank/rank",
+            "style" : {
+				"navigationBarTitleText" : "排名",
+				"backgroundColor":"#F2F2F2",
+				"app-plus":{
+					"bounce":"none"
+				},
+				"navigationStyle":"custom"
+			}
+        }
+    ],
+    "globalStyle" : {
+        "navigationBarTextStyle" : "white",
+        "navigationBarTitleText" : "uni-app",
+        "navigationBarBackgroundColor" : "#5087fb",
+        "backgroundColor" : "#5087fb"
+    },
+    "tabBar" : {
+        "color" : "#7A7E83",
+        "selectedColor" : "#5087FB",
+        "borderStyle" : "black",
+        "backgroundColor" : "#ffffff",
+        "list" : [
+            {
+                "pagePath" : "pages/home/home",
+                "iconPath" : "static/images/nav/home.png",
+                "selectedIconPath" : "static/images/nav/on_home.png",
+                "text" : "首页"
+            },{
+			    "pagePath" : "pages/riverMap/riverMap",
+			    "iconPath" : "static/images/nav/map.png",
+			    "selectedIconPath" : "static/images/nav/on_map.png",
+			    "text" : "地图"
+			},{
+			    "pagePath" : "pages/rank/rank",
+			    "iconPath" : "static/images/nav/rank.png",
+			    "selectedIconPath" : "static/images/nav/on_rank.png",
+			    "text" : "排名"
+			},{
+                "pagePath" : "pages/myMission/myMission",
+                "iconPath" : "static/images/nav/mission.png",
+                "selectedIconPath" : "static/images/nav/on_mission.png",
+                "text" : "我的任务"
+            },{
+                "pagePath" : "pages/workbench/workbench",
+                "iconPath" : "static/images/nav/workbench.png",
+                "selectedIconPath" : "static/images/nav/on_workbench.png",
+                "text" : "工作台"
+            }
+        ]
+    }
+}

@@ -1,0 +1,1 @@
+<view id="workBench" class="data-v-29c9be84"><view data-event-opts="{{[['tap',[['toMenu',['system']]]]]}}" class="work data-v-29c9be84" bindtap="__e"><image class="icon_img data-v-29c9be84" src="../../static/images/icon_xitong.png"></image><view class="data-v-29c9be84">系统</view></view></view>

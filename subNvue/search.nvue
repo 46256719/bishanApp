@@ -1,0 +1,132 @@
+<template>
+	<div class="search">
+		<div class="header">
+			<div class="header_left">
+				<input type="text" value="" @return="search" return-key-type="search" :autofocus="isFocus" class="inp_content"/>
+				<image src="../static/images/icon_search.png"class="icon_search" style="width: 27px;height: 28px;" mode=""></image>
+			</div>
+			<text style="color: #fff;" @click="close()">取消</text>
+		</div>
+		<scroll-view scroll-y="true" class="search_content">
+			<view class="search_list" v-for="(item,index) in searchs" :key="index" @click="onPollution(item)">
+				<view class="search_list_left">
+					<view class=""><text class="search_list_left_text">名称:{{item.wryName}}</text></view>
+					<view class=""><text class="search_list_left_text">地址:{{item.wryAddress}}</text></view>
+				</view>
+				<view class="search_list_right"><text>{{item.distance}}Km</text></view>
+			</view>
+		</scroll-view>
+	</div>
+</template>
+
+<script>
+	import URL from "../static/js/interface.js"
+	import util from "../static/js/utils.js"
+	export default {
+		data() {
+			return {
+				isFocus:false,
+				searchs:[],
+				requestTask:{},
+				distance:[]
+			}
+		},
+
+		mounted() {
+			uni.$on("checkFocus",(bool)=>{
+				this.isFocus=bool
+			})
+		},
+		methods:{
+			close(){
+				uni.$emit("closeSearch")
+				uni.$emit("checkFocus",false)
+			},
+			onPollution(pollution){
+				this.close()
+				uni.$emit("onPollution",pollution)
+			},
+			getDistance(pollution,index){
+				var userLocation=uni.getStorageSync("userLocation")
+				var point1 = new plus.maps.Point(userLocation.longitude,userLocation.latitude);
+				var point2 = new plus.maps.Point(pollution.wryLongitude,pollution.wryLatitude)
+				plus.maps.Map.calculateDistance(point1,point2,(results)=>{
+					var searchs=this.searchs
+					searchs[index].distance= (results.distance/1000).toFixed(2)
+					this.searchs=searchs
+					this.$set(this.searchs)
+				})
+
+			},
+			search(e){
+				if(this.requestTask.abort){
+					this.requestTask.abort()
+				}
+				var token=uni.getStorageSync("token")||""
+				this.requestTask=uni.request({
+					url: URL.POLLUTION_SEARCH, 
+					data: {name:e.value},
+					method:"GET",
+					header: {token},
+					complete:(res) =>{
+						if(!!res.data&&res.data.code==1){
+							this.searchs=res.data.data
+							var i=0
+							while (i < this.searchs.length) {
+								this.getDistance(this.searchs[i],i)
+							    i++;
+							}
+						}
+					}
+				})
+			}
+		}
+	}
+</script>
+
+<style scoped>
+.search{
+	
+}
+.header{
+	position: relative;
+	/* height: 100px; */
+	padding-top: 50px;
+	background-color: #007AFF;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+.header_left{
+	position: relative;
+	width: 600px;
+	align-items: center;
+	margin-right: 10px;
+}
+.inp_content{
+	border-radius: 5px;
+	height: 60px;
+	margin: 10px 0px;
+	background-color: #fff;
+	width: 600px;
+	padding-left: 20px;
+}
+.icon_search{
+	position: absolute;
+	top: 26px;
+	right: 10px;
+}
+.search_list{
+	padding: 20upx;
+	line-height: 40upx;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1upx;
+	background-color: #f1f1f1;
+}
+
+.search_list_left_text{
+	width: 500upx;
+}
+</style>

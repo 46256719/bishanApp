@@ -1,0 +1,260 @@
+<template>
+	<div class="checkTypeMaps">
+		<div class="checkTypeMaps_title checkTypeMaps_header">
+			<text>地图</text>
+			<div class="closeSub" @click="closeSub()"><text style="color: #fff;">关闭</text></div>
+		</div>
+		<div class="typeMaps">
+			<div class="typeMap_list" @click="chooseMapType('MAPTYPE_NORMAL')">
+				<image class="typeMap_list_bg" style="width: 122px;height: 88px;" src="../static/images/bg_2d.png"></image>
+				<image v-if="type=='MAPTYPE_NORMAL'" class="on_choose" style="width: 122px;height: 88px;" src="../static/images/on_typeMap.png"></image>
+			</div>
+			<div class="typeMap_list" @click="chooseMapType('MAPTYPE_SATELLITE')">
+				<image class="typeMap_list_bg" style="width: 122px;height: 88px;" src="../static/images/bg_weixing.png"></image>
+				<image v-if="type=='MAPTYPE_SATELLITE'" class="on_choose" style="width: 122px;height: 88px;" src="../static/images/on_typeMap.png"></image>
+			</div>
+			<!-- <div class="typeMap_list" @click="chooseMapType('dixingtu')">
+				<image class="typeMap_list_bg" style="width: 122px;height: 88px;" src="../static/images/bg_dixingtu.png"></image>
+				<image v-if="type=='dixingtu'" class="on_choose" style="width: 122px;height: 88px;" src="../static/images/on_typeMap.png"></image>
+			</div> -->
+		</div>
+		<div class="checkTypeMaps_title">
+			<text>污染源分布</text>
+			<div class="upWry" @click="upWry()"><text style="color: #fff;">刷新</text></div>
+		</div>
+		<scroll-view scroll-y="true" class="pollutionSources">
+			<div class="pollutionSources_list" v-for="(item,index) in wryType" :key="index">
+				<div class="pollutionSources_list_left">
+					<div class="pollutionSources_icon">
+						<image style="width: 56px;height:56px;" :src="item.icon"></image>
+					</div>
+					<text>{{item.name}}</text>
+				</div>
+				<div class="pollutionSources_list_right" @click="changeStatus(index)">
+					<image style="width: 82px;height:50px;" :src="'../static/images/riverMap/'+(item.isShow?'onShow':'unShow')+'.png'" mode=""></image>
+					<!-- <switch :data-index="item.url" @change="changeStatus" /> -->
+				</div>
+			</div>
+		</scroll-view>
+	</div>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				type:"MAPTYPE_NORMAL",
+				wryType:[
+					{
+						name:"泵站",
+						url:"WRY_BZ_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_bz.png"
+					},{
+						name:"工业企业",
+						url:"WRY_COMPANY_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_gyqy.png"
+					},{
+						name:"入河排污口",
+						url:"WRY_RHKPWK_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_rhpwk.png"
+					},{
+						name:"入河排污点",
+						url:"WRY_RHKPWD_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_rhpwd.png"
+					},{
+						name:"建筑工地",
+						url:"WRY_JZGD_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_jzgd.png"
+					},{
+						name:"其它行业",
+						url:"WRY_QTHY_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_qthy.png"
+					},{
+						name:"检测点位",
+						url:"WRY_JCDW_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_jcdw.png"
+					},{
+						name:"医疗机构",
+						url:"WRY_YLJG_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_yljg.png"
+					},{
+						name:"畜禽养殖",
+						url:"WRY_XQYZ_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_xqyz.png"
+					},{
+						name:"屠宰场",
+						url:"WRY_TZC_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_tzc.png"
+					},{
+						name:"水库",
+						url:"WRY_SHUIKU_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_sk.png"
+					},{
+						name:"山坪塘",
+						url:"WRY_SPT_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_spt.png"
+					},{
+						name:"养鱼池",
+						url:"WRY_YYC_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_yyc.png"
+					},{
+						name:"居民集中居住点",
+						url:"WRY_JMJZJZD_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_jmjzjzd.png"
+					},{
+						name:"小散乱污企业",
+						url:"WRY_XSLW_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_xslwqy.png"
+					},{
+						name:"洗车场",
+						url:"WRY_XCC_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_xcc.png"
+					},{
+						name:"餐饮行业",
+						url:"WRY_CYHY_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_cyhy.png"
+					},{
+						name:"农贸市场",
+						url:"WRY_NMSC_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_nmsc.png"
+					},{
+						name:"污水处理厂",
+						url:"WRY_WSCLC_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_wsclc.png"
+					},{
+						name:"种植业肥料堆积点",
+						url:"WRY_ZZYFLDJD_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_zzyfldjd.png"
+					},{
+						name:"10亩以上种植大户",
+						url:"WRY_SMYSYZDH_LIST",
+						isShow:false,
+						icon:"../static/images/riverMap/icon_10myszzdh.png"
+					}
+				]
+			}
+		},
+		created() {
+			// console.log("Sdasd")
+			 
+		},
+		methods:{
+			changeStatus(index){
+				console.log(index)
+				var wryType=this.wryType
+				wryType[index].isShow=!wryType[index].isShow
+				this.wryType=wryType
+				if(this.wryType[index].isShow){
+					uni.$emit("checkWry",this.wryType[index].url)
+				}else{
+					uni.$emit("clearWry",this.wryType[index].url)
+				}
+			},
+			upWry(){
+				uni.$emit("upWry","")
+			},
+			chooseMapType(type){
+				this.type=type
+				uni.$emit("chooseMapType",type)
+			},
+			closeSub(){
+				uni.$emit("closeSub")
+			}
+		}
+	}
+</script>
+
+<style scoped>
+.checkTypeMaps{
+	width: 550px; 
+	position: relative;
+}
+.checkTypeMaps_header{
+	padding-top: 67px!important;
+}
+.checkTypeMaps_title{
+	padding: 15px 20px;
+	background-color: #f2f2f2;
+	position: relative;
+}
+.typeMaps{
+	padding: 20px;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.typeMap_list{
+	width: 122px;
+	height: 88px;
+	position: relative;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.typeMap_list_bg{
+	width: 122px;
+	height: 88px; 
+}
+.on_choose{
+	position: absolute;
+	top:0px;
+	left: 0px;
+}
+.pollutionSources{
+	width: 550px;
+}
+.pollutionSources_list{
+	padding:15px 20px;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+}
+.pollutionSources_list_left{
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+}
+.pollutionSources_icon{
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-right: 12px;
+}
+.closeSub{
+	position: absolute;
+	right: 20px;
+	padding: 3px 15px;
+	text-align: center;
+	border-radius: 5px;
+	background-color:#5087FB;
+	top:55px;
+}
+.upWry{
+	position: absolute;
+	right: 20px;
+	padding: 3px 15px;
+	text-align: center;
+	border-radius: 5px;
+	background-color:#5087FB;
+	top:10px;
+}
+</style>

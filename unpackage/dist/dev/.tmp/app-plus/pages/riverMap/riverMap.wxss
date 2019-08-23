@@ -1,0 +1,49 @@
+
+#river{
+	font-size: 30rpx;
+	position: relative;
+}
+#searchBind{
+	height: 70rpx;
+	margin: 20rpx;
+	background-color: #FFFFFF;
+	border-radius: 10rpx;
+	text-align: center;
+	line-height: 70rpx;
+	color: #999999;
+}
+#mapType{
+	width: 72rpx;
+	height: 72rpx;
+	border-radius: 10rpx;
+	position: absolute;
+	right: 20rpx;
+	top:110rpx;
+}
+#zhou{
+	width: 72rpx;
+	height: 72rpx;
+	border-radius: 10rpx;
+	line-height: 72rpx;
+	text-align: center;
+	background-color: #fff;
+	color: #444;
+	position: absolute;
+	right: 20rpx;
+	top:202rpx;
+	font-size: 36rpx;
+}
+#xun{
+	width: 72rpx;
+	height: 72rpx;
+	border-radius: 10rpx;
+	line-height: 72rpx;
+	text-align: center;
+	background-color: #fff;
+	color: #444;
+	position: absolute;
+	right: 20rpx;
+	top:294rpx;
+	font-size: 36rpx;
+}
+

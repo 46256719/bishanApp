@@ -1,0 +1,71 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/*每个页面公共css */
+.footer{
+	height: 121rpx;
+	border-top: 1rpx solid #ddd;
+	width: 100vw;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	background-color: #fff;
+	position: fixed;
+	bottom: 0rpx;
+	left: 0rpx;
+}
+.footer>view{
+	width: 305rpx;
+	height: 80rpx;
+	border: 1rpx solid #eee;
+	border-radius: 10rpx;
+	line-height: 80rpx;
+	text-align: center;
+}
+.cancel{
+	background-color: #fff;
+	margin-right: 20rpx;
+}
+.confirm{
+	background-color: #5087FB;
+	color: #fff;
+}
+image{will-change: transform}
+.noData{
+	padding: 20rpx;
+	text-align: center;
+	font-size: 24rpx;
+	color: #ccc;
+}
+
+

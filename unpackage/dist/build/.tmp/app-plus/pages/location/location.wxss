@@ -1,0 +1,60 @@
+
+#location.data-v-26dbe497{
+	height: 100vh;
+}
+#locationMap.data-v-26dbe497{
+	position: relative;
+}
+#reset.data-v-26dbe497{
+	width: 690rpx;
+	height: 70rpx;
+	position: absolute;
+	bottom: 30rpx;
+	left: 30rpx;
+	border-radius: 35rpx;
+	background-color: #5087FB;
+	text-align: center;
+	line-height: 70rpx;
+	color: #fff;
+	font-size: 32rpx;
+}
+#navigation.data-v-26dbe497{
+	width: 690rpx;
+	position: absolute;
+	bottom: 130rpx;
+	left: 30rpx;
+	border-radius: 10rpx;
+	background-color: #fff;
+	text-align: center;
+	color: #333;
+	height: 129rpx;
+	font-size: 32rpx;
+}
+#address.data-v-26dbe497{
+	position: absolute;
+	bottom: 199rpx;
+	left: 60rpx;
+	font-size: 32rpx;
+}
+#address_msg.data-v-26dbe497{
+	position: absolute;
+	bottom: 160rpx;
+	left: 60rpx;
+	width: 300px;
+	font-size: 24rpx;
+}
+#distance.data-v-26dbe497{
+	position: absolute;
+	bottom: 179rpx;
+	right: 60rpx;
+	font-size: 32rpx;
+}
+#toNavigation.data-v-26dbe497{
+	position: absolute;
+	bottom: 226rpx;
+	right: 70rpx;
+	border-radius: 50%;
+	width: 83rpx;
+	height: 83rpx;
+}
+

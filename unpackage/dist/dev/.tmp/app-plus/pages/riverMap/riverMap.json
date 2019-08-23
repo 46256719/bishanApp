@@ -1,0 +1,39 @@
+{
+  "navigationBarTitleText": "巡河地图",
+  "subNVues": [
+    {
+      "id": "checkTypeMap",
+      "path": "subNvue/checkTypeMap",
+      "type": "popup",
+      "style": {
+        "position": "absolute",
+        "dock": "right",
+        "width": "550upx",
+        "height": "100%",
+        "left": "200upx"
+      }
+    },
+    {
+      "id": "search",
+      "path": "subNvue/search",
+      "type": "popup",
+      "style": {
+        "position": "absolute",
+        "dock": "top",
+        "height": "100%"
+      }
+    },
+    {
+      "id": "detail",
+      "path": "subNvue/detail",
+      "type": "popup",
+      "style": {
+        "position": "absolute",
+        "dock": "bottom",
+        "height": "200",
+        "bottom": 0
+      }
+    }
+  ],
+  "usingComponents": {}
+}

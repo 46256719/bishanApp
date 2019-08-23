@@ -1,0 +1,26 @@
+
+.missionCard.data-v-7c8c3eee{
+	background-color: #fff;
+	padding: 10rpx 32rpx 0rpx;
+	border-radius: 10rpx;
+	font-size: 28rpx;
+}
+.missionCard_list.data-v-7c8c3eee{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	padding: 20rpx 0rpx;
+	border-bottom: 1rpx dashed rgb(211,211,211);
+}
+.missionCard_list>view.data-v-7c8c3eee:first-child{
+	color: rgb(153,153,153);
+}
+.missionCard_list>view.data-v-7c8c3eee:last-child{
+	max-width: 470rpx;
+}
+

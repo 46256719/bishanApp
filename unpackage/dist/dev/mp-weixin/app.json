@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#5087fb",
+    "backgroundColor": "#5087fb"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "static/image/tag_patrol.png",
+        "selectedIconPath": "static/image/tag_patrol.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/image/tag_patrol.png",
+        "selectedIconPath": "static/image/tag_patrol.png",
+        "text": "控制台"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

@@ -1,0 +1,154 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+#rank.data-v-c51d5e46 {
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  font-size: 28rpx;
+}
+#navBar.data-v-c51d5e46 {
+  position: relative;
+  height: 90rpx;
+  padding-top: 40rpx;
+  line-height: 90rpx;
+  background-color: #5087fb;
+  color: #fff;
+  font-size: 36rpx;
+  text-align: center;
+}
+#checkDate.data-v-c51d5e46 {
+  display: block;
+  position: absolute;
+  right: 0rpx;
+  bottom: 10rpx;
+  width: 70rpx;
+  height: 70rpx;
+}
+.rank_header.data-v-c51d5e46 {
+  position: absolute;
+  left: 0rpx;
+  top: 0rpx;
+}
+#nav.data-v-c51d5e46 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  height: 88rpx;
+  background-color: #fff;
+  padding-top: 22rpx;
+  width: 100vw;
+}
+.nav_list.data-v-c51d5e46 {
+  width: 164rpx;
+  border-bottom: 4rpx solid #ffffff;
+  padding: 18rpx 0rpx 36rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  text-align: center;
+  position: relative;
+  font-size: 30rpx;
+}
+.on_nav_list.data-v-c51d5e46 {
+  border-bottom-color: #5087FB;
+  color: #5087FB;
+}
+#ranks.data-v-c51d5e46 {
+  background-color: #f5f5f5;
+  height: 100vh;
+  padding-top: 352rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.ranks_list.data-v-c51d5e46 {
+  padding: 20rpx 0rpx;
+  min-height: 40rpx;
+  border-bottom: 1rpx solid #ececec;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #999999;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  text-align: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+}
+.ranks_list > view.data-v-c51d5e46:nth-of-type(1) {
+  width: 150rpx;
+}
+.ranks_list > view.data-v-c51d5e46:nth-of-type(2) {
+  width: 150rpx;
+}
+.ranks_list > view.data-v-c51d5e46:nth-of-type(3) {
+  width: 150rpx;
+}
+.ranks_list > view.data-v-c51d5e46:nth-of-type(4) {
+  width: 300rpx;
+}
+.detail_list.data-v-c51d5e46 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 60rpx;
+  border-bottom: 1rpx solid #E5E5E5;
+}
+.detail_list.data-v-c51d5e46:last-child {
+  border-bottom: 0rpx solid #E5E5E5;
+}
+.detail_list_title.data-v-c51d5e46 {
+  width: 200rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.detail_list_content.data-v-c51d5e46 {
+  width: 430rpx;
+}
+

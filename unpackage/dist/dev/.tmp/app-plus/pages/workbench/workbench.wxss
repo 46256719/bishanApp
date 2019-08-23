@@ -1,0 +1,40 @@
+
+#workBench.data-v-29c9be84{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	padding-top: 15rpx;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+.work.data-v-29c9be84{
+	width: 97.5rpx;
+	/* height: 97.5upx; */
+	display: block;
+	font-size: 24rpx;
+	margin: 30rpx 45rpx;
+	text-align: center;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.icon_img.data-v-29c9be84{
+	width: 94rpx;
+	height: 94rpx;
+	margin-bottom: 20rpx;
+	font-size: 24rpx;
+	color: #333333;
+}
+

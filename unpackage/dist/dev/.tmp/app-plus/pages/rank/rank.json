@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "排名",
+  "backgroundColor": "#F2F2F2",
+  "navigationStyle": "custom",
+  "bounce": "none",
+  "usingComponents": {
+    "pick-date": "/components/lanxiujuan-dyDate/lanxiujuan-dyDate",
+    "uni-popup": "/components/uni-popup/uni-popup"
+  }
+}

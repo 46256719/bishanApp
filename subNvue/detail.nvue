@@ -1,0 +1,37 @@
+<template>
+	<div class="detail">
+		<div class="close" @click="close()"><text style="color: #fff;">关闭</text></div>
+		<div class="detail_content">
+		</div>
+	</div>
+</template>
+
+<script>
+	export default {
+		methods:{
+			close(){
+				uni.$emit("closeDetail")
+			},
+		}
+	}
+</script>
+
+<style scoped>
+.detail{
+	padding-top:60px;
+}
+.detail_content{
+	width: 750px;
+	background-color: red;
+	height: 340px;
+}
+.close{
+	position: absolute;
+	right: 5px;
+	padding: 3px 15px;
+	text-align: center;
+	border-radius: 5px;
+	background-color:#5087FB;
+	top:5px;
+}
+</style>

@@ -1,0 +1,79 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/home/home",
+    "pages/index/index",
+    "pages/myMission/myMission",
+    "pages/report/report",
+    "pages/location/location",
+    "pages/workbench/workbench",
+    "pages/riverMap/riverMap",
+    "pages/system/system",
+    "pages/contact/contact",
+    "pages/allMission/allMission",
+    "pages/problemList/problemList",
+    "pages/taskDetails/taskDetails",
+    "pages/standardDetail/standardDetail",
+    "pages/reportProblem/reportProblem",
+    "pages/setPassWord/setPassWord",
+    "pages/completeTask/completeTask",
+    "pages/rectificationTaskDetail/rectificationTaskDetail",
+    "pages/rank/rank"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#5087fb",
+    "backgroundColor": "#5087fb"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#5087FB",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "static/images/nav/home.png",
+        "selectedIconPath": "static/images/nav/on_home.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/riverMap/riverMap",
+        "iconPath": "static/images/nav/map.png",
+        "selectedIconPath": "static/images/nav/on_map.png",
+        "text": "地图"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "iconPath": "static/images/nav/rank.png",
+        "selectedIconPath": "static/images/nav/on_rank.png",
+        "text": "排名"
+      },
+      {
+        "pagePath": "pages/myMission/myMission",
+        "iconPath": "static/images/nav/mission.png",
+        "selectedIconPath": "static/images/nav/on_mission.png",
+        "text": "我的任务"
+      },
+      {
+        "pagePath": "pages/workbench/workbench",
+        "iconPath": "static/images/nav/workbench.png",
+        "selectedIconPath": "static/images/nav/on_workbench.png",
+        "text": "工作台"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 6000
+  },
+  "nvueCompiler": "weex",
+  "renderer": "auto",
+  "splashscreen": {
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
+  },
+  "appname": "璧山区水污染防治管理信息系统项目",
+  "compilerVersion": "2.2.2",
+  "usingComponents": {}
+}

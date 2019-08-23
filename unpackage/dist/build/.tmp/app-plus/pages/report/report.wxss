@@ -1,0 +1,110 @@
+
+#report.data-v-dcba8e8e{
+	background-color: #F5F5F5;
+	min-height: 100vh;
+	color: #333333;
+	font-size: 28rpx;
+	padding-bottom: 122rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.pick.data-v-dcba8e8e{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	padding: 0rpx 30rpx;
+	font-size: 28rpx;
+	height: 90rpx;
+	background-color: #fff;
+}
+.icon_toRight.data-v-dcba8e8e{
+	display: block;
+	width: 13rpx;
+	height: 24rpx;
+}
+.report_info.data-v-dcba8e8e{
+	padding: 30rpx 0rpx 10rpx 30rpx;
+	background-color: #FFFFFF;
+	margin-top: 20rpx;
+}
+#describe.data-v-dcba8e8e{
+	margin-top: 26rpx;
+	background-color: #F5F5F5;
+	width: auto;
+	margin-right: 30rpx;
+	padding: 23rpx 27rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	height: 340rpx;
+	border-radius: 10rpx;
+}
+.pictures.data-v-dcba8e8e{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	margin-top: 30rpx;
+	margin-right: -30rpx;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+.pictures>view.data-v-dcba8e8e{
+	width: 126rpx;
+	height: 126rpx;
+	border: 1rpx solid #eee;
+	position: relative;
+	margin-right: 19rpx;
+	margin-bottom: 19rpx;
+}
+.pictures>view>image.data-v-dcba8e8e:first-child{
+	width: 124rpx;
+	height: 124rpx;
+	display: block;
+	position: absolute;
+	top:0rpx;
+	bottom: 0rpx;
+	left: 0rpx;
+	right: 0rpx;
+	margin: auto;
+}
+.del.data-v-dcba8e8e{
+	position: absolute;
+	top: -15rpx!important;
+	right: -15rpx!important;
+	width: 30rpx!important;
+	height: 30rpx!important;
+}
+.take_qrCode.data-v-dcba8e8e{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	margin: 20rpx 0rpx;
+	background-color: #FFFFFF;
+	height: 132rpx;
+}
+.take_qrCode>image.data-v-dcba8e8e{
+	width: 40rpx;
+	height: 40rpx;
+	display: block;
+	margin-right: 20rpx;
+}
+
