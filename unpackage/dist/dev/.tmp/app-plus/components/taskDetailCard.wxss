@@ -1,11 +1,11 @@
 
-.taskDetailCard.data-v-531470df{
+.taskDetailCard.data-v-1a926aab{
 	background-color: #fff;
 	padding: 10rpx 32rpx 0rpx;
 	border-radius: 10rpx;
 	font-size: 28rpx;
 }
-.missionCard_list.data-v-531470df{
+.missionCard_list.data-v-1a926aab{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -17,10 +17,10 @@
 	padding: 20rpx 0rpx;
 	border-bottom: 1rpx dashed rgb(211,211,211);
 }
-.missionCard_list>view.data-v-531470df:first-child{
+.missionCard_list>view.data-v-1a926aab:first-child{
 	color: rgb(153,153,153);
 }
-.missionCard_list_rigth.data-v-531470df{
+.missionCard_list_rigth.data-v-1a926aab{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -30,12 +30,12 @@
 	    -ms-flex-align: center;
 	        align-items: center;
 }
-.icon_localtion.data-v-531470df{
+.icon_localtion.data-v-1a926aab{
 	width: 20rpx;
 	height: 28rpx;
 	margin-right: 10rpx;
 }
-.icon_right.data-v-531470df{
+.icon_right.data-v-1a926aab{
 	width: 13rpx;
 	height: 22rpx;
 	margin-left: 7rpx;

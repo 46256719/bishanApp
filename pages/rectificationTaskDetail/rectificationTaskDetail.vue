@@ -5,7 +5,7 @@
 		</map>
 		<view class="report_info">
 			<view class="taskName">任务名称：{{taskDetail.taskName||""}}</view>
-			<view class="title">任务描述</view>
+			<view class="title">整改结果描述</view>
 			<textarea name="" placeholder="最多输入200个文字" @input="inpDetail" maxlength="200" :value="taskDescription" id="describe"></textarea>
 		</view>
 		<view class="pictures">
@@ -35,7 +35,9 @@
 				latitude:"",
 				taskDetail:{
 					longitude:"",
-					latitude:""
+					latitude:"",
+					taskName:"",
+					taskId:""
 				},
 				covers:[],
 				circles:[]
@@ -49,9 +51,11 @@
 		onLoad(options) {
 			this.taskDetail.taskName=options.taskName
 			this.taskDetail.taskId=options.taskId
-			var wgs84togcj02=mapTool.wgs84togcj02(uni.getStorageSync("userLocation").longitude,uni.getStorageSync("userLocation").latitude)
-			this.latitude=wgs84togcj02[1]
+			
+			// console.log(options)
+			var wgs84togcj02=mapTool.wgs84togcj02(options.longitude,options.latitude)
 			this.longitude=wgs84togcj02[0]
+			this.latitude=wgs84togcj02[1]
 			this.taskDetail.longitude=options.longitude
 			this.taskDetail.latitude=options.latitude
 			this.userInfo=uni.getStorageSync("userInfo")
@@ -86,7 +90,7 @@
 					sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
 					sourceType: ['camera'], //从相册选择  默认是两个都有
 					success: (res) => {
-						console.log(res);
+						// console.log(res);
 						this.pictures.push(res.tempFilePaths[0])
 					}
 				});
@@ -150,7 +154,7 @@
 	min-height: 100vh;
 	color: #333333;
 	font-size: 28upx;
-	padding-bottom: 122upx;
+	/* padding-bottom: 122upx; */
 	box-sizing: border-box;
 }
 .taskName{
@@ -202,5 +206,8 @@
 	right: -15upx!important;
 	width: 30upx!important;
 	height: 30upx!important;
+}
+.footer{
+	position: relative;
 }
 </style>

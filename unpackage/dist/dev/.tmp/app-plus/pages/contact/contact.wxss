@@ -1,5 +1,5 @@
 
-#contact.data-v-92180874{
+#contact.data-v-5caebb92{
 	min-height: 100vh;
 	padding-bottom: 20rpx;
 	-webkit-box-sizing: border-box;
@@ -7,7 +7,7 @@
 	background-color: #F2F2F2;
 	font-size: 28rpx;
 }
-.header.data-v-92180874{
+.header.data-v-5caebb92{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -21,12 +21,12 @@
 	        align-items: center;
 	background-color: #fff;
 }
-.icon_user.data-v-92180874{
+.icon_user.data-v-5caebb92{
 	width: 25rpx;
 	height: 28rpx;
 	margin-right: 12rpx;
 }
-.person_list.data-v-92180874{
+.person_list.data-v-5caebb92{
 	height: 140rpx;
 	margin-bottom: 20rpx;
 	display: -webkit-box;
@@ -44,10 +44,10 @@
 	        align-items: center;
 	background-color: #fff;
 }
-.person_list.data-v-92180874:last-child{
+.person_list.data-v-5caebb92:last-child{
 	margin-bottom: 0rpx;
 }
-.person_list_left.data-v-92180874{
+.person_list_left.data-v-5caebb92{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -57,14 +57,14 @@
 	    -ms-flex-align: center;
 	        align-items: center;
 }
-.person_list_left_cover.data-v-92180874{
+.person_list_left_cover.data-v-5caebb92{
 	width: 90rpx;
 	height: 90rpx;
 	border-radius: 45rpx;
 	overflow: hidden;
 	margin-right: 20rpx;
 }
-.person_list_left_msg.data-v-92180874{
+.person_list_left_msg.data-v-5caebb92{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -79,17 +79,17 @@
 	    -ms-flex-pack: center;
 	        justify-content: center;
 }
-.person_list_left_msg_name.data-v-92180874{
+.person_list_left_msg_name.data-v-5caebb92{
 	font-size: 34rpx;
 	color: rgb(51, 51, 51);
 	padding: 2rpx 0rpx;
 }
-.person_list_left_msg_phone.data-v-92180874{
+.person_list_left_msg_phone.data-v-5caebb92{
 	font-size: 24rpx;
 	color: rgb(153, 153, 153);
 	padding: 2rpx 0rpx;
 }
-.person_list_right.data-v-92180874{
+.person_list_right.data-v-5caebb92{
 	width: 50rpx;
 	height: 48rpx;
 	margin-right: 15rpx;

@@ -1,11 +1,11 @@
 
-.missionCard.data-v-ab7f4fda{
+.missionCard.data-v-8844dc72{
 	background-color: #fff;
 	padding: 10rpx 32rpx;
 	border-radius: 10rpx;
 	font-size: 28rpx;
 }
-.missionCard_list.data-v-ab7f4fda{
+.missionCard_list.data-v-8844dc72{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -17,7 +17,7 @@
 	padding: 20rpx 0rpx;
 	border-bottom: 1rpx dashed rgb(211,211,211);
 }
-.missionCard_list>view.data-v-ab7f4fda:first-child{
+.missionCard_list>view.data-v-8844dc72:first-child{
 	color: rgb(153,153,153);
 }
 
