@@ -1,11 +1,11 @@
 
-.problemCard.data-v-1cef0fda{
+.problemCard.data-v-0b51d626{
 	background-color: #fff;
 	padding: 10rpx 32rpx 0rpx;
 	border-radius: 10rpx;
 	font-size: 28rpx;
 }
-.missionCard_list.data-v-1cef0fda{
+.missionCard_list.data-v-0b51d626{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -17,10 +17,10 @@
 	padding: 20rpx 0rpx;
 	border-bottom: 1rpx dashed rgb(211,211,211);
 }
-.missionCard_list>view.data-v-1cef0fda:first-child{
+.missionCard_list>view.data-v-0b51d626:first-child{
 	color: rgb(153,153,153);
 }
-.missionCard_list>view.data-v-1cef0fda:last-child{
+.missionCard_list>view.data-v-0b51d626:last-child{
 	max-width: 470rpx;
 }
 

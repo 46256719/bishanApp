@@ -24,7 +24,7 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-#reportProblem.data-v-8aab3f30 {
+#reportProblem.data-v-09acf29c {
   font-size: 28rpx;
   background-color: #f2f2f2;
   padding-bottom: 150rpx;
@@ -32,14 +32,14 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.problem_title.data-v-8aab3f30 {
+.problem_title.data-v-09acf29c {
   line-height: 120rpx;
   padding-left: 20rpx;
   margin-bottom: 20rpx;
   font-size: 36rpx;
   background-color: #fff;
 }
-.problem_list.data-v-8aab3f30 {
+.problem_list.data-v-09acf29c {
   padding: 20rpx 30rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -56,7 +56,7 @@
   border-bottom: 1rpx solid #e3e3e3;
   background-color: #fff;
 }
-.problem_list_left.data-v-8aab3f30 {
+.problem_list_left.data-v-09acf29c {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -65,7 +65,7 @@
   text-align: left;
   line-height: 30rpx;
 }
-#problemMode.data-v-8aab3f30 {
+#problemMode.data-v-09acf29c {
   position: fixed;
   left: 0rpx;
   top: 0rpx;
@@ -74,7 +74,7 @@
   width: 100vw;
   z-index: 10000;
 }
-.hideStyle.data-v-8aab3f30 {
+.hideStyle.data-v-09acf29c {
   height: 100rpx;
   overflow: hidden;
 }

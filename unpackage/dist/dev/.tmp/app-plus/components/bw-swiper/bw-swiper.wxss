@@ -1,9 +1,9 @@
 
-.cardSwiper .swiper-item.data-v-37dde41c{
+.cardSwiper .swiper-item.data-v-d328c330{
 	width:86%!important; 
 	overflow: initial;
 }
-.cardSwiper .swiper-item view.data-v-37dde41c{
+.cardSwiper .swiper-item view.data-v-d328c330{
 	width: 100%;
 	display: block;
 	height: 100%;
@@ -20,7 +20,7 @@
 	        box-sizing: border-box;
 	margin-left:8.1%;
 }
-.cardSwiper .cur  view.data-v-37dde41c{
+.cardSwiper .cur  view.data-v-d328c330{
 	-webkit-transform:  initial;
 	    -ms-transform:  initial;
 	        transform:  initial;
@@ -29,28 +29,28 @@
 	-o-transition: all 0.1s ease-in 0s;
 	transition: all 0.1s ease-in 0s;
 }
-.swiper-item view.data-v-37dde41c{
+.swiper-item view.data-v-d328c330{
 	height:100%;
 	width:100%;
 	position: relative;
 }
-.swiperText.data-v-37dde41c{
+.swiperText.data-v-d328c330{
 	position: absolute;
 	color:#ffffff;
 	z-index:2;
 	border-radius: 4rpx;
 	padding:0 4rpx;
 }
-.screen-swiper image.data-v-37dde41c{
+.screen-swiper image.data-v-d328c330{
 	width:100%;
 }
-.screen-swiper video.data-v-37dde41c,
-.swiper-item video.data-v-37dde41c {
+.screen-swiper video.data-v-d328c330,
+.swiper-item video.data-v-d328c330 {
 	width: 100%;
 	display: block;
 	height: 100%;
 }
-.swiperContent.data-v-37dde41c{
+.swiperContent.data-v-d328c330{
 	width:100%;
 }
 

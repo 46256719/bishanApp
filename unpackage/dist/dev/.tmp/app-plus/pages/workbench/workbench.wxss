@@ -1,5 +1,5 @@
 
-#workBench.data-v-1d708f60{
+#workBench.data-v-29c9be84{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -9,7 +9,7 @@
 	    -ms-flex-wrap: wrap;
 	        flex-wrap: wrap;
 }
-.work.data-v-1d708f60{
+.work.data-v-29c9be84{
 	width: 97.5rpx;
 	/* height: 97.5upx; */
 	display: block;
@@ -30,7 +30,7 @@
 	    -ms-flex-align: center;
 	        align-items: center;
 }
-.icon_img.data-v-1d708f60{
+.icon_img.data-v-29c9be84{
 	width: 94rpx;
 	height: 94rpx;
 	margin-bottom: 20rpx;

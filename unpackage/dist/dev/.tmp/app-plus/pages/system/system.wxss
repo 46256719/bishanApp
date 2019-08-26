@@ -1,5 +1,5 @@
 
-#system.data-v-bd5bd8a0{
+#system.data-v-66dc5e38{
 	background-color: #F2F2F2;
 	padding-top: 20rpx;
 	min-height: 100vh;
@@ -7,7 +7,7 @@
 	        box-sizing: border-box;
 	padding-bottom: 20rpx;
 }
-.system_menu.data-v-bd5bd8a0{
+.system_menu.data-v-66dc5e38{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -23,12 +23,12 @@
 	font-size: 28rpx;
 	color: #333333;
 }
-.icon_menu.data-v-bd5bd8a0{
+.icon_menu.data-v-66dc5e38{
 	width: 33rpx;
 	height: 33rpx;
 	margin-right: 20rpx;
 }
-.icon_right.data-v-bd5bd8a0{
+.icon_right.data-v-66dc5e38{
 	width: 13rpx;
 	height: 22rpx;
 	position: absolute;
@@ -37,7 +37,7 @@
 	bottom: 0rpx;
 	margin: auto;
 }
-#exit.data-v-bd5bd8a0{
+#exit.data-v-66dc5e38{
 	margin: 60rpx 30rpx 0rpx;
 	height: 70rpx;
 	line-height: 70rpx;

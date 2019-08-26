@@ -56,10 +56,9 @@
 					uni.setStorageSync("userInfo",results.data.user)
 					uni.setStorageSync("loginInfo",this.loginInfo)
 					// util.webSocket(results.data.user.id)
-					// var onTask=uni.getStorageSync("onTask")?uni.getStorageSync("onTask"):[]
-					var onTask=results.data.patrolTask?results.data.patrolTask:[]
+					var onTask=uni.getStorageSync("onTask")?uni.getStorageSync("onTask"):[]
 					for(var i=0;i<onTask.length;i++){
-						util.upLoction(onTask[i].id)
+						util.upLoction(onTask[i])
 					}
 					uni.switchTab({
 						url:"/pages/home/home"
@@ -200,7 +199,6 @@
 	align-items: center;
 	justify-content: space-between;
 	font-size: 30upx;
-	z-index: 1000000;
 }
 .place_class{
 	color:#999999;
