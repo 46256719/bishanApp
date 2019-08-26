@@ -3,6 +3,7 @@ var timer_getLoction=null
 var timer_upLoction={}
 var upLoctionData={}
 var subNvue={}
+var taskInfo={}
 var arrWry=[
 	"WRY_BZ_LIST",
 	"WRY_COMPANY_LIST",
@@ -355,5 +356,6 @@ module.exports={
 	completeTask,
 	rectificationTaskDetail,
 	subNvue,
-	getWryMap
+	getWryMap,
+	taskInfo
 }
