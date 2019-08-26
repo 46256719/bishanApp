@@ -15,6 +15,7 @@
 </template>
 
 <script>
+	import util from "../../static/js/utils.js"
 	export default {
 		data() {
 			return {
@@ -27,7 +28,8 @@
 		},
 		methods: {
 			toLocation(data) {
-				uni.setStorageSync("taskInfo",data)
+				// uni.setStorageSync("taskInfo",data)
+				util.pollutionInfo=data
 				uni.navigateTo({
 					url:"/pages/location/location"
 				})

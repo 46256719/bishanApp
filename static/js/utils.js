@@ -4,6 +4,7 @@ var timer_upLoction={}
 var upLoctionData={}
 var subNvue={}
 var taskInfo={}
+var pollutionInfo={}
 var arrWry=[
 	"WRY_BZ_LIST",
 	"WRY_COMPANY_LIST",
@@ -357,5 +358,6 @@ module.exports={
 	rectificationTaskDetail,
 	subNvue,
 	getWryMap,
-	taskInfo
+	taskInfo,
+	pollutionInfo
 }

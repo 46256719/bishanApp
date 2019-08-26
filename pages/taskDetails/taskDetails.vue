@@ -115,8 +115,9 @@
 				}
 			},
 			toLocation(data){
+				util.pollutionInfo=data
 				uni.navigateTo({
-					url:"/pages/location/location?taskId="+data.id+"&longitude="+data.longitude+"&latitude="+data.latitude+"&address="+data.address
+					url:"/pages/location/location"
 				})
 			},
 			toContact(data){

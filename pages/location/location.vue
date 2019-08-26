@@ -34,7 +34,7 @@
 		},
 		onLoad(options){
 			this.userInfo=uni.getStorageSync("userInfo")
-			this.pointInfo=uni.getStorageSync("taskInfo")
+			this.pointInfo=util.pollutionInfo
 			this.userLocation=uni.getStorageSync("userLocation")
 			var screenWidth=uni.getSystemInfoSync().screenWidth
 			var windowHeight=uni.getSystemInfoSync().windowHeight

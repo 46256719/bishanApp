@@ -124,14 +124,18 @@
 			},
 			startMission(data){
 				util.getRequest(data.type=="1"?URL.TASK_PATROL_UPDATE_STATUS:URL.TASK_RECTIFICATION_UPDATE_STATUS,{id:data.id,status:1},(results)=>{
-					var onTask=uni.getStorageSync("onTask")?uni.getStorageSync("onTask"):[]
-					onTask.push(data.id)
-					uni.setStorageSync("onTask",onTask)
-					util.upLoction(data.id)
-					uni.$emit("refreshTasksPage",true)
-					uni.navigateTo({
-						url:"/pages/taskDetails/taskDetails?taskId="+data.id+"&isReport=true"
-					})
+					if(data.type=="1"){
+						var onTask=uni.getStorageSync("onTask")?uni.getStorageSync("onTask"):[]
+						onTask.push(data.id)
+						uni.setStorageSync("onTask",onTask)
+						util.upLoction(data.id)
+						uni.$emit("refreshTasksPage",true)
+						uni.navigateTo({
+							url:"/pages/taskDetails/taskDetails?taskId="+data.id+"&isReport=true"
+						})
+					}else{
+						this.checkType(this.type)
+					}
 				},(results)=>{
 					uni.showToast({
 						icon:"none",
@@ -159,8 +163,9 @@
 				}
 			},
 			toLocation(data){
+				util.pollutionInfo=data
 				uni.navigateTo({
-					url:"/pages/location/location?taskId="+data.id+"&longitude="+data.longitude+"&latitude="+data.latitude+"&address="+data.address
+					url:"/pages/location/location"
 				})
 			},
 			toContact(data){
@@ -169,6 +174,7 @@
 				})
 			},
 			toTaskDetail(data){
+				util.taskInfo=data
 				if(this.type!='process'){
 					return
 				}
@@ -178,7 +184,7 @@
 					})
 				}else{
 					uni.navigateTo({
-						url:"/pages/rectificationTaskDetail/rectificationTaskDetail?taskId="+data.id+"&taskName="+data.taskName+"&longitude="+data.longitude+"&latitude="+data.latitude
+						url:"/pages/rectificationTaskDetail/rectificationTaskDetail"
 					})
 				}
 			},
