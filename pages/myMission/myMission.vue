@@ -127,7 +127,7 @@
 					if(data.type=="1"){
 						var onTask=uni.getStorageSync("onTask")?uni.getStorageSync("onTask"):[]
 						onTask.push(data.id)
-						uni.setStorageSync("onTask",onTask)
+						// uni.setStorageSync("onTask",onTask)
 						util.upLoction(data.id)
 						uni.$emit("refreshTasksPage",true)
 						uni.navigateTo({
@@ -165,7 +165,7 @@
 			toLocation(data){
 				util.pollutionInfo=data
 				uni.navigateTo({
-					url:"/pages/location/location"
+					url:"/pages/showLocation/showLocation"
 				})
 			},
 			toContact(data){

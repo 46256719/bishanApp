@@ -37,7 +37,7 @@
 		methods:{
 			getProblem(id){//正在进行中的任务
 				util.getRequest(URL.TASK_PATROL_POINT_PROBLEM_LIST,{pointId:id},(results)=>{
-					// console.log(results)
+					console.log(results)
 					this.problems=results.data
 				})
 			}

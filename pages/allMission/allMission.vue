@@ -95,6 +95,13 @@
 				}
 			},
 			previewImage(data){//预览照片
+				if(!data.problemPhoto){
+					uni.showToast({
+						icon:"none",
+						title:"暂无照片"
+					})
+					return
+				}
 				uni.previewImage({
 					current:0,
 					urls: data.problemPhoto?data.problemPhoto.split(";"):[],
@@ -126,6 +133,7 @@
 				}
 			},
 			toLocation(data){
+				util.pollutionInfo=data
 				uni.navigateTo({
 					url:"/pages/location/location?taskId="+data.id+"&longitude="+data.longitude+"&latitude="+data.latitude+"&address="+data.address
 				})

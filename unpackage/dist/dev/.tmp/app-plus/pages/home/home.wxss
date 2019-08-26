@@ -214,8 +214,12 @@
 .taskSituation_list.data-v-fbf44538{
 	text-align: center;
 	/* margin-right: 24upx; */
-	width: 84rpx;
-	padding:0rpx 23rpx;
+	/* width: 84upx; */
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	/* padding:0upx 23upx; */
 	color: #999;
 }
 .taskSituation_list>image.data-v-fbf44538{

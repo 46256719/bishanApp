@@ -1,6 +1,6 @@
 <template>
 	<view id="completeTask">
-		<map id="completeMap" style="width: 100%;height: 50vh;" :scale="20" :show-location="true" :markers="covers" :circles="circles" :latitude="latitude" :longitude="longitude">
+		<map id="completeMap" v-show="!imgUrl" style="width: 100%;height: 50vh;" :scale="18" :show-location="true" :markers="covers" :circles="circles" :latitude="latitude" :longitude="longitude">
 			
 		</map>
 		<view class="report_info">
@@ -19,6 +19,7 @@
 			<view class="cancel" @click="cancel()">取消</view>
 			<view class="confirm" @click="getDistance(taskInfo)">确定</view>
 		</view>
+		<water-mark v-if="imgUrl" @getPhotoUrl="getPhotoUrl" :imgUrl="imgUrl"></water-mark>
 	</view>
 </template>
 
@@ -26,6 +27,7 @@
 	import URL from "../../static/js/interface.js"
 	import util from "../../static/js/utils.js"
 	import {mapTool} from '../../static/js/mapTool.js'
+	import waterMark from "../../components/createWaterMark/createWaterMark"
 	export default {
 		data() {
 			return {
@@ -35,9 +37,11 @@
 				latitude:"",
 				remark:"",
 				covers:[],
-				circles:[]
+				circles:[],
+				imgUrl:""
 			}
 		},
+		components:{waterMark},
 		onLoad() {
 			
 		},
@@ -74,16 +78,43 @@
 					iconPath: '../../static/images/dingwei.png'
 				}]
 			},
+			getPhotoUrl(url){
+				this.imgUrl=""
+				this.pictures.push(url)
+			},
 			getDistance(data){
+				if(this.pictures.length==0){
+					uni.showToast({
+						icon:"none",
+						title:"请拍照上传！"
+					})
+					return
+				}
 				var point1 = new plus.maps.Point(uni.getStorageSync("userLocation").longitude,uni.getStorageSync("userLocation").latitude);
 				var point2 = new plus.maps.Point(this.taskInfo.longitude,this.taskInfo.latitude)
 				plus.maps.Map.calculateDistance(point1,point2,(res)=>{
-					if(res.distance>this.taskInfo.distanceLimit&&this.taskInfo.mustInRange==1){
-						uni.showToast({
-							icon:"none",
-							title:"距离任务地点太远，无法完成！"
-						})
+					if(res.distance>this.taskInfo.distanceLimit){
+						data.inRange=0
+						if(this.taskInfo.mustInRange==1){
+							uni.showToast({
+								icon:"none",
+								title:"距离任务地点太远，无法完成！"
+							})
+						}else{
+							uni.showModal({
+							    title: '提示',
+							    content: '你当前不在范围内，是否确认完成？',
+							    success:(res)=> {
+							        if (res.confirm) {
+							            this.confirm(data)
+							        } else if (res.cancel) {
+							            console.log('用户点击取消');
+							        }
+							    }
+							});
+						}
 					}else{
+						data.inRange=1
 						this.confirm(data)
 					}
 				})
@@ -104,8 +135,9 @@
 					sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
 					sourceType: ['camera'], //从相册选择  默认是两个都有
 					success: (res) => {
-						console.log(res);
-						this.pictures.push(res.tempFilePaths[0])
+						// console.log(res);
+						// this.pictures.push(res.tempFilePaths[0])
+						this.imgUrl=res.tempFilePaths[0]
 					}
 				});
 			},
@@ -129,13 +161,6 @@
 				uni.navigateBack({})
 			},
 			confirm(data){
-				if(this.pictures.length==0){
-					uni.showToast({
-						icon:"none",
-						title:"请拍照上传！"
-					})
-					return
-				}
 				var obj={
 					id:data.id,
 					longitude:this.longitude,

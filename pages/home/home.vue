@@ -408,8 +408,9 @@
 .taskSituation_list{
 	text-align: center;
 	/* margin-right: 24upx; */
-	width: 84upx;
-	padding:0upx 23upx;
+	/* width: 84upx; */
+	flex: 1;
+	/* padding:0upx 23upx; */
 	color: #999;
 }
 .taskSituation_list>image{

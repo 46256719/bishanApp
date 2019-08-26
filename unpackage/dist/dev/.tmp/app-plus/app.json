@@ -18,7 +18,8 @@
     "pages/setPassWord/setPassWord",
     "pages/completeTask/completeTask",
     "pages/rectificationTaskDetail/rectificationTaskDetail",
-    "pages/rank/rank"
+    "pages/rank/rank",
+    "pages/showLocation/showLocation"
   ],
   "window": {
     "navigationBarTextStyle": "white",

@@ -1122,7 +1122,7 @@ function gz$gwx_6(){
 if( __WXML_GLOBAL__.ops_cached.$gwx_6)return __WXML_GLOBAL__.ops_cached.$gwx_6
 __WXML_GLOBAL__.ops_cached.$gwx_6=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
-Z([3,'data-v-426ed982'])
+Z([3,'data-v-5bc6f3ea'])
 Z([1,true])
 Z([3,'height:100vh;padding-bottom:122rpx;box-sizing:border-box;'])
 Z([[2,'=='],[[6],[[7],[3,'nowProblem']],[3,'needRectification']],[1,1]])
@@ -1155,7 +1155,7 @@ if( __WXML_GLOBAL__.ops_cached.$gwx_9)return __WXML_GLOBAL__.ops_cached.$gwx_9
 __WXML_GLOBAL__.ops_cached.$gwx_9=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
 Z([3,'__e'])
-Z([3,'data-v-f482a9bc'])
+Z([3,'data-v-1526e360'])
 Z([[4],[[5],[[4],[[5],[[5],[1,'scrolltolower']],[[4],[[5],[[4],[[5],[[5],[1,'scrollTol']],[[4],[[5],[1,'$event']]]]]]]]]]])
 Z([3,'missions'])
 Z([3,'0'])
@@ -1226,7 +1226,7 @@ if( __WXML_GLOBAL__.ops_cached.$gwx_16)return __WXML_GLOBAL__.ops_cached.$gwx_16
 __WXML_GLOBAL__.ops_cached.$gwx_16=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
 Z([3,'__e'])
-Z([3,'data-v-42e4ff89'])
+Z([3,'data-v-585e996a'])
 Z([[4],[[5],[[4],[[5],[[5],[1,'scrolltolower']],[[4],[[5],[[4],[[5],[[5],[1,'scrollTol']],[[4],[[5],[1,'$event']]]]]]]]]]])
 Z([3,'missions'])
 Z([3,'0'])
@@ -1238,7 +1238,7 @@ Z([3,'item'])
 Z([[7],[3,'missions']])
 Z([3,'id'])
 Z(z[0])
-Z([3,'mission_list data-v-42e4ff89'])
+Z([3,'mission_list data-v-585e996a'])
 Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[[5],[1,'toTaskDetail']],[[4],[[5],[1,'$0']]]],[[4],[[5],[[4],[[5],[[4],[[5],[[5],[[5],[1,'missions']],[1,'id']],[[6],[[7],[3,'item']],[3,'id']]]]]]]]]]]]]]]])
 Z([3,'__l'])
 Z(z[1])
@@ -1247,7 +1247,7 @@ Z([[7],[3,'item']])
 Z([[2,'+'],[1,'1-'],[[7],[3,'index']]])
 Z([[4],[[5],[1,'default']]])
 Z([[2,'=='],[[7],[3,'type']],[1,'noStart']])
-Z([3,'toBind data-v-42e4ff89'])
+Z([3,'toBind data-v-585e996a'])
 Z([3,'slot_bottom'])
 Z([[2,'=='],[[7],[3,'type']],[1,'process']])
 Z(z[21])
@@ -1267,7 +1267,7 @@ function gz$gwx_17(){
 if( __WXML_GLOBAL__.ops_cached.$gwx_17)return __WXML_GLOBAL__.ops_cached.$gwx_17
 __WXML_GLOBAL__.ops_cached.$gwx_17=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
-Z([3,'data-v-6946f4a7'])
+Z([3,'data-v-958d89de'])
 Z([3,'problems'])
 Z([3,'true'])
 Z([3,'index'])
@@ -1275,7 +1275,7 @@ Z([3,'item'])
 Z([[7],[3,'problems']])
 Z([3,'id'])
 Z([3,'__e'])
-Z([3,'problem_list data-v-6946f4a7'])
+Z([3,'problem_list data-v-958d89de'])
 Z([[4],[[5],[[4],[[5],[[5],[1,'tap']],[[4],[[5],[[4],[[5],[[5],[[5],[1,'toTaskDetail']],[[4],[[5],[1,'$0']]]],[[4],[[5],[[4],[[5],[[4],[[5],[[5],[[5],[1,'problems']],[1,'id']],[[6],[[7],[3,'item']],[3,'id']]]]]]]]]]]]]]]])
 Z([3,'__l'])
 Z(z[0])
@@ -1378,7 +1378,13 @@ function gz$gwx_26(){
 if( __WXML_GLOBAL__.ops_cached.$gwx_26)return __WXML_GLOBAL__.ops_cached.$gwx_26
 __WXML_GLOBAL__.ops_cached.$gwx_26=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
-Z([3,'data-v-5e49be35'])
+})(__WXML_GLOBAL__.ops_cached.$gwx_26);return __WXML_GLOBAL__.ops_cached.$gwx_26
+}
+function gz$gwx_27(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_27)return __WXML_GLOBAL__.ops_cached.$gwx_27
+__WXML_GLOBAL__.ops_cached.$gwx_27=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+Z([3,'data-v-05adf458'])
 Z([3,'missions'])
 Z([3,'true'])
 Z([[2,'!='],[[7],[3,'type']],[1,'issuesList']])
@@ -1391,7 +1397,7 @@ Z(z[0])
 Z([[7],[3,'item']])
 Z([[2,'+'],[1,'1-'],[[7],[3,'index']]])
 Z([[4],[[5],[1,'slot_bottom']]])
-Z([3,'toBind data-v-5e49be35'])
+Z([3,'toBind data-v-05adf458'])
 Z([3,'slot_bottom'])
 Z([[2,'&&'],[[7],[3,'isReport']],[[2,'=='],[[7],[3,'type']],[1,'process']]])
 Z(z[15])
@@ -1405,19 +1411,19 @@ Z(z[10])
 Z([[2,'+'],[1,'2-'],[[7],[3,'index']]])
 Z(z[12])
 Z([[2,'=='],[[6],[[7],[3,'missions']],[3,'length']],[1,0]])
-})(__WXML_GLOBAL__.ops_cached.$gwx_26);return __WXML_GLOBAL__.ops_cached.$gwx_26
-}
-function gz$gwx_27(){
-if( __WXML_GLOBAL__.ops_cached.$gwx_27)return __WXML_GLOBAL__.ops_cached.$gwx_27
-__WXML_GLOBAL__.ops_cached.$gwx_27=[];
-(function(z){var a=11;function Z(ops){z.push(ops)}
 })(__WXML_GLOBAL__.ops_cached.$gwx_27);return __WXML_GLOBAL__.ops_cached.$gwx_27
+}
+function gz$gwx_28(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_28)return __WXML_GLOBAL__.ops_cached.$gwx_28
+__WXML_GLOBAL__.ops_cached.$gwx_28=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+})(__WXML_GLOBAL__.ops_cached.$gwx_28);return __WXML_GLOBAL__.ops_cached.$gwx_28
 }
 __WXML_GLOBAL__.ops_set.$gwx=z;
 __WXML_GLOBAL__.ops_init.$gwx=true;
 var nv_require=function(){var nnm={};var nom={};return function(n){return function(){if(!nnm[n]) return undefined;try{if(!nom[n])nom[n]=nnm[n]();return nom[n];}catch(e){e.message=e.message.replace(/nv_/g,'');var tmp = e.stack.substring(0,e.stack.lastIndexOf(n));e.stack = tmp.substring(0,tmp.lastIndexOf('\n'));e.stack = e.stack.replace(/\snv_/g,' ');e.stack = $gstack(e.stack);e.stack += '\n    at ' + n.substring(2);console.error(e);}
 }}}()
-var x=['./components/bw-swiper/bw-swiper.wxml','./components/issuesListCard.wxml','./components/lanxiujuan-dyDate/lanxiujuan-dyDate.wxml','./components/missionCard.wxml','./components/problemCard.wxml','./components/problemMode/mode1.wxml','./components/taskDetailCard.wxml','./components/uni-popup/uni-popup.wxml','./pages/allMission/allMission.wxml','./pages/completeTask/completeTask.wxml','./pages/contact/contact.wxml','./pages/home/home.wxml','./pages/index/index.wxml','./pages/location/location.wxml','./pages/login/login.wxml','./pages/myMission/myMission.wxml','./pages/problemList/problemList.wxml','./pages/rank/rank.wxml','./pages/rectificationTaskDetail/rectificationTaskDetail.wxml','./pages/report/report.wxml','./pages/reportProblem/reportProblem.wxml','./pages/riverMap/riverMap.wxml','./pages/setPassWord/setPassWord.wxml','./pages/standardDetail/standardDetail.wxml','./pages/system/system.wxml','./pages/taskDetails/taskDetails.wxml','./pages/workbench/workbench.wxml'];d_[x[0]]={}
+var x=['./components/bw-swiper/bw-swiper.wxml','./components/issuesListCard.wxml','./components/lanxiujuan-dyDate/lanxiujuan-dyDate.wxml','./components/missionCard.wxml','./components/problemCard.wxml','./components/problemMode/mode1.wxml','./components/taskDetailCard.wxml','./components/uni-popup/uni-popup.wxml','./pages/allMission/allMission.wxml','./pages/completeTask/completeTask.wxml','./pages/contact/contact.wxml','./pages/home/home.wxml','./pages/index/index.wxml','./pages/location/location.wxml','./pages/login/login.wxml','./pages/myMission/myMission.wxml','./pages/problemList/problemList.wxml','./pages/rank/rank.wxml','./pages/rectificationTaskDetail/rectificationTaskDetail.wxml','./pages/report/report.wxml','./pages/reportProblem/reportProblem.wxml','./pages/riverMap/riverMap.wxml','./pages/setPassWord/setPassWord.wxml','./pages/showLocation/showLocation.wxml','./pages/standardDetail/standardDetail.wxml','./pages/system/system.wxml','./pages/taskDetails/taskDetails.wxml','./pages/workbench/workbench.wxml'];d_[x[0]]={}
 var m0=function(e,s,r,gg){
 var z=gz$gwx_1()
 var oB=_mz(z,'swiper',['autoplay',0,'bindanimationfinish',1,'bindchange',1,'circular',2,'class',3,'current',4,'data-event-opts',5,'displayMultipleItems',6,'duration',7,'indicatorActiveColor',8,'indicatorColor',9,'indicatorDots',10,'interval',11,'nextMargin',12,'previousMargin',13,'skipHiddenItemLayout',14,'style',15,'swiperList',16,'vertical',17],[],e,s,gg)
@@ -1796,61 +1802,67 @@ e_[x[24]]={f:m24,j:[],i:[],ti:[],ic:[]}
 d_[x[25]]={}
 var m25=function(e,s,r,gg){
 var z=gz$gwx_26()
-var lOD=_mz(z,'scroll-view',['class',0,'id',1,'scrollY',1],[],e,s,gg)
-var aPD=_v()
-_(lOD,aPD)
-if(_oz(z,3,e,s,gg)){aPD.wxVkey=1
-var eRD=_v()
-_(aPD,eRD)
-var bSD=function(xUD,oTD,oVD,gg){
-var cXD=_mz(z,'task-detail-card',['bind:__l',8,'class',1,'result',2,'vueId',3,'vueSlots',4],[],xUD,oTD,gg)
-var hYD=_mz(z,'view',['class',13,'slot',1],[],xUD,oTD,gg)
-var oZD=_v()
-_(hYD,oZD)
-if(_oz(z,15,xUD,oTD,gg)){oZD.wxVkey=1
-}
-var c1D=_v()
-_(hYD,c1D)
-if(_oz(z,16,xUD,oTD,gg)){c1D.wxVkey=1
-}
-oZD.wxXCkey=1
-c1D.wxXCkey=1
-_(cXD,hYD)
-_(oVD,cXD)
-return oVD
-}
-eRD.wxXCkey=4
-_2z(z,6,bSD,e,s,gg,eRD,'item','index','id')
-}
-else{aPD.wxVkey=2
-var o2D=_v()
-_(aPD,o2D)
-var l3D=function(t5D,a4D,e6D,gg){
-var o8D=_mz(z,'issues-list-card',['bind:__l',21,'class',1,'result',2,'vueId',3,'vueSlots',4],[],t5D,a4D,gg)
-_(e6D,o8D)
-return e6D
-}
-o2D.wxXCkey=4
-_2z(z,19,l3D,e,s,gg,o2D,'item','index','id')
-}
-var tQD=_v()
-_(lOD,tQD)
-if(_oz(z,26,e,s,gg)){tQD.wxVkey=1
-}
-aPD.wxXCkey=1
-aPD.wxXCkey=3
-aPD.wxXCkey=3
-tQD.wxXCkey=1
-_(r,lOD)
 return r
 }
 e_[x[25]]={f:m25,j:[],i:[],ti:[],ic:[]}
 d_[x[26]]={}
 var m26=function(e,s,r,gg){
 var z=gz$gwx_27()
+var aPD=_mz(z,'scroll-view',['class',0,'id',1,'scrollY',1],[],e,s,gg)
+var tQD=_v()
+_(aPD,tQD)
+if(_oz(z,3,e,s,gg)){tQD.wxVkey=1
+var bSD=_v()
+_(tQD,bSD)
+var oTD=function(oVD,xUD,fWD,gg){
+var hYD=_mz(z,'task-detail-card',['bind:__l',8,'class',1,'result',2,'vueId',3,'vueSlots',4],[],oVD,xUD,gg)
+var oZD=_mz(z,'view',['class',13,'slot',1],[],oVD,xUD,gg)
+var c1D=_v()
+_(oZD,c1D)
+if(_oz(z,15,oVD,xUD,gg)){c1D.wxVkey=1
+}
+var o2D=_v()
+_(oZD,o2D)
+if(_oz(z,16,oVD,xUD,gg)){o2D.wxVkey=1
+}
+c1D.wxXCkey=1
+o2D.wxXCkey=1
+_(hYD,oZD)
+_(fWD,hYD)
+return fWD
+}
+bSD.wxXCkey=4
+_2z(z,6,oTD,e,s,gg,bSD,'item','index','id')
+}
+else{tQD.wxVkey=2
+var l3D=_v()
+_(tQD,l3D)
+var a4D=function(e6D,t5D,b7D,gg){
+var x9D=_mz(z,'issues-list-card',['bind:__l',21,'class',1,'result',2,'vueId',3,'vueSlots',4],[],e6D,t5D,gg)
+_(b7D,x9D)
+return b7D
+}
+l3D.wxXCkey=4
+_2z(z,19,a4D,e,s,gg,l3D,'item','index','id')
+}
+var eRD=_v()
+_(aPD,eRD)
+if(_oz(z,26,e,s,gg)){eRD.wxVkey=1
+}
+tQD.wxXCkey=1
+tQD.wxXCkey=3
+tQD.wxXCkey=3
+eRD.wxXCkey=1
+_(r,aPD)
 return r
 }
 e_[x[26]]={f:m26,j:[],i:[],ti:[],ic:[]}
+d_[x[27]]={}
+var m27=function(e,s,r,gg){
+var z=gz$gwx_28()
+return r
+}
+e_[x[27]]={f:m27,j:[],i:[],ti:[],ic:[]}
 if(path&&e_[path]){
 return function(env,dd,global){$gwxc=0;var root={"tag":"wx-page"};root.children=[]
 var main=e_[path].f
@@ -1868,7 +1880,7 @@ return root;
 
 
 
-__wxAppCode__['app.json']={"pages":["pages/login/login","pages/home/home","pages/index/index","pages/myMission/myMission","pages/report/report","pages/location/location","pages/workbench/workbench","pages/riverMap/riverMap","pages/system/system","pages/contact/contact","pages/allMission/allMission","pages/problemList/problemList","pages/taskDetails/taskDetails","pages/standardDetail/standardDetail","pages/reportProblem/reportProblem","pages/setPassWord/setPassWord","pages/completeTask/completeTask","pages/rectificationTaskDetail/rectificationTaskDetail","pages/rank/rank"],"window":{"navigationBarTextStyle":"white","navigationBarTitleText":"uni-app","navigationBarBackgroundColor":"#5087fb","backgroundColor":"#5087fb"},"tabBar":{"color":"#7A7E83","selectedColor":"#5087FB","borderStyle":"black","backgroundColor":"#ffffff","list":[{"pagePath":"pages/home/home","iconPath":"static/images/nav/home.png","selectedIconPath":"static/images/nav/on_home.png","text":"首页"},{"pagePath":"pages/riverMap/riverMap","iconPath":"static/images/nav/map.png","selectedIconPath":"static/images/nav/on_map.png","text":"地图"},{"pagePath":"pages/rank/rank","iconPath":"static/images/nav/rank.png","selectedIconPath":"static/images/nav/on_rank.png","text":"排名"},{"pagePath":"pages/myMission/myMission","iconPath":"static/images/nav/mission.png","selectedIconPath":"static/images/nav/on_mission.png","text":"我的任务"},{"pagePath":"pages/workbench/workbench","iconPath":"static/images/nav/workbench.png","selectedIconPath":"static/images/nav/on_workbench.png","text":"工作台"}]},"networkTimeout":{"request":6000},"nvueCompiler":"weex","renderer":"auto","splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"appname":"璧山区水污染防治管理信息系统项目","compilerVersion":"2.2.2","usingComponents":{}};
+__wxAppCode__['app.json']={"pages":["pages/login/login","pages/home/home","pages/index/index","pages/myMission/myMission","pages/report/report","pages/location/location","pages/workbench/workbench","pages/riverMap/riverMap","pages/system/system","pages/contact/contact","pages/allMission/allMission","pages/problemList/problemList","pages/taskDetails/taskDetails","pages/standardDetail/standardDetail","pages/reportProblem/reportProblem","pages/setPassWord/setPassWord","pages/completeTask/completeTask","pages/rectificationTaskDetail/rectificationTaskDetail","pages/rank/rank","pages/showLocation/showLocation"],"window":{"navigationBarTextStyle":"white","navigationBarTitleText":"uni-app","navigationBarBackgroundColor":"#5087fb","backgroundColor":"#5087fb"},"tabBar":{"color":"#7A7E83","selectedColor":"#5087FB","borderStyle":"black","backgroundColor":"#ffffff","list":[{"pagePath":"pages/home/home","iconPath":"static/images/nav/home.png","selectedIconPath":"static/images/nav/on_home.png","text":"首页"},{"pagePath":"pages/riverMap/riverMap","iconPath":"static/images/nav/map.png","selectedIconPath":"static/images/nav/on_map.png","text":"地图"},{"pagePath":"pages/rank/rank","iconPath":"static/images/nav/rank.png","selectedIconPath":"static/images/nav/on_rank.png","text":"排名"},{"pagePath":"pages/myMission/myMission","iconPath":"static/images/nav/mission.png","selectedIconPath":"static/images/nav/on_mission.png","text":"我的任务"},{"pagePath":"pages/workbench/workbench","iconPath":"static/images/nav/workbench.png","selectedIconPath":"static/images/nav/on_workbench.png","text":"工作台"}]},"networkTimeout":{"request":6000},"nvueCompiler":"weex","renderer":"auto","splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"appname":"璧山区水污染防治管理信息系统项目","compilerVersion":"2.2.2","usingComponents":{}};
 __wxAppCode__['app.wxml']=$gwx('./app.wxml');
 
 __wxAppCode__['components/bw-swiper/bw-swiper.json']={"usingComponents":{},"component":true};
@@ -1939,6 +1951,9 @@ __wxAppCode__['pages/riverMap/riverMap.wxml']=$gwx('./pages/riverMap/riverMap.wx
 
 __wxAppCode__['pages/setPassWord/setPassWord.json']={"navigationBarTitleText":"修改密码","backgroundColor":"#F2F2F2","usingComponents":{}};
 __wxAppCode__['pages/setPassWord/setPassWord.wxml']=$gwx('./pages/setPassWord/setPassWord.wxml');
+
+__wxAppCode__['pages/showLocation/showLocation.json']={"navigationBarTitleText":"上报地点","backgroundColor":"#F2F2F2","usingComponents":{}};
+__wxAppCode__['pages/showLocation/showLocation.wxml']=$gwx('./pages/showLocation/showLocation.wxml');
 
 __wxAppCode__['pages/standardDetail/standardDetail.json']={"navigationBarTitleText":"详情","backgroundColor":"#f2f2f2","usingComponents":{}};
 __wxAppCode__['pages/standardDetail/standardDetail.wxml']=$gwx('./pages/standardDetail/standardDetail.wxml');
@@ -2142,7 +2157,7 @@ define('common/runtime.js',function(require, module, exports, window, document, 
 })([]);
 });
 define('common/vendor.js',function(require, module, exports, window, document, frames, self, location, navigator, localStorage, history, Caches, screen, alert, confirm, prompt, fetch, XMLHttpRequest, WebSocket, webkit, WeixinJSCore, Reporter, print, WeixinJSBridge){
-(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["common/vendor"],{"05ca":function(t,e,n){"use strict";(function(t){n("61ce");i(n("66fd"));var e=i(n("cc98"));function i(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,n("6e42")["createPage"])},"0de9":function(t,e,n){"use strict";function i(t){var e=Object.prototype.toString.call(t);return e.substring(8,e.length-1)}function o(){for(var t=arguments.length,e=new Array(t),n=0;n<t;n++)e[n]=arguments[n];var o=e.map(function(t){var e=Object.prototype.toString.call(t);if("[object object]"===e.toLowerCase())try{t="---BEGIN:JSON---"+JSON.stringify(t)+"---END:JSON---"}catch(o){t="[object object]"}else if(null===t)t="---NULL---";else if(void 0===t)t="---UNDEFINED---";else{var n=i(t).toUpperCase();t="NUMBER"===n||"BOOLEAN"===n?"---BEGIN:"+n+"---"+t+"---END:"+n+"---":String(t)}return t}),r="";if(o.length>1){var a=o.pop();r=o.join("---COMMA---"),0===a.indexOf(" at ")?r+=a:r+="---COMMA---"+a}else r=o[0];return r}Object.defineProperty(e,"__esModule",{value:!0}),e.default=o},"196c":function(t,e,n){"use strict";function i(){this.x_PI=52.35987755982988,this.PI=3.141592653589793,this.ee=.006693421622965943,this.a=6378245}i.prototype.gcj02towgs84=function(t,e){if(this.out_of_china(t,e))return[t,e];var n=this.transformlat(t-105,e-35),i=this.transformlng(t-105,e-35),o=e/180*this.PI,r=Math.sin(o);r=1-this.ee*r*r;var a=Math.sqrt(r);n=180*n/(this.a*(1-this.ee)/(r*a)*this.PI),i=180*i/(this.a/a*Math.cos(o)*this.PI);var s=e+n,l=t+i;return[2*t-l,2*e-s]},i.prototype.gcj02tobd09=function(t,e){var n=Math.sqrt(t*t+e*e)+2e-5*Math.sin(e*this.x_PI),i=Math.atan2(e,t)+3e-6*Math.cos(t*this.x_PI),o=n*Math.cos(i)+.0065,r=n*Math.sin(i)+.006;return[o,r]},i.prototype.wgs84togcj02=function(t,e){if(this.out_of_china(t,e))return[t,e];var n=this.transformlat(t-105,e-35),i=this.transformlng(t-105,e-35),o=e/180*this.PI,r=Math.sin(o);r=1-this.ee*r*r;var a=Math.sqrt(r);n=180*n/(this.a*(1-this.ee)/(r*a)*this.PI),i=180*i/(this.a/a*Math.cos(o)*this.PI);var s=e+n,l=t+i;return[l,s]},i.prototype.gcj02towgs84=function(t,e){if(this.out_of_china(t,e))return[t,e];var n=this.transformlat(t-105,e-35),i=this.transformlng(t-105,e-35),o=e/180*this.PI,r=Math.sin(o);r=1-this.ee*r*r;var a=Math.sqrt(r);n=180*n/(this.a*(1-this.ee)/(r*a)*this.PI),i=180*i/(this.a/a*Math.cos(o)*this.PI);var s=e+n,l=t+i;return[2*t-l,2*e-s]},i.prototype.transformlat=function(t,e){var n=2*t-100+3*e+.2*e*e+.1*t*e+.2*Math.sqrt(Math.abs(t));return n+=2*(20*Math.sin(6*t*this.PI)+20*Math.sin(2*t*this.PI))/3,n+=2*(20*Math.sin(e*this.PI)+40*Math.sin(e/3*this.PI))/3,n+=2*(160*Math.sin(e/12*this.PI)+320*Math.sin(e*this.PI/30))/3,n},i.prototype.transformlng=function(t,e){var n=300+t+2*e+.1*t*t+.1*t*e+.1*Math.sqrt(Math.abs(t));return n+=2*(20*Math.sin(6*t*this.PI)+20*Math.sin(2*t*this.PI))/3,n+=2*(20*Math.sin(t*this.PI)+40*Math.sin(t/3*this.PI))/3,n+=2*(150*Math.sin(t/12*this.PI)+300*Math.sin(t/30*this.PI))/3,n},i.prototype.out_of_china=function(t,e){return t<72.004||t>137.8347||e<.8293||e>55.8271||!1},t.exports.mapTool=new i},"21a4":function(t,e,n){"use strict";(function(t){n("61ce");i(n("66fd"));var e=i(n("5195"));function i(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,n("6e42")["createPage"])},2515:function(t,e,n){"use strict";(function(t){n("61ce");i(n("66fd"));var e=i(n("067c"));function i(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,n("6e42")["createPage"])},2877:function(t,e,n){"use strict";function i(t,e,n,i,o,r,a,s){var l,c="function"===typeof t?t.options:t;if(e&&(c.render=e,c.staticRenderFns=n,c._compiled=!0),i&&(c.functional=!0),r&&(c._scopeId="data-v-"+r),a?(l=function(t){t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext,t||"undefined"===typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),o&&o.call(this,t),t&&t._registeredComponents&&t._registeredComponents.add(a)},c._ssrRegister=l):o&&(l=s?function(){o.call(this,this.$root.$options.shadowRoot)}:o),l)if(c.functional){c._injectStyles=l;var u=c.render;c.render=function(t,e){return l.call(e),u(t,e)}}else{var f=c.beforeCreate;c.beforeCreate=f?[].concat(f,l):[l]}return{exports:t,options:c}}n.d(e,"a",function(){return i})},"290c":function(t,e,n){"use strict";(function(t,e){n("61ce");var i=a(n("66fd")),o=a(n("b2ea")),r=a(n("2a75"));function a(t){return t&&t.__esModule?t:{default:t}}function s(t){for(var e=1;e<arguments.length;e++){var n=null!=arguments[e]?arguments[e]:{},i=Object.keys(n);"function"===typeof Object.getOwnPropertySymbols&&(i=i.concat(Object.getOwnPropertySymbols(n).filter(function(t){return Object.getOwnPropertyDescriptor(n,t).enumerable}))),i.forEach(function(e){l(t,e,n[e])})}return t}function l(t,e,n){return e in t?Object.defineProperty(t,e,{value:n,enumerable:!0,configurable:!0,writable:!0}):t[e]=n,t}i.default.config.productionTip=!1,t.$on("refreshTasksPage",function(t){r.default.isRefreshTasksPage=t}),t.$on("refreshPollutionPage",function(t){r.default.isRefreshPollutionPage=t}),t.$on("hideSub",function(t){for(var e in r.default.subNvue)r.default.subNvue[e].hide()}),o.default.mpType="app";var c=new i.default(s({},o.default));e(c).$mount()}).call(this,n("6e42")["default"],n("6e42")["createApp"])},"2a75":function(t,e,n){"use strict";(function(e,i){var o=r(n("c0ea"));function r(t){return t&&t.__esModule?t:{default:t}}var a=null,s={},l={},c={},u=["WRY_BZ_LIST","WRY_COMPANY_LIST","WRY_RHKPWK_LIST","WRY_RHKPWD_LIST","WRY_JZGD_LIST","WRY_QTHY_LIST","WRY_JCDW_LIST","WRY_YLJG_LIST","WRY_XQYZ_LIST","WRY_TZC_LIST","WRY_SHUIKU_LIST","WRY_SPT_LIST","WRY_YYC_LIST","WRY_JMJZJZD_LIST","WRY_XSLW_LIST","WRY_XCC_LIST","WRY_CYHY_LIST","WRY_NMSC_LIST","WRY_WSCLC_LIST","WRY_ZZYFLDJD_LIST","WRY_SMYSYZDH_LIST"];function f(t,n,o,r){e.showLoading({mask:!0});var a=e.getStorageSync("token")||"";e.request({url:t,data:n,method:"GET",header:{token:a},complete:function(t){e.hideLoading(),t.data?1==t.data.code?"function"==typeof o&&o(t.data):(console.log(i(t.data," at static\\js\\utils.js:46")),e.showToast({icon:"none",title:t.data.msg||"数据异常"})):"function"==typeof r&&r()}})}function h(t,n,i,o){var r=e.getStorageSync("token")||"";e.request({url:t,data:n,method:"GET",header:{token:r},complete:function(t){t.data?"function"==typeof i&&i(t.data):"function"==typeof o&&o()}})}function p(t,n,i,o){var r=e.getStorageSync("token")||"";e.request({url:t,data:n,method:"GET",header:{token:r},complete:function(t){t.data?1==t.data.code?"function"==typeof i&&i(t.data):"function"==typeof o&&o(t.data):"function"==typeof o&&o()}})}function d(t,n,i,o){var r=e.getStorageSync("token")||"";e.request({url:t,data:n,method:"POST",header:{"Content-Type":"application/x-www-form-urlencoded",token:r},success:function(t){"function"==typeof i&&i(t.data)}})}function g(t,n,i,o){e.showLoading({mask:!0});var r=e.getStorageSync("token")||"";e.request({url:t,data:n,method:"POST",header:{"Content-Type":"application/x-www-form-urlencoded",token:r},complete:function(t){e.hideLoading(),t.data?1==t.data.code?"function"==typeof i&&i(t.data):e.showToast({icon:"none",title:t.data.msg||"数据异常"}):"function"==typeof o&&o()}})}function v(t){b(t.pointPhoto,function(e,n){t.pointPhoto=e,console.log(i(t," at static\\js\\utils.js:148")),_(o.default.TASK_PATROL_POINT_UPDATE,t)},1,function(e){v(t)})}function y(t){b(t.rectificationPhoto,function(e,n){t.rectificationPhoto=e,_(o.default.TASK_RECTIFICATION_UPDATE,t)})}function x(t){for(var e=0,n=0;n<t.length;n++)t[n].problemPhoto&&(e++,b(t[n].problemPhoto,function(n,i){e--,t[i].problemPhoto=n,0==e&&(t=JSON.stringify(t),m(o.default.TASK_PATROL_POINT_PROBLEM_ADD_BATCH,t))},n,function(e){x(t)}))}function _(t,e){p(t,e,function(t){console.log(i("上传成功"," at static\\js\\utils.js:180"))},function(t){_(e)})}function m(t,e){p(t,{data:e},function(t){console.log(i("上传成功"," at static\\js\\utils.js:187"))},function(t){m(e)})}function b(t,e,n,i){t=t.split(";");for(var r=[],a=0,s=0;s<t.length;s++)a++,A(o.default.UPLOAD_UPLOAD,t[s],function(t){t=JSON.parse(t),r.push(t.data),a--,0==a&&(r=r.join(";"),e(r,n))},function(t){i(t)})}function A(t,n,i,o){var r=e.getStorageSync("token")||"";e.uploadFile({url:t,fileType:"image",filePath:n,name:"file",header:{token:r},success:function(t){"000000"!=t.data?"function"==typeof i&&i(t.data):"function"==typeof o&&o(n)},fail:function(){"function"==typeof o&&o(n)}})}function S(t,n){e.showToast({icon:"success",title:t}),"function"==typeof n&&setTimeout(n,1500)}var P=!0,T=!0,w=function(t){e.connectSocket({url:o.default.WEBSOCKET+t,header:{"content-type":"application/json"},method:"GET"})};e.onSocketOpen(function(t){console.log(i("WebSocket连接已打开！"," at static\\js\\utils.js:259"))});var O=function t(){a=setInterval(function(){e.getLocation({type:"wgs84",success:function(t){e.setStorageSync("userLocation",{longitude:t.longitude,latitude:t.latitude})},fail:function(n){console.log(i(n," at static\\js\\utils.js:270")),clearInterval(a),e.showModal({title:"获取定位权限失败",content:"请打开手机定位权限",showCancel:!1,success:function(n){console.log(i(n.confirm," at static\\js\\utils.js:277")),e.setStorageSync("userLocation",{longitude:0,latitude:0}),t()},fail:function(t){console.log(i(t," at static\\js\\utils.js:282"))}})}})},1e3)},L=function(t){s[t]&&clearInterval(s[t])},k=function(){clearInterval(a)},I=function(t){s[t]=setInterval(function(){var n=this,i=e.getStorageSync("userLocation"),r=(i.longitude,i.latitude,l[t]?l[t]:[]),a=new Date;r.push({patrolTaskId:t,longitude:i.longitude,latitude:i.latitude,locationTime:a.getTime()}),l[t]=r,d(o.default.TASK_PATROL_PATH_ADD_BATCH,{data:JSON.stringify(r),id:t},function(i){if(2==i.code){L(t);var o=e.getStorageSync("onTask")?e.getStorageSync("onTask"):[];o.splice(o.indexOf(n.taskId)),e.setStorageSync("onTask",o)}l[t]=[]})},6e3)};function M(){for(var t=0;t<u.length;t++)(function(t){h(o.default[t],"",function(n){e.setStorageSync(t,n)})})(u[t])}t.exports={getRequest:f,getRequestNo:p,getRequestPc:h,postRequest:g,postRequestNo:d,uploadFile:A,showSuccess:S,isRefreshTasksPage:P,isRefreshPollutionPage:T,webSocket:w,upLoction:I,unGetLocation:k,unUpLoction:L,getLocation:O,upProblemTeams:x,completeTask:v,rectificationTaskDetail:y,subNvue:c,getWryMap:M}}).call(this,n("6e42")["default"],n("0de9")["default"])},"57fd":function(t,e,n){"use strict";(function(t){n("61ce");i(n("66fd"));var e=i(n("e15c"));function i(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,n("6e42")["createPage"])},"5d03":function(t,e,n){"use strict";(function(t){n("61ce");i(n("66fd"));var e=i(n("8bb0"));function i(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,n("6e42")["createPage"])},"5f4d":function(t,e,n){"use strict";(function(t){n("61ce");i(n("66fd"));var e=i(n("d2c1"));function i(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,n("6e42")["createPage"])},"5f6c":function(t,e,n){"use strict";(function(t){n("61ce");i(n("66fd"));var e=i(n("c92f"));function i(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,n("6e42")["createPage"])},"61ce":function(t,e,n){},"66b5":function(t,e,n){"use strict";(function(t){n("61ce");i(n("66fd"));var e=i(n("e4e0"));function i(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,n("6e42")["createPage"])},"66fd":function(t,e,n){"use strict";n.r(e),function(t){
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["common/vendor"],{"05ca":function(t,e,n){"use strict";(function(t){n("61ce");i(n("66fd"));var e=i(n("cc98"));function i(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,n("6e42")["createPage"])},"0de9":function(t,e,n){"use strict";function i(t){var e=Object.prototype.toString.call(t);return e.substring(8,e.length-1)}function o(){for(var t=arguments.length,e=new Array(t),n=0;n<t;n++)e[n]=arguments[n];var o=e.map(function(t){var e=Object.prototype.toString.call(t);if("[object object]"===e.toLowerCase())try{t="---BEGIN:JSON---"+JSON.stringify(t)+"---END:JSON---"}catch(o){t="[object object]"}else if(null===t)t="---NULL---";else if(void 0===t)t="---UNDEFINED---";else{var n=i(t).toUpperCase();t="NUMBER"===n||"BOOLEAN"===n?"---BEGIN:"+n+"---"+t+"---END:"+n+"---":String(t)}return t}),r="";if(o.length>1){var a=o.pop();r=o.join("---COMMA---"),0===a.indexOf(" at ")?r+=a:r+="---COMMA---"+a}else r=o[0];return r}Object.defineProperty(e,"__esModule",{value:!0}),e.default=o},"196c":function(t,e,n){"use strict";function i(){this.x_PI=52.35987755982988,this.PI=3.141592653589793,this.ee=.006693421622965943,this.a=6378245}i.prototype.gcj02towgs84=function(t,e){if(this.out_of_china(t,e))return[t,e];var n=this.transformlat(t-105,e-35),i=this.transformlng(t-105,e-35),o=e/180*this.PI,r=Math.sin(o);r=1-this.ee*r*r;var a=Math.sqrt(r);n=180*n/(this.a*(1-this.ee)/(r*a)*this.PI),i=180*i/(this.a/a*Math.cos(o)*this.PI);var s=e+n,l=t+i;return[2*t-l,2*e-s]},i.prototype.gcj02tobd09=function(t,e){var n=Math.sqrt(t*t+e*e)+2e-5*Math.sin(e*this.x_PI),i=Math.atan2(e,t)+3e-6*Math.cos(t*this.x_PI),o=n*Math.cos(i)+.0065,r=n*Math.sin(i)+.006;return[o,r]},i.prototype.wgs84togcj02=function(t,e){if(this.out_of_china(t,e))return[t,e];var n=this.transformlat(t-105,e-35),i=this.transformlng(t-105,e-35),o=e/180*this.PI,r=Math.sin(o);r=1-this.ee*r*r;var a=Math.sqrt(r);n=180*n/(this.a*(1-this.ee)/(r*a)*this.PI),i=180*i/(this.a/a*Math.cos(o)*this.PI);var s=e+n,l=t+i;return[l,s]},i.prototype.gcj02towgs84=function(t,e){if(this.out_of_china(t,e))return[t,e];var n=this.transformlat(t-105,e-35),i=this.transformlng(t-105,e-35),o=e/180*this.PI,r=Math.sin(o);r=1-this.ee*r*r;var a=Math.sqrt(r);n=180*n/(this.a*(1-this.ee)/(r*a)*this.PI),i=180*i/(this.a/a*Math.cos(o)*this.PI);var s=e+n,l=t+i;return[2*t-l,2*e-s]},i.prototype.transformlat=function(t,e){var n=2*t-100+3*e+.2*e*e+.1*t*e+.2*Math.sqrt(Math.abs(t));return n+=2*(20*Math.sin(6*t*this.PI)+20*Math.sin(2*t*this.PI))/3,n+=2*(20*Math.sin(e*this.PI)+40*Math.sin(e/3*this.PI))/3,n+=2*(160*Math.sin(e/12*this.PI)+320*Math.sin(e*this.PI/30))/3,n},i.prototype.transformlng=function(t,e){var n=300+t+2*e+.1*t*t+.1*t*e+.1*Math.sqrt(Math.abs(t));return n+=2*(20*Math.sin(6*t*this.PI)+20*Math.sin(2*t*this.PI))/3,n+=2*(20*Math.sin(t*this.PI)+40*Math.sin(t/3*this.PI))/3,n+=2*(150*Math.sin(t/12*this.PI)+300*Math.sin(t/30*this.PI))/3,n},i.prototype.out_of_china=function(t,e){return t<72.004||t>137.8347||e<.8293||e>55.8271||!1},t.exports.mapTool=new i},"21a4":function(t,e,n){"use strict";(function(t){n("61ce");i(n("66fd"));var e=i(n("5195"));function i(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,n("6e42")["createPage"])},2515:function(t,e,n){"use strict";(function(t){n("61ce");i(n("66fd"));var e=i(n("067c"));function i(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,n("6e42")["createPage"])},2877:function(t,e,n){"use strict";function i(t,e,n,i,o,r,a,s){var l,c="function"===typeof t?t.options:t;if(e&&(c.render=e,c.staticRenderFns=n,c._compiled=!0),i&&(c.functional=!0),r&&(c._scopeId="data-v-"+r),a?(l=function(t){t=t||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext,t||"undefined"===typeof __VUE_SSR_CONTEXT__||(t=__VUE_SSR_CONTEXT__),o&&o.call(this,t),t&&t._registeredComponents&&t._registeredComponents.add(a)},c._ssrRegister=l):o&&(l=s?function(){o.call(this,this.$root.$options.shadowRoot)}:o),l)if(c.functional){c._injectStyles=l;var u=c.render;c.render=function(t,e){return l.call(e),u(t,e)}}else{var f=c.beforeCreate;c.beforeCreate=f?[].concat(f,l):[l]}return{exports:t,options:c}}n.d(e,"a",function(){return i})},"290c":function(t,e,n){"use strict";(function(t,e){n("61ce");var i=a(n("66fd")),o=a(n("b2ea")),r=a(n("2a75"));function a(t){return t&&t.__esModule?t:{default:t}}function s(t){for(var e=1;e<arguments.length;e++){var n=null!=arguments[e]?arguments[e]:{},i=Object.keys(n);"function"===typeof Object.getOwnPropertySymbols&&(i=i.concat(Object.getOwnPropertySymbols(n).filter(function(t){return Object.getOwnPropertyDescriptor(n,t).enumerable}))),i.forEach(function(e){l(t,e,n[e])})}return t}function l(t,e,n){return e in t?Object.defineProperty(t,e,{value:n,enumerable:!0,configurable:!0,writable:!0}):t[e]=n,t}i.default.config.productionTip=!1,t.$on("refreshTasksPage",function(t){r.default.isRefreshTasksPage=t}),t.$on("refreshPollutionPage",function(t){r.default.isRefreshPollutionPage=t}),t.$on("hideSub",function(t){for(var e in r.default.subNvue)r.default.subNvue[e].hide()}),o.default.mpType="app";var c=new i.default(s({},o.default));e(c).$mount()}).call(this,n("6e42")["default"],n("6e42")["createApp"])},"2a75":function(t,e,n){"use strict";(function(e,i){var o=r(n("c0ea"));function r(t){return t&&t.__esModule?t:{default:t}}var a=null,s={},l={},c={},u={},f={},h=["WRY_BZ_LIST","WRY_COMPANY_LIST","WRY_RHKPWK_LIST","WRY_RHKPWD_LIST","WRY_JZGD_LIST","WRY_QTHY_LIST","WRY_JCDW_LIST","WRY_YLJG_LIST","WRY_XQYZ_LIST","WRY_TZC_LIST","WRY_SHUIKU_LIST","WRY_SPT_LIST","WRY_YYC_LIST","WRY_JMJZJZD_LIST","WRY_XSLW_LIST","WRY_XCC_LIST","WRY_CYHY_LIST","WRY_NMSC_LIST","WRY_WSCLC_LIST","WRY_ZZYFLDJD_LIST","WRY_SMYSYZDH_LIST"];function p(t,n,o,r){e.showLoading({mask:!0});var a=e.getStorageSync("token")||"";e.request({url:t,data:n,method:"GET",header:{token:a},complete:function(t){e.hideLoading(),t.data?1==t.data.code?"function"==typeof o&&o(t.data):(console.log(i(t.data," at static\\js\\utils.js:48")),e.showToast({icon:"none",title:t.data.msg||"数据异常"})):"function"==typeof r&&r()}})}function d(t,n,i,o){var r=e.getStorageSync("token")||"";e.request({url:t,data:n,method:"GET",header:{token:r},complete:function(t){t.data?"function"==typeof i&&i(t.data):"function"==typeof o&&o()}})}function g(t,n,i,o){var r=e.getStorageSync("token")||"";e.request({url:t,data:n,method:"GET",header:{token:r},complete:function(t){t.data?1==t.data.code?"function"==typeof i&&i(t.data):"function"==typeof o&&o(t.data):"function"==typeof o&&o()}})}function v(t,n,i,o){var r=e.getStorageSync("token")||"";e.request({url:t,data:n,method:"POST",header:{"Content-Type":"application/x-www-form-urlencoded",token:r},success:function(t){"function"==typeof i&&i(t.data)}})}function y(t,n,i,o){e.showLoading({mask:!0});var r=e.getStorageSync("token")||"";e.request({url:t,data:n,method:"POST",header:{"Content-Type":"application/x-www-form-urlencoded",token:r},complete:function(t){e.hideLoading(),t.data?1==t.data.code?"function"==typeof i&&i(t.data):e.showToast({icon:"none",title:t.data.msg||"数据异常"}):"function"==typeof o&&o()}})}function x(t){S(t.pointPhoto,function(e,n){t.pointPhoto=e,console.log(i(t," at static\\js\\utils.js:150")),b(o.default.TASK_PATROL_POINT_UPDATE,t)},1,function(e){x(t)})}function _(t){S(t.rectificationPhoto,function(e,n){t.rectificationPhoto=e,b(o.default.TASK_RECTIFICATION_UPDATE,t)})}function m(t){for(var e=0,n=0;n<t.length;n++)t[n].problemPhoto&&(e++,S(t[n].problemPhoto,function(n,i){e--,t[i].problemPhoto=n,0==e&&(t=JSON.stringify(t),A(o.default.TASK_PATROL_POINT_PROBLEM_ADD_BATCH,t))},n,function(e){m(t)}))}function b(t,e){g(t,e,function(t){console.log(i("上传成功"," at static\\js\\utils.js:182"))},function(t){b(e)})}function A(t,e){g(t,{data:e},function(t){console.log(i("上传成功"," at static\\js\\utils.js:189"))},function(t){A(e)})}function S(t,e,n,i){t=t.split(";");for(var r=[],a=0,s=0;s<t.length;s++)a++,P(o.default.UPLOAD_UPLOAD,t[s],function(t){t=JSON.parse(t),r.push(t.data),a--,0==a&&(r=r.join(";"),e(r,n))},function(t){i(t)})}function P(t,n,i,o){var r=e.getStorageSync("token")||"";e.uploadFile({url:t,fileType:"image",filePath:n,name:"file",header:{token:r},success:function(t){"000000"!=t.data?"function"==typeof i&&i(t.data):"function"==typeof o&&o(n)},fail:function(){"function"==typeof o&&o(n)}})}function T(t,n){e.showToast({icon:"success",title:t}),"function"==typeof n&&setTimeout(n,1500)}var w=!0,O=!0,L=function(t){e.connectSocket({url:o.default.WEBSOCKET+t,header:{"content-type":"application/json"},method:"GET"})};e.onSocketOpen(function(t){console.log(i("WebSocket连接已打开！"," at static\\js\\utils.js:261"))});var k=function t(){a=setInterval(function(){e.getLocation({type:"wgs84",success:function(t){e.setStorageSync("userLocation",{longitude:t.longitude,latitude:t.latitude})},fail:function(n){console.log(i(n," at static\\js\\utils.js:272")),clearInterval(a),e.showModal({title:"获取定位权限失败",content:"请打开手机定位权限",showCancel:!1,success:function(n){console.log(i(n.confirm," at static\\js\\utils.js:279")),e.setStorageSync("userLocation",{longitude:0,latitude:0}),t()},fail:function(t){console.log(i(t," at static\\js\\utils.js:284"))}})}})},1e3)},I=function(t){s[t]&&clearInterval(s[t])},M=function(){clearInterval(a)},R=function(t){s[t]=setInterval(function(){var n=this,i=e.getStorageSync("userLocation"),r=(i.longitude,i.latitude,l[t]?l[t]:[]),a=new Date;r.push({patrolTaskId:t,longitude:i.longitude,latitude:i.latitude,locationTime:a.getTime()}),l[t]=r,v(o.default.TASK_PATROL_PATH_ADD_BATCH,{data:JSON.stringify(r),id:t},function(i){if(2==i.code){I(t);var o=e.getStorageSync("onTask")?e.getStorageSync("onTask"):[];o.splice(o.indexOf(n.taskId)),e.setStorageSync("onTask",o)}l[t]=[]})},6e3)};function $(){for(var t=0;t<h.length;t++)(function(t){d(o.default[t],"",function(n){e.setStorageSync(t,n)})})(h[t])}t.exports={getRequest:p,getRequestNo:g,getRequestPc:d,postRequest:y,postRequestNo:v,uploadFile:P,showSuccess:T,isRefreshTasksPage:w,isRefreshPollutionPage:O,webSocket:L,upLoction:R,unGetLocation:M,unUpLoction:I,getLocation:k,upProblemTeams:m,completeTask:x,rectificationTaskDetail:_,subNvue:c,getWryMap:$,taskInfo:u,pollutionInfo:f}}).call(this,n("6e42")["default"],n("0de9")["default"])},"3ec2":function(t,e,n){"use strict";(function(t){n("61ce");i(n("66fd"));var e=i(n("a142"));function i(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,n("6e42")["createPage"])},"57fd":function(t,e,n){"use strict";(function(t){n("61ce");i(n("66fd"));var e=i(n("e15c"));function i(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,n("6e42")["createPage"])},"5d03":function(t,e,n){"use strict";(function(t){n("61ce");i(n("66fd"));var e=i(n("8bb0"));function i(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,n("6e42")["createPage"])},"5f4d":function(t,e,n){"use strict";(function(t){n("61ce");i(n("66fd"));var e=i(n("d2c1"));function i(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,n("6e42")["createPage"])},"5f6c":function(t,e,n){"use strict";(function(t){n("61ce");i(n("66fd"));var e=i(n("c92f"));function i(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,n("6e42")["createPage"])},"61ce":function(t,e,n){},"66b5":function(t,e,n){"use strict";(function(t){n("61ce");i(n("66fd"));var e=i(n("e4e0"));function i(t){return t&&t.__esModule?t:{default:t}}t(e.default)}).call(this,n("6e42")["createPage"])},"66fd":function(t,e,n){"use strict";n.r(e),function(t){
 /*!
  * Vue.js v2.6.10
  * (c) 2014-2019 Evan You
@@ -2466,6 +2481,8 @@ var timer_getLoction = null;
 var timer_upLoction = {};
 var upLoctionData = {};
 var subNvue = {};
+var taskInfo = {};
+var pollutionInfo = {};
 var arrWry = ["WRY_BZ_LIST", "WRY_COMPANY_LIST", "WRY_RHKPWK_LIST", "WRY_RHKPWD_LIST", "WRY_JZGD_LIST", "WRY_QTHY_LIST", "WRY_JCDW_LIST", "WRY_YLJG_LIST", "WRY_XQYZ_LIST", "WRY_TZC_LIST", "WRY_SHUIKU_LIST", "WRY_SPT_LIST", "WRY_YYC_LIST", "WRY_JMJZJZD_LIST", "WRY_XSLW_LIST", "WRY_XCC_LIST", "WRY_CYHY_LIST", "WRY_NMSC_LIST", "WRY_WSCLC_LIST", "WRY_ZZYFLDJD_LIST", "WRY_SMYSYZDH_LIST"];
 
 function getRequest(url, data, call, error) {
@@ -2833,7 +2850,9 @@ module.exports = {
   completeTask: completeTask,
   rectificationTaskDetail: rectificationTaskDetail,
   subNvue: subNvue,
-  getWryMap: getWryMap
+  getWryMap: getWryMap,
+  taskInfo: taskInfo,
+  pollutionInfo: pollutionInfo
 };
 });
 
@@ -3691,10 +3710,10 @@ define('components/problemMode/mode1.js',function(require, module, exports, wind
       Object.defineProperty(i, "__esModule", {
         value: !0
       }), i.default = void 0;
-      var o = s(e("c0ea")),
-          r = s(e("2a75"));
+      var o = r(e("c0ea")),
+          s = r(e("2a75"));
 
-      function s(t) {
+      function r(t) {
         return t && t.__esModule ? t : {
           default: t
         };
@@ -3751,7 +3770,7 @@ define('components/problemMode/mode1.js',function(require, module, exports, wind
           },
           getImgUrl: function getImgUrl(t) {
             var i = this;
-            r.default.uploadFile(o.default.UPLOAD_UPLOAD, t, function (t) {
+            s.default.uploadFile(o.default.UPLOAD_UPLOAD, t, function (t) {
               t = JSON.parse(t), i.pictures.push(t.data);
             });
           },
@@ -3759,36 +3778,35 @@ define('components/problemMode/mode1.js',function(require, module, exports, wind
             this.$emit("hideMode");
           },
           confirm: function confirm() {
-            var t = {
-              problemDetail: this.problemDetail,
-              problemPhoto: this.pictures.join(";"),
-              rectification: this.rectification,
-              rectificationProgress: this.rectificationProgress,
-              rectificationExpire: this.rectificationExpire,
-              disposeSuggest: this.disposeSuggest
-            };
-            this.$emit("confirmMdoe", t);
+            if (0 != this.pictures.length) {
+              var i = {
+                problemDetail: this.problemDetail,
+                problemPhoto: this.pictures.join(";"),
+                rectification: this.rectification,
+                rectificationProgress: this.rectificationProgress,
+                rectificationExpire: this.rectificationExpire,
+                disposeSuggest: this.disposeSuggest
+              };
+              this.$emit("confirmMdoe", i);
+            } else t.showToast({
+              icon: "none",
+              title: "请拍照上传！"
+            });
           },
           getDate: function getDate(t) {
             var i = new Date(),
                 e = i.getFullYear(),
                 o = i.getMonth() + 1,
-                r = i.getDate();
-            return "start" === t ? e -= 60 : "end" === t && (e += 2), o = o > 9 ? o : "0" + o, r = r > 9 ? r : "0" + r, "".concat(e, "-").concat(o, "-").concat(r);
+                s = i.getDate();
+            return "start" === t ? e -= 60 : "end" === t && (e += 2), o = o > 9 ? o : "0" + o, s = s > 9 ? s : "0" + s, "".concat(e, "-").concat(o, "-").concat(s);
           }
         }
       };
       i.default = c;
     }).call(this, e("6e42")["default"]);
   },
-  "21f6": function f6(t, i, e) {
-    "use strict";
-
-    var o = e("fad7"),
-        r = e.n(o);
-    r.a;
-  },
-  "80a4": function a4(t, i, e) {
+  2992: function _(t, i, e) {},
+  "5fb9": function fb9(t, i, e) {
     "use strict";
 
     var o = function o() {
@@ -3796,32 +3814,39 @@ define('components/problemMode/mode1.js',function(require, module, exports, wind
           i = t.$createElement;
       t._self._c;
     },
-        r = [];
+        s = [];
 
     e.d(i, "a", function () {
       return o;
     }), e.d(i, "b", function () {
-      return r;
+      return s;
     });
+  },
+  "89b2": function b2(t, i, e) {
+    "use strict";
+
+    var o = e("2992"),
+        s = e.n(o);
+    s.a;
   },
   "954a": function a(t, i, e) {
     "use strict";
 
     e.r(i);
-    var o = e("80a4"),
-        r = e("f733");
+    var o = e("5fb9"),
+        s = e("f733");
 
-    for (var s in r) {
-      "default" !== s && function (t) {
+    for (var r in s) {
+      "default" !== r && function (t) {
         e.d(i, t, function () {
-          return r[t];
+          return s[t];
         });
-      }(s);
+      }(r);
     }
 
-    e("21f6");
+    e("89b2");
     var c = e("2877"),
-        n = Object(c["a"])(r["default"], o["a"], o["b"], !1, null, "426ed982", null);
+        n = Object(c["a"])(s["default"], o["a"], o["b"], !1, null, "5bc6f3ea", null);
     i["default"] = n.exports;
   },
   f733: function f733(t, i, e) {
@@ -3829,19 +3854,18 @@ define('components/problemMode/mode1.js',function(require, module, exports, wind
 
     e.r(i);
     var o = e("203f"),
-        r = e.n(o);
+        s = e.n(o);
 
-    for (var s in o) {
-      "default" !== s && function (t) {
+    for (var r in o) {
+      "default" !== r && function (t) {
         e.d(i, t, function () {
           return o[t];
         });
-      }(s);
+      }(r);
     }
 
-    i["default"] = r.a;
-  },
-  fad7: function fad7(t, i, e) {}
+    i["default"] = s.a;
+  }
 }]);
 ;
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push(['components/problemMode/mode1-create-component', {
@@ -3864,7 +3888,15 @@ define('components/taskDetailCard.js',function(require, module, exports, window,
       Object.defineProperty(n, "__esModule", {
         value: !0
       }), n.default = void 0;
-      var e = {
+      var a = u(e("2a75"));
+
+      function u(t) {
+        return t && t.__esModule ? t : {
+          default: t
+        };
+      }
+
+      var o = {
         data: function data() {
           return {};
         },
@@ -3872,23 +3904,16 @@ define('components/taskDetailCard.js',function(require, module, exports, window,
         created: function created() {},
         methods: {
           toLocation: function toLocation(n) {
-            t.setStorageSync("taskInfo", n), t.navigateTo({
+            a.default.pollutionInfo = n, t.navigateTo({
               url: "/pages/location/location"
             });
           }
         }
       };
-      n.default = e;
+      n.default = o;
     }).call(this, e("6e42")["default"]);
   },
-  "3af1": function af1(t, n, e) {
-    "use strict";
-
-    var a = e("de16"),
-        o = e.n(a);
-    o.a;
-  },
-  cbec: function cbec(t, n, e) {
+  "653e": function e(t, n, _e) {
     "use strict";
 
     var a = function a() {
@@ -3896,51 +3921,58 @@ define('components/taskDetailCard.js',function(require, module, exports, window,
           n = t.$createElement;
       t._self._c;
     },
-        o = [];
+        u = [];
 
-    e.d(n, "a", function () {
+    _e.d(n, "a", function () {
       return a;
-    }), e.d(n, "b", function () {
-      return o;
+    }), _e.d(n, "b", function () {
+      return u;
     });
   },
-  de16: function de16(t, n, e) {},
   e557: function e557(t, n, e) {
     "use strict";
 
     e.r(n);
     var a = e("0ef4"),
-        o = e.n(a);
+        u = e.n(a);
 
-    for (var u in a) {
-      "default" !== u && function (t) {
+    for (var o in a) {
+      "default" !== o && function (t) {
         e.d(n, t, function () {
           return a[t];
         });
-      }(u);
+      }(o);
     }
 
-    n["default"] = o.a;
+    n["default"] = u.a;
+  },
+  eca0: function eca0(t, n, e) {},
+  f485: function f485(t, n, e) {
+    "use strict";
+
+    var a = e("eca0"),
+        u = e.n(a);
+    u.a;
   },
   f80d: function f80d(t, n, e) {
     "use strict";
 
     e.r(n);
-    var a = e("cbec"),
-        o = e("e557");
+    var a = e("653e"),
+        u = e("e557");
 
-    for (var u in o) {
-      "default" !== u && function (t) {
+    for (var o in u) {
+      "default" !== o && function (t) {
         e.d(n, t, function () {
-          return o[t];
+          return u[t];
         });
-      }(u);
+      }(o);
     }
 
-    e("3af1");
-    var c = e("2877"),
-        r = Object(c["a"])(o["default"], a["a"], a["b"], !1, null, "114e971d", null);
-    n["default"] = r.exports;
+    e("f485");
+    var r = e("2877"),
+        c = Object(r["a"])(u["default"], a["a"], a["b"], !1, null, "69ad0642", null);
+    n["default"] = c.exports;
   }
 }]);
 ;
@@ -4099,13 +4131,13 @@ require('components/uni-popup/uni-popup.js');
 __wxRoute = 'pages/login/login';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/login/login.js';
 
 define('pages/login/login.js',function(require, module, exports, window, document, frames, self, location, navigator, localStorage, history, Caches, screen, alert, confirm, prompt, fetch, XMLHttpRequest, WebSocket, webkit, WeixinJSCore, Reporter, print, WeixinJSBridge){
-(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/login/login"],{1610:function(n,t,e){"use strict";var o=function(){var n=this,t=n.$createElement;n._self._c},a=[];e.d(t,"a",function(){return o}),e.d(t,"b",function(){return a})},"21ce":function(n,t,e){"use strict";var o=e("d6e8"),a=e.n(o);a.a},"3d2c":function(n,t,e){"use strict";e.r(t);var o=e("c41e"),a=e.n(o);for(var u in o)"default"!==u&&function(n){e.d(t,n,function(){return o[n]})}(u);t["default"]=a.a},"991b":function(n,t,e){"use strict";e.r(t);var o=e("1610"),a=e("3d2c");for(var u in a)"default"!==u&&function(n){e.d(t,n,function(){return a[n]})}(u);e("21ce");var i=e("2877"),r=Object(i["a"])(a["default"],o["a"],o["b"],!1,null,"c0ea383a",null);t["default"]=r.exports},c41e:function(n,t,e){"use strict";(function(n,o){Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var a=i(e("c0ea")),u=i(e("2a75"));e("196c");function i(n){return n&&n.__esModule?n:{default:n}}var r={data:function(){return{loginInfo:{username:"dengmin",password:"123456"},url:"http://122.114.177.198"}},onLoad:function(){this.url=n.getStorageSync("url")?n.getStorageSync("url"):"http://122.114.177.198",this.loginInfo=n.getStorageSync("loginInfo")?n.getStorageSync("loginInfo"):{username:"liuyouzhong",password:"123456"}},methods:{toLogin:function(){var t=this;u.default.postRequest(a.default.LOGIN_LOGIN,this.loginInfo,function(e){n.setStorageSync("token",e.data.token),n.setStorageSync("userInfo",e.data.user),n.setStorageSync("loginInfo",t.loginInfo);for(var o=n.getStorageSync("onTask")?n.getStorageSync("onTask"):[],a=0;a<o.length;a++)u.default.upLoction(o[a]);n.switchTab({url:"/pages/home/home"})},function(t){n.showToast({icon:"none",title:"网络异常"})})},getUserName:function(n){this.loginInfo.username=n.detail.value},getPassWord:function(n){console.log(o(n.detail.value," at pages\\login\\login.vue:77")),this.loginInfo.password=n.detail.value},getUrl:function(n){this.url=n.detail.value},submitUrl:function(){n.setStorageSync("url",this.url),n.showToast({title:"配置成功，请退出重新进入",icon:"none"})}}};t.default=r}).call(this,e("6e42")["default"],e("0de9")["default"])},d6e8:function(n,t,e){}},[["679b","common/runtime","common/vendor"]]]);
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/login/login"],{"2b67":function(t,n,e){"use strict";var o=function(){var t=this,n=t.$createElement;t._self._c},a=[];e.d(n,"a",function(){return o}),e.d(n,"b",function(){return a})},"3d2c":function(t,n,e){"use strict";e.r(n);var o=e("c41e"),a=e.n(o);for(var u in o)"default"!==u&&function(t){e.d(n,t,function(){return o[t]})}(u);n["default"]=a.a},5558:function(t,n,e){},6433:function(t,n,e){"use strict";var o=e("5558"),a=e.n(o);a.a},"991b":function(t,n,e){"use strict";e.r(n);var o=e("2b67"),a=e("3d2c");for(var u in a)"default"!==u&&function(t){e.d(n,t,function(){return a[t]})}(u);e("6433");var i=e("2877"),r=Object(i["a"])(a["default"],o["a"],o["b"],!1,null,"139efa42",null);n["default"]=r.exports},c41e:function(t,n,e){"use strict";(function(t,o){Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var a=i(e("c0ea")),u=i(e("2a75"));e("196c");function i(t){return t&&t.__esModule?t:{default:t}}var r={data:function(){return{loginInfo:{username:"dengmin",password:"123456"},url:"http://122.114.177.198"}},onLoad:function(){this.url=t.getStorageSync("url")?t.getStorageSync("url"):"http://122.114.177.198",this.loginInfo=t.getStorageSync("loginInfo")?t.getStorageSync("loginInfo"):{username:"liuyouzhong",password:"123456"}},methods:{toLogin:function(){var n=this;u.default.postRequest(a.default.LOGIN_LOGIN,this.loginInfo,function(e){t.setStorageSync("token",e.data.token),t.setStorageSync("userInfo",e.data.user),t.setStorageSync("loginInfo",n.loginInfo);for(var o=e.data.patrolTask?e.data.patrolTask:[],a=0;a<o.length;a++)u.default.upLoction(o[a].id);t.switchTab({url:"/pages/home/home"})},function(n){t.showToast({icon:"none",title:"网络异常"})})},getUserName:function(t){this.loginInfo.username=t.detail.value},getPassWord:function(t){console.log(o(t.detail.value," at pages\\login\\login.vue:78")),this.loginInfo.password=t.detail.value},getUrl:function(t){this.url=t.detail.value},submitUrl:function(){t.setStorageSync("url",this.url),t.showToast({title:"配置成功，请退出重新进入",icon:"none"})}}};n.default=r}).call(this,e("6e42")["default"],e("0de9")["default"])}},[["679b","common/runtime","common/vendor"]]]);
 });
 require('pages/login/login.js');
 __wxRoute = 'pages/home/home';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/home/home.js';
 
 define('pages/home/home.js',function(require, module, exports, window, document, frames, self, location, navigator, localStorage, history, Caches, screen, alert, confirm, prompt, fetch, XMLHttpRequest, WebSocket, webkit, WeixinJSCore, Reporter, print, WeixinJSBridge){
-(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/home/home"],{"0773":function(t,e,n){"use strict";n.r(e);var a=n("1d07"),i=n.n(a);for(var o in a)"default"!==o&&function(t){n.d(e,t,function(){return a[t]})}(o);e["default"]=i.a},"1d07":function(t,e,n){"use strict";(function(t){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var a=o(n("c0ea")),i=o(n("2a75"));function o(t){return t&&t.__esModule?t:{default:t}}var s=function(){return n.e("components/bw-swiper/bw-swiper").then(n.bind(null,"17ee"))},r={data:function(){return{latitude:50.64356722667575,longitude:166.57172588823505,tasks:"",setH:100,reportTop:0,covers:[],userInfo:"",examine_1:{},examine_2:{},examine_3:{},examine_4:{},tongji:[],swiperList:[{url:"../../static/images/home/picture1.png"},{url:"../../static/images/home/picture2.png"},{url:"../../static/images/home/picture3.png"},{url:"../../static/images/home/picture4.png"},{url:"../../static/images/home/picture5.png"},{url:"../../static/images/home/picture6.png"},{url:"../../static/images/home/picture7.png"},{url:"../../static/images/home/picture8.png"},{url:"../../static/images/home/picture9.png"}]}},components:{BwSwiper:s},created:function(){this.userInfo=t.getStorageSync("userInfo");var e=t.getSystemInfoSync().windowHeight,n=t.getSystemInfoSync().windowWidth;this.setH=e-n/750*350,this.reportTop=e-n/750*513-10,this.latitude=t.getStorageSync("userLocation").latitude,this.longitude=t.getStorageSync("userLocation").longitude;var a=this;t.onSocketMessage(function(t){a.covers=JSON.parse(t.data)})},onShow:function(){this.getTask(),this.getSituation("examine_1",1,1),this.getSituation("examine_2",5,1),this.getSituation("examine_3",2,1),this.getSituation("examine_4",6,1),t.$emit("hideSub",!1),this.getTongji()},methods:{getTask:function(){var e=this;i.default.getRequestNo(a.default.TASK_INDEX2,{uid:this.userInfo.id},function(n){t.setStorageSync("home_tasks",n.data),e.tasks=n.data},function(n){e.tasks=t.getStorageSync("home_tasks")?t.getStorageSync("home_tasks"):e.tasks})},getTongji:function(){var e=this;i.default.getRequestPc(a.default.QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI,{year:2019,month:4},function(n){t.setStorageSync("home_tongji",n),n=e.getNum(n),e.tongji=n},function(n){e.tongji=t.getStorageSync("home_tongji")?t.getStorageSync("home_tongji"):e.tongji})},getNum:function(t){for(var e=0;e<t.length;e++)switch(t[e].slevel.toString()){case"1":t[e].slevel="Ⅰ";break;case"2":t[e].slevel="Ⅱ";break;case"3":t[e].slevel="Ⅲ";break;case"4":t[e].slevel="Ⅳ";break;case"5":t[e].slevel="Ⅴ";break;case"6":t[e].slevel="Ⅵ";break}return t},getSituation:function(e,n,o){var s=this,r=new Date,u=r.getFullYear(),c=r.getMonth(),g={year:0==c?u-1:u,month:0==c?12:c,lvltype:2,ikhlx:n,kaohetype:o,idistrictid:500227e6};i.default.getRequestPc(a.default.DAPINGSHUIZHI_SHUIZHITONGJI_KHLX,g,function(n){t.setStorageSync(e,n),s[e]=n},function(n){s[e]=t.getStorageSync(e)?t.getStorageSync(e):s[e]})},toMission:function(){},toAllMission:function(e){t.navigateTo({url:"/pages/allMission/allMission?nav="+e})},toReport:function(){t.navigateTo({url:"/pages/report/report"})},toStandarDetail:function(){t.navigateTo({url:"/pages/standardDetail/standardDetail"})}}};e.default=r}).call(this,n("6e42")["default"])},3954:function(t,e,n){},acc9:function(t,e,n){"use strict";var a=n("3954"),i=n.n(a);i.a},e065:function(t,e,n){"use strict";var a=function(){var t=this,e=t.$createElement,n=(t._self._c,Math.floor(t.tasks["已完成务个数"]/t.tasks["全部任务个数"]*100));t.$mp.data=Object.assign({},{$root:{g0:n}})},i=[];n.d(e,"a",function(){return a}),n.d(e,"b",function(){return i})},e15c:function(t,e,n){"use strict";n.r(e);var a=n("e065"),i=n("0773");for(var o in i)"default"!==o&&function(t){n.d(e,t,function(){return i[t]})}(o);n("acc9");var s=n("2877"),r=Object(s["a"])(i["default"],a["a"],a["b"],!1,null,"2d6fe2a7",null);e["default"]=r.exports}},[["57fd","common/runtime","common/vendor"]]]);
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/home/home"],{"0773":function(t,e,n){"use strict";n.r(e);var a=n("1d07"),i=n.n(a);for(var o in a)"default"!==o&&function(t){n.d(e,t,function(){return a[t]})}(o);e["default"]=i.a},"1d07":function(t,e,n){"use strict";(function(t){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var a=o(n("c0ea")),i=o(n("2a75"));function o(t){return t&&t.__esModule?t:{default:t}}var s=function(){return n.e("components/bw-swiper/bw-swiper").then(n.bind(null,"17ee"))},r={data:function(){return{latitude:50.64356722667575,longitude:166.57172588823505,tasks:"",setH:100,reportTop:0,covers:[],userInfo:"",examine_1:{},examine_2:{},examine_3:{},examine_4:{},tongji:[],swiperList:[{url:"../../static/images/home/picture1.png"},{url:"../../static/images/home/picture2.png"},{url:"../../static/images/home/picture3.png"},{url:"../../static/images/home/picture4.png"},{url:"../../static/images/home/picture5.png"},{url:"../../static/images/home/picture6.png"},{url:"../../static/images/home/picture7.png"},{url:"../../static/images/home/picture8.png"},{url:"../../static/images/home/picture9.png"}]}},components:{BwSwiper:s},created:function(){this.userInfo=t.getStorageSync("userInfo");var e=t.getSystemInfoSync().windowHeight,n=t.getSystemInfoSync().windowWidth;this.setH=e-n/750*350,this.reportTop=e-n/750*513-10,this.latitude=t.getStorageSync("userLocation").latitude,this.longitude=t.getStorageSync("userLocation").longitude;var a=this;t.onSocketMessage(function(t){a.covers=JSON.parse(t.data)})},onShow:function(){this.getTask(),this.getSituation("examine_1",1,1),this.getSituation("examine_2",5,1),this.getSituation("examine_3",2,1),this.getSituation("examine_4",6,1),t.$emit("hideSub",!1),this.getTongji()},methods:{getTask:function(){var e=this;i.default.getRequestNo(a.default.TASK_INDEX2,{uid:this.userInfo.id},function(n){t.setStorageSync("home_tasks",n.data),e.tasks=n.data},function(n){e.tasks=t.getStorageSync("home_tasks")?t.getStorageSync("home_tasks"):e.tasks})},getTongji:function(){var e=this;i.default.getRequestPc(a.default.QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI,{year:2019,month:4},function(n){t.setStorageSync("home_tongji",n),n=e.getNum(n),e.tongji=n},function(n){e.tongji=t.getStorageSync("home_tongji")?t.getStorageSync("home_tongji"):e.tongji})},getNum:function(t){for(var e=0;e<t.length;e++)switch(t[e].slevel.toString()){case"1":t[e].slevel="Ⅰ";break;case"2":t[e].slevel="Ⅱ";break;case"3":t[e].slevel="Ⅲ";break;case"4":t[e].slevel="Ⅳ";break;case"5":t[e].slevel="Ⅴ";break;case"6":t[e].slevel="Ⅵ";break}return t},getSituation:function(e,n,o){var s=this,r=new Date,u=r.getFullYear(),c=r.getMonth(),g={year:0==c?u-1:u,month:0==c?12:c,lvltype:2,ikhlx:n,kaohetype:o,idistrictid:500227e6};i.default.getRequestPc(a.default.DAPINGSHUIZHI_SHUIZHITONGJI_KHLX,g,function(n){t.setStorageSync(e,n),s[e]=n},function(n){s[e]=t.getStorageSync(e)?t.getStorageSync(e):s[e]})},toMission:function(){},toAllMission:function(e){t.navigateTo({url:"/pages/allMission/allMission?nav="+e})},toReport:function(){t.navigateTo({url:"/pages/report/report"})},toStandarDetail:function(){t.navigateTo({url:"/pages/standardDetail/standardDetail"})}}};e.default=r}).call(this,n("6e42")["default"])},"38e9":function(t,e,n){"use strict";var a=function(){var t=this,e=t.$createElement,n=(t._self._c,Math.floor(t.tasks["已完成务个数"]/t.tasks["全部任务个数"]*100));t.$mp.data=Object.assign({},{$root:{g0:n}})},i=[];n.d(e,"a",function(){return a}),n.d(e,"b",function(){return i})},"6d22":function(t,e,n){"use strict";var a=n("809a"),i=n.n(a);i.a},"809a":function(t,e,n){},e15c:function(t,e,n){"use strict";n.r(e);var a=n("38e9"),i=n("0773");for(var o in i)"default"!==o&&function(t){n.d(e,t,function(){return i[t]})}(o);n("6d22");var s=n("2877"),r=Object(s["a"])(i["default"],a["a"],a["b"],!1,null,"dac83bb4",null);e["default"]=r.exports}},[["57fd","common/runtime","common/vendor"]]]);
 });
 require('pages/home/home.js');
 __wxRoute = 'pages/index/index';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/index/index.js';
@@ -4117,7 +4149,7 @@ require('pages/index/index.js');
 __wxRoute = 'pages/myMission/myMission';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/myMission/myMission.js';
 
 define('pages/myMission/myMission.js',function(require, module, exports, window, document, frames, self, location, navigator, localStorage, history, Caches, screen, alert, confirm, prompt, fetch, XMLHttpRequest, WebSocket, webkit, WeixinJSCore, Reporter, print, WeixinJSBridge){
-(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/myMission/myMission"],{"0d36":function(t,e,s){"use strict";var a=s("d0e8"),i=s.n(a);i.a},"1e78":function(t,e,s){"use strict";var a=function(){var t=this,e=t.$createElement;t._self._c},i=[];s.d(e,"a",function(){return a}),s.d(e,"b",function(){return i})},2425:function(t,e,s){"use strict";s.r(e);var a=s("1e78"),i=s("5735");for(var n in i)"default"!==n&&function(t){s.d(e,t,function(){return i[t]})}(n);s("0d36");var o=s("2877"),r=Object(o["a"])(i["default"],a["a"],a["b"],!1,null,"42e4ff89",null);e["default"]=r.exports},5735:function(t,e,s){"use strict";s.r(e);var a=s("bb17"),i=s.n(a);for(var n in a)"default"!==n&&function(t){s.d(e,t,function(){return a[t]})}(n);e["default"]=i.a},bb17:function(t,e,s){"use strict";(function(t,a){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var i=o(s("c0ea")),n=o(s("2a75"));function o(t){return t&&t.__esModule?t:{default:t}}var r=function(){return s.e("components/missionCard").then(s.bind(null,"1d77"))},u=function(){return s.e("components/issuesListCard").then(s.bind(null,"6934"))},c={data:function(){return{scrollH:0,userInfo:"",missions:[],page:0,type:"process"}},components:{missionCard:r,issuesListCard:u},onLoad:function(){this.userInfo=t.getStorageSync("userInfo"),n.default.isRefreshTasksPage=!0},onShow:function(){n.default.isRefreshTasksPage&&(this.checkType(this.type),t.$emit("refreshTasksPage",!1))},methods:{getTaskProcess:function(e){var s=this;n.default.getRequest(i.default.TASK_PROCESS,{page:e,uid:this.userInfo.id},function(a){a=a.data;var i=t.getStorageSync("myTaskProcess")?t.getStorageSync("myTaskProcess"):[];i[e]=a,t.setStorageSync("myTaskProcess",i),s.disposeRequestData(a,e)},function(a){var i=t.getStorageSync("myTaskProcess")?t.getStorageSync("myTaskProcess"):[];a=i[e]?i[e]:[],s.disposeRequestData(a,e)})},getNoStart:function(e){var s=this;n.default.getRequest(i.default.TASK_NO_START,{page:e,uid:this.userInfo.id},function(a){a=a.data;var i=t.getStorageSync("myNoStart")?t.getStorageSync("myNoStart"):[];i[e]=a,t.setStorageSync("myNoStart",i),s.disposeRequestData(a,e)},function(a){var i=t.getStorageSync("myNoStart")?t.getStorageSync("myNoStart"):[];a=i[e]?i[e]:[],s.disposeRequestData(a,e)})},getFinish:function(e){var s=this;n.default.getRequest(i.default.TASK_FINISH,{page:e,uid:this.userInfo.id},function(a){a=a.data;var i=t.getStorageSync("myFinish")?t.getStorageSync("myFinish"):[];i[e]=a,t.setStorageSync("myFinish",i),s.disposeRequestData(a,e)},function(a){var i=t.getStorageSync("myFinish")?t.getStorageSync("myFinish"):[];a=i[e]?i[e]:[],s.disposeRequestData(a,e)})},getProblemList:function(e){var s=this;n.default.getRequest(i.default.PROBLEM_LIST,{page:e,uid:this.userInfo.id},function(a){a=a.data;var i=t.getStorageSync("myProblemList")?t.getStorageSync("myProblemList"):[];i[e]=a,t.setStorageSync("myProblemList",i),s.disposeRequestData(a,e)},function(a){var i=t.getStorageSync("myProblemList")?t.getStorageSync("myProblemList"):[];a=i[e]?i[e]:[],s.disposeRequestData(a,e)})},disposeRequestData:function(e,s){e.length>0?(this.missions=this.missions.concat(e),this.page=s):t.showToast({icon:"none",title:"已经没有更多数据了"})},startMission:function(e){n.default.getRequest("1"==e.type?i.default.TASK_PATROL_UPDATE_STATUS:i.default.TASK_RECTIFICATION_UPDATE_STATUS,{id:e.id,status:1},function(s){var a=t.getStorageSync("onTask")?t.getStorageSync("onTask"):[];a.push(e.id),t.setStorageSync("onTask",a),n.default.upLoction(e.id),t.$emit("refreshTasksPage",!0),t.navigateTo({url:"/pages/taskDetails/taskDetails?taskId="+e.id+"&isReport=true"})},function(e){t.showToast({icon:"none",title:"网络异常"})})},checkType:function(t){switch(this.type=t,this.page=0,this.missions=[],t){case"process":this.getTaskProcess(this.page);break;case"noStart":this.getNoStart(this.page);break;case"finish":this.getFinish(this.page);break;case"issuesList":this.getProblemList(this.page);break}},toLocation:function(e){t.navigateTo({url:"/pages/location/location?taskId="+e.id+"&longitude="+e.longitude+"&latitude="+e.latitude+"&address="+e.address})},toContact:function(e){t.navigateTo({url:"/pages/contact/contact?id="+e.pointId})},toTaskDetail:function(e){"process"==this.type&&(1==e.type?t.navigateTo({url:"/pages/taskDetails/taskDetails?taskId="+e.id+"&isReport=true"}):t.navigateTo({url:"/pages/rectificationTaskDetail/rectificationTaskDetail?taskId="+e.id+"&taskName="+e.taskName+"&longitude="+e.longitude+"&latitude="+e.latitude}))},previewImage:function(e){e.problemPhoto?t.previewImage({current:0,urls:e.problemPhoto.split(";"),fail:function(t){console.log(a(t," at pages\\myMission\\myMission.vue:197"))}}):t.showToast({icon:"none",title:"暂无照片"})},scrollTol:function(){switch(this.type){case"process":this.getTaskProcess(this.page+1);break;case"noStart":this.getNoStart(this.page+1);break;case"finish":this.getFinish(this.page+1);break;case"issuesList":this.getProblemList(this.page+1);break}}}};e.default=c}).call(this,s("6e42")["default"],s("0de9")["default"])},d0e8:function(t,e,s){}},[["e094","common/runtime","common/vendor"]]]);
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/myMission/myMission"],{2425:function(t,e,s){"use strict";s.r(e);var a=s("d168"),i=s("5735");for(var n in i)"default"!==n&&function(t){s.d(e,t,function(){return i[t]})}(n);s("7413");var o=s("2877"),r=Object(o["a"])(i["default"],a["a"],a["b"],!1,null,"585e996a",null);e["default"]=r.exports},5735:function(t,e,s){"use strict";s.r(e);var a=s("bb17"),i=s.n(a);for(var n in a)"default"!==n&&function(t){s.d(e,t,function(){return a[t]})}(n);e["default"]=i.a},7413:function(t,e,s){"use strict";var a=s("a181"),i=s.n(a);i.a},a181:function(t,e,s){},bb17:function(t,e,s){"use strict";(function(t,a){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var i=o(s("c0ea")),n=o(s("2a75"));function o(t){return t&&t.__esModule?t:{default:t}}var r=function(){return s.e("components/missionCard").then(s.bind(null,"1d77"))},c=function(){return s.e("components/issuesListCard").then(s.bind(null,"6934"))},u={data:function(){return{scrollH:0,userInfo:"",missions:[],page:0,type:"process"}},components:{missionCard:r,issuesListCard:c},onLoad:function(){this.userInfo=t.getStorageSync("userInfo"),n.default.isRefreshTasksPage=!0},onShow:function(){n.default.isRefreshTasksPage&&(this.checkType(this.type),t.$emit("refreshTasksPage",!1))},methods:{getTaskProcess:function(e){var s=this;n.default.getRequest(i.default.TASK_PROCESS,{page:e,uid:this.userInfo.id},function(a){a=a.data;var i=t.getStorageSync("myTaskProcess")?t.getStorageSync("myTaskProcess"):[];i[e]=a,t.setStorageSync("myTaskProcess",i),s.disposeRequestData(a,e)},function(a){var i=t.getStorageSync("myTaskProcess")?t.getStorageSync("myTaskProcess"):[];a=i[e]?i[e]:[],s.disposeRequestData(a,e)})},getNoStart:function(e){var s=this;n.default.getRequest(i.default.TASK_NO_START,{page:e,uid:this.userInfo.id},function(a){a=a.data;var i=t.getStorageSync("myNoStart")?t.getStorageSync("myNoStart"):[];i[e]=a,t.setStorageSync("myNoStart",i),s.disposeRequestData(a,e)},function(a){var i=t.getStorageSync("myNoStart")?t.getStorageSync("myNoStart"):[];a=i[e]?i[e]:[],s.disposeRequestData(a,e)})},getFinish:function(e){var s=this;n.default.getRequest(i.default.TASK_FINISH,{page:e,uid:this.userInfo.id},function(a){a=a.data;var i=t.getStorageSync("myFinish")?t.getStorageSync("myFinish"):[];i[e]=a,t.setStorageSync("myFinish",i),s.disposeRequestData(a,e)},function(a){var i=t.getStorageSync("myFinish")?t.getStorageSync("myFinish"):[];a=i[e]?i[e]:[],s.disposeRequestData(a,e)})},getProblemList:function(e){var s=this;n.default.getRequest(i.default.PROBLEM_LIST,{page:e,uid:this.userInfo.id},function(a){a=a.data;var i=t.getStorageSync("myProblemList")?t.getStorageSync("myProblemList"):[];i[e]=a,t.setStorageSync("myProblemList",i),s.disposeRequestData(a,e)},function(a){var i=t.getStorageSync("myProblemList")?t.getStorageSync("myProblemList"):[];a=i[e]?i[e]:[],s.disposeRequestData(a,e)})},disposeRequestData:function(e,s){e.length>0?(this.missions=this.missions.concat(e),this.page=s):t.showToast({icon:"none",title:"已经没有更多数据了"})},startMission:function(e){var s=this;n.default.getRequest("1"==e.type?i.default.TASK_PATROL_UPDATE_STATUS:i.default.TASK_RECTIFICATION_UPDATE_STATUS,{id:e.id,status:1},function(a){if("1"==e.type){var i=t.getStorageSync("onTask")?t.getStorageSync("onTask"):[];i.push(e.id),n.default.upLoction(e.id),t.$emit("refreshTasksPage",!0),t.navigateTo({url:"/pages/taskDetails/taskDetails?taskId="+e.id+"&isReport=true"})}else s.checkType(s.type)},function(e){t.showToast({icon:"none",title:"网络异常"})})},checkType:function(t){switch(this.type=t,this.page=0,this.missions=[],t){case"process":this.getTaskProcess(this.page);break;case"noStart":this.getNoStart(this.page);break;case"finish":this.getFinish(this.page);break;case"issuesList":this.getProblemList(this.page);break}},toLocation:function(e){n.default.pollutionInfo=e,t.navigateTo({url:"/pages/showLocation/showLocation"})},toContact:function(e){t.navigateTo({url:"/pages/contact/contact?id="+e.pointId})},toTaskDetail:function(e){n.default.taskInfo=e,"process"==this.type&&(1==e.type?t.navigateTo({url:"/pages/taskDetails/taskDetails?taskId="+e.id+"&isReport=true"}):t.navigateTo({url:"/pages/rectificationTaskDetail/rectificationTaskDetail"}))},previewImage:function(e){e.problemPhoto?t.previewImage({current:0,urls:e.problemPhoto.split(";"),fail:function(t){console.log(a(t," at pages\\myMission\\myMission.vue:203"))}}):t.showToast({icon:"none",title:"暂无照片"})},scrollTol:function(){switch(this.type){case"process":this.getTaskProcess(this.page+1);break;case"noStart":this.getNoStart(this.page+1);break;case"finish":this.getFinish(this.page+1);break;case"issuesList":this.getProblemList(this.page+1);break}}}};e.default=u}).call(this,s("6e42")["default"],s("0de9")["default"])},d168:function(t,e,s){"use strict";var a=function(){var t=this,e=t.$createElement;t._self._c},i=[];s.d(e,"a",function(){return a}),s.d(e,"b",function(){return i})}},[["e094","common/runtime","common/vendor"]]]);
 });
 require('pages/myMission/myMission.js');
 __wxRoute = 'pages/report/report';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/report/report.js';
@@ -4129,7 +4161,7 @@ require('pages/report/report.js');
 __wxRoute = 'pages/location/location';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/location/location.js';
 
 define('pages/location/location.js',function(require, module, exports, window, document, frames, self, location, navigator, localStorage, history, Caches, screen, alert, confirm, prompt, fetch, XMLHttpRequest, WebSocket, webkit, WeixinJSCore, Reporter, print, WeixinJSBridge){
-(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/location/location"],{"1bc5":function(t,o,i){},"262e":function(t,o,i){"use strict";var n=function(){var t=this,o=t.$createElement;t._self._c},e=[];i.d(o,"a",function(){return n}),i.d(o,"b",function(){return e})},"6f5e":function(t,o,i){"use strict";var n=i("1bc5"),e=i.n(n);e.a},"75c2":function(t,o,i){"use strict";i.r(o);var n=i("262e"),e=i("ab1c");for(var a in e)"default"!==a&&function(t){i.d(o,t,function(){return e[t]})}(a);i("6f5e");var s=i("2877"),u=Object(s["a"])(e["default"],n["a"],n["b"],!1,null,"26dbe497",null);o["default"]=u.exports},ab1c:function(t,o,i){"use strict";i.r(o);var n=i("bdb8"),e=i.n(n);for(var a in n)"default"!==a&&function(t){i.d(o,t,function(){return n[t]})}(a);o["default"]=e.a},bdb8:function(t,o,i){"use strict";(function(t,n){Object.defineProperty(o,"__esModule",{value:!0}),o.default=void 0;var e=u(i("c0ea")),a=u(i("2a75")),s=i("196c");function u(t){return t&&t.__esModule?t:{default:t}}var c={data:function(){return{covers:[],circles:[],latitude:"",longitude:"",taskId:"",pointInfo:{},userLocation:{},distance:0,controls:[]}},onReady:function(){this.getDistance()},onLoad:function(o){this.userInfo=t.getStorageSync("userInfo"),this.pointInfo=t.getStorageSync("taskInfo"),this.userLocation=t.getStorageSync("userLocation");var i=t.getSystemInfoSync().screenWidth,n=t.getSystemInfoSync().windowHeight,e=i/750;this.controls=[{id:"toNavigation",position:{width:83*e,height:83*e,left:597*e,top:n-335*e},iconPath:"/static/images/icon_navigation.png",clickable:!0}],this.initMap(this.pointInfo)},methods:{initMap:function(o){if(o.longitude){var i=s.mapTool.wgs84togcj02(o.longitude,o.latitude);this.longitude=i[0],this.latitude=i[1],this.circles=[{latitude:this.latitude,longitude:this.longitude,radius:o.distanceLimit,color:"#5087FB80",fillColor:"#5087FB50",strokeWidth:"2"}],this.covers=[{id:"person1",latitude:this.latitude,longitude:this.longitude,iconPath:"../../static/images/dingwei.png",label:{content:o.address,color:"#5087FB"}}]}else t.showToast({icon:"none",title:"位置未记录，请重新定位！"}),this.latitude=this.userLocation.latitude,this.longitude=this.userLocation.longitude},bindControltap:function(t){"toNavigation"==t.controlId&&this.toNavigation()},getDistance:function(){var o=this,i=t.createMapContext("locationMap"),n=i.$getAppMap();n.showUserLocation(!0);var e=new plus.maps.Point(this.userLocation.longitude,this.userLocation.latitude),a=new plus.maps.Point(this.pointInfo.longitude,this.pointInfo.latitude);plus.maps.Map.calculateDistance(e,a,function(t){o.distance=(t.distance/1e3).toFixed(2)})},toNavigation:function(){var t=this,o=s.mapTool.wgs84togcj02(t.pointInfo.longitude,t.pointInfo.latitude),i=o[0],e=o[1];"Android"==plus.os.name?plus.runtime.openURL("amapuri://route/plan/?sid=BGVIS1&did=BGVIS2&dlat="+e+"&dlon="+i+"&dev=0&t=0",function(t){console.log(n("Open system default browser failed: "+t.message," at pages\\location\\location.vue:116"))},"com.autonavi.minimap"):"iOS"==plus.os.name&&plus.runtime.launchApplication({action:"iosamap://path?sourceApplication=applicationName&sid=BGVIS1&did=BGVIS2&dlat="+e+"&dlon="+i+"&dev=0&t=0"},function(t){console.log(n("Open system default browser failed: "+t.message," at pages\\location\\location.vue:121"))})},toReport:function(){var o=this,i={id:this.pointInfo.pollutionId,wryType:this.pointInfo.wryType,longitude:this.userLocation.longitude,latitude:this.userLocation.latitude};t.showModal({title:"提示",content:"确认重新记录位置？",success:function(t){t.confirm?a.default.getRequest(e.default.TASK_PATROL_POINT_UPDATE_WRY_ADDRESS_DETAILED,i,function(t){console.log(n("成功"," at pages\\location\\location.vue:138")),o.pointInfo.longitude=o.userLocation.longitude,o.pointInfo.latitude=o.userLocation.latitude,o.initMap(o.pointInfo),o.getDistance()}):t.cancel&&console.log(n("用户点击取消"," at pages\\location\\location.vue:145"))}})}}};o.default=c}).call(this,i("6e42")["default"],i("0de9")["default"])}},[["8fde","common/runtime","common/vendor"]]]);
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/location/location"],{"680e":function(t,o,i){"use strict";var n=function(){var t=this,o=t.$createElement;t._self._c},e=[];i.d(o,"a",function(){return n}),i.d(o,"b",function(){return e})},"75c2":function(t,o,i){"use strict";i.r(o);var n=i("680e"),e=i("ab1c");for(var a in e)"default"!==a&&function(t){i.d(o,t,function(){return e[t]})}(a);i("a747");var s=i("2877"),u=Object(s["a"])(e["default"],n["a"],n["b"],!1,null,"f34575f6",null);o["default"]=u.exports},a42b:function(t,o,i){},a747:function(t,o,i){"use strict";var n=i("a42b"),e=i.n(n);e.a},ab1c:function(t,o,i){"use strict";i.r(o);var n=i("bdb8"),e=i.n(n);for(var a in n)"default"!==a&&function(t){i.d(o,t,function(){return n[t]})}(a);o["default"]=e.a},bdb8:function(t,o,i){"use strict";(function(t,n){Object.defineProperty(o,"__esModule",{value:!0}),o.default=void 0;var e=u(i("c0ea")),a=u(i("2a75")),s=i("196c");function u(t){return t&&t.__esModule?t:{default:t}}var l={data:function(){return{covers:[],circles:[],latitude:"",longitude:"",taskId:"",pointInfo:{},userLocation:{},distance:0,controls:[]}},onReady:function(){var o=t.createMapContext("locationMap"),i=o.$getAppMap();i.showUserLocation(!0),this.userInfo=t.getStorageSync("userInfo"),this.pointInfo=a.default.pollutionInfo,this.userLocation=t.getStorageSync("userLocation");var n=t.getSystemInfoSync().screenWidth,e=t.getSystemInfoSync().windowHeight,s=n/750;this.controls=[{id:"toNavigation",position:{width:83*s,height:83*s,left:597*s,top:e-335*s},iconPath:"/static/images/icon_navigation.png",clickable:!0}],this.initMap(this.pointInfo),this.getDistance()},onLoad:function(t){},methods:{initMap:function(o){if(o.longitude){var i=s.mapTool.wgs84togcj02(o.longitude,o.latitude);this.longitude=i[0],this.latitude=i[1],this.circles=[{latitude:this.latitude,longitude:this.longitude,radius:o.distanceLimit,color:"#5087FB80",fillColor:"#5087FB50",strokeWidth:"2"}],this.covers=[{id:"person1",latitude:this.latitude,longitude:this.longitude,iconPath:"../../static/images/dingwei.png",label:{content:o.address,color:"#5087FB"}}]}else t.showToast({icon:"none",title:"位置未记录，请重新定位！"}),this.latitude=this.userLocation.latitude,this.longitude=this.userLocation.longitude},bindControltap:function(t){"toNavigation"==t.controlId&&this.toNavigation()},getDistance:function(){var t=this,o=new plus.maps.Point(this.userLocation.longitude,this.userLocation.latitude),i=new plus.maps.Point(this.pointInfo.longitude,this.pointInfo.latitude);plus.maps.Map.calculateDistance(o,i,function(o){t.distance=(o.distance/1e3).toFixed(2)})},toNavigation:function(){var t=this,o=s.mapTool.wgs84togcj02(t.pointInfo.longitude,t.pointInfo.latitude),i=o[0],e=o[1];"Android"==plus.os.name?plus.runtime.openURL("amapuri://route/plan/?sid=BGVIS1&did=BGVIS2&dlat="+e+"&dlon="+i+"&dev=0&t=0",function(t){console.log(n("Open system default browser failed: "+t.message," at pages\\location\\location.vue:117"))},"com.autonavi.minimap"):"iOS"==plus.os.name&&plus.runtime.launchApplication({action:"iosamap://path?sourceApplication=applicationName&sid=BGVIS1&did=BGVIS2&dlat="+e+"&dlon="+i+"&dev=0&t=0"},function(t){console.log(n("Open system default browser failed: "+t.message," at pages\\location\\location.vue:122"))})},toReport:function(){var o=this,i={id:this.pointInfo.pollutionId,wryType:this.pointInfo.wryType,longitude:this.userLocation.longitude,latitude:this.userLocation.latitude};t.showModal({title:"提示",content:"确认重新记录位置？",success:function(t){t.confirm?a.default.getRequest(e.default.TASK_PATROL_POINT_UPDATE_WRY_ADDRESS_DETAILED,i,function(t){console.log(n("成功"," at pages\\location\\location.vue:139")),o.pointInfo.longitude=o.userLocation.longitude,o.pointInfo.latitude=o.userLocation.latitude,o.initMap(o.pointInfo),o.getDistance()}):t.cancel&&console.log(n("用户点击取消"," at pages\\location\\location.vue:146"))}})}}};o.default=l}).call(this,i("6e42")["default"],i("0de9")["default"])}},[["8fde","common/runtime","common/vendor"]]]);
 });
 require('pages/location/location.js');
 __wxRoute = 'pages/workbench/workbench';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/workbench/workbench.js';
@@ -4159,19 +4191,19 @@ require('pages/contact/contact.js');
 __wxRoute = 'pages/allMission/allMission';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/allMission/allMission.js';
 
 define('pages/allMission/allMission.js',function(require, module, exports, window, document, frames, self, location, navigator, localStorage, history, Caches, screen, alert, confirm, prompt, fetch, XMLHttpRequest, WebSocket, webkit, WeixinJSCore, Reporter, print, WeixinJSBridge){
-(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/allMission/allMission"],{"320b":function(t,e,s){"use strict";s.r(e);var i=s("97b8"),n=s("7a29");for(var a in n)"default"!==a&&function(t){s.d(e,t,function(){return n[t]})}(a);s("ee2e");var o=s("2877"),u=Object(o["a"])(n["default"],i["a"],i["b"],!1,null,"f482a9bc",null);e["default"]=u.exports},"7a29":function(t,e,s){"use strict";s.r(e);var i=s("b0da"),n=s.n(i);for(var a in i)"default"!==a&&function(t){s.d(e,t,function(){return i[t]})}(a);e["default"]=n.a},"97b8":function(t,e,s){"use strict";var i=function(){var t=this,e=t.$createElement;t._self._c},n=[];s.d(e,"a",function(){return i}),s.d(e,"b",function(){return n})},b0da:function(t,e,s){"use strict";(function(t,i){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var n=o(s("c0ea")),a=o(s("2a75"));function o(t){return t&&t.__esModule?t:{default:t}}var u=function(){return s.e("components/missionCard").then(s.bind(null,"1d77"))},c=function(){return s.e("components/issuesListCard").then(s.bind(null,"6934"))},l={data:function(){return{scrollH:0,userInfo:"",missions:[],page:0,type:"process"}},components:{missionCard:u,issuesListCard:c},onReady:function(){this.userInfo=t.getStorageSync("userInfo")},onLoad:function(t){this.type=t.nav,this.checkType(t.nav)},methods:{getTaskProcess:function(t){var e=this;a.default.getRequest(n.default.TASK_PROCESS,{page:this.page},function(s){console.log(i(s," at pages\\allMission\\allMission.vue:63")),e.disposeRequestData(s,t)})},getFinish:function(t){var e=this;a.default.getRequest(n.default.TASK_FINISH,{page:this.page},function(s){console.log(i(s," at pages\\allMission\\allMission.vue:69")),e.disposeRequestData(s,t)})},getProblemList:function(t){var e=this;a.default.getRequest(n.default.PROBLEM_LIST,{page:this.page},function(s){console.log(i(s," at pages\\allMission\\allMission.vue:75")),e.disposeRequestData(s,t)})},disposeRequestData:function(e,s){1==e.code?e.data.length>0?(this.missions=this.missions.concat(e.data),this.page=s):t.showToast({icon:"none",title:"已经没有更多数据了"}):t.showToast({icon:"none",title:e.msg||"数据异常"})},previewImage:function(e){t.previewImage({current:0,urls:e.problemPhoto?e.problemPhoto.split(";"):[]})},checkType:function(t){switch(this.type=t,this.page=0,this.missions=[],t){case"process":this.getTaskProcess(this.page);break;case"finish":this.getFinish(this.page);break;case"issuesList":this.getProblemList(this.page);break}},toLocation:function(e){t.navigateTo({url:"/pages/location/location?taskId="+e.id+"&longitude="+e.longitude+"&latitude="+e.latitude+"&address="+e.address})},toContact:function(e){t.navigateTo({url:"/pages/contact/contact?id="+e.pointId})},toTaskDetail:function(e){t.navigateTo({url:"/pages/taskDetails/taskDetails?taskId="+e.id})},scrollTol:function(){switch(this.type){case"process":this.getTaskProcess(this.page+1);break;case"finish":this.getFinish(this.page+1);break;case"issuesList":this.getProblemList(this.page+1);break}}}};e.default=l}).call(this,s("6e42")["default"],s("0de9")["default"])},ee2e:function(t,e,s){"use strict";var i=s("f1fe"),n=s.n(i);n.a},f1fe:function(t,e,s){}},[["e54b","common/runtime","common/vendor"]]]);
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/allMission/allMission"],{"320b":function(t,e,s){"use strict";s.r(e);var i=s("ec7d"),n=s("7a29");for(var a in n)"default"!==a&&function(t){s.d(e,t,function(){return n[t]})}(a);s("d5ac");var o=s("2877"),u=Object(o["a"])(n["default"],i["a"],i["b"],!1,null,"1526e360",null);e["default"]=u.exports},7348:function(t,e,s){},"7a29":function(t,e,s){"use strict";s.r(e);var i=s("b0da"),n=s.n(i);for(var a in i)"default"!==a&&function(t){s.d(e,t,function(){return i[t]})}(a);e["default"]=n.a},b0da:function(t,e,s){"use strict";(function(t,i){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var n=o(s("c0ea")),a=o(s("2a75"));function o(t){return t&&t.__esModule?t:{default:t}}var u=function(){return s.e("components/missionCard").then(s.bind(null,"1d77"))},c=function(){return s.e("components/issuesListCard").then(s.bind(null,"6934"))},l={data:function(){return{scrollH:0,userInfo:"",missions:[],page:0,type:"process"}},components:{missionCard:u,issuesListCard:c},onReady:function(){this.userInfo=t.getStorageSync("userInfo")},onLoad:function(t){this.type=t.nav,this.checkType(t.nav)},methods:{getTaskProcess:function(t){var e=this;a.default.getRequest(n.default.TASK_PROCESS,{page:this.page},function(s){console.log(i(s," at pages\\allMission\\allMission.vue:63")),e.disposeRequestData(s,t)})},getFinish:function(t){var e=this;a.default.getRequest(n.default.TASK_FINISH,{page:this.page},function(s){console.log(i(s," at pages\\allMission\\allMission.vue:69")),e.disposeRequestData(s,t)})},getProblemList:function(t){var e=this;a.default.getRequest(n.default.PROBLEM_LIST,{page:this.page},function(s){console.log(i(s," at pages\\allMission\\allMission.vue:75")),e.disposeRequestData(s,t)})},disposeRequestData:function(e,s){1==e.code?e.data.length>0?(this.missions=this.missions.concat(e.data),this.page=s):t.showToast({icon:"none",title:"已经没有更多数据了"}):t.showToast({icon:"none",title:e.msg||"数据异常"})},previewImage:function(e){e.problemPhoto?t.previewImage({current:0,urls:e.problemPhoto?e.problemPhoto.split(";"):[]}):t.showToast({icon:"none",title:"暂无照片"})},checkType:function(t){switch(this.type=t,this.page=0,this.missions=[],t){case"process":this.getTaskProcess(this.page);break;case"finish":this.getFinish(this.page);break;case"issuesList":this.getProblemList(this.page);break}},toLocation:function(e){a.default.pollutionInfo=e,t.navigateTo({url:"/pages/location/location?taskId="+e.id+"&longitude="+e.longitude+"&latitude="+e.latitude+"&address="+e.address})},toContact:function(e){t.navigateTo({url:"/pages/contact/contact?id="+e.pointId})},toTaskDetail:function(e){t.navigateTo({url:"/pages/taskDetails/taskDetails?taskId="+e.id})},scrollTol:function(){switch(this.type){case"process":this.getTaskProcess(this.page+1);break;case"finish":this.getFinish(this.page+1);break;case"issuesList":this.getProblemList(this.page+1);break}}}};e.default=l}).call(this,s("6e42")["default"],s("0de9")["default"])},d5ac:function(t,e,s){"use strict";var i=s("7348"),n=s.n(i);n.a},ec7d:function(t,e,s){"use strict";var i=function(){var t=this,e=t.$createElement;t._self._c},n=[];s.d(e,"a",function(){return i}),s.d(e,"b",function(){return n})}},[["e54b","common/runtime","common/vendor"]]]);
 });
 require('pages/allMission/allMission.js');
 __wxRoute = 'pages/problemList/problemList';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/problemList/problemList.js';
 
 define('pages/problemList/problemList.js',function(require, module, exports, window, document, frames, self, location, navigator, localStorage, history, Caches, screen, alert, confirm, prompt, fetch, XMLHttpRequest, WebSocket, webkit, WeixinJSCore, Reporter, print, WeixinJSBridge){
-(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/problemList/problemList"],{"1c9d":function(t,n,e){"use strict";var o=e("ae6a"),u=e.n(o);u.a},"6d0d":function(t,n,e){"use strict";var o=function(){var t=this,n=t.$createElement;t._self._c},u=[];e.d(n,"a",function(){return o}),e.d(n,"b",function(){return u})},"8eaa":function(t,n,e){"use strict";e.r(n);var o=e("f589"),u=e.n(o);for(var a in o)"default"!==a&&function(t){e.d(n,t,function(){return o[t]})}(a);n["default"]=u.a},ae6a:function(t,n,e){},aed7:function(t,n,e){"use strict";e.r(n);var o=e("6d0d"),u=e("8eaa");for(var a in u)"default"!==a&&function(t){e.d(n,t,function(){return u[t]})}(a);e("1c9d");var r=e("2877"),i=Object(r["a"])(u["default"],o["a"],o["b"],!1,null,"6946f4a7",null);n["default"]=i.exports},f589:function(t,n,e){"use strict";(function(t){Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var o=a(e("c0ea")),u=a(e("2a75"));function a(t){return t&&t.__esModule?t:{default:t}}var r=function(){return e.e("components/problemCard").then(e.bind(null,"4485"))},i={data:function(){return{userInfo:"",problems:[],pointId:""}},components:{problemCard:r},computed:{},onReady:function(){this.userInfo=t.getStorageSync("userInfo")},onLoad:function(t){this.pointId=t.id,this.getProblem(this.pointId)},methods:{getProblem:function(t){var n=this;u.default.getRequest(o.default.TASK_PATROL_POINT_PROBLEM_LIST,{pointId:t},function(t){n.problems=t.data})}}};n.default=i}).call(this,e("6e42")["default"])}},[["e83f","common/runtime","common/vendor"]]]);
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/problemList/problemList"],{3309:function(t,e,n){"use strict";var o=function(){var t=this,e=t.$createElement;t._self._c},u=[];n.d(e,"a",function(){return o}),n.d(e,"b",function(){return u})},"4e4b":function(t,e,n){},"8eaa":function(t,e,n){"use strict";n.r(e);var o=n("f589"),u=n.n(o);for(var r in o)"default"!==r&&function(t){n.d(e,t,function(){return o[t]})}(r);e["default"]=u.a},aed7:function(t,e,n){"use strict";n.r(e);var o=n("3309"),u=n("8eaa");for(var r in u)"default"!==r&&function(t){n.d(e,t,function(){return u[t]})}(r);n("f73d");var a=n("2877"),i=Object(a["a"])(u["default"],o["a"],o["b"],!1,null,"958d89de",null);e["default"]=i.exports},f589:function(t,e,n){"use strict";(function(t,o){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var u=a(n("c0ea")),r=a(n("2a75"));function a(t){return t&&t.__esModule?t:{default:t}}var i=function(){return n.e("components/problemCard").then(n.bind(null,"4485"))},f={data:function(){return{userInfo:"",problems:[],pointId:""}},components:{problemCard:i},computed:{},onReady:function(){this.userInfo=t.getStorageSync("userInfo")},onLoad:function(t){this.pointId=t.id,this.getProblem(this.pointId)},methods:{getProblem:function(t){var e=this;r.default.getRequest(u.default.TASK_PATROL_POINT_PROBLEM_LIST,{pointId:t},function(t){console.log(o(t," at pages\\problemList\\problemList.vue:40")),e.problems=t.data})}}};e.default=f}).call(this,n("6e42")["default"],n("0de9")["default"])},f73d:function(t,e,n){"use strict";var o=n("4e4b"),u=n.n(o);u.a}},[["e83f","common/runtime","common/vendor"]]]);
 });
 require('pages/problemList/problemList.js');
 __wxRoute = 'pages/taskDetails/taskDetails';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/taskDetails/taskDetails.js';
 
 define('pages/taskDetails/taskDetails.js',function(require, module, exports, window, document, frames, self, location, navigator, localStorage, history, Caches, screen, alert, confirm, prompt, fetch, XMLHttpRequest, WebSocket, webkit, WeixinJSCore, Reporter, print, WeixinJSBridge){
-(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/taskDetails/taskDetails"],{"41e2":function(t,e,s){"use strict";s.r(e);var n=s("87fb"),a=s("4450");for(var i in a)"default"!==i&&function(t){s.d(e,t,function(){return a[t]})}(i);s("a61c");var o=s("2877"),r=Object(o["a"])(a["default"],n["a"],n["b"],!1,null,"5e49be35",null);e["default"]=r.exports},4450:function(t,e,s){"use strict";s.r(e);var n=s("dbc5"),a=s.n(n);for(var i in n)"default"!==i&&function(t){s.d(e,t,function(){return n[t]})}(i);e["default"]=a.a},"87fb":function(t,e,s){"use strict";var n=function(){var t=this,e=t.$createElement;t._self._c},a=[];s.d(e,"a",function(){return n}),s.d(e,"b",function(){return a})},a61c:function(t,e,s){"use strict";var n=s("e287"),a=s.n(n);a.a},dbc5:function(t,e,s){"use strict";(function(t,n){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var a=o(s("c0ea")),i=o(s("2a75"));function o(t){return t&&t.__esModule?t:{default:t}}var r=function(){return s.e("components/missionCard").then(s.bind(null,"1d77"))},c=function(){return s.e("components/issuesListCard").then(s.bind(null,"6934"))},u=function(){return s.e("components/taskDetailCard").then(s.bind(null,"f80d"))},l={data:function(){return{scrollH:0,userInfo:"",missions:[],page:0,type:"process",isReport:!1,name:""}},components:{missionCard:r,issuesListCard:c,taskDetailCard:u},onReady:function(){},onLoad:function(e){this.userInfo=t.getStorageSync("userInfo"),this.taskId=e.taskId,this.isReport=!!e.isReport&&e.isReport},methods:{getTaskProcess:function(e){var s=this;i.default.getRequest(a.default.TASK_PATROL_POINT_PROCESS_LIST,{taskId:this.taskId,name:e},function(e){if(s.missions=e.data,t.setStorageSync("taskDetailsTaskProcess"+s.taskId,s.missions),0==s.missions.length){var n=t.getStorageSync("onTask")?t.getStorageSync("onTask"):[];n.splice(n.indexOf(s.taskId)),t.setStorageSync("onTask",n),i.default.unUpLoction(s.taskId)}},function(e){if(s.missions=t.getStorageSync("taskDetailsTaskProcess"+s.taskId)?t.getStorageSync("taskDetailsTaskProcess"+s.taskId):[],0==s.missions.length){var n=t.getStorageSync("onTask")?t.getStorageSync("onTask"):[];n.splice(n.indexOf(s.taskId)),t.setStorageSync("onTask",n),i.default.unUpLoction(s.taskId)}})},getFinish:function(e){var s=this;i.default.getRequest(a.default.TASK_PATROL_POINT_FINISH_LIST,{taskId:this.taskId,name:e},function(e){s.missions=e.data,t.setStorageSync("taskDetailsFinish"+s.taskId,s.missions)},function(e){s.missions=t.getStorageSync("taskDetailsFinish"+s.taskId)?t.getStorageSync("taskDetailsFinish"+s.taskId):[]})},getProblemList:function(e){var s=this;i.default.getRequest(a.default.TASK_PATROL_POINT_PROBLEM_LIST2,{taskId:this.taskId,name:e},function(e){s.missions=e.data,t.setStorageSync("taskDetailsProblemList"+s.taskId,s.missions)},function(e){s.missions=t.getStorageSync("taskDetailsProblemList"+s.taskId)?t.getStorageSync("taskDetailsProblemList"+s.taskId):[]})},checkType:function(t,e){switch(this.type=t,this.missions=[],t){case"process":this.getTaskProcess(e);break;case"finish":this.getFinish(e);break;case"issuesList":this.getProblemList(e);break}},toLocation:function(e){t.navigateTo({url:"/pages/location/location?taskId="+e.id+"&longitude="+e.longitude+"&latitude="+e.latitude+"&address="+e.address})},toContact:function(e){t.navigateTo({url:"/pages/contact/contact?id="+e.id})},toReportProblem:function(e){t.navigateTo({url:"/pages/reportProblem/reportProblem?id="+e.id})},toProblemList:function(e){t.navigateTo({url:"/pages/problemList/problemList?id="+e.id})},confirmTask:function(e){t.setStorageSync("taskInfo",e),t.navigateTo({url:"/pages/completeTask/completeTask"})},previewImage:function(e){console.log(n(e," at pages\\taskDetails\\taskDetails.vue:144")),e.problemPhoto?t.previewImage({current:0,urls:e.problemPhoto?e.problemPhoto.split(";"):[]}):t.showToast({icon:"none",title:"该问题没有照片"})},scrollTol:function(){switch(this.type){case"process":this.getTaskProcess(this.page+1);break;case"finish":this.getFinish(this.page+1);break;case"issuesList":this.getProblemList(this.page+1);break}}},onNavigationBarButtonTap:function(t){this.checkType(this.type,this.name)},onNavigationBarSearchInputChanged:function(t){this.name=t.text},onNavigationBarSearchInputConfirmed:function(t){this.checkType(this.type,this.name)},onShow:function(){i.default.isRefreshPollutionPage&&(this.checkType(this.type,""),t.$emit("refreshPollutionPage",!1))},onUnload:function(){t.$emit("refreshPollutionPage",!0)}};e.default=l}).call(this,s("6e42")["default"],s("0de9")["default"])},e287:function(t,e,s){}},[["d60b","common/runtime","common/vendor"]]]);
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/taskDetails/taskDetails"],{"0d8a":function(t,e,s){"use strict";var n=function(){var t=this,e=t.$createElement;t._self._c},a=[];s.d(e,"a",function(){return n}),s.d(e,"b",function(){return a})},"41e2":function(t,e,s){"use strict";s.r(e);var n=s("0d8a"),a=s("4450");for(var i in a)"default"!==i&&function(t){s.d(e,t,function(){return a[t]})}(i);s("d43b");var o=s("2877"),r=Object(o["a"])(a["default"],n["a"],n["b"],!1,null,"05adf458",null);e["default"]=r.exports},4450:function(t,e,s){"use strict";s.r(e);var n=s("dbc5"),a=s.n(n);for(var i in n)"default"!==i&&function(t){s.d(e,t,function(){return n[t]})}(i);e["default"]=a.a},"6d51":function(t,e,s){},d43b:function(t,e,s){"use strict";var n=s("6d51"),a=s.n(n);a.a},dbc5:function(t,e,s){"use strict";(function(t,n){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var a=o(s("c0ea")),i=o(s("2a75"));function o(t){return t&&t.__esModule?t:{default:t}}var r=function(){return s.e("components/missionCard").then(s.bind(null,"1d77"))},c=function(){return s.e("components/issuesListCard").then(s.bind(null,"6934"))},u=function(){return s.e("components/taskDetailCard").then(s.bind(null,"f80d"))},l={data:function(){return{scrollH:0,userInfo:"",missions:[],page:0,type:"process",isReport:!1,name:""}},components:{missionCard:r,issuesListCard:c,taskDetailCard:u},onReady:function(){},onLoad:function(e){this.userInfo=t.getStorageSync("userInfo"),this.taskId=e.taskId,this.isReport=!!e.isReport&&e.isReport},methods:{getTaskProcess:function(e){var s=this;i.default.getRequest(a.default.TASK_PATROL_POINT_PROCESS_LIST,{taskId:this.taskId,name:e},function(e){if(s.missions=e.data,t.setStorageSync("taskDetailsTaskProcess"+s.taskId,s.missions),0==s.missions.length){var n=t.getStorageSync("onTask")?t.getStorageSync("onTask"):[];n.splice(n.indexOf(s.taskId)),t.setStorageSync("onTask",n),i.default.unUpLoction(s.taskId)}},function(e){if(s.missions=t.getStorageSync("taskDetailsTaskProcess"+s.taskId)?t.getStorageSync("taskDetailsTaskProcess"+s.taskId):[],0==s.missions.length){var n=t.getStorageSync("onTask")?t.getStorageSync("onTask"):[];n.splice(n.indexOf(s.taskId)),t.setStorageSync("onTask",n),i.default.unUpLoction(s.taskId)}})},getFinish:function(e){var s=this;i.default.getRequest(a.default.TASK_PATROL_POINT_FINISH_LIST,{taskId:this.taskId,name:e},function(e){s.missions=e.data,t.setStorageSync("taskDetailsFinish"+s.taskId,s.missions)},function(e){s.missions=t.getStorageSync("taskDetailsFinish"+s.taskId)?t.getStorageSync("taskDetailsFinish"+s.taskId):[]})},getProblemList:function(e){var s=this;i.default.getRequest(a.default.TASK_PATROL_POINT_PROBLEM_LIST2,{taskId:this.taskId,name:e},function(e){s.missions=e.data,t.setStorageSync("taskDetailsProblemList"+s.taskId,s.missions)},function(e){s.missions=t.getStorageSync("taskDetailsProblemList"+s.taskId)?t.getStorageSync("taskDetailsProblemList"+s.taskId):[]})},checkType:function(t,e){switch(this.type=t,this.missions=[],t){case"process":this.getTaskProcess(e);break;case"finish":this.getFinish(e);break;case"issuesList":this.getProblemList(e);break}},toLocation:function(e){i.default.pollutionInfo=e,t.navigateTo({url:"/pages/location/location"})},toContact:function(e){t.navigateTo({url:"/pages/contact/contact?id="+e.id})},toReportProblem:function(e){t.navigateTo({url:"/pages/reportProblem/reportProblem?id="+e.id})},toProblemList:function(e){t.navigateTo({url:"/pages/problemList/problemList?id="+e.id})},confirmTask:function(e){i.default.pollutionInfo=e,t.navigateTo({url:"/pages/completeTask/completeTask"})},previewImage:function(e){console.log(n(e," at pages\\taskDetails\\taskDetails.vue:146")),e.problemPhoto?t.previewImage({current:0,urls:e.problemPhoto?e.problemPhoto.split(";"):[]}):t.showToast({icon:"none",title:"该问题没有照片"})},scrollTol:function(){switch(this.type){case"process":this.getTaskProcess(this.page+1);break;case"finish":this.getFinish(this.page+1);break;case"issuesList":this.getProblemList(this.page+1);break}}},onNavigationBarButtonTap:function(t){this.checkType(this.type,this.name)},onNavigationBarSearchInputChanged:function(t){this.name=t.text},onNavigationBarSearchInputConfirmed:function(t){this.checkType(this.type,this.name)},onShow:function(){i.default.isRefreshPollutionPage&&(this.checkType(this.type,""),t.$emit("refreshPollutionPage",!1))},onUnload:function(){t.$emit("refreshPollutionPage",!0)}};e.default=l}).call(this,s("6e42")["default"],s("0de9")["default"])}},[["d60b","common/runtime","common/vendor"]]]);
 });
 require('pages/taskDetails/taskDetails.js');
 __wxRoute = 'pages/standardDetail/standardDetail';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/standardDetail/standardDetail.js';
@@ -4195,13 +4227,13 @@ require('pages/setPassWord/setPassWord.js');
 __wxRoute = 'pages/completeTask/completeTask';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/completeTask/completeTask.js';
 
 define('pages/completeTask/completeTask.js',function(require, module, exports, window, document, frames, self, location, navigator, localStorage, history, Caches, screen, alert, confirm, prompt, fetch, XMLHttpRequest, WebSocket, webkit, WeixinJSCore, Reporter, print, WeixinJSBridge){
-(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/completeTask/completeTask"],{1311:function(t,e,n){"use strict";var a=function(){var t=this,e=t.$createElement;t._self._c},o=[];n.d(e,"a",function(){return a}),n.d(e,"b",function(){return o})},"2a45":function(t,e,n){"use strict";(function(t,a){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var o=u(n("c0ea")),i=u(n("2a75")),s=n("196c");function u(t){return t&&t.__esModule?t:{default:t}}var c={data:function(){return{taskInfo:{},pictures:[],longitude:"",latitude:"",remark:"",covers:[],circles:[]}},onLoad:function(){this.userInfo=t.getStorageSync("userInfo"),this.taskInfo=t.getStorageSync("taskInfo");var e=s.mapTool.wgs84togcj02(t.getStorageSync("userLocation").longitude,t.getStorageSync("userLocation").latitude);this.latitude=e[1],this.longitude=e[0],this.initMap(this.taskInfo)},onReady:function(){var e=t.createMapContext("completeMap"),n=e.$getAppMap();n.showUserLocation(!0),n.show()},methods:{initMap:function(t){var e=s.mapTool.wgs84togcj02(t.longitude,t.latitude);this.circles=[{latitude:e[1],longitude:e[0],radius:t.distanceLimit,color:"#5087FB80",fillColor:"#5087FB30",strokeWidth:"2"}],this.covers=[{id:"person1",latitude:e[1],longitude:e[0],iconPath:"../../static/images/dingwei.png"}]},getDistance:function(e){var n=this,a=new plus.maps.Point(t.getStorageSync("userLocation").longitude,t.getStorageSync("userLocation").latitude),o=new plus.maps.Point(this.taskInfo.longitude,this.taskInfo.latitude);plus.maps.Map.calculateDistance(a,o,function(a){a.distance>n.taskInfo.distanceLimit&&1==n.taskInfo.mustInRange?t.showToast({icon:"none",title:"距离任务地点太远，无法完成！"}):n.confirm(e)})},chooseTown:function(t){console.log(a(t," at pages\\completeTask\\completeTask.vue:90")),this.on_town=t.detail.value},delPicture:function(t){var e=this.pictures;e.splice(t,1),this.pictures=e},takingPictures:function(){var e=this;t.chooseImage({count:1,sizeType:["original","compressed"],sourceType:["camera"],success:function(t){console.log(a(t," at pages\\completeTask\\completeTask.vue:105")),e.pictures.push(t.tempFilePaths[0])}})},getImgUrl:function(t){var e=this;i.default.uploadFile(o.default.UPLOAD_UPLOAD,t,function(t){console.log(a(t," at pages\\completeTask\\completeTask.vue:112")),e.pictures.push(JSON.parse(t).data)})},getRemark:function(t){this.remark=t.detail.value},changeStatus:function(){i.default.getRequest(o.default.TASK_PATROL_POINT_NORMAL,{id:this.taskInfo.id,status:"100"},function(e){i.default.showSuccess("完成",function(){t.navigateBack({})})})},cancel:function(){t.navigateBack({})},confirm:function(e){if(0!=this.pictures.length){var n={id:e.id,longitude:this.longitude,latitude:this.latitude,remark:this.remark,pointPhoto:this.pictures.join(";"),z:1};i.default.completeTask(n),t.showLoading({mask:!0}),setTimeout(function(){t.hideLoading(),t.$emit("refreshPollutionPage",!0),t.navigateBack()},500)}else t.showToast({icon:"none",title:"请拍照上传！"})}}};e.default=c}).call(this,n("6e42")["default"],n("0de9")["default"])},3663:function(t,e,n){"use strict";n.r(e);var a=n("2a45"),o=n.n(a);for(var i in a)"default"!==i&&function(t){n.d(e,t,function(){return a[t]})}(i);e["default"]=o.a},"43e8":function(t,e,n){"use strict";var a=n("95a6"),o=n.n(a);o.a},4611:function(t,e,n){"use strict";n.r(e);var a=n("1311"),o=n("3663");for(var i in o)"default"!==i&&function(t){n.d(e,t,function(){return o[t]})}(i);n("43e8");var s=n("2877"),u=Object(s["a"])(o["default"],a["a"],a["b"],!1,null,"1699faf1",null);e["default"]=u.exports},"95a6":function(t,e,n){}},[["ba99","common/runtime","common/vendor"]]]);
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/completeTask/completeTask"],{"1d7b":function(t,e,a){},"2a45":function(t,e,a){"use strict";(function(t,n){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var o=u(a("c0ea")),i=u(a("2a75")),s=a("196c");function u(t){return t&&t.__esModule?t:{default:t}}var c={data:function(){return{taskInfo:{},pictures:[],longitude:"",latitude:"",remark:"",covers:[],circles:[]}},onLoad:function(){},onReady:function(){var e=t.createMapContext("completeMap"),a=e.$getAppMap();a.showUserLocation(!0),this.userInfo=t.getStorageSync("userInfo"),this.taskInfo=i.default.pollutionInfo,console.log(n(this.taskInfo.longitude," at pages\\completeTask\\completeTask.vue:51"));var o=s.mapTool.wgs84togcj02(this.taskInfo.longitude,this.taskInfo.latitude);this.longitude=o[0],this.latitude=o[1],this.initMap(this.taskInfo)},methods:{initMap:function(t){var e=s.mapTool.wgs84togcj02(t.longitude,t.latitude);this.circles=[{latitude:e[1],longitude:e[0],radius:t.distanceLimit,color:"#5087FB80",fillColor:"#5087FB30",strokeWidth:"2"}],this.covers=[{id:"person1",latitude:e[1],longitude:e[0],iconPath:"../../static/images/dingwei.png"}]},getDistance:function(e){var a=this,n=new plus.maps.Point(t.getStorageSync("userLocation").longitude,t.getStorageSync("userLocation").latitude),o=new plus.maps.Point(this.taskInfo.longitude,this.taskInfo.latitude);plus.maps.Map.calculateDistance(n,o,function(n){n.distance>a.taskInfo.distanceLimit&&1==a.taskInfo.mustInRange?t.showToast({icon:"none",title:"距离任务地点太远，无法完成！"}):a.confirm(e)})},chooseTown:function(t){console.log(n(t," at pages\\completeTask\\completeTask.vue:92")),this.on_town=t.detail.value},delPicture:function(t){var e=this.pictures;e.splice(t,1),this.pictures=e},takingPictures:function(){var e=this;t.chooseImage({count:1,sizeType:["original","compressed"],sourceType:["camera"],success:function(t){console.log(n(t," at pages\\completeTask\\completeTask.vue:107")),e.pictures.push(t.tempFilePaths[0])}})},getImgUrl:function(t){var e=this;i.default.uploadFile(o.default.UPLOAD_UPLOAD,t,function(t){console.log(n(t," at pages\\completeTask\\completeTask.vue:114")),e.pictures.push(JSON.parse(t).data)})},getRemark:function(t){this.remark=t.detail.value},changeStatus:function(){i.default.getRequest(o.default.TASK_PATROL_POINT_NORMAL,{id:this.taskInfo.id,status:"100"},function(e){i.default.showSuccess("完成",function(){t.navigateBack({})})})},cancel:function(){t.navigateBack({})},confirm:function(e){if(0!=this.pictures.length){var a={id:e.id,longitude:this.longitude,latitude:this.latitude,remark:this.remark,pointPhoto:this.pictures.join(";"),z:1};i.default.completeTask(a),t.showLoading({mask:!0}),setTimeout(function(){t.hideLoading(),t.$emit("refreshPollutionPage",!0),t.navigateBack()},500)}else t.showToast({icon:"none",title:"请拍照上传！"})}}};e.default=c}).call(this,a("6e42")["default"],a("0de9")["default"])},3663:function(t,e,a){"use strict";a.r(e);var n=a("2a45"),o=a.n(n);for(var i in n)"default"!==i&&function(t){a.d(e,t,function(){return n[t]})}(i);e["default"]=o.a},4611:function(t,e,a){"use strict";a.r(e);var n=a("b0ca"),o=a("3663");for(var i in o)"default"!==i&&function(t){a.d(e,t,function(){return o[t]})}(i);a("cda2");var s=a("2877"),u=Object(s["a"])(o["default"],n["a"],n["b"],!1,null,"a61ac5aa",null);e["default"]=u.exports},b0ca:function(t,e,a){"use strict";var n=function(){var t=this,e=t.$createElement;t._self._c},o=[];a.d(e,"a",function(){return n}),a.d(e,"b",function(){return o})},cda2:function(t,e,a){"use strict";var n=a("1d7b"),o=a.n(n);o.a}},[["ba99","common/runtime","common/vendor"]]]);
 });
 require('pages/completeTask/completeTask.js');
 __wxRoute = 'pages/rectificationTaskDetail/rectificationTaskDetail';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/rectificationTaskDetail/rectificationTaskDetail.js';
 
 define('pages/rectificationTaskDetail/rectificationTaskDetail.js',function(require, module, exports, window, document, frames, self, location, navigator, localStorage, history, Caches, screen, alert, confirm, prompt, fetch, XMLHttpRequest, WebSocket, webkit, WeixinJSCore, Reporter, print, WeixinJSBridge){
-(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/rectificationTaskDetail/rectificationTaskDetail"],{1356:function(t,e,i){"use strict";var a=function(){var t=this,e=t.$createElement;t._self._c},n=[];i.d(e,"a",function(){return a}),i.d(e,"b",function(){return n})},"31a2":function(t,e,i){"use strict";var a=i("62cb"),n=i.n(a);n.a},"62cb":function(t,e,i){},"775f":function(t,e,i){"use strict";i.r(e);var a=i("fb4c"),n=i.n(a);for(var s in a)"default"!==s&&function(t){i.d(e,t,function(){return a[t]})}(s);e["default"]=n.a},c4f6:function(t,e,i){"use strict";i.r(e);var a=i("1356"),n=i("775f");for(var s in n)"default"!==s&&function(t){i.d(e,t,function(){return n[t]})}(s);i("31a2");var o=i("2877"),c=Object(o["a"])(n["default"],a["a"],a["b"],!1,null,"783f3725",null);e["default"]=c.exports},fb4c:function(t,e,i){"use strict";(function(t,a){Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var n=c(i("c0ea")),s=c(i("2a75")),o=i("196c");function c(t){return t&&t.__esModule?t:{default:t}}var u={data:function(){return{pictures:[],taskDescription:"",longitude:"",latitude:"",taskDetail:{longitude:"",latitude:""},covers:[],circles:[]}},onReady:function(){var e=t.createMapContext("locationMap"),i=e.$getAppMap();i.showUserLocation(!0)},onLoad:function(e){this.taskDetail.taskName=e.taskName,this.taskDetail.taskId=e.taskId;var i=o.mapTool.wgs84togcj02(t.getStorageSync("userLocation").longitude,t.getStorageSync("userLocation").latitude);this.latitude=i[1],this.longitude=i[0],this.taskDetail.longitude=e.longitude,this.taskDetail.latitude=e.latitude,this.userInfo=t.getStorageSync("userInfo")},methods:{delPicture:function(t){var e=this.pictures;e.splice(t,1),this.pictures=e},getDistance:function(){var e=this,i=new plus.maps.Point(t.getStorageSync("userLocation").longitude,t.getStorageSync("userLocation").latitude),n=new plus.maps.Point(this.taskDetail.longitude,this.taskDetail.latitude);plus.maps.Map.calculateDistance(i,n,function(i){i.distance>e.taskDetail.distanceLimit&&1==e.taskDetail.mustInRange?(console.log(a("this.pictures.length"," at pages\\rectificationTaskDetail\\rectificationTaskDetail.vue:71")),t.showToast({icon:"none",title:"距离任务地点太远，无法完成！"})):e.confirm()})},takingPictures:function(){var e=this;t.chooseImage({count:1,sizeType:["original","compressed"],sourceType:["camera"],success:function(t){console.log(a(t," at pages\\rectificationTaskDetail\\rectificationTaskDetail.vue:89")),e.pictures.push(t.tempFilePaths[0])}})},getImgUrl:function(t){var e=this;s.default.uploadFile(n.default.UPLOAD_UPLOAD,t,function(t){console.log(a(t," at pages\\rectificationTaskDetail\\rectificationTaskDetail.vue:96")),t=JSON.parse(t),console.log(a(t.data," at pages\\rectificationTaskDetail\\rectificationTaskDetail.vue:98")),e.pictures.push(t.data)})},inpDetail:function(t){this.taskDescription=t.detail.value},confirm:function(){if(0!=this.pictures.length){var e={taskDescription:this.taskDescription,id:this.taskDetail.taskId,taskStatus:100,rectificationPhoto:this.pictures.join(";")};s.default.rectificationTaskDetail(e),t.showLoading({mask:!0}),setTimeout(function(){t.hideLoading(),t.navigateBack(),t.$emit("refreshTasksPage",!0)},500)}else t.showToast({icon:"none",title:"请拍照上传！"})},cancel:function(){t.navigateBack({}),t.$emit("refreshTasksPage",!1)}}};e.default=u}).call(this,i("6e42")["default"],i("0de9")["default"])}},[["ef4d","common/runtime","common/vendor"]]]);
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/rectificationTaskDetail/rectificationTaskDetail"],{1458:function(t,i,e){"use strict";var a=function(){var t=this,i=t.$createElement;t._self._c},n=[];e.d(i,"a",function(){return a}),e.d(i,"b",function(){return n})},"5bd9":function(t,i,e){"use strict";var a=e("d954"),n=e.n(a);n.a},"775f":function(t,i,e){"use strict";e.r(i);var a=e("fb4c"),n=e.n(a);for(var o in a)"default"!==o&&function(t){e.d(i,t,function(){return a[t]})}(o);i["default"]=n.a},c4f6:function(t,i,e){"use strict";e.r(i);var a=e("1458"),n=e("775f");for(var o in n)"default"!==o&&function(t){e.d(i,t,function(){return n[t]})}(o);e("5bd9");var s=e("2877"),c=Object(s["a"])(n["default"],a["a"],a["b"],!1,null,"3f3e090a",null);i["default"]=c.exports},d954:function(t,i,e){},fb4c:function(t,i,e){"use strict";(function(t,a){Object.defineProperty(i,"__esModule",{value:!0}),i.default=void 0;var n=c(e("c0ea")),o=c(e("2a75")),s=e("196c");function c(t){return t&&t.__esModule?t:{default:t}}var u={data:function(){return{pictures:[],taskDescription:"",longitude:"",latitude:"",taskDetail:{longitude:"",latitude:"",taskName:"",taskId:""},covers:[],circles:[],controls:[]}},onReady:function(){var i=t.createMapContext("locationMap"),e=i.$getAppMap();e.showUserLocation(!0),this.taskDetail=o.default.taskInfo;var a="";a=this.taskDetail.wryLongitude?s.mapTool.wgs84togcj02(this.taskDetail.wryLongitude,this.taskDetail.wryLatitude):s.mapTool.wgs84togcj02(t.getStorageSync("userLocation").longitude,t.getStorageSync("userLocation").latitude),this.longitude=a[0],this.latitude=a[1],this.userInfo=t.getStorageSync("userInfo");var n=t.getSystemInfoSync().screenWidth,c=t.getSystemInfoSync().windowHeight,u=n/750;this.taskDetail.wryLongitude&&(this.controls=[{id:"toNavigation",position:{width:83*u,height:83*u,left:617*u,top:c/2-103*u},iconPath:"/static/images/icon_navigation.png",clickable:!0}],this.covers=[{id:"person1",latitude:this.latitude,longitude:this.longitude,iconPath:"../../static/images/dingwei.png",label:{content:this.taskDetail.address,color:"#5087FB"}}])},onLoad:function(t){},methods:{delPicture:function(t){var i=this.pictures;i.splice(t,1),this.pictures=i},getDistance:function(){var i=this,e=new plus.maps.Point(t.getStorageSync("userLocation").longitude,t.getStorageSync("userLocation").latitude),n=new plus.maps.Point(this.taskDetail.wryLongitude,this.taskDetail.wryLatitude);plus.maps.Map.calculateDistance(e,n,function(e){e.distance>i.taskDetail.distanceLimit&&1==i.taskDetail.mustInRange?(console.log(a("this.pictures.length"," at pages\\rectificationTaskDetail\\rectificationTaskDetail.vue:118")),t.showToast({icon:"none",title:"距离任务地点太远，无法完成！"})):i.confirm()})},bindControltap:function(t){"toNavigation"==t.controlId&&this.toNavigation()},toNavigation:function(){var t=this,i=s.mapTool.wgs84togcj02(t.taskDetail.wryLongitude,t.taskDetail.wryLatitude),e=i[0],n=i[1];"Android"==plus.os.name?plus.runtime.openURL("amapuri://route/plan/?sid=BGVIS1&did=BGVIS2&dlat="+n+"&dlon="+e+"&dev=0&t=0",function(t){console.log(a("Open system default browser failed: "+t.message," at pages\\rectificationTaskDetail\\rectificationTaskDetail.vue:143"))},"com.autonavi.minimap"):"iOS"==plus.os.name&&plus.runtime.launchApplication({action:"iosamap://path?sourceApplication=applicationName&sid=BGVIS1&did=BGVIS2&dlat="+n+"&dlon="+e+"&dev=0&t=0"},function(t){console.log(a("Open system default browser failed: "+t.message," at pages\\rectificationTaskDetail\\rectificationTaskDetail.vue:148"))})},takingPictures:function(){var i=this;t.chooseImage({count:1,sizeType:["original","compressed"],sourceType:["camera"],success:function(t){i.pictures.push(t.tempFilePaths[0])}})},getImgUrl:function(t){var i=this;o.default.uploadFile(n.default.UPLOAD_UPLOAD,t,function(t){console.log(a(t," at pages\\rectificationTaskDetail\\rectificationTaskDetail.vue:166")),t=JSON.parse(t),console.log(a(t.data," at pages\\rectificationTaskDetail\\rectificationTaskDetail.vue:168")),i.pictures.push(t.data)})},inpDetail:function(t){this.taskDescription=t.detail.value},confirm:function(){if(0!=this.pictures.length){var i={taskDescription:this.taskDescription,id:this.taskDetail.taskId,taskStatus:100,rectificationPhoto:this.pictures.join(";")};o.default.rectificationTaskDetail(i),t.showLoading({mask:!0}),setTimeout(function(){t.hideLoading(),t.navigateBack(),t.$emit("refreshTasksPage",!0)},500)}else t.showToast({icon:"none",title:"请拍照上传！"})},cancel:function(){t.navigateBack({}),t.$emit("refreshTasksPage",!1)}}};i.default=u}).call(this,e("6e42")["default"],e("0de9")["default"])}},[["ef4d","common/runtime","common/vendor"]]]);
 });
 require('pages/rectificationTaskDetail/rectificationTaskDetail.js');
 __wxRoute = 'pages/rank/rank';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/rank/rank.js';
@@ -4210,6 +4242,12 @@ define('pages/rank/rank.js',function(require, module, exports, window, document,
 (global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/rank/rank"],{1430:function(t,n,e){"use strict";e.r(n);var a=e("620b"),o=e.n(a);for(var s in a)"default"!==s&&function(t){e.d(n,t,function(){return a[t]})}(s);n["default"]=o.a},"28c7":function(t,n,e){"use strict";var a=e("8f80"),o=e.n(a);o.a},5195:function(t,n,e){"use strict";e.r(n);var a=e("d86a"),o=e("1430");for(var s in o)"default"!==s&&function(t){e.d(n,t,function(){return o[t]})}(s);e("28c7");var r=e("2877"),u=Object(r["a"])(o["default"],a["a"],a["b"],!1,null,"c51d5e46",null);n["default"]=u.exports},"620b":function(t,n,e){"use strict";(function(t){Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var a=s(e("c0ea")),o=s(e("2a75"));function s(t){return t&&t.__esModule?t:{default:t}}var r=function(){return e.e("components/lanxiujuan-dyDate/lanxiujuan-dyDate").then(e.bind(null,"46dd"))},u=function(){return e.e("components/uni-popup/uni-popup").then(e.bind(null,"47f6"))},i={data:function(){return{scrollH:0,userInfo:"",ranks:[],page:0,type:"department",date:"",chooseData:{}}},components:{pickDate:r,uniPopup:u},onLoad:function(){this.getDepartmentRanks()},onShow:function(){},methods:{getDepartmentRanks:function(){var n=this,e='[{"sort":"rank","order":"asc"}]';o.default.getRequestPc(a.default.ASSESS_DEPARTMENT_LIST,{page:1,limit:1e4,date:this.date,sorts:e},function(e){e=e.data;t.setStorageSync("departmentRanks",e),n.ranks=e},function(e){e=t.getStorageSync("departmentRanks")?t.getStorageSync("departmentRanks"):[],n.ranks=e})},getData:function(t){var n=t.split("-");this.date=n.join(""),this.checkType(this.type)},getTownRanks:function(){var n=this,e='[{"sort":"total","order":"asc"}]';o.default.getRequestPc(a.default.ASSESS_TOWN_LIST,{page:1,limit:1e4,date:this.date,sorts:e},function(e){e=e.data;t.setStorageSync("townRanks",e),n.ranks=e},function(e){e=t.getStorageSync("townRanks")?t.getStorageSync("townRanks"):[],n.ranks=e})},disposeRequestData:function(n,e){n.length>0?this.ranks=n:t.showToast({icon:"none",title:"已经没有更多数据了"})},checkType:function(t){switch(this.type=t,t){case"department":this.getDepartmentRanks();break;case"town":this.getTownRanks();break}},scrollTol:function(){switch(this.type){case"department":this.getDepartmentRanks();break;case"town":this.getTownRanks();break}},showDetail:function(t){this.chooseData=t,this.$refs.popup.open()}}};n.default=i}).call(this,e("6e42")["default"])},"8f80":function(t,n,e){},d86a:function(t,n,e){"use strict";var a=function(){var t=this,n=t.$createElement;t._self._c},o=[];e.d(n,"a",function(){return a}),e.d(n,"b",function(){return o})}},[["21a4","common/runtime","common/vendor"]]]);
 });
 require('pages/rank/rank.js');
+__wxRoute = 'pages/showLocation/showLocation';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/showLocation/showLocation.js';
+
+define('pages/showLocation/showLocation.js',function(require, module, exports, window, document, frames, self, location, navigator, localStorage, history, Caches, screen, alert, confirm, prompt, fetch, XMLHttpRequest, WebSocket, webkit, WeixinJSCore, Reporter, print, WeixinJSBridge){
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["pages/showLocation/showLocation"],{1343:function(t,o,i){"use strict";var n=function(){var t=this,o=t.$createElement;t._self._c},e=[];i.d(o,"a",function(){return n}),i.d(o,"b",function(){return e})},"1f2e":function(t,o,i){"use strict";var n=i("a5da"),e=i.n(n);e.a},"538b":function(t,o,i){"use strict";i.r(o);var n=i("8c58"),e=i.n(n);for(var a in n)"default"!==a&&function(t){i.d(o,t,function(){return n[t]})}(a);o["default"]=e.a},"8c58":function(t,o,i){"use strict";(function(t,n){Object.defineProperty(o,"__esModule",{value:!0}),o.default=void 0;var e=u(i("c0ea")),a=u(i("2a75")),s=i("196c");function u(t){return t&&t.__esModule?t:{default:t}}var c={data:function(){return{covers:[],circles:[],latitude:"",longitude:"",taskId:"",pointInfo:{},userLocation:{},distance:0,controls:[]}},onReady:function(){var o=t.createMapContext("locationMap"),i=o.$getAppMap();i.showUserLocation(!0),this.userInfo=t.getStorageSync("userInfo"),this.pointInfo=a.default.pollutionInfo,this.userLocation=t.getStorageSync("userLocation");var n=t.getSystemInfoSync().screenWidth,e=t.getSystemInfoSync().windowHeight,s=n/750;this.controls=[{id:"toNavigation",position:{width:83*s,height:83*s,left:597*s,top:e-235*s},iconPath:"/static/images/icon_navigation.png",clickable:!0}],this.initMap(this.pointInfo),this.getDistance()},onLoad:function(t){},methods:{initMap:function(o){if(o.longitude){var i=s.mapTool.wgs84togcj02(o.longitude,o.latitude);this.longitude=i[0],this.latitude=i[1],this.circles=[{latitude:this.latitude,longitude:this.longitude,radius:o.distanceLimit,color:"#5087FB80",fillColor:"#5087FB50",strokeWidth:"2"}],this.covers=[{id:"person1",latitude:this.latitude,longitude:this.longitude,iconPath:"../../static/images/dingwei.png",label:{content:o.address,color:"#5087FB"}}]}else t.showToast({icon:"none",title:"位置未记录，请重新定位！"}),this.latitude=this.userLocation.latitude,this.longitude=this.userLocation.longitude},bindControltap:function(t){"toNavigation"==t.controlId&&this.toNavigation()},getDistance:function(){var t=this,o=new plus.maps.Point(this.userLocation.longitude,this.userLocation.latitude),i=new plus.maps.Point(this.pointInfo.longitude,this.pointInfo.latitude);plus.maps.Map.calculateDistance(o,i,function(o){t.distance=(o.distance/1e3).toFixed(2)})},toNavigation:function(){var t=this,o=s.mapTool.wgs84togcj02(t.pointInfo.longitude,t.pointInfo.latitude),i=o[0],e=o[1];"Android"==plus.os.name?plus.runtime.openURL("amapuri://route/plan/?sid=BGVIS1&did=BGVIS2&dlat="+e+"&dlon="+i+"&dev=0&t=0",function(t){console.log(n("Open system default browser failed: "+t.message," at pages\\showLocation\\showLocation.vue:115"))},"com.autonavi.minimap"):"iOS"==plus.os.name&&plus.runtime.launchApplication({action:"iosamap://path?sourceApplication=applicationName&sid=BGVIS1&did=BGVIS2&dlat="+e+"&dlon="+i+"&dev=0&t=0"},function(t){console.log(n("Open system default browser failed: "+t.message," at pages\\showLocation\\showLocation.vue:120"))})},toReport:function(){var o=this,i={id:this.pointInfo.pollutionId,wryType:this.pointInfo.wryType,longitude:this.userLocation.longitude,latitude:this.userLocation.latitude};t.showModal({title:"提示",content:"确认重新记录位置？",success:function(t){t.confirm?a.default.getRequest(e.default.TASK_PATROL_POINT_UPDATE_WRY_ADDRESS_DETAILED,i,function(t){console.log(n("成功"," at pages\\showLocation\\showLocation.vue:137")),o.pointInfo.longitude=o.userLocation.longitude,o.pointInfo.latitude=o.userLocation.latitude,o.initMap(o.pointInfo),o.getDistance()}):t.cancel&&console.log(n("用户点击取消"," at pages\\showLocation\\showLocation.vue:144"))}})}}};o.default=c}).call(this,i("6e42")["default"],i("0de9")["default"])},a142:function(t,o,i){"use strict";i.r(o);var n=i("1343"),e=i("538b");for(var a in e)"default"!==a&&function(t){i.d(o,t,function(){return e[t]})}(a);i("1f2e");var s=i("2877"),u=Object(s["a"])(e["default"],n["a"],n["b"],!1,null,"53f71a6e",null);o["default"]=u.exports},a5da:function(t,o,i){}},[["3ec2","common/runtime","common/vendor"]]]);
+});
+require('pages/showLocation/showLocation.js');
 ;(function(global) {
     __uni_launch_ready(function() {
         var entryPagePath = __wxConfig.entryPagePath.replace('.html', '')

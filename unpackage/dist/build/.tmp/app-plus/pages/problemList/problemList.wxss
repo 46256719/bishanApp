@@ -24,26 +24,26 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-#problemList.data-v-6946f4a7 {
+#problemList.data-v-958d89de {
   font-size: 28rpx;
   background-color: #f2f2f2;
   min-height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.problems.data-v-6946f4a7 {
+.problems.data-v-958d89de {
   height: 100vh;
   padding-bottom: 20rpx;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.problem_list.data-v-6946f4a7 {
+.problem_list.data-v-958d89de {
   padding: 20rpx 20rpx 0rpx;
 }
-.problem_list.data-v-6946f4a7:last-child {
+.problem_list.data-v-958d89de:last-child {
   padding-bottom: 20rpx;
 }
-.toBind.data-v-6946f4a7 {
+.toBind.data-v-958d89de {
   margin: 0rpx -32rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -56,7 +56,7 @@
   padding: 10rpx 32rpx;
   border-top: 1rpx solid lightgray;
 }
-.startMission.data-v-6946f4a7 {
+.startMission.data-v-958d89de {
   width: 140rpx;
   height: 50rpx;
   line-height: 50rpx;

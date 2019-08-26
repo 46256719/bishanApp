@@ -3,7 +3,7 @@
 		<view class="missionCard_list"><view class="">点位名称：</view><view class="">{{result.pollutionName}}</view></view>
 		<view class="missionCard_list"><view class="">问题名称：</view><view class="">{{result.problemTitle}}</view></view>
 		<view class="missionCard_list"><view class="">类别：</view><view class="">{{result.problemType=="1"?"巡查上报":"整改上报"}}</view></view>
-		<view class="missionCard_list"><view class="">时间：</view><view class="">{{result.createTime}}</view></view>
+		<view class="missionCard_list"><view class="">时间：</view><view class="">{{result.createTime||"-"}}</view></view>
 		<view class="missionCard_list" style="border-bottom-color: transparent;"><view class="">问题描述：</view><view class="">{{result.problemDetail||"无"}}</view></view>
 		<slot name="slot_bottom"></slot>
 	</view>

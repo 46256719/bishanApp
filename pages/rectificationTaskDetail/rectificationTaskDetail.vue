@@ -1,10 +1,11 @@
 <template>
 	<view id="rectificationTaskDetail">
-		<map id="locationMap" style="width: 100%;height: 50vh;" :scale="20" :show-location="true" :markers="covers" :circles="circles" :latitude="latitude" :longitude="longitude">
+		<map id="locationMap" v-show="!imgUrl" style="width: 100%;height: 50vh;" :controls="controls" @controltap="bindControltap" :scale="18" :show-location="true" :markers="covers" :circles="circles" :latitude="latitude" :longitude="longitude">
 			
 		</map>
 		<view class="report_info">
 			<view class="taskName">任务名称：{{taskDetail.taskName||""}}</view>
+			<view class="taskName">问题详情：{{taskDetail.problemDetail||""}}</view>
 			<view class="title">整改结果描述</view>
 			<textarea name="" placeholder="最多输入200个文字" @input="inpDetail" maxlength="200" :value="taskDescription" id="describe"></textarea>
 		</view>
@@ -19,6 +20,7 @@
 			<view class="cancel" @click="cancel()">取消</view>
 			<view class="confirm" @click="getDistance()">完成</view>
 		</view>
+		<water-mark v-if="imgUrl" @getPhotoUrl="getPhotoUrl" :imgUrl="imgUrl"></water-mark>
 	</view>
 </template>
 
@@ -26,6 +28,7 @@
 	import URL from "../../static/js/interface.js"
 	import util from "../../static/js/utils.js"
 	import {mapTool} from "../../static/js/mapTool.js"
+	import waterMark from "../../components/createWaterMark/createWaterMark"
 	export default {
 		data() {
 			return {
@@ -33,30 +36,76 @@
 				taskDescription:"",
 				longitude:"",
 				latitude:"",
+				imgUrl:"",
 				taskDetail:{
 					longitude:"",
 					latitude:"",
 					taskName:"",
-					taskId:""
+					id:""
 				},
 				covers:[],
-				circles:[]
+				circles:[],
+				controls:[]
 			}
 		},
+		components:{waterMark},
 		onReady(){
 			var mapContext=uni.createMapContext("locationMap")
 			var locationMapInfo=mapContext.$getAppMap()
 			locationMapInfo.showUserLocation(true)
 			this.taskDetail=util.taskInfo
+			console.log(this.taskDetail) 
 			var wgs84togcj02=""
-			if(!this.taskDetail.longitude){
+			if(!this.taskDetail.wryLongitude){
 				wgs84togcj02=mapTool.wgs84togcj02(uni.getStorageSync("userLocation").longitude,uni.getStorageSync("userLocation").latitude)
 			}else{
-				wgs84togcj02=mapTool.wgs84togcj02(this.taskDetail.longitude,this.taskDetail.latitude)
+				wgs84togcj02=mapTool.wgs84togcj02(this.taskDetail.wryLongitude,this.taskDetail.wryLatitude)
 			}
-			this.latitude=wgs84togcj02[1]
 			this.longitude=wgs84togcj02[0]
+			this.latitude=wgs84togcj02[1]
 			this.userInfo=uni.getStorageSync("userInfo")
+			var screenWidth=uni.getSystemInfoSync().screenWidth
+			var windowHeight=uni.getSystemInfoSync().windowHeight
+			var coefficient=screenWidth/750
+			if(this.taskDetail.wryLongitude){
+				this.controls=[
+					{
+						id:"toNavigation",
+						position:{
+							width: 83*coefficient,
+							height: 83*coefficient,
+							left: 617*coefficient,
+							top:windowHeight/2-103*coefficient
+						},
+						iconPath:"/static/images/icon_navigation.png",
+						clickable:true
+					}
+				]
+				// this.circles=[
+				// 	{
+				// 		latitude: this.latitude,
+				// 		longitude: this.longitude,
+				// 		radius:this.taskDetail.distanceLimit,
+				// 		color:"#5087FB80",
+				// 		fillColor:"#5087FB50",
+				// 		strokeWidth:"2"
+				// 	}
+				// ]
+				this.covers=[{
+					id:"person1",
+					latitude: this.latitude,
+					longitude: this.longitude,
+					iconPath: '../../static/images/dingwei.png',
+					label:{
+						content:this.taskDetail.address,
+						color:"#5087FB"
+					}
+				}]
+			}
+			// uni.$on("query",(url)=>{
+			// 	this.imgUrl=""
+			// 	this.pictures.push(url)
+			// })
 		},
 		onLoad(options) {
 			
@@ -67,9 +116,13 @@
 				pictures.splice(index,1)
 				this.pictures=pictures
 			},
+			getPhotoUrl(url){
+				this.imgUrl=""
+				this.pictures.push(url)
+			},
 			getDistance(){
 				var point1 = new plus.maps.Point(uni.getStorageSync("userLocation").longitude,uni.getStorageSync("userLocation").latitude);
-				var point2 = new plus.maps.Point(this.taskDetail.longitude,this.taskDetail.latitude)
+				var point2 = new plus.maps.Point(this.taskDetail.wryLongitude,this.taskDetail.wryLatitude)
 				plus.maps.Map.calculateDistance(point1,point2,(res)=>{
 					// distance=(res.distance/1000).toFixed(2)
 					if(res.distance>this.taskDetail.distanceLimit&&this.taskDetail.mustInRange==1){
@@ -84,6 +137,29 @@
 				})
 				// return distance
 			},
+			bindControltap(e){
+				if(e.controlId=="toNavigation"){
+					this.toNavigation()
+				}
+			},
+			toNavigation(){//导航
+				var _this = this;  
+				// 判断平台  
+				var wgs84togcj02=mapTool.wgs84togcj02(_this.taskDetail.wryLongitude,_this.taskDetail.wryLatitude)
+				var longitude=wgs84togcj02[0]
+				var latitude=wgs84togcj02[1]
+				if (plus.os.name == 'Android') {  
+					plus.runtime.openURL("amapuri://route/plan/?sid=BGVIS1&did=BGVIS2&dlat="+latitude+"&dlon="+longitude+"&dev=0&t=0",  
+						function(e) {  
+							console.log('Open system default browser failed: ' + e.message);  
+						},"com.autonavi.minimap"
+					);
+				} else if (plus.os.name == 'iOS') {  
+					plus.runtime.launchApplication({ action:"iosamap://path?sourceApplication=applicationName&sid=BGVIS1&did=BGVIS2&dlat="+latitude+"&dlon="+longitude+"&dev=0&t=0" }, function(e) {  
+						console.log('Open system default browser failed: ' + e.message);  
+					});  
+				}
+			},
 			takingPictures(){
 				var that=this
 				uni.chooseImage({
@@ -91,8 +167,9 @@
 					sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
 					sourceType: ['camera'], //从相册选择  默认是两个都有
 					success: (res) => {
-						// console.log(res);
-						this.pictures.push(res.tempFilePaths[0])
+						console.log(res);
+						// this.pictures.push(res.tempFilePaths[0])
+						this.imgUrl=res.tempFilePaths[0]
 					}
 				});
 			},
@@ -121,7 +198,7 @@
 				}
 				var data={
 					taskDescription:this.taskDescription,
-					id:this.taskDetail.taskId,
+					id:this.taskDetail.id,
 					taskStatus:100,
 					rectificationPhoto:this.pictures.join(";")
 				}

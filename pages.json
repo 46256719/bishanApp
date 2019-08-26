@@ -190,6 +190,13 @@
 				"navigationStyle":"custom"
 			}
         }
+		,{
+		    "path" : "pages/showLocation/showLocation",
+		    "style" : {
+				"navigationBarTitleText" : "上报地点",
+				"backgroundColor":"#F2F2F2"
+			}
+		}
     ],
     "globalStyle" : {
         "navigationBarTextStyle" : "white",

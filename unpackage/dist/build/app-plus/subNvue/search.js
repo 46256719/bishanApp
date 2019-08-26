@@ -1489,6 +1489,8 @@ var timer_getLoction = null;
 var timer_upLoction = {};
 var upLoctionData = {};
 var subNvue = {};
+var taskInfo = {};
+var pollutionInfo = {};
 var arrWry = ["WRY_BZ_LIST", "WRY_COMPANY_LIST", "WRY_RHKPWK_LIST", "WRY_RHKPWD_LIST", "WRY_JZGD_LIST", "WRY_QTHY_LIST", "WRY_JCDW_LIST", "WRY_YLJG_LIST", "WRY_XQYZ_LIST", "WRY_TZC_LIST", "WRY_SHUIKU_LIST", "WRY_SPT_LIST", "WRY_YYC_LIST", "WRY_JMJZJZD_LIST", "WRY_XSLW_LIST", "WRY_XCC_LIST", "WRY_CYHY_LIST", "WRY_NMSC_LIST", "WRY_WSCLC_LIST", "WRY_ZZYFLDJD_LIST", "WRY_SMYSYZDH_LIST"];
 
 function getRequest(url, data, call, error) {
@@ -1512,7 +1514,7 @@ function getRequest(url, data, call, error) {
       } else if (res.data.code == 1) {
         typeof call == "function" ? call(res.data) : "";
       } else {
-        console.log(__f__(res.data, " at static\\js\\utils.js:46"));
+        console.log(__f__(res.data, " at static\\js\\utils.js:48"));
         uni.showToast({
           icon: "none",
           title: res.data.msg || "数据异常"
@@ -1617,7 +1619,7 @@ function completeTask(data) {
   //完成巡查污染源任务
   upImgTeams(data.pointPhoto, function (results, index) {
     data.pointPhoto = results;
-    console.log(__f__(data, " at static\\js\\utils.js:148"));
+    console.log(__f__(data, " at static\\js\\utils.js:150"));
     toCompleteTask(_interface.default.TASK_PATROL_POINT_UPDATE, data);
   }, 1, function (results) {
     completeTask(data);
@@ -1657,7 +1659,7 @@ function upProblemTeams(data) {
 function toCompleteTask(url, data) {
   //上传问题或者完成点位巡查
   getRequestNo(url, data, function (results) {
-    console.log(__f__("上传成功", " at static\\js\\utils.js:180"));
+    console.log(__f__("上传成功", " at static\\js\\utils.js:182"));
   }, function (results) {
     toCompleteTask(data);
   });
@@ -1668,7 +1670,7 @@ function toUpProblem(url, data) {
   getRequestNo(url, {
     data: data
   }, function (results) {
-    console.log(__f__("上传成功", " at static\\js\\utils.js:187"));
+    console.log(__f__("上传成功", " at static\\js\\utils.js:189"));
   }, function (results) {
     toUpProblem(data);
   });
@@ -1745,7 +1747,7 @@ var webSocket = function webSocket(id) {
 };
 
 uni.onSocketOpen(function (res) {
-  console.log(__f__('WebSocket连接已打开！', " at static\\js\\utils.js:259"));
+  console.log(__f__('WebSocket连接已打开！', " at static\\js\\utils.js:261"));
 });
 
 var getLocation = function getLocation() {
@@ -1759,14 +1761,14 @@ var getLocation = function getLocation() {
         });
       },
       fail: function fail(res) {
-        console.log(__f__(res, " at static\\js\\utils.js:270"));
+        console.log(__f__(res, " at static\\js\\utils.js:272"));
         clearInterval(timer_getLoction);
         uni.showModal({
           title: "获取定位权限失败",
           content: "请打开手机定位权限",
           showCancel: false,
           success: function success(res) {
-            console.log(__f__(res.confirm, " at static\\js\\utils.js:277"));
+            console.log(__f__(res.confirm, " at static\\js\\utils.js:279"));
             uni.setStorageSync("userLocation", {
               longitude: 0,
               latitude: 0
@@ -1774,7 +1776,7 @@ var getLocation = function getLocation() {
             getLocation();
           },
           fail: function fail(res) {
-            console.log(__f__(res, " at static\\js\\utils.js:282"));
+            console.log(__f__(res, " at static\\js\\utils.js:284"));
           }
         });
       }
@@ -1856,7 +1858,9 @@ module.exports = {
   completeTask: completeTask,
   rectificationTaskDetail: rectificationTaskDetail,
   subNvue: subNvue,
-  getWryMap: getWryMap
+  getWryMap: getWryMap,
+  taskInfo: taskInfo,
+  pollutionInfo: pollutionInfo
 };
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus-nvue-v8/dist/index.js */ 7)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 6)["default"]))
 

@@ -35,12 +35,14 @@
 			<view class="cancel" @click="cancel()">取消</view>
 			<view class="confirm" @click="confirm()">确定</view>
 		</view>
+		<water-mark v-if="imgUrl" @getPhotoUrl="getPhotoUrl" :imgUrl="imgUrl"></water-mark>
 	</view>
 </template>
 
 <script>
 	import URL from "../../static/js/interface.js"
 	import util from "../../static/js/utils.js"
+	import waterMark from "../createWaterMark/createWaterMark"
 	export default {
 		data() {
 			const currentDate = this.getDate({
@@ -52,7 +54,8 @@
 				rectificationProgress:"",
 				rectificationExpire:currentDate,
 				disposeSuggest:"",
-				pictures:[]
+				pictures:[],
+				imgUrl:""
 			};
 		},
 		props:["chooseProblem","nowProblem"],
@@ -65,6 +68,7 @@
 			this.disposeSuggest=this.chooseProblem.disposeSuggest?this.chooseProblem.disposeSuggest:""
 			this.pictures=this.chooseProblem.problemPhoto?this.chooseProblem.problemPhoto.split(";"):[]
 		},
+		components:{waterMark},
 		methods:{
 			delPicture(index){
 				var pictures=this.pictures
@@ -93,23 +97,35 @@
 					sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
 					sourceType: ['camera'], //从相册选择  默认是两个都有
 					success:  (res)=> {
-						// console.log(res);
-						this.pictures.push(res.tempFilePaths[0]) 
+						console.log(res);
+						// this.pictures.push(res.tempFilePaths[0]) 
+						this.imgUrl=res.tempFilePaths[0]
 					}
 				});
 			},
 			getImgUrl(url){//获取图片地址
 				util.uploadFile(URL.UPLOAD_UPLOAD,url,(results)=>{
 					// console.log(results)
-					results=JSON.parse(results)
+					// results=JSON.parse(results)
 					// console.log(results.data)
 					this.pictures.push(results.data)
 				})
+			},
+			getPhotoUrl(url){
+				this.imgUrl=""
+				this.pictures.push(url)
 			},
 			cancel(){
 				this.$emit("hideMode")
 			},
 			confirm(){
+				if(this.pictures.length==0){
+					uni.showToast({
+						icon:"none",
+						title:"请拍照上传！"
+					})
+					return
+				}
 				var data={
 					"problemDetail":this.problemDetail,
 					"problemPhoto":this.pictures.join(";"),
