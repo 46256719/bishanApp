@@ -5,7 +5,7 @@
 			<cover-view id="address">重庆市</cover-view>
 			<cover-view id="address_msg">{{pointInfo.address}}</cover-view>	
 			<cover-view id="distance">{{distance}}km</cover-view>
-			<cover-image id="toNavigation" @click="toNavigation()" src="../../static/images/icon_navigation.png"></cover-image>
+			<!-- <cover-image id="toNavigation" @click="toNavigation()" src="../../static/images/icon_navigation.png"></cover-image> -->
 			<cover-view id="reset" @click="toReport()">重新定位</cover-view>
 		</map>
 	</view>
@@ -30,9 +30,9 @@
 			}
 		},
 		onReady() {
-			this.getDistance()
-		},
-		onLoad(options){
+			var mapContext=uni.createMapContext("locationMap")
+			var locationMapInfo=mapContext.$getAppMap()
+			locationMapInfo.showUserLocation(true)
 			this.userInfo=uni.getStorageSync("userInfo")
 			this.pointInfo=util.pollutionInfo
 			this.userLocation=uni.getStorageSync("userLocation")
@@ -53,6 +53,10 @@
 				}
 			]
 			this.initMap(this.pointInfo)
+			this.getDistance()
+		},
+		onLoad(options){
+			
 		},
 		methods: {
 			initMap(data){
@@ -95,9 +99,6 @@
 				}
 			},
 			getDistance(){
-				var mapContext=uni.createMapContext("locationMap")
-				var locationMapInfo=mapContext.$getAppMap()
-				locationMapInfo.showUserLocation(true)
 				var point1 = new plus.maps.Point(this.userLocation.longitude,this.userLocation.latitude);
 				var point2 = new plus.maps.Point(this.pointInfo.longitude,this.pointInfo.latitude)
 				plus.maps.Map.calculateDistance(point1,point2,(res)=>{

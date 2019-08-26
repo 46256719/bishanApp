@@ -47,8 +47,6 @@
 			var mapContext=uni.createMapContext("locationMap")
 			var locationMapInfo=mapContext.$getAppMap()
 			locationMapInfo.showUserLocation(true)
-		},
-		onLoad(options) {
 			this.taskDetail=util.taskInfo
 			var wgs84togcj02=""
 			if(!this.taskDetail.longitude){
@@ -59,6 +57,9 @@
 			this.latitude=wgs84togcj02[1]
 			this.longitude=wgs84togcj02[0]
 			this.userInfo=uni.getStorageSync("userInfo")
+		},
+		onLoad(options) {
+			
 		},
 		methods: {
 			delPicture(index){

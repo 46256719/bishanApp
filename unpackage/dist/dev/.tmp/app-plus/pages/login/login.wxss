@@ -121,6 +121,7 @@
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	font-size: 30rpx;
+	z-index: 1000000;
 }
 .place_class.data-v-27f2b558{
 	color:#999999;

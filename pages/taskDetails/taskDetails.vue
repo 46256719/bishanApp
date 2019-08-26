@@ -136,7 +136,8 @@
 				})
 			},
 			confirmTask(data){
-				uni.setStorageSync("taskInfo",data)
+				// uni.setStorageSync("taskInfo",data)
+				util.pollutionInfo=data
 				uni.navigateTo({
 					url:"/pages/completeTask/completeTask"
 				})

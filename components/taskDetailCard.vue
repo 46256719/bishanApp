@@ -15,7 +15,7 @@
 </template>
 
 <script>
-	import util from "../../static/js/utils.js"
+	import util from "../static/js/utils.js"
 	export default {
 		data() {
 			return {

@@ -4,7 +4,7 @@
 	min-height: 100vh;
 	color: #333333;
 	font-size: 28rpx;
-	padding-bottom: 122rpx;
+	/* padding-bottom: 122upx; */
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 }
@@ -63,5 +63,8 @@
 	right: -15rpx!important;
 	width: 30rpx!important;
 	height: 30rpx!important;
+}
+.footer.data-v-4d085326{
+	position: relative;
 }
 

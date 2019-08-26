@@ -39,18 +39,20 @@
 			}
 		},
 		onLoad() {
-			this.userInfo=uni.getStorageSync("userInfo")
-			this.taskInfo=uni.getStorageSync("taskInfo")
-			var wgs84togcj02=mapTool.wgs84togcj02(uni.getStorageSync("userLocation").longitude,uni.getStorageSync("userLocation").latitude)
-			this.latitude=wgs84togcj02[1]
-			this.longitude=wgs84togcj02[0]
-			this.initMap(this.taskInfo)
+			
 		},
 		onReady(){
 			var mapContext=uni.createMapContext("completeMap")
 			var locationMapInfo=mapContext.$getAppMap()
 			locationMapInfo.showUserLocation(true)
-			locationMapInfo.show()
+			// locationMapInfo.show()
+			this.userInfo=uni.getStorageSync("userInfo")
+			this.taskInfo=util.pollutionInfo
+			console.log(this.taskInfo.longitude)
+			var wgs84togcj02=mapTool.wgs84togcj02(this.taskInfo.longitude,this.taskInfo.latitude)
+			this.longitude=wgs84togcj02[0]
+			this.latitude=wgs84togcj02[1]
+			this.initMap(this.taskInfo)
 		},
 		methods: {
 			initMap(data){
