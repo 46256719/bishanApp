@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "完成整改任务",
-  "usingComponents": {}
+  "usingComponents": {
+    "water-mark": "/components/createWaterMark/createWaterMark"
+  }
 }

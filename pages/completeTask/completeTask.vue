@@ -1,6 +1,6 @@
 <template>
 	<view id="completeTask">
-		<map id="completeMap" v-show="!imgUrl" style="width: 100%;height: 50vh;" :scale="18" :show-location="true" :markers="covers" :circles="circles" :latitude="latitude" :longitude="longitude">
+		<map id="completeMap" style="width: 100%;height: 50vh;" :scale="18" :show-location="true" :markers="covers" :circles="circles" :latitude="latitude" :longitude="longitude">
 			
 		</map>
 		<view class="report_info">
@@ -10,7 +10,7 @@
 			<view class="pictures">
 				<view class="takingPictures" @click="takingPictures()"><image style="width: 46upx;height: 38upx;" src="/static/images/icon_takePicture.png" mode=""></image></view>
 				<view class="picture_list" v-for="(item,index) in pictures" :key="index">
-					<image :src="item" mode="aspectFill"></image>
+					<image :src="item" mode="aspectFill" @click="previewImage(pictures,index)"></image>
 					<image class="del" @click="delPicture(index)" src="/static/images/icon_ban.png" mode=""></image>
 				</view>
 			</view>
@@ -52,7 +52,6 @@
 			// locationMapInfo.show()
 			this.userInfo=uni.getStorageSync("userInfo")
 			this.taskInfo=util.pollutionInfo
-			console.log(this.taskInfo.longitude)
 			var wgs84togcj02=mapTool.wgs84togcj02(this.taskInfo.longitude,this.taskInfo.latitude)
 			this.longitude=wgs84togcj02[0]
 			this.latitude=wgs84togcj02[1]
@@ -77,6 +76,15 @@
 					longitude: wgs84togcj02[0],
 					iconPath: '../../static/images/dingwei.png'
 				}]
+			},
+			previewImage(data,index){//预览照片
+				uni.previewImage({
+					current:index,
+					urls: data,
+					fail(res){
+						console.log(res)
+					}
+				});
 			},
 			getPhotoUrl(url){
 				this.imgUrl=""

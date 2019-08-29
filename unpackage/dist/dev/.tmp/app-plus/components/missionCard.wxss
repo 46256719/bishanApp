@@ -20,5 +20,7 @@
 .missionCard_list>view.data-v-ab7f4fda:first-child{
 	color: rgb(153,153,153);
 }
-
+.missionCard_list_left.data-v-ab7f4fda{
+	width: 200rpx;
+}
 

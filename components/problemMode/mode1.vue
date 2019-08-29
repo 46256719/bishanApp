@@ -26,7 +26,7 @@
 			<view class="pictures">
 				<view class="takingPictures" @click="takingPictures()"><image style="width: 46upx;height: 38upx;" src="/static/images/icon_takePicture.png" mode=""></image></view>
 				<view class="picture_list" v-for="(item,index) in pictures" :key="index">
-					<image :src="item" mode="aspectFill"></image>
+					<image :src="item" mode="aspectFill" @click="previewImage(pictures,index)"></image>
 					<image class="del" @click="delPicture(index)" src="/static/images/icon_ban.png" mode=""></image>
 				</view>
 			</view>
@@ -74,6 +74,15 @@
 				var pictures=this.pictures
 				pictures.splice(index,1)
 				this.pictures=pictures
+			},
+			previewImage(data,index){//预览照片
+				uni.previewImage({
+					current:index,
+					urls: data,
+					fail(res){
+						console.log(res)
+					}
+				});
 			},
 			inpDetail(e){
 				this.problemDetail=e.detail.value

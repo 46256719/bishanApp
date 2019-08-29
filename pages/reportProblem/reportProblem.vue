@@ -194,7 +194,7 @@
 	height: 100vh;
 	background-color: #fff;
 	width: 100vw;
-	z-index: 10000
+	z-index: 1000
 }
 .hideStyle{
 	height:100upx;

@@ -5,6 +5,7 @@ var upLoctionData={}
 var subNvue={}
 var taskInfo={}
 var pollutionInfo={}
+var upTimeNum=30000
 var arrWry=[
 	"WRY_BZ_LIST",
 	"WRY_COMPANY_LIST",
@@ -324,7 +325,7 @@ var upLoction=function(id){
 			}
 			upLoctionData[id]=[] 
 		}) 
-	},30000)
+	},upTimeNum)
 }
 
 function getWryMap(){

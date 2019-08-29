@@ -1658,10 +1658,11 @@ function upProblemTeams(data) {
 
 function toCompleteTask(url, data) {
   //上传问题或者完成点位巡查
+  console.log(__f__(data, " at static\\js\\utils.js:181"));
   getRequestNo(url, data, function (results) {
-    console.log(__f__("上传成功", " at static\\js\\utils.js:182"));
+    console.log(__f__("上传成功", " at static\\js\\utils.js:183"));
   }, function (results) {
-    toCompleteTask(data);
+    toCompleteTask(url, data);
   });
 }
 
@@ -1670,7 +1671,7 @@ function toUpProblem(url, data) {
   getRequestNo(url, {
     data: data
   }, function (results) {
-    console.log(__f__("上传成功", " at static\\js\\utils.js:189"));
+    console.log(__f__("上传成功", " at static\\js\\utils.js:190"));
   }, function (results) {
     toUpProblem(data);
   });
@@ -1719,7 +1720,7 @@ function uploadFile(url, data, call, error) {
         typeof error == "function" ? error(data) : "";
       }
     },
-    fail: function fail() {
+    fail: function fail(res) {
       typeof error == "function" ? error(data) : "";
     }
   });
@@ -1747,7 +1748,7 @@ var webSocket = function webSocket(id) {
 };
 
 uni.onSocketOpen(function (res) {
-  console.log(__f__('WebSocket连接已打开！', " at static\\js\\utils.js:261"));
+  console.log(__f__('WebSocket连接已打开！', " at static\\js\\utils.js:262"));
 });
 
 var getLocation = function getLocation() {
@@ -1761,14 +1762,14 @@ var getLocation = function getLocation() {
         });
       },
       fail: function fail(res) {
-        console.log(__f__(res, " at static\\js\\utils.js:272"));
+        console.log(__f__(res, " at static\\js\\utils.js:273"));
         clearInterval(timer_getLoction);
         uni.showModal({
           title: "获取定位权限失败",
           content: "请打开手机定位权限",
           showCancel: false,
           success: function success(res) {
-            console.log(__f__(res.confirm, " at static\\js\\utils.js:279"));
+            console.log(__f__(res.confirm, " at static\\js\\utils.js:280"));
             uni.setStorageSync("userLocation", {
               longitude: 0,
               latitude: 0
@@ -1776,7 +1777,7 @@ var getLocation = function getLocation() {
             getLocation();
           },
           fail: function fail(res) {
-            console.log(__f__(res, " at static\\js\\utils.js:284"));
+            console.log(__f__(res, " at static\\js\\utils.js:285"));
           }
         });
       }
@@ -1826,7 +1827,7 @@ var upLoction = function upLoction(id) {
 
       upLoctionData[id] = [];
     });
-  }, 6000);
+  }, 30000);
 };
 
 function getWryMap() {

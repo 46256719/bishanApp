@@ -178,10 +178,11 @@ function upProblemTeams(data){//上传多个问题
 	}
 }
 function toCompleteTask(url,data){//上传问题或者完成点位巡查
+	console.log(data)
 	getRequestNo(url,data,(results)=>{
 		console.log("上传成功")
 	},(results)=>{
-		toCompleteTask(data)
+		toCompleteTask(url,data)
 	})
 }
 function toUpProblem(url,data){//上传问题或者完成点位巡查
@@ -232,7 +233,7 @@ function uploadFile(url,data,call,error){//上传图片
 				typeof error=="function"?error(data):""
 			}
 		},
-		fail(){
+		fail(res){
 			typeof error=="function"?error(data):""
 		}
 	})
@@ -323,7 +324,7 @@ var upLoction=function(id){
 			}
 			upLoctionData[id]=[] 
 		}) 
-	},6000)
+	},30000)
 }
 
 function getWryMap(){
@@ -335,9 +336,6 @@ function getWryMap(){
 		})(arrWry[i])
 	}
 }
-
-
-
 module.exports={  
 	getRequest,
 	getRequestNo,

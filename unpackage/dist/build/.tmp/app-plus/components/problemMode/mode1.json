@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "water-mark": "/components/createWaterMark/createWaterMark"
+  },
   "component": true
 }
