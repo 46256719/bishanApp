@@ -1,5 +1,5 @@
 
-#rectificationTaskDetail.data-v-75fc66ae{
+#rectificationTaskDetail.data-v-0e4c3bf2{
 	background-color: #F5F5F5;
 	min-height: 100vh;
 	color: #333333;
@@ -8,14 +8,14 @@
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 }
-.taskName.data-v-75fc66ae{
+.taskName.data-v-0e4c3bf2{
 	padding-bottom: 30rpx;
 }
-.report_info.data-v-75fc66ae{
+.report_info.data-v-0e4c3bf2{
 	padding: 30rpx 0rpx 10rpx 30rpx;
 	background-color: #FFFFFF;
 }
-#describe.data-v-75fc66ae{
+#describe.data-v-0e4c3bf2{
 	margin-top: 26rpx;
 	background-color: #F5F5F5;
 	width: auto;
@@ -26,7 +26,7 @@
 	height: 340rpx;
 	border-radius: 10rpx;
 }
-.pictures.data-v-75fc66ae{
+.pictures.data-v-0e4c3bf2{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -38,7 +38,7 @@
 	        flex-wrap: wrap;
 	background-color: #FFFFFF;
 }
-.pictures>view.data-v-75fc66ae{
+.pictures>view.data-v-0e4c3bf2{
 	width: 126rpx;
 	height: 126rpx;
 	border: 1rpx solid #eee;
@@ -46,7 +46,7 @@
 	margin-right: 17rpx;
 	margin-bottom: 17rpx;
 }
-.pictures>view>image.data-v-75fc66ae:first-child{
+.pictures>view>image.data-v-0e4c3bf2:first-child{
 	width: 124rpx;
 	height: 124rpx;
 	display: block;
@@ -57,14 +57,14 @@
 	right: 0rpx;
 	margin: auto;
 }
-.del.data-v-75fc66ae{
+.del.data-v-0e4c3bf2{
 	position: absolute;
 	top: -15rpx!important;
 	right: -15rpx!important;
 	width: 30rpx!important;
 	height: 30rpx!important;
 }
-.footer.data-v-75fc66ae{
+.footer.data-v-0e4c3bf2{
 	position: relative;
 }
 

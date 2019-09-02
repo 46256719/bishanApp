@@ -90,12 +90,13 @@
 		},
 		components:{pickDate,uniPopup},
 		onLoad(){
-			// this.userInfo=uni.getStorageSync("userInfo")
-			// util.isRefreshTasksPage=true
-			// var date=new Date()
-			// var year=date.getFullYear()
-			// var month=date.getMonth()+1
-			// this.date=year.toString()+(month<10?"0"+month:month)
+			this.userInfo=uni.getStorageSync("userInfo")
+			util.isRefreshTasksPage=true
+			var date=new Date()
+			var year=date.getFullYear()
+			var month=date.getMonth()
+			month=month<1?12:month
+			this.date=year.toString()+(month<10?"0"+month:month)
 			this.getDepartmentRanks()
 		},
 		onShow() {
@@ -107,7 +108,7 @@
 		methods:{
 			getDepartmentRanks(){//部门排名
 				var sorts='[{"sort":"rank","order":"asc"}]'
-				util.getRequestPc(URL.ASSESS_DEPARTMENT_LIST,{page:1,limit:10000,date:this.date,sorts},(results)=>{
+				util.getRequestPc(URL.url_PC,{url:URL.ASSESS_DEPARTMENT_LIST,params:"page=1;limit=10000;date="+this.date+";sorts="+sorts},(results)=>{
 					var results=results.data
 					uni.setStorageSync("departmentRanks",results)
 					this.ranks=results
@@ -125,7 +126,7 @@
 			},
 			getTownRanks(){//镇街排名
 				var sorts='[{"sort":"total","order":"asc"}]'
-				util.getRequestPc(URL.ASSESS_TOWN_LIST,{page:1,limit:10000,date:this.date,sorts},(results)=>{
+				util.getRequestPc(URL.url_PC,{url:URL.ASSESS_TOWN_LIST,params:"page=1;limit=10000;date="+this.date+";sorts="+sorts},(results)=>{
 					var results=results.data
 					uni.setStorageSync("townRanks",results)
 					this.ranks=results
@@ -194,11 +195,9 @@
 	text-align: center;
 }
 #checkDate{
-	display: block;
 	position: absolute;
-	right:0upx;
-	bottom: 10upx;
-	width: 70upx;
+	right:30upx;
+	bottom: 15upx;
 	height: 70upx;
 }
 .rank_header{

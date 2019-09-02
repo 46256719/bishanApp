@@ -5,11 +5,11 @@
 			<view class="project_title_first">璧山区水污染防治管理信息系统</view>
 			<view class="project_title_second">绿水青山，就是金山银山</view>
 		</view>
-		<view class="getUrl">
+		<!-- <view class="getUrl">
 			<text>配置请求地址:</text>
 			<input @input="getUrl" type="text" placeholder="请输入带端口号的地址" :value="url" />
 			<view class="submitUrl" @click="submitUrl()">确定</view>
-		</view>
+		</view> -->
 		<view class="loginContent">
 			<!-- <view class="systemTitle">璧山区水污染防治管理信息系统</view> -->
 			<view class="lg">
@@ -41,11 +41,11 @@
 					username:"dengmin",
 					password:"123456"
 				},
-				url:"http://122.114.177.198"
+				url:"http://183.230.23.21"
 			}
 		},
 		onLoad() {
-			this.url=uni.getStorageSync("url")?uni.getStorageSync("url"):"http://122.114.177.198"
+			this.url=uni.getStorageSync("url")?uni.getStorageSync("url"):"http://183.230.23.21"
 			this.loginInfo=uni.getStorageSync("loginInfo")?uni.getStorageSync("loginInfo"):{username:"liuyouzhong",password:"123456"}
 		},
 		methods: {
@@ -55,6 +55,7 @@
 					uni.setStorageSync("token",results.data.token)
 					uni.setStorageSync("userInfo",results.data.user)
 					uni.setStorageSync("loginInfo",this.loginInfo)
+					util.upTimeNum=results.data.upLoadTime?(results.data.upLoadTime*1000):300000
 					// util.webSocket(results.data.user.id)
 					// var onTask=uni.getStorageSync("onTask")?uni.getStorageSync("onTask"):[]
 					var onTask=results.data.patrolTask?results.data.patrolTask:[]

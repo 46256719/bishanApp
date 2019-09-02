@@ -1,7 +1,7 @@
 <template>
 	<view id="problemList">
 		<scroll-view id="problems" scroll-y="true">
-			<view v-for="(item,index) in problems" @click="toTaskDetail(item)" :key="item.id" class="problem_list">
+			<view v-for="(item,index) in problems" :key="item.id" class="problem_list">
 				<problem-card :result="item">
 					<!-- <view slot="slot_bottom" class="toBind">
 						<view class="startMission">确认</view>

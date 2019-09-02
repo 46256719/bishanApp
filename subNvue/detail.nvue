@@ -1,29 +1,91 @@
 <template>
 	<div class="detail">
-		<div class="close" @click="close()"><text style="color: #fff;">关闭</text></div>
+		<div class="detail_title"><text style="color: #000;text-align: center;">{{pollution.name}}</text></div>
+		<!-- <div class="close" @click="close()"><text style="color: #fff;">关闭</text></div> -->
 		<div class="detail_content">
+			<div class="detail_content_list" @click="close()">取消</div>
+			<div class="detail_content_list navigation" @click="toNavigation()"><text style="color: #fff;">导航</text></div>
 		</div>
 	</div>
 </template>
 
 <script>
+	import {mapTool} from '../static/js/mapTool.js'
 	export default {
+		data() {
+			return {
+				pollution:{}
+			}
+		},
+		mounted() {
+			uni.$on("showDetail",(pollution)=>{
+				this.pollution=pollution
+			})
+		},
 		methods:{
 			close(){
 				uni.$emit("closeDetail")
 			},
+			toNavigation(){//导航
+				var _this = this;  
+				// 判断平台  
+				var wgs84togcj02=mapTool.wgs84togcj02(_this.pollution.longitude,_this.pollution.latitude)
+				var longitude=wgs84togcj02[0]
+				var latitude=wgs84togcj02[1]
+				if (plus.os.name == 'Android') {  
+					plus.runtime.openURL("amapuri://route/plan/?sid=BGVIS1&did=BGVIS2&dlat="+latitude+"&dlon="+longitude+"&dev=0&t=0",  
+						function(e) {  
+							console.log('Open system default browser failed: ' + e.message);  
+						},"com.autonavi.minimap"
+					);
+				} else if (plus.os.name == 'iOS') {  
+					plus.runtime.launchApplication({ action:"iosamap://path?sourceApplication=applicationName&sid=BGVIS1&did=BGVIS2&dlat="+latitude+"&dlon="+longitude+"&dev=0&t=0" }, function(e) {  
+						console.log('Open system default browser failed: ' + e.message);  
+					});  
+				}
+			}
 		}
 	}
 </script>
 
 <style scoped>
 .detail{
-	padding-top:60px;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+}
+.detail_title{
+	padding: 10px 0px;
+	align-items: center;
+	justify-content: center;
+	width: 710px;
+	margin-left: 20px;
+	flex: 1;
+	border-bottom-style: solid;
+	border-bottom-color: #e1e1e1;
+	border-bottom-width: 1px;
 }
 .detail_content{
 	width: 750px;
-	background-color: red;
-	height: 340px;
+	flex: 1;
+	flex-direction: row;
+	justify-content:space-between ;
+	height: 100%;
+	align-items: center;
+	padding: 0px 20px;
+}
+.detail_content_list{
+	border-style:solid;
+	border-width: 1px;
+	border-color: #e1e1e1;
+	height: 70px;
+	width: 340px;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.navigation{
+	background-color: #5087fb;
 }
 .close{
 	position: absolute;
@@ -32,6 +94,6 @@
 	text-align: center;
 	border-radius: 5px;
 	background-color:#5087FB;
-	top:5px;
+	top:10px;
 }
 </style>

@@ -15,15 +15,30 @@
 image.data-v-7409c03c{
 	width: 31rpx;
 	height: 31rpx;
-	position: absolute;
-	right: 0rpx;
-	bottom:0rpx;
-	top:0rpx;
-	left: 0rpx;
-	margin: auto;
+	/* position: absolute; */
+	/* right: 0upx; */
+	/* bottom:0upx; */
+	/* top:0upx; */
+	/* left: 0upx; */
+	/* margin: auto; */
+	margin-left: 10rpx;
 }
 .fa-angle-right.data-v-7409c03c {
   font-size: 36rpx;
   padding-left: 12rpx;
+}
+.dt.data-v-7409c03c{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 

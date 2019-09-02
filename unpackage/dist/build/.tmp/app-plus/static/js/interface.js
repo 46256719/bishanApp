@@ -3,9 +3,13 @@
 // const url0="http://192.168.1.5"
 // const url0="http://192.168.0.188"
 // const url0="http://192.168.1.15"
-const url0=uni.getStorageSync("url")?uni.getStorageSync("url"):"http://122.114.177.198"
-const url=url0+":8082"
-const url_PC=url0+":8081/app"
+// const url0="http://122.114.177.198"
+const url0="http://183.230.23.21"
+// const url0=uni.getStorageSync("url")?uni.getStorageSync("url"):"http://183.230.23.21"
+const url=url0+":18082"
+// const url=url0+":8082"
+const url_PC=url0+":18081/app"
+// const url_PC=url0+":8081/app"
 
 //常链接 
 const WEBSOCKET="ws://192.168.1.4:8082/websocket/"

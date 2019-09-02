@@ -1,5 +1,5 @@
 <template>
-  <view style="position: relative;width: 70upx;height: 70upx;">
+  <view style="position: relative;width: 200upx;height: 70upx;">
     <picker @change="bindTimeChange"
       @columnchange="columnchange"
       mode="multiSelector"
@@ -7,9 +7,12 @@
 	  :class="{disabled:disabled}"
       :value="index"
       :range="array"
-	  style="width: 70upx;height: 70upx;"
+	  style="width: 200upx;height: 70upx;"
 	  >
-      <image src="../../static/images/icon_date.png" mode=""></image>
+	  <view class="dt">
+	  	{{showTime}}
+		<image src="../../static/images/icon_date.png" mode=""></image>
+	  </view>
     </picker>
   </view>
   <!-- 只读 -->
@@ -53,13 +56,18 @@ export default {
     }
   },
   data() {
+	  var date=new Date()
+	  var y=date.getFullYear()
+	  var m=date.getMonth()
+	  m=m<1?12:m
+	  m=m<10?"0"+m:m
     return {
       index: [0],
       array: [],
       yearArr: [], // 年份数组
       monthArr: [], // 月份数组
       yearIndex: 0, // 年份选中下标
-      showTime: this.moment(this.childValue)
+      showTime: y+"-"+m
     }
   },
 
@@ -389,15 +397,21 @@ export default {
 image{
 	width: 31upx;
 	height: 31upx;
-	position: absolute;
-	right: 0upx;
-	bottom:0upx;
-	top:0upx;
-	left: 0upx;
-	margin: auto;
+	/* position: absolute; */
+	/* right: 0upx; */
+	/* bottom:0upx; */
+	/* top:0upx; */
+	/* left: 0upx; */
+	/* margin: auto; */
+	margin-left: 10upx;
 }
 .fa-angle-right {
   font-size: 36rpx;
   padding-left: 12rpx;
+}
+.dt{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }
 </style>

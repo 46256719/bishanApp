@@ -160,7 +160,7 @@
 		},
 		methods:{
 			changeStatus(index){
-				console.log(index)
+				// console.log(index)
 				var wryType=this.wryType
 				wryType[index].isShow=!wryType[index].isShow
 				this.wryType=wryType

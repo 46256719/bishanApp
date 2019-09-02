@@ -5,7 +5,7 @@ var upLoctionData={}
 var subNvue={}
 var taskInfo={}
 var pollutionInfo={}
-var upTimeNum=30000
+var upTimeNum=300000
 var arrWry=[
 	"WRY_BZ_LIST",
 	"WRY_COMPANY_LIST",
@@ -288,7 +288,7 @@ var getLocation=function(){
 				})
 			}
 		})
-	},1000)
+	},5000)
 }
 
 var unUpLoction=function(id){
@@ -358,5 +358,6 @@ module.exports={
 	subNvue,
 	getWryMap,
 	taskInfo,
-	pollutionInfo
+	pollutionInfo,
+	upTimeNum
 }

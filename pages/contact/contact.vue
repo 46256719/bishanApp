@@ -69,7 +69,6 @@
 				});
 			},
 			getContacts(id){
-				console.log(URL.TASK_PATROL_POINT_CONTACTLIST)
 				util.getRequest(URL.TASK_PATROL_POINT_CONTACTLIST,{pointId: id},(results)=>{
 					// console.log(results)
 					this.contactInfo=results.data

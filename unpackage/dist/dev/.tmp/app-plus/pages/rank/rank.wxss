@@ -42,11 +42,9 @@
   text-align: center;
 }
 #checkDate.data-v-3b6f54f8 {
-  display: block;
   position: absolute;
-  right: 0rpx;
-  bottom: 10rpx;
-  width: 70rpx;
+  right: 30rpx;
+  bottom: 15rpx;
   height: 70rpx;
 }
 .rank_header.data-v-3b6f54f8 {

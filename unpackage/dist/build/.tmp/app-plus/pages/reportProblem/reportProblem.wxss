@@ -24,7 +24,7 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-#reportProblem.data-v-1f72f3cc {
+#reportProblem.data-v-787e3898 {
   font-size: 28rpx;
   background-color: #f2f2f2;
   padding-bottom: 150rpx;
@@ -32,14 +32,14 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.problem_title.data-v-1f72f3cc {
+.problem_title.data-v-787e3898 {
   line-height: 120rpx;
   padding-left: 20rpx;
   margin-bottom: 20rpx;
   font-size: 36rpx;
   background-color: #fff;
 }
-.problem_list.data-v-1f72f3cc {
+.problem_list.data-v-787e3898 {
   padding: 20rpx 30rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -56,7 +56,7 @@
   border-bottom: 1rpx solid #e3e3e3;
   background-color: #fff;
 }
-.problem_list_left.data-v-1f72f3cc {
+.problem_list_left.data-v-787e3898 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -65,16 +65,16 @@
   text-align: left;
   line-height: 30rpx;
 }
-#problemMode.data-v-1f72f3cc {
+#problemMode.data-v-787e3898 {
   position: fixed;
   left: 0rpx;
   top: 0rpx;
   height: 100vh;
   background-color: #fff;
   width: 100vw;
-  z-index: 10000;
+  z-index: 1000;
 }
-.hideStyle.data-v-1f72f3cc {
+.hideStyle.data-v-787e3898 {
   height: 100rpx;
   overflow: hidden;
 }

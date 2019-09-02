@@ -147,6 +147,8 @@
 					for(var index in this.allShowWry){
 						this.covers=this.covers.concat(this.allShowWry[index])
 					}
+					util.subNvue.detailSub.show('slide-in-bottom',300, function(res){});
+					uni.$emit("showDetail",this.allShowWry.search[0])
 				})
 			},
 			showTypeMap(){
@@ -227,8 +229,8 @@
 			getWrys(url){
 				if(this.isWryUp[url]){
 					uni.showLoading({mask:true})
-					console.log(URL[url])
-					util.getRequestPc(URL[url],"",(results)=>{
+					// console.log(URL[url])
+					util.getRequestPc(URL.url_PC,{url:URL[url]},(results)=>{
 						uni.hideLoading()
 						if(url=="WRY_WSCLC_LIST"){
 							results=results.data
@@ -250,8 +252,16 @@
 				
 			},
 			bindTap(e){
-				console.log(e)
-				// util.subNvue.detailSub.show('slide-in-bottom',300, function(res){});
+				// console.log(e.markerId)
+				util.subNvue.detailSub.show('slide-in-bottom',300, function(res){});
+				uni.$emit("showDetail",this.getPollution(e.markerId))
+			},
+			getPollution(id){
+				for (var i=0;i<this.covers.length;i++) {
+					if(id==this.covers[i].id){
+						return this.covers[i]
+					}
+				}
 			},
 			bindControltap(e){
 				if(e.controlId=="mapType"){
@@ -262,6 +272,9 @@
 				this.covers=[]
 				var data=this.allShowWry[k]
 				for(var i=0;i<data.length;i++){
+					// if(data[i].code=="cyhy2829"){
+					// 	console.log(data[i])
+					// }
 					if(k=="WRY_TZC_LIST"){
 						data[i]={
 							id:k+data[i].id,

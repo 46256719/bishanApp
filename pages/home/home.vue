@@ -182,16 +182,17 @@
 		methods: {
 			getTask(){//获取首页任务情况
 				util.getRequestNo(URL.TASK_INDEX2,{uid:this.userInfo.id},(results)=>{
-					uni.setStorageSync("home_tasks",results.data)
+					uni.setStorageSync("home_Ztasks",results.data)
 					this.tasks=results.data
 				},(results)=>{
 					this.tasks=uni.getStorageSync("home_tasks")?uni.getStorageSync("home_tasks"):this.tasks
 				})
 			},
 			getTongji(){//获取首页头部情况
-				util.getRequestPc(URL.QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI,{year:2019,month:4},(results)=>{
+				util.getRequestPc(URL.url_PC,{url:URL.QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI,params:"year=2019;month=4"},(results)=>{
 					uni.setStorageSync("home_tongji",results)
-					// console.log(results[0])
+					console.log(results)
+					console.log(URL.url_PC)
 					results=this.getNum(results)
 					this.tongji=results
 				},(results)=>{
@@ -228,16 +229,14 @@
 				var year=date.getFullYear()
 				var month=date.getMonth()
 				var data={
-					year:month==0?year-1:year,
-					month:month==0?12:month,
-					lvltype:2,
-					ikhlx,
-					kaohetype,
-					idistrictid:500227000000
+					url:URL.DAPINGSHUIZHI_SHUIZHITONGJI_KHLX,
+					params:"year="+(month==0?year-1:year)+";month="+(month==0?12:month)
+					+";lvltype=2;ikhlx="+ikhlx+";kaohetype="+kaohetype+";idistrictid=500227000000"
 				}
 				
-				util.getRequestPc(URL.DAPINGSHUIZHI_SHUIZHITONGJI_KHLX,data,(results) => {
+				util.getRequestPc(URL.url_PC,data,(results) => {
 					uni.setStorageSync(examine,results)
+					// console.log(results)
 					this[examine]=results
 				},(res) => {
 					this[examine]=uni.getStorageSync(examine)?uni.getStorageSync(examine):this[examine]
