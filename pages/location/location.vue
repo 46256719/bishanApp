@@ -136,10 +136,11 @@
 				    success:(res)=> {
 				        if (res.confirm) {
 				            util.getRequest(URL.TASK_PATROL_POINT_UPDATE_WRY_ADDRESS_DETAILED,data,(results)=>{
-				            	console.log("成功")
+				            	// console.log("成功")
 				            	this.pointInfo.longitude=this.userLocation.longitude
 				            	this.pointInfo.latitude=this.userLocation.latitude
 				            	this.initMap(this.pointInfo)
+								uni.$emit("refreshPollutionPage",true)
 				            	this.getDistance()
 				            })
 				        } else if (res.cancel) {

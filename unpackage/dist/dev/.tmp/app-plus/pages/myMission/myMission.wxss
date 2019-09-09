@@ -56,6 +56,19 @@
   position: relative;
   font-size: 30rpx;
 }
+.nav_list > text.data-v-eff5ad74 {
+  min-width: 25rpx;
+  height: 25rpx;
+  border-radius: 50%;
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  line-height: 25rpx;
+  position: absolute;
+  font-size: 18rpx;
+  right: 0rpx;
+  top: 0rpx;
+}
 .on_nav_list.data-v-eff5ad74 {
   border-bottom-color: #5087FB;
   color: #5087FB;

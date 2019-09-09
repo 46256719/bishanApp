@@ -38,29 +38,39 @@
 		data() {
 			return {
 				loginInfo:{
-					username:"dengmin",
-					password:"123456"
+					username:"",
+					password:""
 				},
 				url:"http://183.230.23.21"
 			}
 		},
 		onLoad() {
 			this.url=uni.getStorageSync("url")?uni.getStorageSync("url"):"http://183.230.23.21"
-			this.loginInfo=uni.getStorageSync("loginInfo")?uni.getStorageSync("loginInfo"):{username:"liuyouzhong",password:"123456"}
+			this.loginInfo=uni.getStorageSync("loginInfo")?uni.getStorageSync("loginInfo"):{username:"",password:""}
 		},
 		methods: {
 			toLogin(){
 				util.postRequest(URL.LOGIN_LOGIN,this.loginInfo,(results)=>{
 					// util.getWryMap()
+					// console.log(results.data)
 					uni.setStorageSync("token",results.data.token)
+					results.data.user.townName=results.data.townName
+					results.data.user.villageName=results.data.villageName
 					uni.setStorageSync("userInfo",results.data.user)
 					uni.setStorageSync("loginInfo",this.loginInfo)
 					util.upTimeNum=results.data.upLoadTime?(results.data.upLoadTime*1000):300000
 					// util.webSocket(results.data.user.id)
 					// var onTask=uni.getStorageSync("onTask")?uni.getStorageSync("onTask"):[]
 					var onTask=results.data.patrolTask?results.data.patrolTask:[]
+					util.onTaskNum=results.data.taskNumProcess
+					util.unTaskNum=results.data.taskNum
 					for(var i=0;i<onTask.length;i++){
 						util.upLoction(onTask[i].id)
+					}
+					if(util.onTaskNum>0||util.unTaskNum>0){
+						uni.showTabBarRedDot({
+						  index: 3
+						})
 					}
 					uni.switchTab({
 						url:"/pages/home/home"
@@ -76,7 +86,7 @@
 				this.loginInfo.username=e.detail.value
 			},
 			getPassWord(e){
-				console.log(e.detail.value)
+				// console.log(e.detail.value)
 				this.loginInfo.password=e.detail.value
 			},
 			getUrl(e){

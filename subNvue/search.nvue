@@ -3,18 +3,24 @@
 		<div class="header">
 			<div class="header_left">
 				<input type="text" value="" @return="search" return-key-type="search" :autofocus="isFocus" class="inp_content"/>
-				<image src="../static/images/icon_search.png"class="icon_search" style="width: 27px;height: 28px;" mode=""></image>
+				<image src="../static/images/icon_search.png" class="icon_search" style="width: 27px;height: 28px;" mode=""></image>
 			</div>
 			<text style="color: #fff;" @click="close()">取消</text>
 		</div>
 		<scroll-view scroll-y="true" class="search_content">
 			<view class="search_list" v-for="(item,index) in searchs" :key="index" @click="onPollution(item)">
-				<view class="search_list_left">
-					<view class=""><text class="search_list_left_text">名称:{{item.wryName}}</text></view>
-					<view class=""><text class="search_list_left_text">地址:{{item.wryAddress}}</text></view>
+				<image src="../static/images/search/position.png" style="width: 26px;height: 36px;" class="search_list_left" mode=""></image>
+				<view class="search_list_right">
+					<view class=""><text class="search_list_right_text1">名称:{{item.wryName}}</text></view>
+					<view class=""><text class="search_list_right_text2" style="color: #999999;">{{item.wryAddress}}</text></view>
+					<view class="search_list_right_address">
+						<image class="distance_icon" style="width: 24px;height: 21px;margin-right: 9px;" src="../static/images/search/dictance_icon.png" mode=""></image>
+						<text>{{item.distance}}Km</text>
+					</view>
 				</view>
-				<view class="search_list_right"><text>{{item.distance}}Km</text></view>
 			</view>
+			<view class="onSearch" v-if="onSearch"><text style="color: #666;font-size: 20px;">————正在查询————</text></view>
+			<view class="noData" v-if="!onSearch&&searchs.length==0"><text style="color: #666;font-size: 20px;">————未查询到数据————</text></view>
 		</scroll-view>
 	</div>
 </template>
@@ -28,7 +34,8 @@
 				isFocus:false,
 				searchs:[],
 				requestTask:{},
-				distance:[]
+				distance:[],
+				onSearch:false
 			}
 		},
 
@@ -53,6 +60,7 @@
 				plus.maps.Map.calculateDistance(point1,point2,(results)=>{
 					var searchs=this.searchs
 					searchs[index].distance= (results.distance/1000).toFixed(2)
+					searchs[index].wryAddress= "地址:"+searchs[index].wryAddress
 					this.searchs=searchs
 					this.$set(this.searchs)
 				})
@@ -63,12 +71,15 @@
 					this.requestTask.abort()
 				}
 				var token=uni.getStorageSync("token")||""
+				this.onSearch=true
+				this.searchs=[]
 				this.requestTask=uni.request({
 					url: URL.POLLUTION_SEARCH, 
 					data: {name:e.value},
 					method:"GET",
 					header: {token},
 					complete:(res) =>{
+						this.onSearch=false
 						if(!!res.data&&res.data.code==1){
 							this.searchs=res.data.data
 							var i=0
@@ -86,7 +97,7 @@
 
 <style scoped>
 .search{
-	
+	position: relative
 }
 .header{
 	position: relative;
@@ -117,16 +128,39 @@
 	right: 10px;
 }
 .search_list{
-	padding: 20upx;
-	line-height: 40upx;
+	padding-left: 30px;
 	flex-direction: row;
-	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 1upx;
-	background-color: #f1f1f1;
 }
 
-.search_list_left_text{
-	width: 500upx;
+.search_list_left{
+	/* width: 26upx;
+	height: 36upx; */
+}
+.search_list_right{
+	margin-left: 32px;
+	padding-top: 30px;
+	width: 630px;
+	justify-content: center;
+	border-color: #e5e5e5;
+	border-bottom-width: 1px;
+	border-style: solid;
+}
+.search_list_right_text1{
+	font-size: 28px;
+}
+.search_list_right_text2{
+	font-size: 24px;
+}
+
+.search_list_right_address{
+	padding-bottom: 29px;
+	flex-direction: row;
+	align-items: center;
+}
+.onSearch,.noData{
+	height: 60px;
+	justify-content: center;
+	align-items: center;
 }
 </style>

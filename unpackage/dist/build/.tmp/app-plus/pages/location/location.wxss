@@ -1,11 +1,11 @@
 
-#location.data-v-f34575f6{
+#location.data-v-1a85135c{
 	height: 100vh;
 }
-#locationMap.data-v-f34575f6{
+#locationMap.data-v-1a85135c{
 	position: relative;
 }
-#reset.data-v-f34575f6{
+#reset.data-v-1a85135c{
 	width: 690rpx;
 	height: 70rpx;
 	position: absolute;
@@ -18,7 +18,7 @@
 	color: #fff;
 	font-size: 32rpx;
 }
-#navigation.data-v-f34575f6{
+#navigation.data-v-1a85135c{
 	width: 690rpx;
 	position: absolute;
 	bottom: 130rpx;
@@ -30,26 +30,26 @@
 	height: 129rpx;
 	font-size: 32rpx;
 }
-#address.data-v-f34575f6{
+#address.data-v-1a85135c{
 	position: absolute;
 	bottom: 199rpx;
 	left: 60rpx;
 	font-size: 32rpx;
 }
-#address_msg.data-v-f34575f6{
+#address_msg.data-v-1a85135c{
 	position: absolute;
 	bottom: 160rpx;
 	left: 60rpx;
 	width: 300px;
 	font-size: 24rpx;
 }
-#distance.data-v-f34575f6{
+#distance.data-v-1a85135c{
 	position: absolute;
 	bottom: 179rpx;
 	right: 60rpx;
 	font-size: 32rpx;
 }
-#toNavigation.data-v-f34575f6{
+#toNavigation.data-v-1a85135c{
 	position: absolute;
 	bottom: 226rpx;
 	right: 70rpx;

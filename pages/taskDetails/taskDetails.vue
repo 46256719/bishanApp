@@ -126,8 +126,9 @@
 				})
 			},
 			toReportProblem(data){
+				util.pollutionInfo=data
 				uni.navigateTo({
-					url:"/pages/reportProblem/reportProblem?id="+data.id
+					url:"/pages/reportProblem/reportProblem"
 				})
 			},
 			toProblemList(data){
@@ -138,6 +139,7 @@
 			confirmTask(data){
 				// uni.setStorageSync("taskInfo",data)
 				util.pollutionInfo=data
+				// console.log(data)
 				uni.navigateTo({
 					url:"/pages/completeTask/completeTask"
 				})

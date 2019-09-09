@@ -1,5 +1,5 @@
 
-#login.data-v-a06d1f60{
+#login.data-v-828daf78{
 	background-color: #eeeeee;
 	height: 100vh;
 	width: 100vw;
@@ -9,13 +9,13 @@
 	        box-sizing: border-box;
 	/* color: #fff; */
 }
-#home_bg.data-v-a06d1f60{
+#home_bg.data-v-828daf78{
 	width: 750rpx;
 	height: 485rpx;
 	display: block;
 	margin: 0;
 }
-.project_title.data-v-a06d1f60{
+.project_title.data-v-828daf78{
 	position: absolute;
 	top:145rpx;
 	min-width: 580rpx;
@@ -27,18 +27,18 @@
 	font-size:40rpx;
 	text-align: center;
 }
-.project_title_first.data-v-a06d1f60{
+.project_title_first.data-v-828daf78{
 	border-bottom: 1rpx solid #fff;
 	font-weight: 700;
 }
-.project_title_second.data-v-a06d1f60{
+.project_title_second.data-v-828daf78{
 	letter-spacing: 20rpx;
 	font-size: 22rpx;
 }
-.inpContent.data-v-a06d1f60{
+.inpContent.data-v-828daf78{
 	/* margin-top: 270upx; */
 }
-.loginContent.data-v-a06d1f60{
+.loginContent.data-v-828daf78{
 	position: absolute;
 	top: 0rpx;
 	height: 100vh;
@@ -48,21 +48,21 @@
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 }
-.logo_bottom.data-v-a06d1f60{
+.logo_bottom.data-v-828daf78{
 	width: 690rpx;
 	height: 153rpx;
 	position: absolute;
 	bottom: 30rpx;
 	left: 30rpx;
 }
-.systemTitle.data-v-a06d1f60{
+.systemTitle.data-v-828daf78{
 	text-align: center;
 	font-size: 42rpx;
 	margin: auto;
 	color: #007AFF;
 	margin-bottom: 120rpx;
 }
-.inpContent_list.data-v-a06d1f60{
+.inpContent_list.data-v-828daf78{
 	/* display: flex; */
 	/* align-items: center; */
 	/* padding: 30upx 0upx; */
@@ -77,7 +77,7 @@
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 }
-.inpContent_list>input.data-v-a06d1f60{
+.inpContent_list>input.data-v-828daf78{
 	height: 70rpx;
 	line-height: 70rpx;
 	width: 480rpx;
@@ -87,7 +87,7 @@
 	height: 44upx;
 	margin-right: 40upx;
 } */
-.toLogin.data-v-a06d1f60{
+.toLogin.data-v-828daf78{
 	margin: 78rpx auto 0rpx;
 	width: 480rpx;
 	border-radius: 35rpx;
@@ -98,7 +98,7 @@
 	color: #fff;
 	font-size: 36rpx;
 }
-.getUrl.data-v-a06d1f60{
+.getUrl.data-v-828daf78{
 	position: absolute;
 	top:50rpx;
 	left: 0rpx;
@@ -123,21 +123,21 @@
 	font-size: 30rpx;
 	z-index: 1000000;
 }
-.place_class.data-v-a06d1f60{
+.place_class.data-v-828daf78{
 	color:#999999;
 	font-size:24rpx;
 	text-align: center;
 }
-.getUrl>input.data-v-a06d1f60{
+.getUrl>input.data-v-828daf78{
 	width: 370rpx;
 	
 	border: 1rpx solid #007AFF;
 }
-.submitUrl.data-v-a06d1f60{
+.submitUrl.data-v-828daf78{
 	border: 1rpx solid #007AFF;
 	padding:0rpx 10rpx;
 }
-.lg.data-v-a06d1f60{
+.lg.data-v-828daf78{
 	background-color: #fff;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;

@@ -1,18 +1,18 @@
 
-.tx_r.data-v-2ebccd1d {
+.tx_r.data-v-301f5d70 {
   line-height: 48px;
   font-size: 15px;
   font-weight: normal;
   color: #848b9a;
 }
-.disabled.data-v-2ebccd1d{
+.disabled.data-v-301f5d70{
 	color: #b5b8c2;
 }
-.placeholder.data-v-2ebccd1d {
+.placeholder.data-v-301f5d70 {
   color: #b5b8c2;
   font-size: 30rpx;
 }
-image.data-v-2ebccd1d{
+image.data-v-301f5d70{
 	width: 31rpx;
 	height: 31rpx;
 	/* position: absolute; */
@@ -23,11 +23,11 @@ image.data-v-2ebccd1d{
 	/* margin: auto; */
 	margin-left: 10rpx;
 }
-.fa-angle-right.data-v-2ebccd1d {
+.fa-angle-right.data-v-301f5d70 {
   font-size: 36rpx;
   padding-left: 12rpx;
 }
-.dt.data-v-2ebccd1d{
+.dt.data-v-301f5d70{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;

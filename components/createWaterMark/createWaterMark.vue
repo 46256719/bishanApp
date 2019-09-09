@@ -83,7 +83,7 @@
 				var minute=date.getMinutes()
 				m=m<10?"0"+m:m
 				d=d<10?"0"+d:d
-				h=h<10?0+"h":h
+				h=h<10?"0"+h:h
 				minute=minute<10?"0"+minute:minute
 				return y+"-"+m+"-"+d+" "+h+":"+minute
 			}

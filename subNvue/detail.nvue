@@ -29,7 +29,7 @@
 			toNavigation(){//导航
 				var _this = this;  
 				// 判断平台  
-				var wgs84togcj02=mapTool.wgs84togcj02(_this.pollution.longitude,_this.pollution.latitude)
+				var wgs84togcj02=mapTool.wgs84togcj02(_this.pollution.longitude*1,_this.pollution.latitude*1)
 				var longitude=wgs84togcj02[0]
 				var latitude=wgs84togcj02[1]
 				if (plus.os.name == 'Android') {  

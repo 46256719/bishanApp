@@ -9,10 +9,10 @@
 				<view class="title">整改措施</view>
 				<textarea name="" :fixed="true" placeholder="最多输入200个文字" :value="rectification" @input="inpRectification" maxlength="200" class="describe"></textarea>
 			</view>
-			<view class="content" v-if="nowProblem.needRectificationProgress==1">
+			<!-- <view class="content" v-if="nowProblem.needRectificationProgress==1">
 				<view class="title">整改进度</view>
 				<textarea name="" :fixed="true" placeholder="最多输入200个文字" :value="rectificationProgress" @input="inpRectificationProgress" maxlength="200" class="describe"></textarea>
-			</view>
+			</view> -->
 			<view v-if="nowProblem.needRectificationExpire==1" class="content" style="display: flex;justify-content: space-between;align-items: center;padding: 30upx;">
 				<view class="title">整改期限</view>
 				<picker mode="date" @change="bindRectificationExpire" :value="rectificationExpire">

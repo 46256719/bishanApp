@@ -48,6 +48,8 @@ mapTool.prototype.gcj02towgs84 = function(lng, lat) {
      * @returns {*[]}  
      */  
     mapTool.prototype.wgs84togcj02 = function(lng, lat) {  
+		lng=lng*1
+		lat=lat*1
         if (this.out_of_china(lng, lat)) {  
             return [lng, lat]  
         } else {  

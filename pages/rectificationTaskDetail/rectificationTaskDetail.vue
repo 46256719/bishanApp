@@ -1,13 +1,14 @@
 <template>
 	<view id="rectificationTaskDetail">
-		<map id="locationMap" style="width: 100%;height: 50vh;" :controls="controls" @controltap="bindControltap" :scale="18" :show-location="true" :markers="covers" :circles="circles" :latitude="latitude" :longitude="longitude">
+		<map id="locationMap" style="width: 100%;height: 50vh;" :controls="controls" @controltap="bindControltap" :scale="15" :show-location="true" :markers="covers" :circles="circles" :latitude="latitude" :longitude="longitude">
 			
 		</map>
 		<view class="report_info">
 			<view class="taskName">任务名称：{{taskDetail.taskName||""}}</view>
-			<view class="taskName">问题详情：{{taskDetail.problemDetail||""}}</view>
+			<view class="taskName">任务描述：{{taskDetail.taskDescription||"无"}}</view>
+			<view class="taskName">问题详情：{{taskDetail.problemDetail||"无"}}</view>
 			<view class="title">整改结果描述</view>
-			<textarea name="" placeholder="最多输入200个文字" @input="inpDetail" maxlength="200" :value="taskDescription" id="describe"></textarea>
+			<textarea name="" placeholder="最多输入200个文字" @input="inpDetail" maxlength="200" :value="rectificationBeforeDesc" id="describe"></textarea>
 		</view>
 		<view class="pictures">
 			<view class="takingPictures" @click="takingPictures()"><image style="width: 46upx;height: 38upx;" src="/static/images/icon_takePicture.png" mode=""></image></view>
@@ -33,7 +34,7 @@
 		data() {
 			return {
 				pictures:[],
-				taskDescription:"",
+				rectificationBeforeDesc:"",
 				longitude:"",
 				latitude:"",
 				imgUrl:"",
@@ -54,7 +55,7 @@
 			var locationMapInfo=mapContext.$getAppMap()
 			locationMapInfo.showUserLocation(true)
 			this.taskDetail=util.taskInfo
-			console.log(this.taskDetail) 
+			// console.log(this.taskDetail) 
 			var wgs84togcj02=""
 			if(!this.taskDetail.wryLongitude){
 				wgs84togcj02=mapTool.wgs84togcj02(uni.getStorageSync("userLocation").longitude,uni.getStorageSync("userLocation").latitude)
@@ -63,6 +64,8 @@
 			}
 			this.longitude=wgs84togcj02[0]
 			this.latitude=wgs84togcj02[1]
+			var point = new plus.maps.Point(wgs84togcj02[0],wgs84togcj02[1]);
+			locationMapInfo.setCenter(point)
 			this.userInfo=uni.getStorageSync("userInfo")
 			var screenWidth=uni.getSystemInfoSync().screenWidth
 			var windowHeight=uni.getSystemInfoSync().windowHeight
@@ -93,8 +96,8 @@
 				// ]
 				this.covers=[{
 					id:"person1",
-					latitude: this.latitude,
-					longitude: this.longitude,
+					latitude: wgs84togcj02[1],
+					longitude: wgs84togcj02[0],
 					iconPath: '../../static/images/dingwei.png',
 					label:{
 						content:this.taskDetail.address,
@@ -176,7 +179,7 @@
 					sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
 					sourceType: ['camera'], //从相册选择  默认是两个都有
 					success: (res) => {
-						console.log(res);
+						// console.log(res);
 						// this.pictures.push(res.tempFilePaths[0])
 						this.imgUrl=res.tempFilePaths[0]
 					}
@@ -191,7 +194,7 @@
 				})
 			},
 			inpDetail(e){
-				this.taskDescription=e.detail.value
+				this.rectificationBeforeDesc=e.detail.value
 			},
 			confirm(){
 				// var distance=this.getDistance()
@@ -206,7 +209,7 @@
 					return
 				}
 				var data={
-					taskDescription:this.taskDescription,
+					rectificationBeforeDesc:this.rectificationBeforeDesc,
 					id:this.taskDetail.id,
 					taskStatus:100,
 					rectificationPhoto:this.pictures.join(";")
@@ -246,6 +249,7 @@
 }
 .taskName{
 	padding-bottom: 30upx;
+	word-wrap: break-word;
 }
 .report_info{
 	padding: 30upx 0upx 10upx 30upx;

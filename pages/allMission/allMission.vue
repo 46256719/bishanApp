@@ -9,9 +9,9 @@
 			<block v-if="type!='issuesList'">
 				<view v-for="(item,index) in missions" :key="index" class="mission_list">
 					<mission-card :isProcess="type=='finish'" :result="item">
-						<view slot="slot_bottom" class="toBind" v-if="type=='process'">
+						<!-- <view slot="slot_bottom" class="toBind" v-if="type=='process'">
 							<view class="startMission" @click.stop="toLocation(item)">定位</view>
-						</view>
+						</view> -->
 					</mission-card>
 				</view>	
 			</block>
@@ -60,19 +60,19 @@
 		methods:{
 			getTaskProcess(page){//正在进行中的任务
 				util.getRequest(URL.TASK_PROCESS,{page:this.page},(results)=>{
-					console.log(results)
+					// console.log(results)
 					this.disposeRequestData(results,page)
 				})
 			},
 			getFinish(page){//已完成的任务
 				util.getRequest(URL.TASK_FINISH,{page:this.page},(results)=>{
-					console.log(results)
+					// console.log(results)
 					this.disposeRequestData(results,page)
 				})
 			},
 			getProblemList(page){//问题清单的任务
 				util.getRequest(URL.PROBLEM_LIST,{page:this.page},(results)=>{
-					console.log(results)
+					// console.log(results)
 					this.disposeRequestData(results,page)
 				})
 			},

@@ -179,9 +179,9 @@ function upProblemTeams(data){//上传多个问题
 	}
 }
 function toCompleteTask(url,data){//上传问题或者完成点位巡查
-	console.log(data)
+	// console.log(data)
 	getRequestNo(url,data,(results)=>{
-		console.log("上传成功")
+		console.log(results)
 	},(results)=>{
 		toCompleteTask(url,data)
 	})
@@ -190,7 +190,7 @@ function toUpProblem(url,data){//上传问题或者完成点位巡查
 	getRequestNo(url,{data},(results)=>{
 		console.log("上传成功")
 	},(results)=>{
-		toUpProblem(data)
+		toUpProblem(url,data)
 	})
 }
 
@@ -359,5 +359,7 @@ module.exports={
 	getWryMap,
 	taskInfo,
 	pollutionInfo,
-	upTimeNum
+	upTimeNum,
+	onTaskNum:0,
+	unTaskNum:0
 }

@@ -8,8 +8,12 @@ const url0="http://183.230.23.21"
 // const url0=uni.getStorageSync("url")?uni.getStorageSync("url"):"http://183.230.23.21"
 const url=url0+":18082"
 // const url=url0+":8082"
-const url_PC=url0+":18081/app"
+const url_PC=url+"/proxy/pc"
+const daili="http://10.117.80.201:8081/app"
+// const daili="http://122.114.177.198:8081/app"
 // const url_PC=url0+":8081/app"
+
+
 
 //常链接 
 const WEBSOCKET="ws://192.168.1.4:8082/websocket/"
@@ -42,6 +46,7 @@ const TASK_PATROL_PATH_ADD_BATCH=url+"/task/patrol/path/addBatch"//添加路径�
 
 // const TASK_PATROL_UPDATE_STATUS=url+"/task/patrol/updateStatus"//更改巡查任务状态
 const TASK_RECTIFICATION_UPDATE_STATUS=url+"/task/rectification/updateStatus"//更改整个任务状态
+
 const TASK_RECTIFICATION_UPDATE=url+"/task/rectification/update"//修改整改任务内容，图片等
 
 const TASK_PATROL_UPDATE_STATUS=url+"/task/patrol/updateStatus"//更改巡查任务状态
@@ -54,35 +59,35 @@ const POLLUTION_SEARCH=url+"/pollution/search"//搜索污染源
 
 //PC接口
 
-const DAPINGSHUIZHI_SHUIZHITONGJI_KHLX=url_PC+"/dapingshuizhi/shuizhitongji_khlx"//详情
-const QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI=url_PC+"/quKongShuiZhiTongJi/heLiuShuiZhiTongJi"//详情
+const DAPINGSHUIZHI_SHUIZHITONGJI_KHLX=daili+"/dapingshuizhi/shuizhitongji_khlx"//详情
+const QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI=daili+"/quKongShuiZhiTongJi/heLiuShuiZhiTongJi"//详情
 
 //PC排行榜接口
-const ASSESS_TOWN_LIST=url_PC+"/assess/townList"//镇街排行
-const ASSESS_DEPARTMENT_LIST=url_PC+"/assess/departmentList"//部门排行
+const ASSESS_TOWN_LIST=daili+"/assess/townList"//镇街排行
+const ASSESS_DEPARTMENT_LIST=daili+"/assess/departmentList"//部门排行
 //污染源接口
 
-const WRY_BZ_LIST=url_PC+"/wry/bz/list"//泵站
-const WRY_COMPANY_LIST=url_PC+"/wry/company/list"//工业企业
-const WRY_RHKPWK_LIST=url_PC+"/wry/rhkpwk/list"//入河排污口
-const WRY_RHKPWD_LIST=url_PC+"/wry/rhkpwd/list"//入河排污点
-const WRY_JZGD_LIST=url_PC+"/wry/jzgd/list"//建筑工地
-const WRY_QTHY_LIST=url_PC+"/wry/qthy/list"//其它行业
-const WRY_JCDW_LIST=url_PC+"/wry/jcdw/list"//检测点位
-const WRY_YLJG_LIST=url_PC+"/wry/yljg/list"//医疗机构
-const WRY_XQYZ_LIST=url_PC+"/wry/xqyz/list"//畜禽养殖
-const WRY_TZC_LIST=url_PC+"/wry/tzc/list"//屠宰场
-const WRY_SHUIKU_LIST=url_PC+"/wry/shuiku/list"//水库
-const WRY_SPT_LIST=url_PC+"/wry/spt/list"//山坪塘
-const WRY_YYC_LIST=url_PC+"/wry/yyc/list"//养鱼池
-const WRY_JMJZJZD_LIST=url_PC+"/wry/jmjzjzd/list"//居民集中居住点
-const WRY_XSLW_LIST=url_PC+"/wry/xslw/list"//小散乱污企业
-const WRY_XCC_LIST=url_PC+"/wry/xcc/list"//洗车场
-const WRY_CYHY_LIST=url_PC+"/wry/cyhy/list"//餐饮行业
-const WRY_NMSC_LIST=url_PC+"/wry/nmsc/list"//农贸市场
-const WRY_WSCLC_LIST=url_PC+"/wry/wsclc/list"//污水处理厂
-const WRY_ZZYFLDJD_LIST=url_PC+"/wry/zzyfldjd/list"//种植业肥料堆积点
-const WRY_SMYSYZDH_LIST=url_PC+"/wry/smysyzdh/list"//10亩以上种植大户
+const WRY_BZ_LIST=daili+"/wry/bz/list"//泵站
+const WRY_COMPANY_LIST=daili+"/wry/company/list"//工业企业
+const WRY_RHKPWK_LIST=daili+"/wry/rhkpwk/list"//入河排污口
+const WRY_RHKPWD_LIST=daili+"/wry/rhkpwd/list"//入河排污点
+const WRY_JZGD_LIST=daili+"/wry/jzgd/list"//建筑工地
+const WRY_QTHY_LIST=daili+"/wry/qthy/list"//其它行业
+const WRY_JCDW_LIST=daili+"/wry/jcdw/list"//检测点位
+const WRY_YLJG_LIST=daili+"/wry/yljg/list"//医疗机构
+const WRY_XQYZ_LIST=daili+"/wry/xqyz/list"//畜禽养殖
+const WRY_TZC_LIST=daili+"/wry/tzc/list"//屠宰场
+const WRY_SHUIKU_LIST=daili+"/wry/shuiku/list"//水库
+const WRY_SPT_LIST=daili+"/wry/spt/list"//山坪塘
+const WRY_YYC_LIST=daili+"/wry/yyc/list"//养鱼池
+const WRY_JMJZJZD_LIST=daili+"/wry/jmjzjzd/list"//居民集中居住点
+const WRY_XSLW_LIST=daili+"/wry/xslw/list"//小散乱污企业
+const WRY_XCC_LIST=daili+"/wry/xcc/list"//洗车场
+const WRY_CYHY_LIST=daili+"/wry/cyhy/list"//餐饮行业
+const WRY_NMSC_LIST=daili+"/wry/nmsc/list"//农贸市场
+const WRY_WSCLC_LIST=daili+"/wry/wsclc/list"//污水处理厂
+const WRY_ZZYFLDJD_LIST=daili+"/wry/zzyfldjd/list"//种植业肥料堆积点
+const WRY_SMYSYZDH_LIST=daili+"/wry/smysyzdh/list"//10亩以上种植大户
 
 module.exports={
 	url,
@@ -138,5 +143,6 @@ module.exports={
 	WRY_SMYSYZDH_LIST,
 	ASSESS_TOWN_LIST,
 	ASSESS_DEPARTMENT_LIST,
-	POLLUTION_SEARCH
+	POLLUTION_SEARCH,
+	url_PC
 }

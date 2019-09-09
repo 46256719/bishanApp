@@ -173,17 +173,15 @@
 				var date=new Date()
 				var year=date.getFullYear()
 				var month=date.getMonth()
+				
 				var data={
-					year:month==0?year-1:year,
-					month:month==0?12:month,
-					lvltype:2,
-					ikhlx,
-					kaohetype,
-					idistrictid:500227000000
+					url:URL.DAPINGSHUIZHI_SHUIZHITONGJI_KHLX,
+					params:"year="+(month==0?year-1:year)+";month="+(month==0?12:month)
+					+";lvltype=2;ikhlx="+ikhlx+";kaohetype="+kaohetype+";idistrictid=500227000000"
 				}
 				uni.showLoading({mask:true})
 				uni.request({
-					url: URL.DAPINGSHUIZHI_SHUIZHITONGJI_KHLX, //仅为示例，并非真实接口地址。
+					url: URL.url_PC, //仅为示例，并非真实接口地址。
 					data: data,
 					method:"GET",
 					success: (res) => {

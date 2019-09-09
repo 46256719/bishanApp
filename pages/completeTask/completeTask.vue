@@ -38,7 +38,8 @@
 				remark:"",
 				covers:[],
 				circles:[],
-				imgUrl:""
+				imgUrl:"",
+				mapContext:""
 			}
 		},
 		components:{waterMark},
@@ -46,20 +47,21 @@
 			
 		},
 		onReady(){
-			var mapContext=uni.createMapContext("completeMap")
-			var locationMapInfo=mapContext.$getAppMap()
+			this.mapContext=uni.createMapContext("completeMap")
+			var locationMapInfo=this.mapContext.$getAppMap()
 			locationMapInfo.showUserLocation(true)
 			// locationMapInfo.show()
 			this.userInfo=uni.getStorageSync("userInfo")
 			this.taskInfo=util.pollutionInfo
-			var wgs84togcj02=mapTool.wgs84togcj02(this.taskInfo.longitude,this.taskInfo.latitude)
-			this.longitude=wgs84togcj02[0]
-			this.latitude=wgs84togcj02[1]
 			this.initMap(this.taskInfo)
 		},
 		methods: {
 			initMap(data){
 				var wgs84togcj02=mapTool.wgs84togcj02(data.longitude,data.latitude)
+				this.longitude=wgs84togcj02[0]
+				this.latitude=wgs84togcj02[1]
+				var point = new plus.maps.Point(wgs84togcj02[0],wgs84togcj02[1]);
+				this.mapContext.$getAppMap().centerAndZoom(point,22)
 				this.circles=[
 					{
 						latitude: wgs84togcj02[1],
@@ -95,6 +97,13 @@
 					uni.showToast({
 						icon:"none",
 						title:"请拍照上传！"
+					})
+					return
+				}
+				if(!this.taskInfo.longitude){
+					uni.showToast({
+						icon:"none",
+						title:"污染源位置信息完全，请重新定位再试！"
 					})
 					return
 				}

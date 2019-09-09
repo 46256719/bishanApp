@@ -191,8 +191,8 @@
 			getTongji(){//获取首页头部情况
 				util.getRequestPc(URL.url_PC,{url:URL.QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI,params:"year=2019;month=4"},(results)=>{
 					uni.setStorageSync("home_tongji",results)
-					console.log(results)
-					console.log(URL.url_PC)
+					// console.log(results[0])
+					// console.log(URL.url_PC)
 					results=this.getNum(results)
 					this.tongji=results
 				},(results)=>{
@@ -236,7 +236,6 @@
 				
 				util.getRequestPc(URL.url_PC,data,(results) => {
 					uni.setStorageSync(examine,results)
-					// console.log(results)
 					this[examine]=results
 				},(res) => {
 					this[examine]=uni.getStorageSync(examine)?uni.getStorageSync(examine):this[examine]

@@ -1,6 +1,6 @@
 <template>
 	<view id="river">
-		<map id="riverMap" @markertap="bindTap" @controltap="bindControltap" :controls="controls" style="width: 100%;height: 100vh;" :markers="covers" :latitude="latitude" :longitude="longitude">
+		<map id="riverMap" @markertap="bindTap" @controltap="bindControltap" :controls="controls" style="width: 100%;height: 100vh;" :markers="covers" :scale="15" :latitude="latitude" :longitude="longitude">
 			<cover-view id="searchBind" @click="showSearch()">请输入污染源名称搜索</cover-view>
 			<!-- <cover-image id="mapType" @click="showTypeMap()" src="../../static/images/icon_typeMap.png"></cover-image> -->
 			<!-- <cover-view id="zhou">周</cover-view> -->
@@ -75,8 +75,8 @@
 		onLoad(){
 			this.userLocation=uni.getStorageSync("userLocation")
 			var wgs84togcj02=mapTool.wgs84togcj02(this.userLocation.longitude,this.userLocation.latitude)
-			this.latitude=wgs84togcj02[1];
 			this.longitude=wgs84togcj02[0];
+			this.latitude=wgs84togcj02[1];
 		},
 		onReady() {
 			this.init()
@@ -136,17 +136,23 @@
 					this.covers=[]
 					var wgs84togcj02=mapTool.wgs84togcj02(pollution.wryLongitude,pollution.wryLatitude)
 					var point = new plus.maps.Point(wgs84togcj02[0],wgs84togcj02[1]);
-					this.mapContext.$getAppMap().centerAndZoom(point,22)
+					// this.mapContext.$getAppMap().centerAndZoom(point,22)
+					this.mapContext.$getAppMap().setCenter(point)
 					this.allShowWry.search=[{
 						id:pollution.wryCode,
 						name:pollution.wryName,
 						districtname:pollution.wryAddress,
-						latitude: pollution.wryLatitude,
-						longitude: pollution.wryLongitude
+						latitude: wgs84togcj02[1],
+						longitude: wgs84togcj02[0],
+						width:56,
+						height:56,
+						iconPath: '../../static/images/riverMap/icon_'+this.getIcon(pollution.wryType)+'.png'
 					}]
 					for(var index in this.allShowWry){
 						this.covers=this.covers.concat(this.allShowWry[index])
 					}
+					this.latitude=wgs84togcj02[1]
+					this.longitude=wgs84togcj02[0]
 					util.subNvue.detailSub.show('slide-in-bottom',300, function(res){});
 					uni.$emit("showDetail",this.allShowWry.search[0])
 				})
@@ -161,66 +167,86 @@
 			getIcon(url){
 				switch(url){
 					case "WRY_BZ_LIST":
+					case "bengzhan":
 					url="bz";
 					break
 					case "WRY_COMPANY_LIST":
+					case "gyqy":
 					url="gyqy";
 					break
 					case "WRY_RHKPWK_LIST":
+					case "rhkpwk":
 					url="rhpwk"
 					break
 					case "WRY_RHKPWD_LIST":
+					case "rhkpwd":
 					url="rhpwd"
 					break
 					case "WRY_JZGD_LIST":
+					case "jianzhugongdi":
 					url="jzgd"
 					break
 					case "WRY_QTHY_LIST":
+					case "qthy":
 					url="qthy"
 					break
 					case "WRY_JCDW_LIST":
+					case "jcdw":
 					url="jcdw"
 					break
 					case "WRY_YLJG_LIST":
+					case "yiliaojigou":
 					url="yljg"
 					break
 					case "WRY_XQYZ_LIST":
+					case "xqyz":
 					url="xqyz"
 					break
 					case "WRY_TZC_LIST":
 					url="tzc"
 					break
 					case "WRY_SHUIKU_LIST":
+					case "shuiku":
 					url="sk"
 					break
 					case "WRY_SPT_LIST":
+					case "shanpingtang":
 					url="spt"
 					break
 					case "WRY_YYC_LIST":
+					case "yangyuchi":
 					url="yyc"
 					break
 					case "WRY_JMJZJZD_LIST":
+					case "jmjzjzd":
 					url="jmjzjzd"
 					break
 					case "WRY_XSLW_LIST":
+					case "xiaosanluanwu":
 					url="xslwqy"
 					break
 					case "WRY_XCC_LIST":
+					case "xichechang":
 					url="xcc"
 					break
 					case "WRY_CYHY_LIST":
+					case "canyinhangye":
 					url="cyhy"
 					break
 					case "WRY_NMSC_LIST":
+					case "nongmaoshichang":
 					url="nmsc"
 					break
 					case "WRY_WSCLC_LIST":
+					case "wsclc":
 					url="wsclc"
 					break
 					case "WRY_ZZYFLDJD_LIST":
+					case "zzyfldjd":
 					url="zzyfldjd"
 					break
 					case "WRY_SMYSYZDH_LIST":
+					case "smysyzdh":
 					url="10myszzdh"
 					break
 				}
@@ -259,6 +285,7 @@
 			getPollution(id){
 				for (var i=0;i<this.covers.length;i++) {
 					if(id==this.covers[i].id){
+						// console.log(this.covers[i])
 						return this.covers[i]
 					}
 				}
@@ -272,25 +299,25 @@
 				this.covers=[]
 				var data=this.allShowWry[k]
 				for(var i=0;i<data.length;i++){
-					// if(data[i].code=="cyhy2829"){
-					// 	console.log(data[i])
-					// }
+					
 					if(k=="WRY_TZC_LIST"){
+						var wgs84togcj02=mapTool.wgs84togcj02(data[i].longitude,data[i].latitude)
 						data[i]={
 							id:k+data[i].id,
-							name:data[i].name,
+							name:data[i].name||data[i].sname||data[i].tname,
 							districtname:data[i].districtname,
-							latitude: data[i].latitude,
-							longitude: data[i].longitude,
+							latitude: wgs84togcj02[1],
+							longitude: wgs84togcj02[0],
 							iconPath: '../../static/images/riverMap/icon_'+this.getIcon(k)+'.png'
 						}
 					}else{
+						var wgs84togcj02=mapTool.wgs84togcj02(data[i].saddresssx,data[i].saddresssy)
 						data[i]={
 							id:k+data[i].id,
-							name:data[i].name,
+							name:data[i].name||data[i].sname||data[i].tname,
 							districtname:data[i].districtname,
-							latitude: data[i].saddresssy,
-							longitude: data[i].saddresssx,
+							latitude: wgs84togcj02[1],
+							longitude: wgs84togcj02[0],
 							iconPath: '../../static/images/riverMap/icon_'+this.getIcon(k)+'.png'
 						}
 					}

@@ -10,6 +10,7 @@
 }
 .taskName.data-v-4d085326{
 	padding-bottom: 30rpx;
+	word-wrap: break-word;
 }
 .report_info.data-v-4d085326{
 	padding: 30rpx 0rpx 10rpx 30rpx;

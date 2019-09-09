@@ -30,6 +30,7 @@
 			toLocation(data) {
 				// uni.setStorageSync("taskInfo",data)
 				util.pollutionInfo=data
+				// console.log(data)
 				uni.navigateTo({
 					url:"/pages/location/location"
 				})

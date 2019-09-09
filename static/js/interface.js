@@ -10,6 +10,7 @@ const url=url0+":18082"
 // const url=url0+":8082"
 const url_PC=url+"/proxy/pc"
 const daili="http://10.117.80.201:8081/app"
+// const daili="http://122.114.177.198:8081/app"
 // const url_PC=url0+":8081/app"
 
 
@@ -45,6 +46,7 @@ const TASK_PATROL_PATH_ADD_BATCH=url+"/task/patrol/path/addBatch"//添加路径�
 
 // const TASK_PATROL_UPDATE_STATUS=url+"/task/patrol/updateStatus"//更改巡查任务状态
 const TASK_RECTIFICATION_UPDATE_STATUS=url+"/task/rectification/updateStatus"//更改整个任务状态
+
 const TASK_RECTIFICATION_UPDATE=url+"/task/rectification/update"//修改整改任务内容，图片等
 
 const TASK_PATROL_UPDATE_STATUS=url+"/task/patrol/updateStatus"//更改巡查任务状态

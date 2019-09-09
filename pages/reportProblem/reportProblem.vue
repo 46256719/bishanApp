@@ -33,7 +33,7 @@
 	export default {
 		data() {
 			return {
-				ponitId:"",
+				pollutionInfo:{},
 				userInfo:"",
 				problems:"",
 				isShowMode:false,
@@ -53,8 +53,9 @@
 			// console.log(this.userInfo)
 		},
 		onLoad(options) {
-			this.ponitId=options.id
-			this.getProblem(options.id)
+			this.pollutionInfo=util.pollutionInfo
+			// console.log(this.pollutionInfo)
+			this.getProblem(this.pollutionInfo.id)
 		},
 		methods:{
 			getProblem(id){//获取污染源问题类型
@@ -77,7 +78,9 @@
 			confirmMdoe(data){
 				data.id=this.chooseProblem.id
 				data.problemTitle=this.nowProblem.problemTitle;
-				data.pointId=this.ponitId;
+				data.pointId=this.pollutionInfo.id;
+				data.departmentId=this.pollutionInfo.wryGlflx;
+				data.orgId=this.pollutionInfo.dwId;
 				data.problemStatus=1;
 				data.problemLevel=1;
 				data.problemType=1;
@@ -98,7 +101,9 @@
 						id:id,
 						problemDetail,
 						problemTitle:this.nowProblem.problemTitle,
-						pointId:this.ponitId,
+						pointId:this.pollutionInfo.id,
+						departmentId:this.pollutionInfo.wryGlflx,
+						orgId:this.pollutionInfo.dwId,
 						problemStatus:1,
 						problemLevel:1,
 						problemType:1,
