@@ -1,113 +1,131 @@
 <template>
 	<view id="standarDetail">
-		<view class="standarDetail_list">
-			<view class="standarDetail_list_header">
-				<view class="title">国考</view>
-				<view class=""><text :class="type.examine_0==1?'biaozhun':''" @click="checkType('examine_0',1,1)">III类标准 </text> / <text :class="type.examine_0==2?'biaozhun':''" @click="checkType('examine_0',1,2)">当年目标</text></view>
+		<view class="standarDetail_header">
+			<view class="header_left" @click="toBack()">
+				<image src="../../static/images/back_icon.png" class="back" mode=""></image>
 			</view>
-			<view class="standarDetail_list_msg">
-				<view class="canvas_pie">
-					<canvas canvas-id="examine_0" id="examine_0" class="charts"></canvas>
-				</view>
-				<view class="msg_num">
-					<view class="" style="color: #000000;">
-						<text style="font-size: 50upx;">{{examine_0.total_site}}</text>个
+			<view class="header_mid">详情</view>
+			<view class="header_right">
+				<pick-date id="checkDate" timeType="month" @getData="getData" placeholder="请选择日期">
+					<view class="dateContent" slot="content">
+						<view class="">{{date.year}}-{{date.month}}</view>
+						<image src="../../static/images/icon_date.png" class="date_icon" mode=""></image>
 					</view>
-					<view class="">断面</view>
-				</view>
-				<view class="msg_num">
-					<view class="" style="color: #ff0000;">
-						<text style="font-size: 50upx;">{{examine_0.total_site-examine_0.dabiaonum_now}}</text>个
-					</view>
-					<view class="">未达标</view>
-				</view>
+				</pick-date>
 			</view>
-			<!-- <view class="targetValue">目标值90.5%</view> -->
 		</view>
-		<view class="standarDetail_list">
-			<view class="standarDetail_list_header">
-				<view class="title">市级考核</view>
-				<view class=""><text :class="type.examine_1==1?'biaozhun':''" @click="checkType('examine_1',2,1)">III类标准 </text> / <text :class="type.examine_1==2?'biaozhun':''" @click="checkType('examine_1',2,2)">当年目标</text></view>
+		<scroll-view class="standarDetail_content" scroll-y>
+			<view class="standarDetail_list">
+				<view class="standarDetail_list_header">
+					<view class="title">国考</view>
+					<view class=""><text :class="type.examine_0==1?'biaozhun':''" @click="checkType('examine_0',1,1)">III类标准 </text> / <text :class="type.examine_0==2?'biaozhun':''" @click="checkType('examine_0',1,2)">当年目标</text></view>
+				</view>
+				<view class="standarDetail_list_msg">
+					<view class="canvas_pie">
+						<canvas canvas-id="examine_0" id="examine_0" class="charts"></canvas>
+					</view>
+					<view class="msg_num">
+						<view class="" style="color: #000000;">
+							<text style="font-size: 50upx;">{{examine_0.total_site||"-"}}</text>个
+						</view>
+						<view class="">断面</view>
+					</view>
+					<view class="msg_num">
+						<view class="" style="color: #ff0000;">
+							<text style="font-size: 50upx;">{{(examine_0.total_site-examine_0.dabiaonum_now)||"-"}}</text>个
+						</view>
+						<view class="">未达标</view>
+					</view>
+				</view>
+				<!-- <view class="targetValue">目标值90.5%</view> -->
 			</view>
-			<view class="standarDetail_list_msg">
-				<view class="canvas_pie">
-					<canvas canvas-id="examine_1" id="examine_1" class="charts"></canvas>
+			<view class="standarDetail_list">
+				<view class="standarDetail_list_header">
+					<view class="title">市级考核</view>
+					<view class=""><text :class="type.examine_1==1?'biaozhun':''" @click="checkType('examine_1',2,1)">III类标准 </text> / <text :class="type.examine_1==2?'biaozhun':''" @click="checkType('examine_1',2,2)">当年目标</text></view>
 				</view>
-				<view class="msg_num">
-					<view class="" style="color: #000000;">
-						<text style="font-size: 50upx;">{{examine_1.total_site}}</text>个
+				<view class="standarDetail_list_msg">
+					<view class="canvas_pie">
+						<canvas canvas-id="examine_1" id="examine_1" class="charts"></canvas>
 					</view>
-					<view class="">断面</view>
-				</view>
-				<view class="msg_num">
-					<view class="" style="color: #ff0000;">
-						<text style="font-size: 50upx;">{{examine_1.total_site-examine_1.dabiaonum_now}}</text>个
+					<view class="msg_num">
+						<view class="" style="color: #000000;">
+							<text style="font-size: 50upx;">{{examine_1.total_site||"-"}}</text>个
+						</view>
+						<view class="">断面</view>
 					</view>
-					<view class="">未达标</view>
+					<view class="msg_num">
+						<view class="" style="color: #ff0000;">
+							<text style="font-size: 50upx;">{{(examine_1.total_site-examine_1.dabiaonum_now)||"-"}}</text>个
+						</view>
+						<view class="">未达标</view>
+					</view>
 				</view>
+				<!-- <view class="targetValue">目标值90.5%</view> -->
 			</view>
-			<!-- <view class="targetValue">目标值90.5%</view> -->
-		</view>
-		<view class="standarDetail_list">
-			<view class="standarDetail_list_header">
-				<view class="title">市控考核</view>
-				<view class=""><text :class="type.examine_2==1?'biaozhun':''" @click="checkType('examine_2',5,1)">III类标准 </text> / <text :class="type.examine_2==2?'biaozhun':''" @click="checkType('examine_2',5,2)">当年目标</text></view>
+			<view class="standarDetail_list">
+				<view class="standarDetail_list_header">
+					<view class="title">市控考核</view>
+					<view class=""><text :class="type.examine_2==1?'biaozhun':''" @click="checkType('examine_2',5,1)">III类标准 </text> / <text :class="type.examine_2==2?'biaozhun':''" @click="checkType('examine_2',5,2)">当年目标</text></view>
+				</view>
+				<view class="standarDetail_list_msg">
+					<view class="canvas_pie">
+						<canvas canvas-id="examine_2" id="examine_2" class="charts"></canvas>
+					</view>
+					<view class="msg_num">
+						<view class="" style="color: #000000;">
+							<text style="font-size: 50upx;">{{examine_2.total_site||"-"}}</text>个
+						</view>
+						<view class="">断面</view>
+					</view>
+					<view class="msg_num">
+						<view class="" style="color: #ff0000;">
+							<text style="font-size: 50upx;">{{(examine_2.total_site-examine_2.dabiaonum_now)||"-"}}</text>个
+						</view>
+						<view class="">未达标</view>
+					</view>
+					<view class="msg_num" style="margin-right: 0upx;">
+						<view class="" style="color: #ff0000;">
+							<text style="font-size: 50upx;">{{examine_2.liewunum||"-"}}</text>个
+						</view>
+						<view class="">劣V</view>
+					</view>
+				</view>
+				<!-- <view class="targetValue">目标值90.5%</view> -->
 			</view>
-			<view class="standarDetail_list_msg">
-				<view class="canvas_pie">
-					<canvas canvas-id="examine_2" id="examine_2" class="charts"></canvas>
+			<view class="standarDetail_list">
+				<view class="standarDetail_list_header">
+					<view class="title">区控考核</view>
+					<view class=""><text :class="type.examine_3==1?'biaozhun':''" @click="checkType('examine_3',6,1)">III类标准 </text> / <text :class="type.examine_3==2?'biaozhun':''" @click="checkType('examine_3',6,2)">当年目标</text></view>
 				</view>
-				<view class="msg_num">
-					<view class="" style="color: #000000;">
-						<text style="font-size: 50upx;">{{examine_2.total_site}}</text>个
+				<view class="standarDetail_list_msg">
+					<view class="canvas_pie">
+						<canvas canvas-id="examine_3" id="examine_3" class="charts"></canvas>
 					</view>
-					<view class="">断面</view>
-				</view>
-				<view class="msg_num">
-					<view class="" style="color: #ff0000;">
-						<text style="font-size: 50upx;">{{examine_2.total_site-examine_2.dabiaonum_now}}</text>个
+					<view class="msg_num">
+						<view class="" style="color: #000000;">
+							<text style="font-size: 50upx;">{{examine_3.total_site||"-"}}</text>个
+						</view>
+						<view class="">断面</view>
 					</view>
-					<view class="">未达标</view>
-				</view>
-				<view class="msg_num" style="margin-right: 0upx;">
-					<view class="" style="color: #ff0000;">
-						<text style="font-size: 50upx;">{{examine_2.liewunum}}</text>个
+					<view class="msg_num">
+						<view class="" style="color: #ff0000;">
+							<text style="font-size: 50upx;">{{(examine_3.total_site-examine_3.dabiaonum_now)||"-"}}</text>个
+						</view>
+						<view class="">未达标</view>
 					</view>
-					<view class="">劣V</view>
+					<view class="msg_num" style="margin-right: 0upx;">
+						<view class="" style="color: #ff0000;">
+							<text style="font-size: 50upx;">{{examine_3.liewunum||"-"}}</text>个
+						</view>
+						<view class="">劣V</view>
+					</view>
 				</view>
+				<!-- <view class="targetValue">目标值90.5%</view> -->
 			</view>
-			<!-- <view class="targetValue">目标值90.5%</view> -->
-		</view>
-		<view class="standarDetail_list">
-			<view class="standarDetail_list_header">
-				<view class="title">区控考核</view>
-				<view class=""><text :class="type.examine_3==1?'biaozhun':''" @click="checkType('examine_3',6,1)">III类标准 </text> / <text :class="type.examine_3==2?'biaozhun':''" @click="checkType('examine_3',6,2)">当年目标</text></view>
-			</view>
-			<view class="standarDetail_list_msg">
-				<view class="canvas_pie">
-					<canvas canvas-id="examine_3" id="examine_3" class="charts"></canvas>
-				</view>
-				<view class="msg_num">
-					<view class="" style="color: #000000;">
-						<text style="font-size: 50upx;">{{examine_3.total_site}}</text>个
-					</view>
-					<view class="">断面</view>
-				</view>
-				<view class="msg_num">
-					<view class="" style="color: #ff0000;">
-						<text style="font-size: 50upx;">{{examine_3.total_site-examine_3.dabiaonum_now}}</text>个
-					</view>
-					<view class="">未达标</view>
-				</view>
-				<view class="msg_num" style="margin-right: 0upx;">
-					<view class="" style="color: #ff0000;">
-						<text style="font-size: 50upx;">{{examine_3.liewunum}}</text>个
-					</view>
-					<view class="">劣V</view>
-				</view>
-			</view>
-			<!-- <view class="targetValue">目标值90.5%</view> -->
-		</view>
+		</scroll-view>
+		
+		
 <!-- 		<view class="standarDetail_list">
 			<view class="standarDetail_list_header">
 				<view class="title">河流</view>
@@ -126,6 +144,7 @@
 	import URL from "../../static/js/interface.js"
 	import util from "../../static/js/utils.js"
 	import uCharts from '../../js_sdk/u-charts/u-charts/u-charts.js';
+	import pickDate from "../../components/lanxiujuan-dyDate/lanxiujuan-dyDate"
 	var _self;
 	var canvaColumn=null;
 	export default {
@@ -145,11 +164,17 @@
 					examine_1:1,
 					examine_2:1,
 					examine_3:1
+				},
+				date:{
+					year:"",
+					month:""
 				}
 			}
 		},
+		components:{pickDate},
 		onLoad() {
 			_self = this;
+			this.date=util.situationDate
 			this.userInfo=uni.getStorageSync("userInfo")
 			// uni.getSystemInfo({
 			// 	success: function (res) {
@@ -176,7 +201,7 @@
 				
 				var data={
 					url:URL.DAPINGSHUIZHI_SHUIZHITONGJI_KHLX,
-					params:"year="+(month==0?year-1:year)+";month="+(month==0?12:month)
+					params:"year="+this.date.year+";month="+this.date.month
 					+";lvltype=2;ikhlx="+ikhlx+";kaohetype="+kaohetype+";idistrictid=500227000000"
 				}
 				uni.showLoading({mask:true})
@@ -193,6 +218,20 @@
 						uni.hideLoading()
 					}
 				})
+			},
+			getData(e){//获取时间
+				var date=e.split("-")
+				this.date={
+					year:date[0],
+					month:date[1]
+				}
+				this.getStandarDetail("examine_0",1,this.type["examine_0"])
+				this.getStandarDetail("examine_1",2,this.type["examine_1"])
+				this.getStandarDetail("examine_2",5,this.type["examine_2"])
+				this.getStandarDetail("examine_3",6,this.type["examine_3"])
+			},
+			toBack(){
+				uni.navigateBack({})
 			},
 			getCanvas(canvasId,data){
 				canvaColumn=new uCharts({
@@ -243,12 +282,45 @@
 
 <style scoped>
 #standarDetail{
-	min-height: 100vh;
+	/* min-height: 100vh; */
 	box-sizing: border-box;
-	padding-bottom: 20upx;
+	/* padding-bottom: 20upx; */
 	background-color: #F2F2F2;
 	color: rgb(153,153,153);
 	font-size: 28upx;
+}
+.standarDetail_header{
+	background-color: #5087fb;
+	color: #fff;
+	height: 130upx;
+	font-size: 36upx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40upx 30upx 0upx;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0upx;
+	bottom: 0upx;
+	z-index: 100000;
+	width: 100vw;
+}
+.header_left{
+	text-align: left;
+	width: 280upx;
+}
+.header_mid{
+	text-align: center;
+	width: 100upx;
+}
+.header_right{
+	width: 280upx;
+	display: flex;
+	justify-content: flex-end;
+}
+.back{
+	width: 20.4upx;
+	height: 36upx;
 }
 .standarDetail_list{
 	padding: 30upx;
@@ -305,5 +377,10 @@
 	line-height: 70upx;
 	color: #333;
 	background-color: #fafafa;
+}
+.standarDetail_content{
+	height: 100vh;
+	box-sizing: border-box;
+	padding-top: 130upx;
 }
 </style>

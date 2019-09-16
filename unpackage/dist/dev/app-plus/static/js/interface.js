@@ -59,8 +59,9 @@ const POLLUTION_SEARCH=url+"/pollution/search"//搜索污染源
 
 //PC接口
 
-const DAPINGSHUIZHI_SHUIZHITONGJI_KHLX=daili+"/dapingshuizhi/shuizhitongji_khlx"//详情
-const QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI=daili+"/quKongShuiZhiTongJi/heLiuShuiZhiTongJi"//详情
+const DAPINGSHUIZHI_SHUIZHITONGJI_KHLX=daili+"/dapingshuizhi/shuizhitongji_khlx"//断面情况
+const QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI=daili+"/quKongShuiZhiTongJi/heLiuShuiZhiTongJi"//河流统计
+const WATER_BASE_GETBASEYEARMONTH=daili+"/water/base/getBaseYearMonth"//获取有数据的时间
 
 //PC排行榜接口
 const ASSESS_TOWN_LIST=daili+"/assess/townList"//镇街排行
@@ -144,5 +145,6 @@ module.exports={
 	ASSESS_TOWN_LIST,
 	ASSESS_DEPARTMENT_LIST,
 	POLLUTION_SEARCH,
-	url_PC
+	url_PC,
+	WATER_BASE_GETBASEYEARMONTH
 }

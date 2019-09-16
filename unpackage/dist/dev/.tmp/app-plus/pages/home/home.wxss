@@ -228,4 +228,22 @@
 	margin: auto;
 	display: block;
 }
+.home_title_left.data-v-fbf44538{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	position: relative;
+}
+#checkDate.data-v-fbf44538{
+	/* width: 100upx;
+	height: 40upx; */
+	/* position: absolute; */
+	/* right: -200upx; */
+	/* top: 0upx; */
+}
 

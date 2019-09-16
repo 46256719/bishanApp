@@ -7,6 +7,7 @@
 			<view class="taskName">任务名称：{{taskDetail.taskName||""}}</view>
 			<view class="taskName">任务描述：{{taskDetail.taskDescription||"无"}}</view>
 			<view class="taskName">问题详情：{{taskDetail.problemDetail||"无"}}</view>
+			<!-- <view class="taskName">处理意见：{{taskDetail.problemDetail||"无"}}</view> -->
 			<view class="title">整改结果描述</view>
 			<textarea name="" placeholder="最多输入200个文字" @input="inpDetail" maxlength="200" :value="rectificationBeforeDesc" id="describe"></textarea>
 		</view>
@@ -64,8 +65,8 @@
 			}
 			this.longitude=wgs84togcj02[0]
 			this.latitude=wgs84togcj02[1]
-			var point = new plus.maps.Point(wgs84togcj02[0],wgs84togcj02[1]);
-			locationMapInfo.setCenter(point)
+			// var point = new plus.maps.Point(wgs84togcj02[0],wgs84togcj02[1]);
+			// locationMapInfo.setCenter(point)
 			this.userInfo=uni.getStorageSync("userInfo")
 			var screenWidth=uni.getSystemInfoSync().screenWidth
 			var windowHeight=uni.getSystemInfoSync().windowHeight
@@ -77,8 +78,8 @@
 						position:{
 							width: 83*coefficient,
 							height: 83*coefficient,
-							left: 617*coefficient,
-							top:windowHeight/2-103*coefficient
+							left: 647*coefficient,
+							top:20*coefficient
 						},
 						iconPath:"/static/images/icon_navigation.png",
 						clickable:true
@@ -124,6 +125,13 @@
 				this.pictures.push(url)
 			},
 			getDistance(){
+				if(!this.taskDetail.wryLongitude){
+					uni.showToast({
+						icon:"none",
+						title:"污染源位置信息不完整，请联系工作人员！"
+					})
+					return
+				}
 				var point1 = new plus.maps.Point(uni.getStorageSync("userLocation").longitude,uni.getStorageSync("userLocation").latitude);
 				var point2 = new plus.maps.Point(this.taskDetail.wryLongitude,this.taskDetail.wryLatitude)
 				plus.maps.Map.calculateDistance(point1,point2,(res)=>{

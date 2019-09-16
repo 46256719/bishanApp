@@ -1,5 +1,5 @@
 <template>
-  <view style="position: relative;width: 200upx;height: 70upx;">
+  <view style="position: relative">
     <picker @change="bindTimeChange"
       @columnchange="columnchange"
       mode="multiSelector"
@@ -7,11 +7,12 @@
 	  :class="{disabled:disabled}"
       :value="index"
       :range="array"
-	  style="width: 200upx;height: 70upx;"
+	  style=""
 	  >
 	  <view class="dt">
-	  	{{showTime}}
-		<image src="../../static/images/icon_date.png" mode=""></image>
+		<!-- <text :style="'color:'+color">{{showTime}}</text>
+		<image src="../../static/images/icon_date.png" mode=""></image> -->
+		<slot name="content"></slot>
 	  </view>
     </picker>
   </view>
@@ -35,6 +36,10 @@ export default {
       type: Boolean,
       default: () => true
     },
+	color: {
+	  type: String,
+	  default: () => "#fff"
+	},
     placeholder: {
       type: String,
       default() {

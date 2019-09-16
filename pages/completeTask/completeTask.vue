@@ -103,7 +103,7 @@
 				if(!this.taskInfo.longitude){
 					uni.showToast({
 						icon:"none",
-						title:"污染源位置信息完全，请重新定位再试！"
+						title:"污染源位置信息不完整，请重新定位再试！"
 					})
 					return
 				}
@@ -184,7 +184,8 @@
 					latitude:this.latitude,
 					remark:this.remark,
 					pointPhoto:this.pictures.join(";"),
-					z:1
+					z:1,
+					inRange:data.inRange
 				}
 				util.completeTask(obj)
 				uni.showLoading({mask:true})

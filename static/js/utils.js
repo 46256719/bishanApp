@@ -6,6 +6,7 @@ var subNvue={}
 var taskInfo={}
 var pollutionInfo={}
 var upTimeNum=300000
+var situationDate={}
 var arrWry=[
 	"WRY_BZ_LIST",
 	"WRY_COMPANY_LIST",
@@ -361,5 +362,6 @@ module.exports={
 	pollutionInfo,
 	upTimeNum,
 	onTaskNum:0,
-	unTaskNum:0
+	unTaskNum:0,
+	situationDate
 }

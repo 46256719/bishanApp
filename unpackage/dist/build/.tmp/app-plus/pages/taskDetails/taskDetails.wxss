@@ -24,7 +24,10 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-#nav.data-v-f80249b0 {
+#taskDetails.data-v-9308ede6 {
+  position: relative;
+}
+#nav.data-v-9308ede6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -40,7 +43,7 @@
   height: 88rpx;
   background-color: #fff;
 }
-.nav_list.data-v-f80249b0 {
+.nav_list.data-v-9308ede6 {
   width: 164rpx;
   border-bottom: 4rpx solid #ffffff;
   padding: 18rpx 0rpx 36rpx;
@@ -50,11 +53,11 @@
   position: relative;
   font-size: 30rpx;
 }
-.on_nav_list.data-v-f80249b0 {
+.on_nav_list.data-v-9308ede6 {
   border-bottom-color: #5087FB;
   color: #5087FB;
 }
-.nav_list > text.data-v-f80249b0 {
+.nav_list > text.data-v-9308ede6 {
   width: 25rpx;
   height: 25rpx;
   border-radius: 50%;
@@ -67,7 +70,7 @@
   right: 0rpx;
   top: 0rpx;
 }
-#missions.data-v-f80249b0 {
+#missions.data-v-9308ede6 {
   background-color: #f5f5f5;
   padding: 1rpx;
   padding-top: 110rpx;
@@ -75,13 +78,13 @@
           box-sizing: border-box;
   height: 100vh;
 }
-.mission_list.data-v-f80249b0 {
+.mission_list.data-v-9308ede6 {
   padding: 20rpx 20rpx 0rpx;
 }
-.mission_list.data-v-f80249b0:last-child {
+.mission_list.data-v-9308ede6:last-child {
   padding-bottom: 20rpx;
 }
-.toBind.data-v-f80249b0 {
+.toBind.data-v-9308ede6 {
   margin: 0rpx -32rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -94,7 +97,7 @@
   padding: 10rpx 32rpx;
   border-top: 1rpx solid lightgray;
 }
-.startMission.data-v-f80249b0 {
+.startMission.data-v-9308ede6 {
   width: 140rpx;
   height: 50rpx;
   line-height: 50rpx;
@@ -103,5 +106,12 @@
   border: 1rpx solid #9abbff;
   color: #9abbff;
   margin-left: 20rpx;
+}
+.QR_code.data-v-9308ede6 {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  right: 16rpx;
+  bottom: 16rpx;
 }
 

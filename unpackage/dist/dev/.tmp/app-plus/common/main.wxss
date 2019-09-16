@@ -67,5 +67,24 @@ image{will-change: transform}
 	font-size: 24rpx;
 	color: #ccc;
 }
-
+.dateContent{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	color: #fff;
+}
+.date_icon{
+	width: 31rpx;
+	height: 31rpx;
+	margin-left: 10rpx;
+}	
 

@@ -13,10 +13,20 @@
 					<view class="riverType"><text>{{item.slevel}}</text>类</view>
 				</view>	
 			</view>
-			<view id="demonstratingCompliance" @click="toStandarDetail()">
+			<view id="demonstratingCompliance">
 				<view class="home_title">
-					<view class="">水质达标情况</view>
-					<view class="home_title_right"><view class="">详情</view><image class="icon_toRight" src="../../static/images/icon_more.png" mode=""></image></view>
+					<view class="home_title_left">
+						水质达标情况
+						<view style="padding: 5upx 10upx;background-color: #5087FB;border-radius: 5upx;margin-left: 40upx;">
+							<pick-date timeType="month" @getData="getData" placeholder="请选择日期">
+								<view class="dateContent" slot="content">
+									<view class="">{{situationDate.year}}-{{situationDate.month}}</view>
+									<image src="../../static/images/icon_date.png" class="date_icon" mode=""></image>
+								</view>
+							</pick-date>
+						</view>
+					</view>
+					<view class="home_title_right" @click="toStandarDetail()"><view class="">详情</view><image class="icon_toRight" src="../../static/images/icon_more.png" mode=""></image></view>
 				</view>
 				<view class="demonstratingCompliance_content">
 					<view class="demonstratingCompliance_list">
@@ -34,20 +44,6 @@
 						</view>
 					</view>
 					<view class="demonstratingCompliance_list">
-						<image src="../../static/images/home/shikong.png" class="demonstratingCompliance_mark" mode=""></image>
-						<view class="demonstratingCompliance_list_info">
-							<view class="color_000 fz30">市控</view>
-							<view class="demonstratingCompliance_list_onStandard">
-								<view class="standard_title">达标</view>
-								<view class="color_000"><text class="fz30">{{examine_2.dabiaonum_now||0}}</text><text class="fz20">个</text></view>
-							</view>
-							<view class="demonstratingCompliance_list_unStandard">
-								<view class="standard_title">未达标</view>
-								<view class="color_red"><text class="fz30">{{(examine_2.total_site-examine_2.dabiaonum_now)||0}}</text><text class="fz20">个</text></view>
-							</view>
-						</view>
-					</view>
-					<view class="demonstratingCompliance_list">
 						<image src="../../static/images/home/shiji.png" class="demonstratingCompliance_mark" mode=""></image>
 						<view class="demonstratingCompliance_list_info">
 							<view class="color_000 fz30">市级</view>
@@ -58,6 +54,20 @@
 							<view class="demonstratingCompliance_list_unStandard">
 								<view class="standard_title">未达标</view>
 								<view class="color_red"><text class="fz30">{{(examine_3.total_site-examine_3.dabiaonum_now)||0}}</text><text class="fz20">个</text></view>
+							</view>
+						</view>
+					</view>
+					<view class="demonstratingCompliance_list">
+						<image src="../../static/images/home/shikong.png" class="demonstratingCompliance_mark" mode=""></image>
+						<view class="demonstratingCompliance_list_info">
+							<view class="color_000 fz30">市控</view>
+							<view class="demonstratingCompliance_list_onStandard">
+								<view class="standard_title">达标</view>
+								<view class="color_000"><text class="fz30">{{examine_2.dabiaonum_now||0}}</text><text class="fz20">个</text></view>
+							</view>
+							<view class="demonstratingCompliance_list_unStandard">
+								<view class="standard_title">未达标</view>
+								<view class="color_red"><text class="fz30">{{(examine_2.total_site-examine_2.dabiaonum_now)||0}}</text><text class="fz20">个</text></view>
 							</view>
 						</view>
 					</view>
@@ -120,8 +130,12 @@
 	import URL from "../../static/js/interface.js"
 	import util from "../../static/js/utils.js"
 	import BwSwiper from '../../components/bw-swiper/bw-swiper'
+	import pickDate from "../../components/lanxiujuan-dyDate/lanxiujuan-dyDate"
 	export default {
 		data() {
+			var date=new Date()
+			var year=date.getFullYear()
+			var month=date.getMonth()
 			return {
 				latitude: 50.64356722667575,
 				longitude: 166.57172588823506,
@@ -135,6 +149,10 @@
 				examine_3:{},
 				examine_4:{},
 				tongji:[],
+				situationDate:{
+					year:month==0?year-1:year,
+					month:month==0?12:month
+				},
 				swiperList:[{
 					url:"../../static/images/home/picture1.png",
 				},{
@@ -156,7 +174,7 @@
 				}]
 			}
 		},
-		components:{BwSwiper},
+		components:{BwSwiper,pickDate},
 		created(){
 			this.userInfo=uni.getStorageSync("userInfo")
 			var getH=uni.getSystemInfoSync().windowHeight
@@ -172,12 +190,9 @@
 		},
 		onShow() {
 			this.getTask()
-			this.getSituation("examine_1",1,1)
-			this.getSituation("examine_2",5,1)
-			this.getSituation("examine_3",2,1)
-			this.getSituation("examine_4",6,1)
+			
 			uni.$emit("hideSub",false)
-			this.getTongji()
+			this.getBaseYearMonth()
 		},
 		methods: {
 			getTask(){//获取首页任务情况
@@ -188,10 +203,34 @@
 					this.tasks=uni.getStorageSync("home_tasks")?uni.getStorageSync("home_tasks"):this.tasks
 				})
 			},
+			getBaseYearMonth(){//获取有数据的时间
+				util.getRequestPc(URL.url_PC,{url:URL.WATER_BASE_GETBASEYEARMONTH},(results)=>{
+					// console.log(results)
+					this.situationDate={
+						year:results.year,
+						month:(results.month*1)<10?"0"+results.month:results.month
+					}
+					this.getSituation("examine_1",1,2)
+					this.getSituation("examine_2",5,2)
+					this.getSituation("examine_3",2,2)
+					this.getSituation("examine_4",6,2)
+					this.getTongji()
+				},(results)=>{
+					// console.log(results)
+					this.getSituation("examine_1",1,2)
+					this.getSituation("examine_2",5,2)
+					this.getSituation("examine_3",2,2)
+					this.getSituation("examine_4",6,2)
+					this.getTongji()
+				})
+			},
 			getTongji(){//获取首页头部情况
-				util.getRequestPc(URL.url_PC,{url:URL.QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI,params:"year=2019;month=4"},(results)=>{
+				var date=new Date()
+				var year=date.getFullYear()
+				var month=date.getMonth()
+				util.getRequestPc(URL.url_PC,{url:URL.QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI,params:"year="+(month==0?year-1:year)+";month=4"},(results)=>{
 					uni.setStorageSync("home_tongji",results)
-					// console.log(results[0])
+					// console.log(results)
 					// console.log(URL.url_PC)
 					results=this.getNum(results)
 					this.tongji=results
@@ -224,17 +263,28 @@
 				}
 				return data
 			},
+			getData(e){
+				// console.log(e)
+				var date=e.split("-")
+				this.situationDate={
+					year:date[0],
+					month:date[1]
+				}
+				this.getSituation("examine_1",1,2)
+				this.getSituation("examine_2",5,2)
+				this.getSituation("examine_3",2,2)
+				this.getSituation("examine_4",6,2)
+				// this.checkType(this.type)
+			},
 			getSituation(examine,ikhlx,kaohetype){
-				var date=new Date()
-				var year=date.getFullYear()
-				var month=date.getMonth()
 				var data={
 					url:URL.DAPINGSHUIZHI_SHUIZHITONGJI_KHLX,
-					params:"year="+(month==0?year-1:year)+";month="+(month==0?12:month)
+					params:"year="+this.situationDate.year+";month="+this.situationDate.month
 					+";lvltype=2;ikhlx="+ikhlx+";kaohetype="+kaohetype+";idistrictid=500227000000"
 				}
 				
 				util.getRequestPc(URL.url_PC,data,(results) => {
+					// console.log(results)
 					uni.setStorageSync(examine,results)
 					this[examine]=results
 				},(res) => {
@@ -255,6 +305,7 @@
 				})
 			},
 			toStandarDetail(){
+				util.situationDate=this.situationDate
 				uni.navigateTo({
 					url:"/pages/standardDetail/standardDetail"
 				})
@@ -416,5 +467,17 @@
 	height: 84upx;
 	margin: auto;
 	display: block;
+}
+.home_title_left{
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+#checkDate{
+	/* width: 100upx;
+	height: 40upx; */
+	/* position: absolute; */
+	/* right: -200upx; */
+	/* top: 0upx; */
 }
 </style>

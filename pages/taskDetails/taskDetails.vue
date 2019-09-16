@@ -7,7 +7,7 @@
 		</view>
 		<scroll-view id="missions" scroll-y="true">
 			<block v-if="type!='issuesList'">
-				<view v-for="(item,index) in missions" :key="item.id" class="mission_list">
+				<view v-for="(item,index) in missions" :key="index" class="mission_list">
 					<task-detail-card :result="item">
 						<view slot="slot_bottom" class="toBind">
 							<view class="startMission" @click="toContact(item)">联系人</view>
@@ -31,6 +31,7 @@
 			</block>
 			<view v-if="missions.length==0" class="noData">—————— 暂无数据 ——————</view>
 		</scroll-view>
+		<image class="QR_code" v-if="type=='process'" @click="takeCode()" src="../../static/images/QR_code.png" mode=""></image>
 	</view>
 </template>
 <script>
@@ -64,7 +65,14 @@
 		},
 		methods:{
 			getTaskProcess(name){//正在进行中的点位
-				util.getRequest(URL.TASK_PATROL_POINT_PROCESS_LIST,{taskId:this.taskId,name},(results)=>{
+				var data={
+					sLongitude:uni.getStorageSync("userLocation").longitude,
+					sLatitude:uni.getStorageSync("userLocation").latitude,
+					taskId:this.taskId,
+					name
+				}
+				util.getRequest(URL.TASK_PATROL_POINT_PROCESS_LIST,data,(results)=>{
+					// console.log(results.data[0])
 					this.missions=results.data
 					uni.setStorageSync("taskDetailsTaskProcess"+this.taskId,this.missions)
 					if(this.missions.length==0){
@@ -113,6 +121,28 @@
 					this.getProblemList(name);
 					break;
 				}
+			},
+			takeCode(){//扫描二维码
+				uni.scanCode({
+					onlyFromCamera: true,
+					success:  (res)=> {
+						// console.log('条码类型：' + res.scanType);
+						// console.log('条码内容：' + res.result);
+						this.filtrate(res.result)
+					}
+				});
+			},
+			filtrate(code){//筛选污染源
+				for(var i=0;i<this.missions.length;i++){
+					if(this.missions[i].pollutionCode==code){
+						this.missions=[this.missions[i]];
+						return
+					}
+				}
+				uni.showToast({
+					icon:"none",
+					title:"本任务中无该点位！"
+				})
 			},
 			toLocation(data){
 				util.pollutionInfo=data
@@ -198,7 +228,7 @@
 
 <style lang="scss" scoped>
 #taskDetails{
-	
+	position: relative;
 }
 #nav{
 	display: flex;
@@ -267,5 +297,12 @@
 	border: 1upx solid rgb(154, 187, 255);
 	color: rgb(154, 187, 255);
 	margin-left: 20upx;
+}
+.QR_code{
+	width: 80upx;
+	height: 80upx;
+	position: absolute;
+	right: 16upx;
+	bottom: 16upx;
 }
 </style>

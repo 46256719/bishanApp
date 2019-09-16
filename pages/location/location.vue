@@ -38,15 +38,17 @@
 			this.userLocation=uni.getStorageSync("userLocation")
 			var screenWidth=uni.getSystemInfoSync().screenWidth
 			var windowHeight=uni.getSystemInfoSync().windowHeight
-			var coefficient=screenWidth/750
+			// console.log(uni.getSystemInfoSync())
+			var coefficient=screenWidth/750			
+			// console.log(coefficient)
 			this.controls=[
 				{
 					id:"toNavigation",
 					position:{
 						width: 83*coefficient,
 						height: 83*coefficient,
-						left: 597*coefficient,
-						top:windowHeight-335*coefficient
+						left: 647*coefficient,
+						top:20*coefficient
 					},
 					iconPath:"/static/images/icon_navigation.png",
 					clickable:true
@@ -102,6 +104,7 @@
 				var point1 = new plus.maps.Point(this.userLocation.longitude,this.userLocation.latitude);
 				var point2 = new plus.maps.Point(this.pointInfo.longitude,this.pointInfo.latitude)
 				plus.maps.Map.calculateDistance(point1,point2,(res)=>{
+					// console.log(res.distance)
 					this.distance=(res.distance/1000).toFixed(2)
 				})
 			},

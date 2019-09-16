@@ -58,5 +58,15 @@ image{will-change: transform}
 	font-size: 24upx;
 	color: #ccc;
 }
-
+.dateContent{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	color: #fff;
+}
+.date_icon{
+	width: 31upx;
+	height: 31upx;
+	margin-left: 10upx;
+}	
 </style>

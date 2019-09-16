@@ -140,13 +140,15 @@
 					"problemPhoto":this.pictures.join(";"),
 					"rectification":this.rectification,
 					"rectificationProgress":this.rectificationProgress,
-					"rectificationExpire":this.rectificationExpire,
+					"rectificationExpire":nowProblem.needRectificationExpire==1?this.rectificationExpire:"",
 					"disposeSuggest":this.disposeSuggest
 				}
 				this.$emit("confirmMdoe",data)
 			},
 			getDate(type) {
-				const date = new Date();
+				var date = new Date();
+				var time=date.getTime()+7*24*60*60*1000
+				date=new Date(time)
 				let year = date.getFullYear();
 				let month = date.getMonth() + 1;
 				let day = date.getDate();

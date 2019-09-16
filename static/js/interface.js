@@ -3,14 +3,14 @@
 // const url0="http://192.168.1.5"
 // const url0="http://192.168.0.188"
 // const url0="http://192.168.1.15"
-// const url0="http://122.114.177.198"
-const url0="http://183.230.23.21"
+const url0="http://122.114.177.198"
+// const url0="http://183.230.23.21"
 // const url0=uni.getStorageSync("url")?uni.getStorageSync("url"):"http://183.230.23.21"
-const url=url0+":18082"
-// const url=url0+":8082"
+// const url=url0+":18082"
+const url=url0+":8082"
 const url_PC=url+"/proxy/pc"
-const daili="http://10.117.80.201:8081/app"
-// const daili="http://122.114.177.198:8081/app"
+// const daili="http://10.117.80.201:8081/app"
+const daili="http://122.114.177.198:8081/app"
 // const url_PC=url0+":8081/app"
 
 
@@ -59,8 +59,9 @@ const POLLUTION_SEARCH=url+"/pollution/search"//搜索污染源
 
 //PC接口
 
-const DAPINGSHUIZHI_SHUIZHITONGJI_KHLX=daili+"/dapingshuizhi/shuizhitongji_khlx"//详情
-const QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI=daili+"/quKongShuiZhiTongJi/heLiuShuiZhiTongJi"//详情
+const DAPINGSHUIZHI_SHUIZHITONGJI_KHLX=daili+"/dapingshuizhi/shuizhitongji_khlx"//断面情况
+const QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI=daili+"/quKongShuiZhiTongJi/heLiuShuiZhiTongJi"//河流统计
+const WATER_BASE_GETBASEYEARMONTH=daili+"/water/base/getBaseYearMonth"//获取有数据的时间
 
 //PC排行榜接口
 const ASSESS_TOWN_LIST=daili+"/assess/townList"//镇街排行
@@ -144,5 +145,6 @@ module.exports={
 	ASSESS_TOWN_LIST,
 	ASSESS_DEPARTMENT_LIST,
 	POLLUTION_SEARCH,
-	url_PC
+	url_PC,
+	WATER_BASE_GETBASEYEARMONTH
 }

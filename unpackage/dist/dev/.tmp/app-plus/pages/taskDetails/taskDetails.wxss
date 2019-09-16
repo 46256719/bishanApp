@@ -24,6 +24,9 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+#taskDetails.data-v-68022f80 {
+  position: relative;
+}
 #nav.data-v-68022f80 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -103,5 +106,12 @@
   border: 1rpx solid #9abbff;
   color: #9abbff;
   margin-left: 20rpx;
+}
+.QR_code.data-v-68022f80 {
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  right: 16rpx;
+  bottom: 16rpx;
 }
 

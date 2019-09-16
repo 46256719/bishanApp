@@ -149,9 +149,13 @@
         ,{
             "path" : "pages/standardDetail/standardDetail",
             "style" : {
-				"navigationBarTitleText" : "详情",
-				"backgroundColor":"#f2f2f2"
-			}
+            	"navigationBarTitleText" : "详情",
+            	"backgroundColor":"#F2F2F2",
+            	"app-plus":{
+            		"bounce":"none"
+            	},
+            	"navigationStyle":"custom"
+            }
         }
         ,{
             "path" : "pages/reportProblem/reportProblem",

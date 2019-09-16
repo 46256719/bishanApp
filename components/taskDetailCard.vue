@@ -2,14 +2,15 @@
 	<view class="taskDetailCard">
 		<view class="missionCard_list"><view class="">任务类别：</view><view class="">巡查任务</view></view>
 		<view class="missionCard_list"><view class="">名称：</view><view class="">{{result.pollutionName}}</view></view>
-		<view class="missionCard_list" style="border: 0;">
+		<view class="missionCard_list" :style="result.distanceMeter?'':'border: 0'">
 			<view class="">污染源地址：</view>
 			<view class="missionCard_list_rigth" @click="toLocation(result)">
 				<image class="icon_localtion" src="../../static/images/icon_localtion.png" mode=""></image>
 				<text>{{result.address}}</text>
 				<image class="icon_right" src="../../static/images/icon_unfold.png" mode=""></image>
 			</view>
-		</view>
+		</view>		
+		<view style="border: 0;" class="missionCard_list" v-if="result.distanceMeter"><view class="">距离(大约)：</view><view class="">{{result.distanceMeter>1000?((result.distanceMeter/1000).toFixed(1))+"K":result.distanceMeter}}m</view></view>
 		<slot name="slot_bottom"></slot>
 	</view>
 </template>

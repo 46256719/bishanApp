@@ -8,7 +8,7 @@
 		</view>
 		<scroll-view id="missions" upper-threshold="0" lower-threshold="0" scroll-y="true" @scrolltolower="scrollTol">
 			<block v-if="type!='issuesList'">
-				<view v-for="(item,index) in missions" @click="toTaskDetail(item)" :key="item.id" class="mission_list">
+				<view v-for="(item,index) in missions" @click="toTaskDetail(item)" :key="index" class="mission_list">
 					<mission-card :isProcess="type!='noStart'" :result="item">
 						<view slot="slot_bottom" class="toBind" v-if="type=='noStart'">
 							<view class="startMission" v-if="type=='process'">定位</view>

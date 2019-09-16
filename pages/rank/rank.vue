@@ -2,8 +2,19 @@
 	<view id="rank">
 		<view class="rank_header">
 			<view id="navBar">
-				<text>排名</text>
-				<pick-date id="checkDate" timeType="month" @getData="getData" placeholder="请选择日期"></pick-date>
+				<view class="">
+					
+				</view>
+				<view class="nav_title">排名</view>
+				<view class="">
+					<pick-date timeType="month" @getData="getData" placeholder="请选择日期">
+						<view class="dateContent" slot="content">
+							<view class="">{{date}}</view>
+							<image src="../../static/images/icon_date.png" class="date_icon" mode=""></image>
+						</view>
+					</pick-date>
+				</view>
+				
 				<!-- <picker mode="date" fields="month" @change="checkDate">
 					
 				</picker> -->
@@ -187,18 +198,20 @@
 #navBar{
 	position: relative;
 	height: 90upx;
-	padding-top: 40upx;
-	line-height: 90upx;
 	background-color: #5087fb;
 	color: #fff;
 	font-size: 36upx;
 	text-align: center;
+	display: flex;
+	align-items: center;
+	padding: 40upx 30upx 0upx;
+	justify-content: space-between;
 }
-#checkDate{
-	position: absolute;
-	right:30upx;
-	bottom: 15upx;
-	height: 70upx;
+#navBar>view{
+	width: 280upx;
+}
+#navBar>view.nav_title{
+	width: 100upx;
 }
 .rank_header{
 	position: absolute;
