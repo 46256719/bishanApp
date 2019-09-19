@@ -1,9 +1,10 @@
 <template name="taskDetailCard">
 	<view class="taskDetailCard">
-		<view class="missionCard_list"><view class="">任务类别：</view><view class="">巡查任务</view></view>
-		<view class="missionCard_list"><view class="">名称：</view><view class="">{{result.pollutionName}}</view></view>
+		<view class="missionCard_list"><view class="missionCard_list_left">任务类别：</view><view class="missionCard_list_rigth">巡查任务</view></view>
+		<view class="missionCard_list"><view class="missionCard_list_left">点位名称：</view><view class="missionCard_list_rigth">{{result.pollutionName}}</view></view>
+		<view class="missionCard_list"><view class="missionCard_list_left">污染源类型：</view><view class="missionCard_list_rigth">{{getWryTypeName(result.wryType)}}</view></view>
 		<view class="missionCard_list" :style="result.distanceMeter?'':'border: 0'">
-			<view class="">污染源地址：</view>
+			<view class="missionCard_list_left">污染源地址：</view>
 			<view class="missionCard_list_rigth" @click="toLocation(result)">
 				<image class="icon_localtion" src="../../static/images/icon_localtion.png" mode=""></image>
 				<text>{{result.address}}</text>
@@ -24,8 +25,12 @@
 			}
 		},
 		props: ['result',"isProcess"],
-		created(){
-			// console.log(this.result)
+		computed: {
+			getWryTypeName() {
+				return function(type){
+					return util.getWryTypeName(type)
+				}
+			}
 		},
 		methods: {
 			toLocation(data) {
@@ -35,7 +40,8 @@
 				uni.navigateTo({
 					url:"/pages/location/location"
 				})
-			}
+			},
+			
 		}
 	}
 </script>
@@ -56,9 +62,14 @@
 .missionCard_list>view:first-child{
 	color: rgb(153,153,153);
 }
+.missionCard_list_left{
+	flex: 1;
+}
 .missionCard_list_rigth{
 	display: flex;
+	flex: 2;
 	align-items: center;
+	justify-content: flex-end;
 }
 .icon_localtion{
 	width: 20upx;

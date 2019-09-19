@@ -1,5 +1,6 @@
 {
   "navigationBarTitleText": "完成巡查任务",
+  "bounce": "none",
   "usingComponents": {
     "water-mark": "/components/createWaterMark/createWaterMark"
   }

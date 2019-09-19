@@ -17,7 +17,7 @@
 		<scroll-view class="standarDetail_content" scroll-y>
 			<view class="standarDetail_list">
 				<view class="standarDetail_list_header">
-					<view class="title">国考</view>
+					<view class="title">国家考核</view>
 					<view class=""><text :class="type.examine_0==1?'biaozhun':''" @click="checkType('examine_0',1,1)">III类标准 </text> / <text :class="type.examine_0==2?'biaozhun':''" @click="checkType('examine_0',1,2)">当年目标</text></view>
 				</view>
 				<view class="standarDetail_list_msg">
@@ -26,13 +26,13 @@
 					</view>
 					<view class="msg_num">
 						<view class="" style="color: #000000;">
-							<text style="font-size: 50upx;">{{examine_0.total_site||"-"}}</text>个
+							<text style="font-size: 50upx;">{{examine_0.total_site||"0"}}</text>个
 						</view>
 						<view class="">断面</view>
 					</view>
 					<view class="msg_num">
 						<view class="" style="color: #ff0000;">
-							<text style="font-size: 50upx;">{{(examine_0.total_site-examine_0.dabiaonum_now)||"-"}}</text>个
+							<text style="font-size: 50upx;">{{(examine_0.total_site-examine_0.dabiaonum_now)||"0"}}</text>个
 						</view>
 						<view class="">未达标</view>
 					</view>
@@ -41,8 +41,12 @@
 			</view>
 			<view class="standarDetail_list">
 				<view class="standarDetail_list_header">
-					<view class="title">市级考核</view>
-					<view class=""><text :class="type.examine_1==1?'biaozhun':''" @click="checkType('examine_1',2,1)">III类标准 </text> / <text :class="type.examine_1==2?'biaozhun':''" @click="checkType('examine_1',2,2)">当年目标</text></view>
+					<view class="title">市控监测</view>
+					<view class="">
+						<text :class="type.examine_1==1?'biaozhun':''" @click="checkType('examine_1',2,1)">III类标准 </text>
+						 / 
+						<text :class="type.examine_1==3?'biaozhun':''" @click="checkType('examine_1',2,3)">水域功能</text>
+					</view>
 				</view>
 				<view class="standarDetail_list_msg">
 					<view class="canvas_pie">
@@ -50,13 +54,13 @@
 					</view>
 					<view class="msg_num">
 						<view class="" style="color: #000000;">
-							<text style="font-size: 50upx;">{{examine_1.total_site||"-"}}</text>个
+							<text style="font-size: 50upx;">{{examine_1.total_site||"0"}}</text>个
 						</view>
 						<view class="">断面</view>
 					</view>
 					<view class="msg_num">
 						<view class="" style="color: #ff0000;">
-							<text style="font-size: 50upx;">{{(examine_1.total_site-examine_1.dabiaonum_now)||"-"}}</text>个
+							<text style="font-size: 50upx;">{{(examine_1.total_site-examine_1.dabiaonum_now)||"0"}}</text>个
 						</view>
 						<view class="">未达标</view>
 					</view>
@@ -65,8 +69,14 @@
 			</view>
 			<view class="standarDetail_list">
 				<view class="standarDetail_list_header">
-					<view class="title">市控考核</view>
-					<view class=""><text :class="type.examine_2==1?'biaozhun':''" @click="checkType('examine_2',5,1)">III类标准 </text> / <text :class="type.examine_2==2?'biaozhun':''" @click="checkType('examine_2',5,2)">当年目标</text></view>
+					<view class="title">市级体检</view>
+					<view class="">
+						<text :class="type.examine_2==1?'biaozhun':''" @click="checkType('examine_2',5,1)">III类标准 </text>
+						 / 
+						<text :class="type.examine_2==2?'biaozhun':''" @click="checkType('examine_2',5,2)">当年目标</text>
+						 / 
+						<text :class="type.examine_2==4?'biaozhun':''" @click="checkType('examine_2',5,4)">区县考核</text>
+					</view>
 				</view>
 				<view class="standarDetail_list_msg">
 					<view class="canvas_pie">
@@ -74,19 +84,20 @@
 					</view>
 					<view class="msg_num">
 						<view class="" style="color: #000000;">
-							<text style="font-size: 50upx;">{{examine_2.total_site||"-"}}</text>个
+							<text style="font-size: 50upx;">{{examine_2.total_site||"0"}}</text>个
 						</view>
 						<view class="">断面</view>
 					</view>
 					<view class="msg_num">
 						<view class="" style="color: #ff0000;">
-							<text style="font-size: 50upx;">{{(examine_2.total_site-examine_2.dabiaonum_now)||"-"}}</text>个
+							<text v-if="type.examine_3!=4" style="font-size: 50upx;">{{(examine_2.total_site-examine_2.dabiaonum_now)||"0"}}个</text>
+							<text v-else style="font-size: 50upx;">{{(examine_2.total_site-examine_2.dabiaonum_now_koufen)||"0"}}个</text>
 						</view>
 						<view class="">未达标</view>
 					</view>
 					<view class="msg_num" style="margin-right: 0upx;">
 						<view class="" style="color: #ff0000;">
-							<text style="font-size: 50upx;">{{examine_2.liewunum||"-"}}</text>个
+							<text style="font-size: 50upx;">{{examine_2.liewunum||"0"}}</text>个
 						</view>
 						<view class="">劣V</view>
 					</view>
@@ -96,7 +107,13 @@
 			<view class="standarDetail_list">
 				<view class="standarDetail_list_header">
 					<view class="title">区控考核</view>
-					<view class=""><text :class="type.examine_3==1?'biaozhun':''" @click="checkType('examine_3',6,1)">III类标准 </text> / <text :class="type.examine_3==2?'biaozhun':''" @click="checkType('examine_3',6,2)">当年目标</text></view>
+					<view class="">
+						<text :class="type.examine_3==1?'biaozhun':''" @click="checkType('examine_3',6,1)">III类标准 </text>
+						 / 
+						<text :class="type.examine_3==2?'biaozhun':''" @click="checkType('examine_3',6,2)">当年目标</text>
+						 / 
+						<text :class="type.examine_3==4?'biaozhun':''" @click="checkType('examine_3',6,4)">区县考核</text>
+					</view>
 				</view>
 				<view class="standarDetail_list_msg">
 					<view class="canvas_pie">
@@ -104,19 +121,20 @@
 					</view>
 					<view class="msg_num">
 						<view class="" style="color: #000000;">
-							<text style="font-size: 50upx;">{{examine_3.total_site||"-"}}</text>个
+							<text style="font-size: 50upx;">{{examine_3.total_site||"0"}}</text>个
 						</view>
 						<view class="">断面</view>
 					</view>
 					<view class="msg_num">
 						<view class="" style="color: #ff0000;">
-							<text style="font-size: 50upx;">{{(examine_3.total_site-examine_3.dabiaonum_now)||"-"}}</text>个
+							<text v-if="type.examine_3!=4" style="font-size: 50upx;">{{(examine_3.total_site-examine_3.dabiaonum_now)||"0"}}个</text>
+							<text v-else style="font-size: 50upx;">{{(examine_3.total_site-examine_3.dabiaonum_now_koufen)||"0"}}个</text>
 						</view>
 						<view class="">未达标</view>
 					</view>
 					<view class="msg_num" style="margin-right: 0upx;">
 						<view class="" style="color: #ff0000;">
-							<text style="font-size: 50upx;">{{examine_3.liewunum||"-"}}</text>个
+							<text style="font-size: 50upx;">{{examine_3.liewunum||"0"}}</text>个
 						</view>
 						<view class="">劣V</view>
 					</view>
@@ -161,9 +179,9 @@
 				userInfo:{},
 				type:{
 					examine_0:1,
-					examine_1:1,
-					examine_2:1,
-					examine_3:1
+					examine_1:3,
+					examine_2:2,
+					examine_3:2
 				},
 				date:{
 					year:"",
@@ -189,9 +207,9 @@
 			this.cWidth=uni.upx2px(150);
 			this.pixelRatio=uni.upx2px(150)/150;
 			this.getStandarDetail("examine_0",1,1)
-			this.getStandarDetail("examine_1",2,1)
-			this.getStandarDetail("examine_2",5,1)
-			this.getStandarDetail("examine_3",6,1)
+			this.getStandarDetail("examine_1",2,3)
+			this.getStandarDetail("examine_2",5,2)
+			this.getStandarDetail("examine_3",6,2)
 		},
 		methods: {
 			getStandarDetail(examine,ikhlx,kaohetype){
@@ -234,6 +252,9 @@
 				uni.navigateBack({})
 			},
 			getCanvas(canvasId,data){
+				if(this.type[canvasId]==4){
+					data.dabiaonum_now=data.dabiaonum_now_koufen
+				}
 				canvaColumn=new uCharts({
 					$this:_self,
 					canvasId: canvasId,

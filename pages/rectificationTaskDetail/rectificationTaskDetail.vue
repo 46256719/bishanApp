@@ -7,7 +7,7 @@
 			<view class="taskName">任务名称：{{taskDetail.taskName||""}}</view>
 			<view class="taskName">任务描述：{{taskDetail.taskDescription||"无"}}</view>
 			<view class="taskName">问题详情：{{taskDetail.problemDetail||"无"}}</view>
-			<!-- <view class="taskName">处理意见：{{taskDetail.problemDetail||"无"}}</view> -->
+			<view class="taskName">处理意见：{{taskDetail.disposeSuggest||"无"}}</view>
 			<view class="title">整改结果描述</view>
 			<textarea name="" placeholder="最多输入200个文字" @input="inpDetail" maxlength="200" :value="rectificationBeforeDesc" id="describe"></textarea>
 		</view>
@@ -163,22 +163,7 @@
 				});
 			},
 			toNavigation(){//导航
-				var _this = this;  
-				// 判断平台  
-				var wgs84togcj02=mapTool.wgs84togcj02(_this.taskDetail.wryLongitude,_this.taskDetail.wryLatitude)
-				var longitude=wgs84togcj02[0]
-				var latitude=wgs84togcj02[1]
-				if (plus.os.name == 'Android') {  
-					plus.runtime.openURL("amapuri://route/plan/?sid=BGVIS1&did=BGVIS2&dlat="+latitude+"&dlon="+longitude+"&dev=0&t=0",  
-						function(e) {  
-							console.log('Open system default browser failed: ' + e.message);  
-						},"com.autonavi.minimap"
-					);
-				} else if (plus.os.name == 'iOS') {  
-					plus.runtime.launchApplication({ action:"iosamap://path?sourceApplication=applicationName&sid=BGVIS1&did=BGVIS2&dlat="+latitude+"&dlon="+longitude+"&dev=0&t=0" }, function(e) {  
-						console.log('Open system default browser failed: ' + e.message);  
-					});  
-				}
+				util.toNavigation(this.taskDetail.wryLongitude,this.taskDetail.wryLatitude)
 			},
 			takingPictures(){
 				var that=this

@@ -1,5 +1,5 @@
 
-#system.data-v-2c82fc36{
+#system.data-v-2be7533a{
 	background-color: #F2F2F2;
 	/* padding-top: 20upx; */
 	min-height: 100vh;
@@ -7,10 +7,10 @@
 	        box-sizing: border-box;
 	padding-bottom: 20rpx;
 }
-#system_menus.data-v-2c82fc36{
+#system_menus.data-v-2be7533a{
 	margin-top: 40rpx;
 }
-.system_menu.data-v-2c82fc36{
+.system_menu.data-v-2be7533a{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;
@@ -26,12 +26,12 @@
 	font-size: 28rpx;
 	color: #333333;
 }
-.icon_menu.data-v-2c82fc36{
+.icon_menu.data-v-2be7533a{
 	width: 33rpx;
 	height: 33rpx;
 	margin-right: 20rpx;
 }
-.icon_right.data-v-2c82fc36{
+.icon_right.data-v-2be7533a{
 	width: 13rpx;
 	height: 22rpx;
 	position: absolute;
@@ -40,7 +40,7 @@
 	bottom: 0rpx;
 	margin: auto;
 }
-#exit.data-v-2c82fc36{
+#exit.data-v-2be7533a{
 	margin: 60rpx 30rpx 0rpx;
 	height: 70rpx;
 	line-height: 70rpx;
@@ -50,7 +50,7 @@
 	background-color: #eb4940;
 	border-radius: 35rpx;
 }
-.userInfo_title.data-v-2c82fc36{
+.userInfo_title.data-v-2be7533a{
 	height: 120rpx;
 	line-height: 120rpx;
 	padding-left: 20rpx;
@@ -59,7 +59,7 @@
 	color: #000;
 	background-color: #fff;
 }
-.userInfo_item.data-v-2c82fc36{
+.userInfo_item.data-v-2be7533a{
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -ms-flexbox;

@@ -71,10 +71,10 @@
 					page: page,
 					uid: this.userInfo.id
 				}, (results) => {
+					this.onTaskNum=results.total
 					var results = results.data
 					var myTaskProcess = uni.getStorageSync("myTaskProcess") ? uni.getStorageSync("myTaskProcess") : []
 					myTaskProcess[page] = results;
-					// this.onTaskNum=results.length
 					uni.setStorageSync("myTaskProcess", myTaskProcess)
 					this.disposeRequestData(results, page)
 				}, (results) => {
@@ -89,10 +89,12 @@
 					page: page,
 					uid: this.userInfo.id
 				}, (results) => {
+					// console.log(results)
+					this.unTaskNum=results.total
 					var results = results.data
 					var myNoStart = uni.getStorageSync("myNoStart") ? uni.getStorageSync("myNoStart") : []
 					myNoStart[page] = results;
-					// this.unTaskNum=results.length
+					
 					uni.setStorageSync("myNoStart", myNoStart)
 					this.disposeRequestData(results, page)
 				}, (results) => {

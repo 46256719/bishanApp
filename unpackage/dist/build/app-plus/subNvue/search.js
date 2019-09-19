@@ -1037,9 +1037,9 @@ if(this.__merge_style && this.$root && this.$root.$options.appStyle){
   this.__merge_style(this.$root.$options.appStyle)
 }
 if(this.__merge_style){
-              this.__merge_style(__webpack_require__(/*! ./search.nvue?vue&type=style&index=0&id=230e3590&scoped=true&lang=css&mpType=page */ 19).default)
+              this.__merge_style(__webpack_require__(/*! ./search.nvue?vue&type=style&index=0&id=230e3590&scoped=true&lang=css&mpType=page */ 20).default)
           }else{
-              Object.assign(this.$options.style,__webpack_require__(/*! ./search.nvue?vue&type=style&index=0&id=230e3590&scoped=true&lang=css&mpType=page */ 19).default)
+              Object.assign(this.$options.style,__webpack_require__(/*! ./search.nvue?vue&type=style&index=0&id=230e3590&scoped=true&lang=css&mpType=page */ 20).default)
           }
 
 }
@@ -1254,14 +1254,14 @@ exports.default = _default;
 // const url0="http://192.168.1.5"
 // const url0="http://192.168.0.188"
 // const url0="http://192.168.1.15"
-// const url0="http://122.114.177.198"
-var url0 = "http://183.230.23.21"; // const url0=uni.getStorageSync("url")?uni.getStorageSync("url"):"http://183.230.23.21"
+var url0 = "http://122.114.177.198"; // const url0="http://183.230.23.21"
+// const url0=uni.getStorageSync("url")?uni.getStorageSync("url"):"http://183.230.23.21"ZZZZZZZ
+// const url=url0+":18082"
 
-var url = url0 + ":18082"; // const url=url0+":8082"
+var url = url0 + ":8082";
+var url_PC = url + "/proxy/pc"; // const daili="http://10.117.80.201:8081/app"
 
-var url_PC = url + "/proxy/pc";
-var daili = "http://10.117.80.201:8081/app"; // const daili="http://122.114.177.198:8081/app"
-// const url_PC=url0+":8081/app"
+var daili = "http://122.114.177.198:8081/app"; // const url_PC=url0+":8081/app"
 //常链接 
 
 var WEBSOCKET = "ws://192.168.1.4:8082/websocket/"; // 登录
@@ -1321,9 +1321,11 @@ var USER_UPDATE = url + "/user/update"; //通过点位信息 获取问题信息
 var POLLUTION_SEARCH = url + "/pollution/search"; //搜索污染源
 //PC接口
 
-var DAPINGSHUIZHI_SHUIZHITONGJI_KHLX = daili + "/dapingshuizhi/shuizhitongji_khlx"; //详情
+var DAPINGSHUIZHI_SHUIZHITONGJI_KHLX = daili + "/dapingshuizhi/shuizhitongji_khlx"; //断面情况
 
-var QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI = daili + "/quKongShuiZhiTongJi/heLiuShuiZhiTongJi"; //详情
+var QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI = daili + "/quKongShuiZhiTongJi/heLiuShuiZhiTongJi"; //河流统计
+
+var WATER_BASE_GETBASEYEARMONTH = daili + "/water/base/getBaseYearMonth"; //获取有数据的时间
 //PC排行榜接口
 
 var ASSESS_TOWN_LIST = daili + "/assess/townList"; //镇街排行
@@ -1428,7 +1430,8 @@ module.exports = {
   ASSESS_TOWN_LIST: ASSESS_TOWN_LIST,
   ASSESS_DEPARTMENT_LIST: ASSESS_DEPARTMENT_LIST,
   POLLUTION_SEARCH: POLLUTION_SEARCH,
-  url_PC: url_PC
+  url_PC: url_PC,
+  WATER_BASE_GETBASEYEARMONTH: WATER_BASE_GETBASEYEARMONTH
 };
 
 /***/ }),
@@ -1440,9 +1443,11 @@ module.exports = {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni, __f__) {
+/* WEBPACK VAR INJECTION */(function(uni, __f__, plus) {
 
 var _interface = _interopRequireDefault(__webpack_require__(/*! ./interface.js */ 16));
+
+var _mapTool = __webpack_require__(/*! ./mapTool.js */ 19);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1453,7 +1458,29 @@ var subNvue = {};
 var taskInfo = {};
 var pollutionInfo = {};
 var upTimeNum = 300000;
-var arrWry = ["WRY_BZ_LIST", "WRY_COMPANY_LIST", "WRY_RHKPWK_LIST", "WRY_RHKPWD_LIST", "WRY_JZGD_LIST", "WRY_QTHY_LIST", "WRY_JCDW_LIST", "WRY_YLJG_LIST", "WRY_XQYZ_LIST", "WRY_TZC_LIST", "WRY_SHUIKU_LIST", "WRY_SPT_LIST", "WRY_YYC_LIST", "WRY_JMJZJZD_LIST", "WRY_XSLW_LIST", "WRY_XCC_LIST", "WRY_CYHY_LIST", "WRY_NMSC_LIST", "WRY_WSCLC_LIST", "WRY_ZZYFLDJD_LIST", "WRY_SMYSYZDH_LIST"];
+var situationDate = {}; // var arrWry=[
+// 	"WRY_BZ_LIST",
+// 	"WRY_COMPANY_LIST",
+// 	"WRY_RHKPWK_LIST",
+// 	"WRY_RHKPWD_LIST",
+// 	"WRY_JZGD_LIST",
+// 	"WRY_QTHY_LIST",
+// 	"WRY_JCDW_LIST",
+// 	"WRY_YLJG_LIST",
+// 	"WRY_XQYZ_LIST",
+// 	"WRY_TZC_LIST",
+// 	"WRY_SHUIKU_LIST",
+// 	"WRY_SPT_LIST",
+// 	"WRY_YYC_LIST",
+// 	"WRY_JMJZJZD_LIST",
+// 	"WRY_XSLW_LIST",
+// 	"WRY_XCC_LIST",
+// 	"WRY_CYHY_LIST",
+// 	"WRY_NMSC_LIST",
+// 	"WRY_WSCLC_LIST",
+// 	"WRY_ZZYFLDJD_LIST",
+// 	"WRY_SMYSYZDH_LIST"
+// ]
 
 function getRequest(url, data, call, error) {
   uni.showLoading({
@@ -1476,7 +1503,7 @@ function getRequest(url, data, call, error) {
       } else if (res.data.code == 1) {
         typeof call == "function" ? call(res.data) : "";
       } else {
-        console.log(__f__(res.data, " at static\\js\\utils.js:49"));
+        console.log(__f__(res.data, " at static\\js\\utils.js:51"));
         uni.showToast({
           icon: "none",
           title: res.data.msg || "数据异常"
@@ -1581,7 +1608,7 @@ function completeTask(data) {
   //完成巡查污染源任务
   upImgTeams(data.pointPhoto, function (results, index) {
     data.pointPhoto = results;
-    console.log(__f__(data, " at static\\js\\utils.js:151"));
+    console.log(__f__(data, " at static\\js\\utils.js:153"));
     toCompleteTask(_interface.default.TASK_PATROL_POINT_UPDATE, data);
   }, 1, function (results) {
     completeTask(data);
@@ -1622,7 +1649,7 @@ function toCompleteTask(url, data) {
   //上传问题或者完成点位巡查
   // console.log(data)
   getRequestNo(url, data, function (results) {
-    console.log(__f__(results, " at static\\js\\utils.js:184"));
+    console.log(__f__(results, " at static\\js\\utils.js:186"));
   }, function (results) {
     toCompleteTask(url, data);
   });
@@ -1633,7 +1660,7 @@ function toUpProblem(url, data) {
   getRequestNo(url, {
     data: data
   }, function (results) {
-    console.log(__f__("上传成功", " at static\\js\\utils.js:191"));
+    console.log(__f__("上传成功", " at static\\js\\utils.js:193"));
   }, function (results) {
     toUpProblem(url, data);
   });
@@ -1710,7 +1737,7 @@ var webSocket = function webSocket(id) {
 };
 
 uni.onSocketOpen(function (res) {
-  console.log(__f__('WebSocket连接已打开！', " at static\\js\\utils.js:263"));
+  console.log(__f__('WebSocket连接已打开！', " at static\\js\\utils.js:265"));
 });
 
 var getLocation = function getLocation() {
@@ -1724,14 +1751,14 @@ var getLocation = function getLocation() {
         });
       },
       fail: function fail(res) {
-        console.log(__f__(res, " at static\\js\\utils.js:274"));
+        console.log(__f__(res, " at static\\js\\utils.js:276"));
         clearInterval(timer_getLoction);
         uni.showModal({
           title: "获取定位权限失败",
           content: "请打开手机定位权限",
           showCancel: false,
           success: function success(res) {
-            console.log(__f__(res.confirm, " at static\\js\\utils.js:281"));
+            console.log(__f__(res.confirm, " at static\\js\\utils.js:283"));
             uni.setStorageSync("userLocation", {
               longitude: 0,
               latitude: 0
@@ -1739,7 +1766,7 @@ var getLocation = function getLocation() {
             getLocation();
           },
           fail: function fail(res) {
-            console.log(__f__(res, " at static\\js\\utils.js:286"));
+            console.log(__f__(res, " at static\\js\\utils.js:288"));
           }
         });
       }
@@ -1792,15 +1819,131 @@ var upLoction = function upLoction(id) {
   }, upTimeNum);
 };
 
-function getWryMap() {
-  for (var i = 0; i < arrWry.length; i++) {
-    (function (url) {
-      getRequestPc(_interface.default[url], "", function (results) {
-        uni.setStorageSync(url, results);
+function toNavigation(longitude, latitude) {
+  //导航
+  // 判断平台  
+  var wgs84togcj02 = _mapTool.mapTool.wgs84togcj02(longitude, latitude);
+
+  longitude = wgs84togcj02[0];
+  latitude = wgs84togcj02[1];
+
+  if (plus.os.name == 'Android') {
+    plus.runtime.openURL("amapuri://route/plan/?sid=BGVIS1&did=BGVIS2&dlat=" + latitude + "&dlon=" + longitude + "&dev=0&t=0", function (e) {
+      uni.showToast({
+        icon: "none",
+        title: "请下确认手机安装了高德地图"
       });
-    })(arrWry[i]);
+      console.log(__f__('Open system default browser failed: ' + e.message, " at static\\js\\utils.js:346"));
+    }, "com.autonavi.minimap");
+  } else if (plus.os.name == 'iOS') {
+    plus.runtime.launchApplication({
+      action: "iosamap://path?sourceApplication=applicationName&sid=BGVIS1&did=BGVIS2&dlat=" + latitude + "&dlon=" + longitude + "&dev=0&t=0"
+    }, function (e) {
+      uni.showToast({
+        icon: "none",
+        title: "请下确认手机安装了高德地图"
+      });
+      console.log(__f__('Open system default browser failed: ' + e.message, " at static\\js\\utils.js:355"));
+    });
   }
 }
+
+function getWryTypeName(type) {
+  var name = "-";
+
+  switch (type) {
+    case "bengzhan":
+      name = "泵站";
+      break;
+
+    case "canyinhangye":
+      name = "餐饮行业";
+      break;
+
+    case "gyqy":
+      name = "工业企业";
+      break;
+
+    case "xqyz":
+      name = "禽畜养殖";
+      break;
+
+    case "jcdw":
+      name = "监测点位";
+      break;
+
+    case "jianzhugongdi":
+      name = "建筑工地";
+      break;
+
+    case "jmjzjzd":
+      name = "居民集中居住点";
+      break;
+
+    case "nongmaoshichang":
+      name = "农贸市场";
+      break;
+
+    case "qthy":
+      name = "其他行业";
+      break;
+
+    case "rhkpwd":
+      name = "入河(库)排污点";
+      break;
+
+    case "wsclc":
+      name = "污水集中处理设施";
+      break;
+
+    case "shanpingtang":
+      name = "山坪塘";
+      break;
+
+    case "shuiku":
+      name = "水库";
+      break;
+
+    case "smysyzdh":
+      name = "十亩以上种植大户";
+      break;
+
+    case "tzc":
+      name = "屠宰场";
+      break;
+
+    case "xiaosanluanwu":
+      name = "小散乱污";
+      break;
+
+    case "xichechang":
+      name = "洗车场";
+      break;
+
+    case "yangyuchi":
+      name = "养鱼池";
+      break;
+
+    case "yiliaojigou":
+      name = "医疗机构";
+      break;
+
+    case "zzyfldjd":
+      name = "种植业肥料堆积点";
+      break;
+  }
+
+  return name;
+} // function getWryMap(){
+// 	for (var i=0;i<arrWry.length;i++) {
+// 		(function(url){
+// 			getRequestPc(URL[url],"",(results)=>{
+// 				uni.setStorageSync(url,results)
+// 			})	
+// 		})(arrWry[i])
+// 	}
+// }
+
 
 module.exports = {
   getRequest: getRequest,
@@ -1821,14 +1964,17 @@ module.exports = {
   completeTask: completeTask,
   rectificationTaskDetail: rectificationTaskDetail,
   subNvue: subNvue,
-  getWryMap: getWryMap,
+  // getWryMap,
   taskInfo: taskInfo,
   pollutionInfo: pollutionInfo,
   upTimeNum: upTimeNum,
   onTaskNum: 0,
-  unTaskNum: 0
+  unTaskNum: 0,
+  situationDate: situationDate,
+  toNavigation: toNavigation,
+  getWryTypeName: getWryTypeName
 };
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus-nvue-v8/dist/index.js */ 6)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 18)["default"]))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus-nvue-v8/dist/index.js */ 6)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 18)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus-nvue-v8/dist/index.js */ 6)["weexPlus"]))
 
 /***/ }),
 /* 18 */
@@ -1889,6 +2035,144 @@ function formatLog (...args) {
 
 /***/ }),
 /* 19 */
+/*!*********************************************************!*\
+  !*** G:/知行APP/pollutionMonitoring/static/js/mapTool.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function mapTool() {
+  this.x_PI = 3.14159265358979324 * 3000.0 / 180.0, this.PI = 3.1415926535897932384626, this.ee = 0.00669342162296594323, this.a = 6378245.0;
+}
+/**  
+ * GCJ02 转换为 WGS84  
+ * @param lng  
+ * @param lat  
+ * @returns {*[]}  
+ */
+
+
+mapTool.prototype.gcj02towgs84 = function (lng, lat) {
+  if (this.out_of_china(lng, lat)) {
+    return [lng, lat];
+  } else {
+    var dlat = this.transformlat(lng - 105.0, lat - 35.0);
+    var dlng = this.transformlng(lng - 105.0, lat - 35.0);
+    var radlat = lat / 180.0 * this.PI;
+    var magic = Math.sin(radlat);
+    magic = 1 - this.ee * magic * magic;
+    var sqrtmagic = Math.sqrt(magic);
+    dlat = dlat * 180.0 / (this.a * (1 - this.ee) / (magic * sqrtmagic) * this.PI);
+    dlng = dlng * 180.0 / (this.a / sqrtmagic * Math.cos(radlat) * this.PI);
+    var mglat = lat + dlat;
+    var mglng = lng + dlng;
+    return [lng * 2 - mglng, lat * 2 - mglat];
+  }
+};
+/**  
+ * 火星坐标系 (GCJ-02) 与百度坐标系 (BD-09) 的转换  
+ * 即谷歌、高德 转 百度  
+ * @param lng  
+ * @param lat  
+ * @returns {*[]}  
+ */
+
+
+mapTool.prototype.gcj02tobd09 = function (lng, lat) {
+  var z = Math.sqrt(lng * lng + lat * lat) + 0.00002 * Math.sin(lat * this.x_PI);
+  var theta = Math.atan2(lat, lng) + 0.000003 * Math.cos(lng * this.x_PI);
+  var bd_lng = z * Math.cos(theta) + 0.0065;
+  var bd_lat = z * Math.sin(theta) + 0.006;
+  return [bd_lng, bd_lat];
+};
+/**  
+ * WGS84转GCj02  
+ * @param lng  
+ * @param lat  
+ * @returns {*[]}  
+ */
+
+
+mapTool.prototype.wgs84togcj02 = function (lng, lat) {
+  lng = lng * 1;
+  lat = lat * 1;
+
+  if (this.out_of_china(lng, lat)) {
+    return [lng, lat];
+  } else {
+    var dlat = this.transformlat(lng - 105.0, lat - 35.0);
+    var dlng = this.transformlng(lng - 105.0, lat - 35.0);
+    var radlat = lat / 180.0 * this.PI;
+    var magic = Math.sin(radlat);
+    magic = 1 - this.ee * magic * magic;
+    var sqrtmagic = Math.sqrt(magic);
+    dlat = dlat * 180.0 / (this.a * (1 - this.ee) / (magic * sqrtmagic) * this.PI);
+    dlng = dlng * 180.0 / (this.a / sqrtmagic * Math.cos(radlat) * this.PI);
+    var mglat = lat + dlat;
+    var mglng = lng + dlng;
+    return [mglng, mglat];
+  }
+};
+/**  
+ * GCJ02 转换为 WGS84  
+ * @param lng  
+ * @param lat  
+ * @returns {*[]}  
+ */
+
+
+mapTool.prototype.gcj02towgs84 = function (lng, lat) {
+  if (this.out_of_china(lng, lat)) {
+    return [lng, lat];
+  } else {
+    var dlat = this.transformlat(lng - 105.0, lat - 35.0);
+    var dlng = this.transformlng(lng - 105.0, lat - 35.0);
+    var radlat = lat / 180.0 * this.PI;
+    var magic = Math.sin(radlat);
+    magic = 1 - this.ee * magic * magic;
+    var sqrtmagic = Math.sqrt(magic);
+    dlat = dlat * 180.0 / (this.a * (1 - this.ee) / (magic * sqrtmagic) * this.PI);
+    dlng = dlng * 180.0 / (this.a / sqrtmagic * Math.cos(radlat) * this.PI);
+    var mglat = lat + dlat;
+    var mglng = lng + dlng;
+    return [lng * 2 - mglng, lat * 2 - mglat];
+  }
+};
+
+mapTool.prototype.transformlat = function (lng, lat) {
+  var ret = -100.0 + 2.0 * lng + 3.0 * lat + 0.2 * lat * lat + 0.1 * lng * lat + 0.2 * Math.sqrt(Math.abs(lng));
+  ret += (20.0 * Math.sin(6.0 * lng * this.PI) + 20.0 * Math.sin(2.0 * lng * this.PI)) * 2.0 / 3.0;
+  ret += (20.0 * Math.sin(lat * this.PI) + 40.0 * Math.sin(lat / 3.0 * this.PI)) * 2.0 / 3.0;
+  ret += (160.0 * Math.sin(lat / 12.0 * this.PI) + 320 * Math.sin(lat * this.PI / 30.0)) * 2.0 / 3.0;
+  return ret;
+};
+
+mapTool.prototype.transformlng = function (lng, lat) {
+  var ret = 300.0 + lng + 2.0 * lat + 0.1 * lng * lng + 0.1 * lng * lat + 0.1 * Math.sqrt(Math.abs(lng));
+  ret += (20.0 * Math.sin(6.0 * lng * this.PI) + 20.0 * Math.sin(2.0 * lng * this.PI)) * 2.0 / 3.0;
+  ret += (20.0 * Math.sin(lng * this.PI) + 40.0 * Math.sin(lng / 3.0 * this.PI)) * 2.0 / 3.0;
+  ret += (150.0 * Math.sin(lng / 12.0 * this.PI) + 300.0 * Math.sin(lng / 30.0 * this.PI)) * 2.0 / 3.0;
+  return ret;
+};
+/**  
+ * 判断是否在国内，不在国内则不做偏移  
+ * @param lng  
+ * @param lat  
+ * @returns {boolean}  
+ */
+
+
+mapTool.prototype.out_of_china = function (lng, lat) {
+  return lng < 72.004 || lng > 137.8347 || lat < 0.8293 || lat > 55.8271 || false;
+};
+
+module.exports.mapTool = new mapTool();
+
+/***/ }),
+/* 20 */
 /*!****************************************************************************************************************************!*\
   !*** G:/知行APP/pollutionMonitoring/subNvue/search.nvue?vue&type=style&index=0&id=230e3590&scoped=true&lang=css&mpType=page ***!
   \****************************************************************************************************************************/
@@ -1897,13 +2181,13 @@ function formatLog (...args) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_hbuilderx_packages_webpack_uni_nvue_loader_lib_style_js_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_1_F_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_7_oneOf_0_2_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_3_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_search_nvue_vue_type_style_index_0_id_230e3590_scoped_true_lang_css_mpType_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/webpack-uni-nvue-loader/lib/style.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--7-oneOf-0-1!./node_modules/postcss-loader/src??ref--7-oneOf-0-2!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--7-oneOf-0-3!./node_modules/vue-loader/lib??ref--3-0!./search.nvue?vue&type=style&index=0&id=230e3590&scoped=true&lang=css&mpType=page */ 20);
+/* harmony import */ var _F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_hbuilderx_packages_webpack_uni_nvue_loader_lib_style_js_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_1_F_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_7_oneOf_0_2_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_3_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_search_nvue_vue_type_style_index_0_id_230e3590_scoped_true_lang_css_mpType_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/webpack-uni-nvue-loader/lib/style.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--7-oneOf-0-1!./node_modules/postcss-loader/src??ref--7-oneOf-0-2!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--7-oneOf-0-3!./node_modules/vue-loader/lib??ref--3-0!./search.nvue?vue&type=style&index=0&id=230e3590&scoped=true&lang=css&mpType=page */ 21);
 /* harmony import */ var _F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_hbuilderx_packages_webpack_uni_nvue_loader_lib_style_js_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_1_F_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_7_oneOf_0_2_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_3_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_search_nvue_vue_type_style_index_0_id_230e3590_scoped_true_lang_css_mpType_page__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_hbuilderx_packages_webpack_uni_nvue_loader_lib_style_js_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_1_F_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_7_oneOf_0_2_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_3_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_search_nvue_vue_type_style_index_0_id_230e3590_scoped_true_lang_css_mpType_page__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_hbuilderx_packages_webpack_uni_nvue_loader_lib_style_js_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_1_F_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_7_oneOf_0_2_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_3_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_search_nvue_vue_type_style_index_0_id_230e3590_scoped_true_lang_css_mpType_page__WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_hbuilderx_packages_webpack_uni_nvue_loader_lib_style_js_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_1_F_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_7_oneOf_0_2_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_3_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_search_nvue_vue_type_style_index_0_id_230e3590_scoped_true_lang_css_mpType_page__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
  /* harmony default export */ __webpack_exports__["default"] = (_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_hbuilderx_packages_webpack_uni_nvue_loader_lib_style_js_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_1_F_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_7_oneOf_0_2_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_3_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_search_nvue_vue_type_style_index_0_id_230e3590_scoped_true_lang_css_mpType_page__WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/webpack-uni-nvue-loader/lib/style.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--7-oneOf-0-1!./node_modules/postcss-loader/src??ref--7-oneOf-0-2!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--7-oneOf-0-3!./node_modules/vue-loader/lib??ref--3-0!G:/知行APP/pollutionMonitoring/subNvue/search.nvue?vue&type=style&index=0&id=230e3590&scoped=true&lang=css&mpType=page ***!
   \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/

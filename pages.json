@@ -6,14 +6,20 @@
             "style" : {
 				"navigationBarTitleText" : "登录",
 				"backgroundColor":"#f2f2f2",
-				"navigationStyle":"custom"
+				"navigationStyle":"custom",
+				"app-plus":{
+					"bounce":"none"
+				}
 			}
         },{
             "path" : "pages/home/home",
             "style" : {
                 "navigationBarTitleText" : "首页",
 				"backgroundColor":"#f2f2f2",
-				"navigationStyle":"custom"
+				"navigationStyle":"custom",
+				"app-plus":{
+					"bounce":"none"
+				}
             }
         },{
             "path" : "pages/index/index",
@@ -33,19 +39,28 @@
             "path" : "pages/report/report",
             "style" : {
                 "navigationBarTitleText" : "上报",
-				"backgroundColor":"#f2f2f2"
+				"backgroundColor":"#f2f2f2",
+				"app-plus":{
+					"bounce":"none"
+				}
             }
         },{
             "path" : "pages/location/location",
             "style" : {
                 "navigationBarTitleText" : "定位",
-				"backgroundColor":"#f2f2f2"
+				"backgroundColor":"#f2f2f2",
+				"app-plus":{
+					"bounce":"none"
+				}
             }
         },{
             "path" : "pages/workbench/workbench",
             "style" : {
                 "navigationBarTitleText" : "工作台",
-				"backgroundColor":"#f2f2f2"
+				"backgroundColor":"#f2f2f2",
+				"app-plus":{
+					"bounce":"none"
+				}
             }
         },{
             "path" : "pages/riverMap/riverMap",
@@ -92,14 +107,20 @@
             "path" : "pages/system/system",
             "style" : {
 				"navigationBarTitleText" : "系统",
-				"backgroundColor":"#f2f2f2"
+				"backgroundColor":"#f2f2f2",
+				"app-plus":{
+					"bounce":"none"
+				}
 			}
         }
         ,{
             "path" : "pages/contact/contact",
             "style" : {
 				"navigationBarTitleText" : "联系人",
-				"backgroundColor":"#f2f2f2"
+				"backgroundColor":"#f2f2f2",
+				"app-plus":{
+					"bounce":"none"
+				}
 			}
         }
         ,{
@@ -161,26 +182,38 @@
             "path" : "pages/reportProblem/reportProblem",
             "style" : {
 				"navigationBarTitleText" : "上报问题",
-				"backgroundColor":"#F2F2F2"
+				"backgroundColor":"#F2F2F2",
+				"app-plus":{
+					"bounce":"none"
+				}
 			}
         }
         ,{
             "path" : "pages/setPassWord/setPassWord",
             "style" : {
 				"navigationBarTitleText" : "修改密码",
-				"backgroundColor":"#F2F2F2"
+				"backgroundColor":"#F2F2F2",
+				"app-plus":{
+					"bounce":"none"
+				}
 			}
         }
         ,{
             "path" : "pages/completeTask/completeTask",
             "style" : {
-				"navigationBarTitleText" : "完成巡查任务"
+				"navigationBarTitleText" : "完成巡查任务",
+				"app-plus":{
+					"bounce":"none"
+				}
 			}
         }
         ,{
             "path" : "pages/rectificationTaskDetail/rectificationTaskDetail",
             "style" : {
-				"navigationBarTitleText" : "完成整改任务"
+				"navigationBarTitleText" : "完成整改任务",
+				"app-plus":{
+					"bounce":"none"
+				}
 			}
         }
         ,{
@@ -198,7 +231,10 @@
 		    "path" : "pages/showLocation/showLocation",
 		    "style" : {
 				"navigationBarTitleText" : "上报地点",
-				"backgroundColor":"#F2F2F2"
+				"backgroundColor":"#F2F2F2",
+				"app-plus":{
+					"bounce":"none"
+				}
 			}
 		}
     ],

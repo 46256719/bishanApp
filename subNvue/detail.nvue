@@ -11,6 +11,7 @@
 
 <script>
 	import {mapTool} from '../static/js/mapTool.js'
+	import util from '../static/js/utils.js'
 	export default {
 		data() {
 			return {
@@ -27,22 +28,7 @@
 				uni.$emit("closeDetail")
 			},
 			toNavigation(){//导航
-				var _this = this;  
-				// 判断平台  
-				var wgs84togcj02=mapTool.wgs84togcj02(_this.pollution.longitude*1,_this.pollution.latitude*1)
-				var longitude=wgs84togcj02[0]
-				var latitude=wgs84togcj02[1]
-				if (plus.os.name == 'Android') {  
-					plus.runtime.openURL("amapuri://route/plan/?sid=BGVIS1&did=BGVIS2&dlat="+latitude+"&dlon="+longitude+"&dev=0&t=0",  
-						function(e) {  
-							console.log('Open system default browser failed: ' + e.message);  
-						},"com.autonavi.minimap"
-					);
-				} else if (plus.os.name == 'iOS') {  
-					plus.runtime.launchApplication({ action:"iosamap://path?sourceApplication=applicationName&sid=BGVIS1&did=BGVIS2&dlat="+latitude+"&dlon="+longitude+"&dev=0&t=0" }, function(e) {  
-						console.log('Open system default browser failed: ' + e.message);  
-					});  
-				}
+				util.toNavigation(this.pollution.longitude,this.pollution.latitude)
 			}
 		}
 	}

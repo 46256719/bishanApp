@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "上报问题",
   "backgroundColor": "#F2F2F2",
+  "bounce": "none",
   "usingComponents": {
     "mode1": "/components/problemMode/mode1"
   }

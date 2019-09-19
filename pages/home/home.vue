@@ -32,7 +32,7 @@
 					<view class="demonstratingCompliance_list">
 						<image src="../../static/images/home/guokao.png" class="demonstratingCompliance_mark" mode=""></image>
 						<view class="demonstratingCompliance_list_info">
-							<view class="color_000 fz30">国考</view>
+							<view class="color_000 fz30">国家考核</view>
 							<view class="demonstratingCompliance_list_onStandard">
 								<view class="standard_title">达标</view>
 								<view class="color_000"><text class="fz30">{{examine_1.dabiaonum_now||0}}</text><text class="fz20">个</text></view>
@@ -46,7 +46,7 @@
 					<view class="demonstratingCompliance_list">
 						<image src="../../static/images/home/shiji.png" class="demonstratingCompliance_mark" mode=""></image>
 						<view class="demonstratingCompliance_list_info">
-							<view class="color_000 fz30">市级</view>
+							<view class="color_000 fz30">市控监测</view>
 							<view class="demonstratingCompliance_list_onStandard">
 								<view class="standard_title">达标</view>
 								<view class="color_000"><text class="fz30">{{examine_3.dabiaonum_now||0}}</text><text class="fz20">个</text></view>
@@ -60,7 +60,7 @@
 					<view class="demonstratingCompliance_list">
 						<image src="../../static/images/home/shikong.png" class="demonstratingCompliance_mark" mode=""></image>
 						<view class="demonstratingCompliance_list_info">
-							<view class="color_000 fz30">市控</view>
+							<view class="color_000 fz30">市级体检</view>
 							<view class="demonstratingCompliance_list_onStandard">
 								<view class="standard_title">达标</view>
 								<view class="color_000"><text class="fz30">{{examine_2.dabiaonum_now||0}}</text><text class="fz20">个</text></view>
@@ -74,7 +74,7 @@
 					<view class="demonstratingCompliance_list">
 						<image src="../../static/images/home/quji.png" class="demonstratingCompliance_mark" mode=""></image>
 						<view class="demonstratingCompliance_list_info">
-							<view class="color_000 fz30">区级</view>
+							<view class="color_000 fz30">区控考核</view>
 							<view class="demonstratingCompliance_list_onStandard">
 								<view class="standard_title">达标</view>
 								<view class="color_000"><text class="fz30">{{examine_4.dabiaonum_now||0}}</text><text class="fz20">个</text></view>
@@ -89,7 +89,7 @@
 			</view>
 			<view id="taskSituation">
 				<view class="home_title">
-					<view class="">全部任务</view>
+					<view class="">全部巡查任务</view>
 					<view class="home_title_right" @click="toAllMission('process')"><view class="">详情</view><image class="icon_toRight" src="../../static/images/icon_more.png" mode=""></image></view>
 				</view>
 				<view style="width: 100%;overflow: auto;">
@@ -112,7 +112,8 @@
 						<view class="taskSituation_list">
 							<image src="../../static/images/home/icon_wanchenglv.png" mode=""></image>
 							<view class="">完成率</view>
-							<view class="color_000"><text class="fz30">{{Math.floor(tasks["已完成务个数"]/tasks["全部任务个数"]*100)}}</text><text class="fz20">%</text></view>
+							<view class="color_000" v-if="((tasks['已完成务个数']/tasks['全部任务个数'])*100)<1"><text class="fz30">{{xiaoyu}}</text><text class="fz20">%</text></view>
+							<view class="color_000" v-else><text class="fz30">{{(tasks["已完成务个数"]/tasks["全部任务个数"]*100).toFixed(1)}}</text><text class="fz20">%</text></view>
 						</view>
 						<view class="taskSituation_list" @click="toAllMission('issuesList')">
 							<image src="../../static/images/home/icon_wenti.png" mode=""></image>
@@ -142,6 +143,12 @@
 				tasks:"",
 				setH:100,
 				reportTop:0,
+				kaoheType:{
+					examine_1:1,
+					examine_2:2,
+					examine_3:3,
+					examine_4:2
+				},
 				covers: [],
 				userInfo:"",
 				examine_1:{},
@@ -149,7 +156,13 @@
 				examine_3:{},
 				examine_4:{},
 				tongji:[],
+				xiaoyu:"<1",
+				isGetTime:true,
 				situationDate:{
+					year:month==0?year-1:year,
+					month:month==0?12:month
+				},
+				tongjiDate:{
 					year:month==0?year-1:year,
 					month:month==0?12:month
 				},
@@ -175,7 +188,7 @@
 			}
 		},
 		components:{BwSwiper,pickDate},
-		created(){
+		created(){ 
 			this.userInfo=uni.getStorageSync("userInfo")
 			var getH=uni.getSystemInfoSync().windowHeight
 			var getW=uni.getSystemInfoSync().windowWidth
@@ -190,9 +203,16 @@
 		},
 		onShow() {
 			this.getTask()
-			
 			uni.$emit("hideSub",false)
-			this.getBaseYearMonth()
+			if(this.isGetTime){
+				this.getBaseYearMonth()
+			}else{
+				this.getSituation("examine_1",1,2)
+				this.getSituation("examine_2",5,2)
+				this.getSituation("examine_3",2,2)
+				this.getSituation("examine_4",6,2)
+				this.getTongji()
+			}
 		},
 		methods: {
 			getTask(){//获取首页任务情况
@@ -210,11 +230,16 @@
 						year:results.year,
 						month:(results.month*1)<10?"0"+results.month:results.month
 					}
+					this.tongjiDate={
+						year:results.year,
+						month:(results.month*1)<10?"0"+results.month:results.month
+					}
 					this.getSituation("examine_1",1,2)
 					this.getSituation("examine_2",5,2)
 					this.getSituation("examine_3",2,2)
 					this.getSituation("examine_4",6,2)
 					this.getTongji()
+					this.isGetTime=false
 				},(results)=>{
 					// console.log(results)
 					this.getSituation("examine_1",1,2)
@@ -222,13 +247,14 @@
 					this.getSituation("examine_3",2,2)
 					this.getSituation("examine_4",6,2)
 					this.getTongji()
+					this.isGetTime=false
 				})
 			},
 			getTongji(){//获取首页头部情况
 				var date=new Date()
 				var year=date.getFullYear()
 				var month=date.getMonth()
-				util.getRequestPc(URL.url_PC,{url:URL.QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI,params:"year="+(month==0?year-1:year)+";month=4"},(results)=>{
+				util.getRequestPc(URL.url_PC,{url:URL.QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI,params:"year="+this.tongjiDate.year+";month="+this.tongjiDate.month},(results)=>{
 					uni.setStorageSync("home_tongji",results)
 					// console.log(results)
 					// console.log(URL.url_PC)
@@ -274,9 +300,11 @@
 				this.getSituation("examine_2",5,2)
 				this.getSituation("examine_3",2,2)
 				this.getSituation("examine_4",6,2)
+				// this.getTongji()
 				// this.checkType(this.type)
 			},
 			getSituation(examine,ikhlx,kaohetype){
+				kaohetype=this.kaoheType[examine]
 				var data={
 					url:URL.DAPINGSHUIZHI_SHUIZHITONGJI_KHLX,
 					params:"year="+this.situationDate.year+";month="+this.situationDate.month

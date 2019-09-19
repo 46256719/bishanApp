@@ -1,4 +1,5 @@
 import URL from "./interface.js"
+import {mapTool} from "./mapTool.js"
 var timer_getLoction=null
 var timer_upLoction={}
 var upLoctionData={}
@@ -7,29 +8,29 @@ var taskInfo={}
 var pollutionInfo={}
 var upTimeNum=300000
 var situationDate={}
-var arrWry=[
-	"WRY_BZ_LIST",
-	"WRY_COMPANY_LIST",
-	"WRY_RHKPWK_LIST",
-	"WRY_RHKPWD_LIST",
-	"WRY_JZGD_LIST",
-	"WRY_QTHY_LIST",
-	"WRY_JCDW_LIST",
-	"WRY_YLJG_LIST",
-	"WRY_XQYZ_LIST",
-	"WRY_TZC_LIST",
-	"WRY_SHUIKU_LIST",
-	"WRY_SPT_LIST",
-	"WRY_YYC_LIST",
-	"WRY_JMJZJZD_LIST",
-	"WRY_XSLW_LIST",
-	"WRY_XCC_LIST",
-	"WRY_CYHY_LIST",
-	"WRY_NMSC_LIST",
-	"WRY_WSCLC_LIST",
-	"WRY_ZZYFLDJD_LIST",
-	"WRY_SMYSYZDH_LIST"
-]
+// var arrWry=[
+// 	"WRY_BZ_LIST",
+// 	"WRY_COMPANY_LIST",
+// 	"WRY_RHKPWK_LIST",
+// 	"WRY_RHKPWD_LIST",
+// 	"WRY_JZGD_LIST",
+// 	"WRY_QTHY_LIST",
+// 	"WRY_JCDW_LIST",
+// 	"WRY_YLJG_LIST",
+// 	"WRY_XQYZ_LIST",
+// 	"WRY_TZC_LIST",
+// 	"WRY_SHUIKU_LIST",
+// 	"WRY_SPT_LIST",
+// 	"WRY_YYC_LIST",
+// 	"WRY_JMJZJZD_LIST",
+// 	"WRY_XSLW_LIST",
+// 	"WRY_XCC_LIST",
+// 	"WRY_CYHY_LIST",
+// 	"WRY_NMSC_LIST",
+// 	"WRY_WSCLC_LIST",
+// 	"WRY_ZZYFLDJD_LIST",
+// 	"WRY_SMYSYZDH_LIST"
+// ]
 function getRequest(url,data,call,error){
 	uni.showLoading({mask:true})
 	var token=uni.getStorageSync("token")||""
@@ -329,15 +330,110 @@ var upLoction=function(id){
 	},upTimeNum)
 }
 
-function getWryMap(){
-	for (var i=0;i<arrWry.length;i++) {
-		(function(url){
-			getRequestPc(URL[url],"",(results)=>{
-				uni.setStorageSync(url,results)
-			})	
-		})(arrWry[i])
+
+function toNavigation(longitude,latitude){//导航
+	// 判断平台  
+	var wgs84togcj02=mapTool.wgs84togcj02(longitude,latitude)
+	longitude=wgs84togcj02[0]
+	latitude=wgs84togcj02[1]
+	if (plus.os.name == 'Android') {  
+		plus.runtime.openURL("amapuri://route/plan/?sid=BGVIS1&did=BGVIS2&dlat="+latitude+"&dlon="+longitude+"&dev=0&t=0",  
+			function(e) {  
+				uni.showToast({
+					icon:"none",
+					title:"请下确认手机安装了高德地图"
+				})
+				console.log('Open system default browser failed: ' + e.message);  
+			},"com.autonavi.minimap"
+		);
+	} else if (plus.os.name == 'iOS') {  
+		plus.runtime.launchApplication({ action:"iosamap://path?sourceApplication=applicationName&sid=BGVIS1&did=BGVIS2&dlat="+latitude+"&dlon="+longitude+"&dev=0&t=0" }, function(e) {  
+			uni.showToast({
+				icon:"none",
+				title:"请下确认手机安装了高德地图"
+			})
+			console.log('Open system default browser failed: ' + e.message);  
+		});  
 	}
 }
+
+function getWryTypeName(type){
+	var name="-"
+	switch(type){
+		case "bengzhan":
+			name="泵站"
+		break;
+		case "canyinhangye":
+			name="餐饮行业"
+		break;
+		case "gyqy":
+			name="工业企业"
+		break;
+		case "xqyz":
+			name="禽畜养殖"
+		break;
+		case "jcdw":
+			name="监测点位"
+		break;
+		case "jianzhugongdi":
+			name="建筑工地"
+		break;
+		case "jmjzjzd":
+			name="居民集中居住点"
+		break;
+		case "nongmaoshichang":
+			name="农贸市场"
+		break;
+		case "qthy":
+			name="其他行业"
+		break;
+		case "rhkpwd":
+			name="入河(库)排污点"
+		break;
+		case "wsclc":
+			name="污水集中处理设施"
+		break;
+		case "shanpingtang":
+			name="山坪塘"
+		break;
+		case "shuiku":
+			name="水库"
+		break;
+		case "smysyzdh":
+			name="十亩以上种植大户"
+		break;
+		case "tzc":
+			name="屠宰场"
+		break;
+		case "xiaosanluanwu":
+			name="小散乱污"
+		break;
+		case "xichechang":
+			name="洗车场"
+		break;
+		case "yangyuchi":
+			name="养鱼池"
+		break;
+		case "yiliaojigou":
+			name="医疗机构"
+		break;
+		case "zzyfldjd":
+			name="种植业肥料堆积点"
+		break;
+	}
+	return name
+}
+
+
+// function getWryMap(){
+// 	for (var i=0;i<arrWry.length;i++) {
+// 		(function(url){
+// 			getRequestPc(URL[url],"",(results)=>{
+// 				uni.setStorageSync(url,results)
+// 			})	
+// 		})(arrWry[i])
+// 	}
+// }
 module.exports={  
 	getRequest,
 	getRequestNo,
@@ -357,11 +453,13 @@ module.exports={
 	completeTask,
 	rectificationTaskDetail,
 	subNvue,
-	getWryMap,
+	// getWryMap,
 	taskInfo,
 	pollutionInfo,
 	upTimeNum,
 	onTaskNum:0,
 	unTaskNum:0,
-	situationDate
+	situationDate,
+	toNavigation,
+	getWryTypeName
 }

@@ -70,7 +70,7 @@
 					this.latitude=this.userLocation.latitude
 					this.longitude=this.userLocation.longitude
 				}else{
-					var wgs84togcj02=mapTool.wgs84togcj02(data.longitude,data.latitude)
+					var wgs84togcj02=mapTool.wgs84togcj02(data.longitude*1,data.latitude*1)
 					this.longitude=wgs84togcj02[0]
 					this.latitude=wgs84togcj02[1]
 					this.circles=[
@@ -109,22 +109,7 @@
 				})
 			},
 			toNavigation(){//导航
-				var _this = this;  
-				// 判断平台  
-				var wgs84togcj02=mapTool.wgs84togcj02(_this.pointInfo.longitude,_this.pointInfo.latitude)
-				var longitude=wgs84togcj02[0]
-				var latitude=wgs84togcj02[1]
-				if (plus.os.name == 'Android') {  
-					plus.runtime.openURL("amapuri://route/plan/?sid=BGVIS1&did=BGVIS2&dlat="+latitude+"&dlon="+longitude+"&dev=0&t=0",  
-						function(e) {  
-							console.log('Open system default browser failed: ' + e.message);  
-						},"com.autonavi.minimap"
-					);
-				} else if (plus.os.name == 'iOS') {  
-					plus.runtime.launchApplication({ action:"iosamap://path?sourceApplication=applicationName&sid=BGVIS1&did=BGVIS2&dlat="+latitude+"&dlon="+longitude+"&dev=0&t=0" }, function(e) {  
-						console.log('Open system default browser failed: ' + e.message);  
-					});  
-				}
+				util.toNavigation(this.pointInfo.longitude,this.pointInfo.latitude)
 			},
 			toReport(){
 				var data={

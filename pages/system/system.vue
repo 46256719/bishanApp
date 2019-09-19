@@ -21,6 +21,10 @@
 			<view class="">电话：</view>
 			<view class="">{{userInfo.sphoneno||"-"}}</view>
 		</view>
+		<view class="userInfo_item">
+			<view class="">版本：</view>
+			<view class="">v {{version||"-"}}</view>
+		</view>
 		<view id="system_menus">
 			<view class="system_menu" @click="toSetPassword()">
 				<image class="icon_menu" src="../../static/images/icon_passWord.png" mode=""></image>
@@ -36,12 +40,15 @@
 	export default {
 		data() {
 			return {
-				userInfo:{}
+				userInfo:{},
+				version:""
 			}
 		},
 		onLoad() {
 			this.userInfo=uni.getStorageSync("userInfo")
 			// console.log(this.userInfo)
+			this.version=plus.runtime.version
+			// console.log(plus.runtime)
 		},
 		methods: {
 			toSetPassword(){

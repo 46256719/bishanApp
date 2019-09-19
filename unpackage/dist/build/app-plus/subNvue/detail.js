@@ -82,7 +82,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 21);
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -998,8 +998,744 @@ function normalizeComponent (
 /* 13 */,
 /* 14 */,
 /* 15 */,
-/* 16 */,
-/* 17 */,
+/* 16 */
+/*!***********************************************************!*\
+  !*** G:/知行APP/pollutionMonitoring/static/js/interface.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// const url0="http://192.168.1.7:8082"
+// const url0="http://192.168.1.4"
+// const url0="http://192.168.1.5"
+// const url0="http://192.168.0.188"
+// const url0="http://192.168.1.15"
+var url0 = "http://122.114.177.198"; // const url0="http://183.230.23.21"
+// const url0=uni.getStorageSync("url")?uni.getStorageSync("url"):"http://183.230.23.21"ZZZZZZZ
+// const url=url0+":18082"
+
+var url = url0 + ":8082";
+var url_PC = url + "/proxy/pc"; // const daili="http://10.117.80.201:8081/app"
+
+var daili = "http://122.114.177.198:8081/app"; // const url_PC=url0+":8081/app"
+//常链接 
+
+var WEBSOCKET = "ws://192.168.1.4:8082/websocket/"; // 登录
+
+var LOGIN_LOGIN = url + "/login/login";
+var TASK_INDEX = url + "/task/index"; //获取首页任务情况
+
+var TASK_INDEX2 = url + "/task/index2"; //获取首页任务情况
+
+var TASK_PROCESS = url + "/task/process"; //正在进行中的任务，不传uid 则显示所有人
+
+var TASK_FINISH = url + "/task/finish"; //已完成的任务，不传uid 则显示所有人
+
+var TASK_NO_START = url + "/task/noStart"; //还未开始的任务，不传uid 则显示所有人
+
+var PROBLEM_LIST = url + "/problem/list"; //问题列表 page 为必需 第一页为0 当uid为空的时候将会查询所有问题 反之则查询当前用户提交的问题
+
+var UPLOAD_UPLOAD = url + "/upload/upload"; //上传图片
+
+var DEPARTMENT_GET_DEPT = url + "/department/getDept"; //获取乡镇列表
+
+var TASK_PATROL_POINT_CONTACTLIST = url + "/task/patrol/point/contactList"; //获取联系人信息
+
+var TASK_PATROL_POINT_FINISH_LIST = url + "/task/patrol/point/finishList"; //获取点位进行中的信息
+
+var TASK_PATROL_POINT_GET_ALL_PROBLEM = url + "/task/patrol/point/getAllProblem"; //获取所有污染源问题类型
+
+var TASK_PATROL_POINT_GET_PROBLEM = url + "/task/patrol/point/getProblem"; //获取污染源问题类型
+
+var TASK_PATROL_POINT_PROBLEM_ADD_BATCH = url + "/task/patrol/point/problem/addBatch"; //批量新增问题
+
+var TASK_PATROL_POINT_PROBLEM_LIST = url + "/task/patrol/point/problem/list"; //通过点位信息 获取问题信息
+
+var TASK_PATROL_POINT_PROBLEM_LIST2 = url + "/task/patrol/point/problem/list2"; //通过任务信息 获取问题信息
+
+var TASK_PATROL_POINT_UPDATE = url + "/task/patrol/point/update"; //更新巡查点位状信息
+
+var TASK_PATROL_POINT_NORMAL = url + "/task/patrol/point/normal"; //更改巡查点位状态状态
+
+var TASK_PATROL_POINT_PROCESS_LIST = url + "/task/patrol/point/processList"; //更改巡查点位状态状态
+
+var TASK_PATROL_POINT_UPDATE_WRY_ADDRESS_DETAILED = url + "/task/patrol/point/updateWryAddressDetailed"; //污染源重新定位 id=污染源ID ，wryType等于污染源类型，地址信息 和经纬度
+
+var TASK_PATROL_PATH_ADD = url + "/task/patrol/path/add"; //添加路径点信息
+
+var TASK_PATROL_PATH_ADD_BATCH = url + "/task/patrol/path/addBatch"; //添加路径点信息
+// const TASK_PATROL_UPDATE_STATUS=url+"/task/patrol/updateStatus"//更改巡查任务状态
+
+var TASK_RECTIFICATION_UPDATE_STATUS = url + "/task/rectification/updateStatus"; //更改整个任务状态
+
+var TASK_RECTIFICATION_UPDATE = url + "/task/rectification/update"; //修改整改任务内容，图片等
+
+var TASK_PATROL_UPDATE_STATUS = url + "/task/patrol/updateStatus"; //更改巡查任务状态
+
+var USER_UPDATE = url + "/user/update"; //通过点位信息 获取问题信息
+
+var POLLUTION_SEARCH = url + "/pollution/search"; //搜索污染源
+//PC接口
+
+var DAPINGSHUIZHI_SHUIZHITONGJI_KHLX = daili + "/dapingshuizhi/shuizhitongji_khlx"; //断面情况
+
+var QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI = daili + "/quKongShuiZhiTongJi/heLiuShuiZhiTongJi"; //河流统计
+
+var WATER_BASE_GETBASEYEARMONTH = daili + "/water/base/getBaseYearMonth"; //获取有数据的时间
+//PC排行榜接口
+
+var ASSESS_TOWN_LIST = daili + "/assess/townList"; //镇街排行
+
+var ASSESS_DEPARTMENT_LIST = daili + "/assess/departmentList"; //部门排行
+//污染源接口
+
+var WRY_BZ_LIST = daili + "/wry/bz/list"; //泵站
+
+var WRY_COMPANY_LIST = daili + "/wry/company/list"; //工业企业
+
+var WRY_RHKPWK_LIST = daili + "/wry/rhkpwk/list"; //入河排污口
+
+var WRY_RHKPWD_LIST = daili + "/wry/rhkpwd/list"; //入河排污点
+
+var WRY_JZGD_LIST = daili + "/wry/jzgd/list"; //建筑工地
+
+var WRY_QTHY_LIST = daili + "/wry/qthy/list"; //其它行业
+
+var WRY_JCDW_LIST = daili + "/wry/jcdw/list"; //检测点位
+
+var WRY_YLJG_LIST = daili + "/wry/yljg/list"; //医疗机构
+
+var WRY_XQYZ_LIST = daili + "/wry/xqyz/list"; //畜禽养殖
+
+var WRY_TZC_LIST = daili + "/wry/tzc/list"; //屠宰场
+
+var WRY_SHUIKU_LIST = daili + "/wry/shuiku/list"; //水库
+
+var WRY_SPT_LIST = daili + "/wry/spt/list"; //山坪塘
+
+var WRY_YYC_LIST = daili + "/wry/yyc/list"; //养鱼池
+
+var WRY_JMJZJZD_LIST = daili + "/wry/jmjzjzd/list"; //居民集中居住点
+
+var WRY_XSLW_LIST = daili + "/wry/xslw/list"; //小散乱污企业
+
+var WRY_XCC_LIST = daili + "/wry/xcc/list"; //洗车场
+
+var WRY_CYHY_LIST = daili + "/wry/cyhy/list"; //餐饮行业
+
+var WRY_NMSC_LIST = daili + "/wry/nmsc/list"; //农贸市场
+
+var WRY_WSCLC_LIST = daili + "/wry/wsclc/list"; //污水处理厂
+
+var WRY_ZZYFLDJD_LIST = daili + "/wry/zzyfldjd/list"; //种植业肥料堆积点
+
+var WRY_SMYSYZDH_LIST = daili + "/wry/smysyzdh/list"; //10亩以上种植大户
+
+module.exports = {
+  url: url,
+  WEBSOCKET: WEBSOCKET,
+  LOGIN_LOGIN: LOGIN_LOGIN,
+  TASK_INDEX: TASK_INDEX,
+  TASK_INDEX2: TASK_INDEX2,
+  TASK_PROCESS: TASK_PROCESS,
+  TASK_FINISH: TASK_FINISH,
+  TASK_NO_START: TASK_NO_START,
+  PROBLEM_LIST: PROBLEM_LIST,
+  UPLOAD_UPLOAD: UPLOAD_UPLOAD,
+  DEPARTMENT_GET_DEPT: DEPARTMENT_GET_DEPT,
+  TASK_PATROL_POINT_CONTACTLIST: TASK_PATROL_POINT_CONTACTLIST,
+  TASK_PATROL_POINT_FINISH_LIST: TASK_PATROL_POINT_FINISH_LIST,
+  TASK_PATROL_POINT_GET_ALL_PROBLEM: TASK_PATROL_POINT_GET_ALL_PROBLEM,
+  TASK_PATROL_POINT_GET_PROBLEM: TASK_PATROL_POINT_GET_PROBLEM,
+  TASK_PATROL_POINT_PROBLEM_ADD_BATCH: TASK_PATROL_POINT_PROBLEM_ADD_BATCH,
+  TASK_PATROL_POINT_PROBLEM_LIST: TASK_PATROL_POINT_PROBLEM_LIST,
+  TASK_PATROL_POINT_PROBLEM_LIST2: TASK_PATROL_POINT_PROBLEM_LIST2,
+  USER_UPDATE: USER_UPDATE,
+  TASK_RECTIFICATION_UPDATE_STATUS: TASK_RECTIFICATION_UPDATE_STATUS,
+  TASK_RECTIFICATION_UPDATE: TASK_RECTIFICATION_UPDATE,
+  TASK_PATROL_UPDATE_STATUS: TASK_PATROL_UPDATE_STATUS,
+  TASK_PATROL_POINT_UPDATE: TASK_PATROL_POINT_UPDATE,
+  TASK_PATROL_POINT_NORMAL: TASK_PATROL_POINT_NORMAL,
+  TASK_PATROL_POINT_PROCESS_LIST: TASK_PATROL_POINT_PROCESS_LIST,
+  TASK_PATROL_POINT_UPDATE_WRY_ADDRESS_DETAILED: TASK_PATROL_POINT_UPDATE_WRY_ADDRESS_DETAILED,
+  TASK_PATROL_PATH_ADD: TASK_PATROL_PATH_ADD,
+  TASK_PATROL_PATH_ADD_BATCH: TASK_PATROL_PATH_ADD_BATCH,
+  DAPINGSHUIZHI_SHUIZHITONGJI_KHLX: DAPINGSHUIZHI_SHUIZHITONGJI_KHLX,
+  QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI: QUKONGSHUIZHITONGJI_HELIUSHUIZHITONGJI,
+  WRY_BZ_LIST: WRY_BZ_LIST,
+  WRY_COMPANY_LIST: WRY_COMPANY_LIST,
+  WRY_RHKPWK_LIST: WRY_RHKPWK_LIST,
+  WRY_RHKPWD_LIST: WRY_RHKPWD_LIST,
+  WRY_JZGD_LIST: WRY_JZGD_LIST,
+  WRY_QTHY_LIST: WRY_QTHY_LIST,
+  WRY_JCDW_LIST: WRY_JCDW_LIST,
+  WRY_YLJG_LIST: WRY_YLJG_LIST,
+  WRY_XQYZ_LIST: WRY_XQYZ_LIST,
+  WRY_TZC_LIST: WRY_TZC_LIST,
+  WRY_SHUIKU_LIST: WRY_SHUIKU_LIST,
+  WRY_SPT_LIST: WRY_SPT_LIST,
+  WRY_YYC_LIST: WRY_YYC_LIST,
+  WRY_JMJZJZD_LIST: WRY_JMJZJZD_LIST,
+  WRY_XSLW_LIST: WRY_XSLW_LIST,
+  WRY_XCC_LIST: WRY_XCC_LIST,
+  WRY_CYHY_LIST: WRY_CYHY_LIST,
+  WRY_NMSC_LIST: WRY_NMSC_LIST,
+  WRY_WSCLC_LIST: WRY_WSCLC_LIST,
+  WRY_ZZYFLDJD_LIST: WRY_ZZYFLDJD_LIST,
+  WRY_SMYSYZDH_LIST: WRY_SMYSYZDH_LIST,
+  ASSESS_TOWN_LIST: ASSESS_TOWN_LIST,
+  ASSESS_DEPARTMENT_LIST: ASSESS_DEPARTMENT_LIST,
+  POLLUTION_SEARCH: POLLUTION_SEARCH,
+  url_PC: url_PC,
+  WATER_BASE_GETBASEYEARMONTH: WATER_BASE_GETBASEYEARMONTH
+};
+
+/***/ }),
+/* 17 */
+/*!*******************************************************!*\
+  !*** G:/知行APP/pollutionMonitoring/static/js/utils.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni, __f__, plus) {
+
+var _interface = _interopRequireDefault(__webpack_require__(/*! ./interface.js */ 16));
+
+var _mapTool = __webpack_require__(/*! ./mapTool.js */ 19);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var timer_getLoction = null;
+var timer_upLoction = {};
+var upLoctionData = {};
+var subNvue = {};
+var taskInfo = {};
+var pollutionInfo = {};
+var upTimeNum = 300000;
+var situationDate = {}; // var arrWry=[
+// 	"WRY_BZ_LIST",
+// 	"WRY_COMPANY_LIST",
+// 	"WRY_RHKPWK_LIST",
+// 	"WRY_RHKPWD_LIST",
+// 	"WRY_JZGD_LIST",
+// 	"WRY_QTHY_LIST",
+// 	"WRY_JCDW_LIST",
+// 	"WRY_YLJG_LIST",
+// 	"WRY_XQYZ_LIST",
+// 	"WRY_TZC_LIST",
+// 	"WRY_SHUIKU_LIST",
+// 	"WRY_SPT_LIST",
+// 	"WRY_YYC_LIST",
+// 	"WRY_JMJZJZD_LIST",
+// 	"WRY_XSLW_LIST",
+// 	"WRY_XCC_LIST",
+// 	"WRY_CYHY_LIST",
+// 	"WRY_NMSC_LIST",
+// 	"WRY_WSCLC_LIST",
+// 	"WRY_ZZYFLDJD_LIST",
+// 	"WRY_SMYSYZDH_LIST"
+// ]
+
+function getRequest(url, data, call, error) {
+  uni.showLoading({
+    mask: true
+  });
+  var token = uni.getStorageSync("token") || "";
+  uni.request({
+    url: url,
+    //仅为示例，并非真实接口地址。
+    data: data,
+    method: "GET",
+    header: {
+      token: token
+    },
+    complete: function complete(res) {
+      uni.hideLoading();
+
+      if (!res.data) {
+        typeof error == "function" ? error() : "";
+      } else if (res.data.code == 1) {
+        typeof call == "function" ? call(res.data) : "";
+      } else {
+        console.log(__f__(res.data, " at static\\js\\utils.js:51"));
+        uni.showToast({
+          icon: "none",
+          title: res.data.msg || "数据异常"
+        });
+      }
+    }
+  });
+}
+
+function getRequestPc(url, data, call, error) {
+  var token = uni.getStorageSync("token") || "";
+  uni.request({
+    url: url,
+    data: data,
+    method: "GET",
+    header: {
+      token: token
+    },
+    complete: function complete(res) {
+      if (!res.data) {
+        typeof error == "function" ? error() : "";
+      } else {
+        typeof call == "function" ? call(res.data) : "";
+      }
+    }
+  });
+}
+
+function getRequestNo(url, data, call, error) {
+  var token = uni.getStorageSync("token") || "";
+  uni.request({
+    url: url,
+    data: data,
+    method: "GET",
+    header: {
+      token: token
+    },
+    complete: function complete(res) {
+      if (!res.data) {
+        typeof error == "function" ? error() : "";
+      } else if (res.data.code == 1) {
+        typeof call == "function" ? call(res.data) : "";
+      } else {
+        typeof error == "function" ? error(res.data) : "";
+      }
+    }
+  });
+}
+
+function postRequestNo(url, data, call, error) {
+  var token = uni.getStorageSync("token") || "";
+  uni.request({
+    url: url,
+    //仅为示例，并非真实接口地址。
+    data: data,
+    method: "POST",
+    header: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      token: token
+    },
+    success: function success(res) {
+      // if(res.data.code==1){
+      typeof call == "function" ? call(res.data) : ""; // }else{
+      // typeof error=="function"?error(res.data):""
+      // }
+    }
+  });
+}
+
+function postRequest(url, data, call, error) {
+  uni.showLoading({
+    mask: true
+  });
+  var token = uni.getStorageSync("token") || "";
+  uni.request({
+    url: url,
+    //仅为示例，并非真实接口地址。
+    data: data,
+    method: "POST",
+    header: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      token: token
+    },
+    complete: function complete(res) {
+      uni.hideLoading();
+
+      if (!res.data) {
+        typeof error == "function" ? error() : "";
+      } else if (res.data.code == 1) {
+        typeof call == "function" ? call(res.data) : "";
+      } else {
+        uni.showToast({
+          icon: "none",
+          title: res.data.msg || "数据异常"
+        });
+      }
+    }
+  });
+}
+
+function completeTask(data) {
+  //完成巡查污染源任务
+  upImgTeams(data.pointPhoto, function (results, index) {
+    data.pointPhoto = results;
+    console.log(__f__(data, " at static\\js\\utils.js:153"));
+    toCompleteTask(_interface.default.TASK_PATROL_POINT_UPDATE, data);
+  }, 1, function (results) {
+    completeTask(data);
+  });
+}
+
+function rectificationTaskDetail(data) {
+  //完成整改任务
+  upImgTeams(data.rectificationPhoto, function (results, index) {
+    data.rectificationPhoto = results;
+    toCompleteTask(_interface.default.TASK_RECTIFICATION_UPDATE, data);
+  });
+}
+
+function upProblemTeams(data) {
+  //上传多个问题
+  var problemTeams = 0;
+
+  for (var i = 0; i < data.length; i++) {
+    if (data[i].problemPhoto) {
+      problemTeams++;
+      upImgTeams(data[i].problemPhoto, function (results, index) {
+        problemTeams--;
+        data[index].problemPhoto = results;
+
+        if (problemTeams == 0) {
+          data = JSON.stringify(data);
+          toUpProblem(_interface.default.TASK_PATROL_POINT_PROBLEM_ADD_BATCH, data);
+        }
+      }, i, function (results) {
+        upProblemTeams(data);
+      });
+    }
+  }
+}
+
+function toCompleteTask(url, data) {
+  //上传问题或者完成点位巡查
+  // console.log(data)
+  getRequestNo(url, data, function (results) {
+    console.log(__f__(results, " at static\\js\\utils.js:186"));
+  }, function (results) {
+    toCompleteTask(url, data);
+  });
+}
+
+function toUpProblem(url, data) {
+  //上传问题或者完成点位巡查
+  getRequestNo(url, {
+    data: data
+  }, function (results) {
+    console.log(__f__("上传成功", " at static\\js\\utils.js:193"));
+  }, function (results) {
+    toUpProblem(url, data);
+  });
+}
+
+function upImgTeams(imgs, call, index, error) {
+  //上传多张图片
+  var imgs = imgs.split(";");
+  var picture = [];
+  var imgTeams = 0;
+
+  for (var i = 0; i < imgs.length; i++) {
+    imgTeams++;
+    uploadFile(_interface.default.UPLOAD_UPLOAD, imgs[i], function (results) {
+      // console.log(results)
+      results = JSON.parse(results);
+      picture.push(results.data);
+      imgTeams--;
+
+      if (imgTeams == 0) {
+        picture = picture.join(";");
+        call(picture, index);
+      }
+    }, function (results) {
+      error(results);
+    });
+  }
+}
+
+function uploadFile(url, data, call, error) {
+  //上传图片
+  var token = uni.getStorageSync("token") || "";
+  uni.uploadFile({
+    url: url,
+    //仅为示例，并非真实接口地址。
+    fileType: "image",
+    filePath: data,
+    name: "file",
+    header: {
+      token: token
+    },
+    success: function success(res) {
+      if (res.data != "000000") {
+        typeof call == "function" ? call(res.data) : "";
+      } else {
+        typeof error == "function" ? error(data) : "";
+      }
+    },
+    fail: function fail(res) {
+      typeof error == "function" ? error(data) : "";
+    }
+  });
+}
+
+function showSuccess(msg, call) {
+  uni.showToast({
+    icon: "success",
+    title: msg
+  });
+  typeof call == "function" ? setTimeout(call, 1500) : "";
+}
+
+var isRefreshTasksPage = true;
+var isRefreshPollutionPage = true;
+
+var webSocket = function webSocket(id) {
+  uni.connectSocket({
+    url: _interface.default.WEBSOCKET + id,
+    header: {
+      'content-type': 'application/json'
+    },
+    method: 'GET'
+  });
+};
+
+uni.onSocketOpen(function (res) {
+  console.log(__f__('WebSocket连接已打开！', " at static\\js\\utils.js:265"));
+});
+
+var getLocation = function getLocation() {
+  timer_getLoction = setInterval(function () {
+    uni.getLocation({
+      type: "wgs84",
+      success: function success(res) {
+        uni.setStorageSync("userLocation", {
+          longitude: res.longitude,
+          latitude: res.latitude
+        });
+      },
+      fail: function fail(res) {
+        console.log(__f__(res, " at static\\js\\utils.js:276"));
+        clearInterval(timer_getLoction);
+        uni.showModal({
+          title: "获取定位权限失败",
+          content: "请打开手机定位权限",
+          showCancel: false,
+          success: function success(res) {
+            console.log(__f__(res.confirm, " at static\\js\\utils.js:283"));
+            uni.setStorageSync("userLocation", {
+              longitude: 0,
+              latitude: 0
+            });
+            getLocation();
+          },
+          fail: function fail(res) {
+            console.log(__f__(res, " at static\\js\\utils.js:288"));
+          }
+        });
+      }
+    });
+  }, 5000);
+};
+
+var unUpLoction = function unUpLoction(id) {
+  if (!!timer_upLoction[id]) {
+    clearInterval(timer_upLoction[id]);
+  }
+};
+
+var unGetLocation = function unGetLocation() {
+  clearInterval(timer_getLoction);
+};
+
+var upLoction = function upLoction(id) {
+  timer_upLoction[id] = setInterval(function () {
+    var _this = this;
+
+    var userLocation = uni.getStorageSync("userLocation");
+    var data = {
+      patrolTaskId: id,
+      longitude: userLocation.longitude,
+      latitude: userLocation.latitude
+    };
+    var upData = upLoctionData[id] ? upLoctionData[id] : [];
+    var date = new Date();
+    upData.push({
+      patrolTaskId: id,
+      longitude: userLocation.longitude,
+      latitude: userLocation.latitude,
+      locationTime: date.getTime()
+    });
+    upLoctionData[id] = upData;
+    postRequestNo(_interface.default.TASK_PATROL_PATH_ADD_BATCH, {
+      data: JSON.stringify(upData),
+      id: id
+    }, function (results) {
+      if (results.code == 2) {
+        unUpLoction(id);
+        var onTask = uni.getStorageSync("onTask") ? uni.getStorageSync("onTask") : [];
+        onTask.splice(onTask.indexOf(_this.taskId));
+        uni.setStorageSync("onTask", onTask);
+      }
+
+      upLoctionData[id] = [];
+    });
+  }, upTimeNum);
+};
+
+function toNavigation(longitude, latitude) {
+  //导航
+  // 判断平台  
+  var wgs84togcj02 = _mapTool.mapTool.wgs84togcj02(longitude, latitude);
+
+  longitude = wgs84togcj02[0];
+  latitude = wgs84togcj02[1];
+
+  if (plus.os.name == 'Android') {
+    plus.runtime.openURL("amapuri://route/plan/?sid=BGVIS1&did=BGVIS2&dlat=" + latitude + "&dlon=" + longitude + "&dev=0&t=0", function (e) {
+      uni.showToast({
+        icon: "none",
+        title: "请下确认手机安装了高德地图"
+      });
+      console.log(__f__('Open system default browser failed: ' + e.message, " at static\\js\\utils.js:346"));
+    }, "com.autonavi.minimap");
+  } else if (plus.os.name == 'iOS') {
+    plus.runtime.launchApplication({
+      action: "iosamap://path?sourceApplication=applicationName&sid=BGVIS1&did=BGVIS2&dlat=" + latitude + "&dlon=" + longitude + "&dev=0&t=0"
+    }, function (e) {
+      uni.showToast({
+        icon: "none",
+        title: "请下确认手机安装了高德地图"
+      });
+      console.log(__f__('Open system default browser failed: ' + e.message, " at static\\js\\utils.js:355"));
+    });
+  }
+}
+
+function getWryTypeName(type) {
+  var name = "-";
+
+  switch (type) {
+    case "bengzhan":
+      name = "泵站";
+      break;
+
+    case "canyinhangye":
+      name = "餐饮行业";
+      break;
+
+    case "gyqy":
+      name = "工业企业";
+      break;
+
+    case "xqyz":
+      name = "禽畜养殖";
+      break;
+
+    case "jcdw":
+      name = "监测点位";
+      break;
+
+    case "jianzhugongdi":
+      name = "建筑工地";
+      break;
+
+    case "jmjzjzd":
+      name = "居民集中居住点";
+      break;
+
+    case "nongmaoshichang":
+      name = "农贸市场";
+      break;
+
+    case "qthy":
+      name = "其他行业";
+      break;
+
+    case "rhkpwd":
+      name = "入河(库)排污点";
+      break;
+
+    case "wsclc":
+      name = "污水集中处理设施";
+      break;
+
+    case "shanpingtang":
+      name = "山坪塘";
+      break;
+
+    case "shuiku":
+      name = "水库";
+      break;
+
+    case "smysyzdh":
+      name = "十亩以上种植大户";
+      break;
+
+    case "tzc":
+      name = "屠宰场";
+      break;
+
+    case "xiaosanluanwu":
+      name = "小散乱污";
+      break;
+
+    case "xichechang":
+      name = "洗车场";
+      break;
+
+    case "yangyuchi":
+      name = "养鱼池";
+      break;
+
+    case "yiliaojigou":
+      name = "医疗机构";
+      break;
+
+    case "zzyfldjd":
+      name = "种植业肥料堆积点";
+      break;
+  }
+
+  return name;
+} // function getWryMap(){
+// 	for (var i=0;i<arrWry.length;i++) {
+// 		(function(url){
+// 			getRequestPc(URL[url],"",(results)=>{
+// 				uni.setStorageSync(url,results)
+// 			})	
+// 		})(arrWry[i])
+// 	}
+// }
+
+
+module.exports = {
+  getRequest: getRequest,
+  getRequestNo: getRequestNo,
+  getRequestPc: getRequestPc,
+  postRequest: postRequest,
+  postRequestNo: postRequestNo,
+  uploadFile: uploadFile,
+  showSuccess: showSuccess,
+  isRefreshTasksPage: isRefreshTasksPage,
+  isRefreshPollutionPage: isRefreshPollutionPage,
+  webSocket: webSocket,
+  upLoction: upLoction,
+  unGetLocation: unGetLocation,
+  unUpLoction: unUpLoction,
+  getLocation: getLocation,
+  upProblemTeams: upProblemTeams,
+  completeTask: completeTask,
+  rectificationTaskDetail: rectificationTaskDetail,
+  subNvue: subNvue,
+  // getWryMap,
+  taskInfo: taskInfo,
+  pollutionInfo: pollutionInfo,
+  upTimeNum: upTimeNum,
+  onTaskNum: 0,
+  unTaskNum: 0,
+  situationDate: situationDate,
+  toNavigation: toNavigation,
+  getWryTypeName: getWryTypeName
+};
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus-nvue-v8/dist/index.js */ 6)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 18)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus-nvue-v8/dist/index.js */ 6)["weexPlus"]))
+
+/***/ }),
 /* 18 */
 /*!*********************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js ***!
@@ -1057,199 +1793,7 @@ function formatLog (...args) {
 
 
 /***/ }),
-/* 19 */,
-/* 20 */,
-/* 21 */
-/*!************************************************************************!*\
-  !*** G:/知行APP/pollutionMonitoring/main.js?{"page":"subNvue%2Fdetail"} ***!
-  \************************************************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _subNvue_detail_nvue_mpType_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./subNvue/detail.nvue?mpType=page */ 22);
-
-
-_subNvue_detail_nvue_mpType_page__WEBPACK_IMPORTED_MODULE_0__["default"].mpType = 'page'
-_subNvue_detail_nvue_mpType_page__WEBPACK_IMPORTED_MODULE_0__["default"].route = 'subNvue/detail'
-_subNvue_detail_nvue_mpType_page__WEBPACK_IMPORTED_MODULE_0__["default"].el = '#root'
-
-new Vue(_subNvue_detail_nvue_mpType_page__WEBPACK_IMPORTED_MODULE_0__["default"])
-
-
-/***/ }),
-/* 22 */
-/*!********************************************************************!*\
-  !*** G:/知行APP/pollutionMonitoring/subNvue/detail.nvue?mpType=page ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _detail_nvue_vue_type_template_id_65b0181b_scoped_true_mpType_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./detail.nvue?vue&type=template&id=65b0181b&scoped=true&mpType=page */ 23);
-/* harmony import */ var _detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./detail.nvue?vue&type=script&lang=js&mpType=page */ 25);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/lib/runtime/componentNormalizer.js */ 9);
-
-
-
-function injectStyles (context) {
-  
-  if(!this.$options.style){
-    this.$options.style = {}
-}
-if(this.__merge_style && this.$root && this.$root.$options.appStyle){
-  this.__merge_style(this.$root.$options.appStyle)
-}
-if(this.__merge_style){
-              this.__merge_style(__webpack_require__(/*! ./detail.nvue?vue&type=style&index=0&id=65b0181b&scoped=true&lang=css&mpType=page */ 28).default)
-          }else{
-              Object.assign(this.$options.style,__webpack_require__(/*! ./detail.nvue?vue&type=style&index=0&id=65b0181b&scoped=true&lang=css&mpType=page */ 28).default)
-          }
-
-}
-
-/* normalize component */
-
-var component = Object(_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_1__["default"],
-  _detail_nvue_vue_type_template_id_65b0181b_scoped_true_mpType_page__WEBPACK_IMPORTED_MODULE_0__["render"],
-  _detail_nvue_vue_type_template_id_65b0181b_scoped_true_mpType_page__WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  injectStyles,
-  "65b0181b",
-  "3ca5cf2a"
-  
-)
-
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-/* 23 */
-/*!**************************************************************************************************************!*\
-  !*** G:/知行APP/pollutionMonitoring/subNvue/detail.nvue?vue&type=template&id=65b0181b&scoped=true&mpType=page ***!
-  \**************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_0_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_template_id_65b0181b_scoped_true_mpType_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-0!./node_modules/vue-loader/lib??ref--3-0!./detail.nvue?vue&type=template&id=65b0181b&scoped=true&mpType=page */ 24);
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_0_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_template_id_65b0181b_scoped_true_mpType_page__WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_0_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_template_id_65b0181b_scoped_true_mpType_page__WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-/* 24 */
-/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-0!./node_modules/vue-loader/lib??ref--3-0!G:/知行APP/pollutionMonitoring/subNvue/detail.nvue?vue&type=template&id=65b0181b&scoped=true&mpType=page ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:["detail"]},[_c('div',{staticClass:["detail_title"]},[_c('text',{staticStyle:{color:"#000",textAlign:"center"}},[_vm._v(_vm._s(_vm.pollution.name))])]),_c('div',{staticClass:["detail_content"]},[_c('div',{staticClass:["detail_content_list"],on:{"click":function($event){return _vm.close()}}},[_vm._v("取消")]),_c('div',{staticClass:["detail_content_list","navigation"],on:{"click":function($event){return _vm.toNavigation()}}},[_c('text',{staticStyle:{color:"#fff"}},[_vm._v("导航")])])])])}
-var staticRenderFns = []
-
-
-
-/***/ }),
-/* 25 */
-/*!********************************************************************************************!*\
-  !*** G:/知行APP/pollutionMonitoring/subNvue/detail.nvue?vue&type=script&lang=js&mpType=page ***!
-  \********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _F_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_ref_2_0_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_2_1_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/babel-loader/lib??ref--2-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--2-1!./node_modules/vue-loader/lib??ref--3-0!./detail.nvue?vue&type=script&lang=js&mpType=page */ 26);
-/* harmony import */ var _F_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_ref_2_0_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_2_1_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_F_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_ref_2_0_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_2_1_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _F_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_ref_2_0_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_2_1_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _F_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_ref_2_0_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_2_1_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_F_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_ref_2_0_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_2_1_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_0___default.a); 
-
-/***/ }),
-/* 26 */
-/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--2-1!./node_modules/vue-loader/lib??ref--3-0!G:/知行APP/pollutionMonitoring/subNvue/detail.nvue?vue&type=script&lang=js&mpType=page ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni, plus, __f__) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _mapTool = __webpack_require__(/*! ../static/js/mapTool.js */ 27);
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default = {
-  data: function data() {
-    return {
-      pollution: {}
-    };
-  },
-  mounted: function mounted() {
-    var _this2 = this;
-
-    uni.$on("showDetail", function (pollution) {
-      _this2.pollution = pollution;
-    });
-  },
-  methods: {
-    close: function close() {
-      uni.$emit("closeDetail");
-    },
-    toNavigation: function toNavigation() {
-      //导航
-      var _this = this; // 判断平台  
-
-
-      var wgs84togcj02 = _mapTool.mapTool.wgs84togcj02(_this.pollution.longitude * 1, _this.pollution.latitude * 1);
-
-      var longitude = wgs84togcj02[0];
-      var latitude = wgs84togcj02[1];
-
-      if (plus.os.name == 'Android') {
-        plus.runtime.openURL("amapuri://route/plan/?sid=BGVIS1&did=BGVIS2&dlat=" + latitude + "&dlon=" + longitude + "&dev=0&t=0", function (e) {
-          console.log(__f__('Open system default browser failed: ' + e.message, " at subNvue\\detail.nvue:38"));
-        }, "com.autonavi.minimap");
-      } else if (plus.os.name == 'iOS') {
-        plus.runtime.launchApplication({
-          action: "iosamap://path?sourceApplication=applicationName&sid=BGVIS1&did=BGVIS2&dlat=" + latitude + "&dlon=" + longitude + "&dev=0&t=0"
-        }, function (e) {
-          console.log(__f__('Open system default browser failed: ' + e.message, " at subNvue\\detail.nvue:43"));
-        });
-      }
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus-nvue-v8/dist/index.js */ 6)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus-nvue-v8/dist/index.js */ 6)["weexPlus"], __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-uni/lib/format-log.js */ 18)["default"]))
-
-/***/ }),
-/* 27 */
+/* 19 */
 /*!*********************************************************!*\
   !*** G:/知行APP/pollutionMonitoring/static/js/mapTool.js ***!
   \*********************************************************/
@@ -1387,24 +1931,202 @@ mapTool.prototype.out_of_china = function (lng, lat) {
 module.exports.mapTool = new mapTool();
 
 /***/ }),
+/* 20 */,
+/* 21 */,
+/* 22 */
+/*!************************************************************************!*\
+  !*** G:/知行APP/pollutionMonitoring/main.js?{"page":"subNvue%2Fdetail"} ***!
+  \************************************************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _subNvue_detail_nvue_mpType_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./subNvue/detail.nvue?mpType=page */ 23);
+
+
+_subNvue_detail_nvue_mpType_page__WEBPACK_IMPORTED_MODULE_0__["default"].mpType = 'page'
+_subNvue_detail_nvue_mpType_page__WEBPACK_IMPORTED_MODULE_0__["default"].route = 'subNvue/detail'
+_subNvue_detail_nvue_mpType_page__WEBPACK_IMPORTED_MODULE_0__["default"].el = '#root'
+
+new Vue(_subNvue_detail_nvue_mpType_page__WEBPACK_IMPORTED_MODULE_0__["default"])
+
+
+/***/ }),
+/* 23 */
+/*!********************************************************************!*\
+  !*** G:/知行APP/pollutionMonitoring/subNvue/detail.nvue?mpType=page ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _detail_nvue_vue_type_template_id_65dedeed_scoped_true_mpType_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./detail.nvue?vue&type=template&id=65dedeed&scoped=true&mpType=page */ 24);
+/* harmony import */ var _detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./detail.nvue?vue&type=script&lang=js&mpType=page */ 26);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/lib/runtime/componentNormalizer.js */ 9);
+
+
+
+function injectStyles (context) {
+  
+  if(!this.$options.style){
+    this.$options.style = {}
+}
+if(this.__merge_style && this.$root && this.$root.$options.appStyle){
+  this.__merge_style(this.$root.$options.appStyle)
+}
+if(this.__merge_style){
+              this.__merge_style(__webpack_require__(/*! ./detail.nvue?vue&type=style&index=0&id=65dedeed&scoped=true&lang=css&mpType=page */ 28).default)
+          }else{
+              Object.assign(this.$options.style,__webpack_require__(/*! ./detail.nvue?vue&type=style&index=0&id=65dedeed&scoped=true&lang=css&mpType=page */ 28).default)
+          }
+
+}
+
+/* normalize component */
+
+var component = Object(_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_1__["default"],
+  _detail_nvue_vue_type_template_id_65dedeed_scoped_true_mpType_page__WEBPACK_IMPORTED_MODULE_0__["render"],
+  _detail_nvue_vue_type_template_id_65dedeed_scoped_true_mpType_page__WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  injectStyles,
+  "65dedeed",
+  "3ca5cf2a"
+  
+)
+
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+/* 24 */
+/*!**************************************************************************************************************!*\
+  !*** G:/知行APP/pollutionMonitoring/subNvue/detail.nvue?vue&type=template&id=65dedeed&scoped=true&mpType=page ***!
+  \**************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_0_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_template_id_65dedeed_scoped_true_mpType_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-0!./node_modules/vue-loader/lib??ref--3-0!./detail.nvue?vue&type=template&id=65dedeed&scoped=true&mpType=page */ 25);
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_0_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_template_id_65dedeed_scoped_true_mpType_page__WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_6_0_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_template_id_65dedeed_scoped_true_mpType_page__WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+/* 25 */
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-0!./node_modules/vue-loader/lib??ref--3-0!G:/知行APP/pollutionMonitoring/subNvue/detail.nvue?vue&type=template&id=65dedeed&scoped=true&mpType=page ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:["detail"]},[_c('div',{staticClass:["detail_title"]},[_c('text',{staticStyle:{color:"#000",textAlign:"center"}},[_vm._v(_vm._s(_vm.pollution.name))])]),_c('div',{staticClass:["detail_content"]},[_c('div',{staticClass:["detail_content_list"],on:{"click":function($event){return _vm.close()}}},[_vm._v("取消")]),_c('div',{staticClass:["detail_content_list","navigation"],on:{"click":function($event){return _vm.toNavigation()}}},[_c('text',{staticStyle:{color:"#fff"}},[_vm._v("导航")])])])])}
+var staticRenderFns = []
+
+
+
+/***/ }),
+/* 26 */
+/*!********************************************************************************************!*\
+  !*** G:/知行APP/pollutionMonitoring/subNvue/detail.nvue?vue&type=script&lang=js&mpType=page ***!
+  \********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _F_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_ref_2_0_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_2_1_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/babel-loader/lib??ref--2-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--2-1!./node_modules/vue-loader/lib??ref--3-0!./detail.nvue?vue&type=script&lang=js&mpType=page */ 27);
+/* harmony import */ var _F_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_ref_2_0_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_2_1_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_F_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_ref_2_0_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_2_1_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _F_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_ref_2_0_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_2_1_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _F_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_ref_2_0_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_2_1_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_F_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_ref_2_0_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_2_1_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_script_lang_js_mpType_page__WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+/* 27 */
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--2-1!./node_modules/vue-loader/lib??ref--3-0!G:/知行APP/pollutionMonitoring/subNvue/detail.nvue?vue&type=script&lang=js&mpType=page ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _mapTool = __webpack_require__(/*! ../static/js/mapTool.js */ 19);
+
+var _utils = _interopRequireDefault(__webpack_require__(/*! ../static/js/utils.js */ 17));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  data: function data() {
+    return {
+      pollution: {}
+    };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    uni.$on("showDetail", function (pollution) {
+      _this.pollution = pollution;
+    });
+  },
+  methods: {
+    close: function close() {
+      uni.$emit("closeDetail");
+    },
+    toNavigation: function toNavigation() {
+      //导航
+      _utils.default.toNavigation(this.pollution.longitude, this.pollution.latitude);
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus-nvue-v8/dist/index.js */ 6)["default"]))
+
+/***/ }),
 /* 28 */
 /*!****************************************************************************************************************************!*\
-  !*** G:/知行APP/pollutionMonitoring/subNvue/detail.nvue?vue&type=style&index=0&id=65b0181b&scoped=true&lang=css&mpType=page ***!
+  !*** G:/知行APP/pollutionMonitoring/subNvue/detail.nvue?vue&type=style&index=0&id=65dedeed&scoped=true&lang=css&mpType=page ***!
   \****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_hbuilderx_packages_webpack_uni_nvue_loader_lib_style_js_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_1_F_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_7_oneOf_0_2_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_3_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_style_index_0_id_65b0181b_scoped_true_lang_css_mpType_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/webpack-uni-nvue-loader/lib/style.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--7-oneOf-0-1!./node_modules/postcss-loader/src??ref--7-oneOf-0-2!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--7-oneOf-0-3!./node_modules/vue-loader/lib??ref--3-0!./detail.nvue?vue&type=style&index=0&id=65b0181b&scoped=true&lang=css&mpType=page */ 29);
-/* harmony import */ var _F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_hbuilderx_packages_webpack_uni_nvue_loader_lib_style_js_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_1_F_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_7_oneOf_0_2_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_3_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_style_index_0_id_65b0181b_scoped_true_lang_css_mpType_page__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_hbuilderx_packages_webpack_uni_nvue_loader_lib_style_js_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_1_F_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_7_oneOf_0_2_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_3_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_style_index_0_id_65b0181b_scoped_true_lang_css_mpType_page__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_hbuilderx_packages_webpack_uni_nvue_loader_lib_style_js_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_1_F_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_7_oneOf_0_2_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_3_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_style_index_0_id_65b0181b_scoped_true_lang_css_mpType_page__WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_hbuilderx_packages_webpack_uni_nvue_loader_lib_style_js_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_1_F_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_7_oneOf_0_2_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_3_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_style_index_0_id_65b0181b_scoped_true_lang_css_mpType_page__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_hbuilderx_packages_webpack_uni_nvue_loader_lib_style_js_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_1_F_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_7_oneOf_0_2_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_3_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_style_index_0_id_65b0181b_scoped_true_lang_css_mpType_page__WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* harmony import */ var _F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_hbuilderx_packages_webpack_uni_nvue_loader_lib_style_js_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_1_F_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_7_oneOf_0_2_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_3_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_style_index_0_id_65dedeed_scoped_true_lang_css_mpType_page__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/webpack-uni-nvue-loader/lib/style.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--7-oneOf-0-1!./node_modules/postcss-loader/src??ref--7-oneOf-0-2!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--7-oneOf-0-3!./node_modules/vue-loader/lib??ref--3-0!./detail.nvue?vue&type=style&index=0&id=65dedeed&scoped=true&lang=css&mpType=page */ 29);
+/* harmony import */ var _F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_hbuilderx_packages_webpack_uni_nvue_loader_lib_style_js_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_1_F_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_7_oneOf_0_2_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_3_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_style_index_0_id_65dedeed_scoped_true_lang_css_mpType_page__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_hbuilderx_packages_webpack_uni_nvue_loader_lib_style_js_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_1_F_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_7_oneOf_0_2_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_3_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_style_index_0_id_65dedeed_scoped_true_lang_css_mpType_page__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_hbuilderx_packages_webpack_uni_nvue_loader_lib_style_js_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_1_F_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_7_oneOf_0_2_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_3_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_style_index_0_id_65dedeed_scoped_true_lang_css_mpType_page__WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_hbuilderx_packages_webpack_uni_nvue_loader_lib_style_js_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_1_F_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_7_oneOf_0_2_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_3_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_style_index_0_id_65dedeed_scoped_true_lang_css_mpType_page__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_hbuilderx_packages_webpack_uni_nvue_loader_lib_style_js_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_1_F_HBuilderX_plugins_uniapp_cli_node_modules_postcss_loader_src_index_js_ref_7_oneOf_0_2_F_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_7_oneOf_0_3_F_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_ref_3_0_detail_nvue_vue_type_style_index_0_id_65dedeed_scoped_true_lang_css_mpType_page__WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 /* 29 */
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/webpack-uni-nvue-loader/lib/style.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--7-oneOf-0-1!./node_modules/postcss-loader/src??ref--7-oneOf-0-2!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--7-oneOf-0-3!./node_modules/vue-loader/lib??ref--3-0!G:/知行APP/pollutionMonitoring/subNvue/detail.nvue?vue&type=style&index=0&id=65b0181b&scoped=true&lang=css&mpType=page ***!
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/webpack-uni-nvue-loader/lib/style.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--7-oneOf-0-1!./node_modules/postcss-loader/src??ref--7-oneOf-0-2!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--7-oneOf-0-3!./node_modules/vue-loader/lib??ref--3-0!G:/知行APP/pollutionMonitoring/subNvue/detail.nvue?vue&type=style&index=0&id=65dedeed&scoped=true&lang=css&mpType=page ***!
   \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {

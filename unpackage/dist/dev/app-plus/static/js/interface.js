@@ -5,7 +5,7 @@
 // const url0="http://192.168.1.15"
 const url0="http://122.114.177.198"
 // const url0="http://183.230.23.21"
-// const url0=uni.getStorageSync("url")?uni.getStorageSync("url"):"http://183.230.23.21"
+// const url0=uni.getStorageSync("url")?uni.getStorageSync("url"):"http://183.230.23.21"ZZZZZZZ
 // const url=url0+":18082"
 const url=url0+":8082"
 const url_PC=url+"/proxy/pc"

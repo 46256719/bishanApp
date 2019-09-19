@@ -138,9 +138,9 @@
 				var data={
 					"problemDetail":this.problemDetail,
 					"problemPhoto":this.pictures.join(";"),
-					"rectification":this.rectification,
+					"rectificationMeasure":this.rectification,
 					"rectificationProgress":this.rectificationProgress,
-					"rectificationExpire":nowProblem.needRectificationExpire==1?this.rectificationExpire:"",
+					"rectificationExpire":this.nowProblem.needRectificationExpire==1?this.rectificationExpire:"",
 					"disposeSuggest":this.disposeSuggest
 				}
 				this.$emit("confirmMdoe",data)

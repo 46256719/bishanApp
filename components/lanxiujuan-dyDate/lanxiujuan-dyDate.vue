@@ -57,7 +57,15 @@ export default {
     },
     maxSelect: {
       type: String,
-      default: () => '2050/12/31'
+      default: () => {
+		  var date=new Date()
+		  var year=date.getFullYear()
+		  var month=date.getMonth()+1
+		  var day=date.getDate()
+		  month=month<10?"0"+month:month;
+		  day=day<10?"0"+day:day;
+		  return year+"/"+month+"/"+day
+	  }
     }
   },
   data() {
@@ -122,8 +130,9 @@ export default {
       this.monthArr = []
       let minDate = this.minSelect ? this.minSelect.split(' ') : ''
       let maxDate = this.maxSelect ? this.maxSelect.split(' ') : ''
-      minDate = minDate[0] ? minDate[0].split('-') : 1900
-      maxDate = maxDate[0] ? maxDate[0].split('-') : 2050
+	  // console.log(maxDate)
+      minDate = minDate[0] ? minDate[0].split('/') : 1900
+      maxDate = maxDate[0] ? maxDate[0].split('/') : 2050
       let type = this.timeType
       let { monthStar, monthEnd } = ''
       let yearStar = minDate[0] ? parseInt(minDate[0]) : 1900
@@ -133,6 +142,7 @@ export default {
         let dateEnd = maxDate[2] ? parseInt(maxDate[2]) : 31
       }
       if (type === 'month' || type === 'day') {
+		  // console.log(maxDate[1])
         monthStar = minDate[1] ? parseInt(minDate[1]) : 1
         monthEnd = maxDate[1] ? parseInt(maxDate[1]) : 12
       }

@@ -59,19 +59,20 @@
 		},
 		methods:{
 			getTaskProcess(page){//正在进行中的任务
-				util.getRequest(URL.TASK_PROCESS,{page:this.page},(results)=>{
+				util.getRequest(URL.TASK_PROCESS,{page:page},(results)=>{
 					// console.log(results)
 					this.disposeRequestData(results,page)
 				})
 			},
 			getFinish(page){//已完成的任务
-				util.getRequest(URL.TASK_FINISH,{page:this.page},(results)=>{
+				console.log()
+				util.getRequest(URL.TASK_FINISH,{page:page},(results)=>{
 					// console.log(results)
 					this.disposeRequestData(results,page)
 				})
 			},
 			getProblemList(page){//问题清单的任务
-				util.getRequest(URL.PROBLEM_LIST,{page:this.page},(results)=>{
+				util.getRequest(URL.PROBLEM_LIST,{page:page},(results)=>{
 					// console.log(results)
 					this.disposeRequestData(results,page)
 				})
