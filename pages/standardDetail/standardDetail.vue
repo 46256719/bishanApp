@@ -207,7 +207,7 @@
 			this.cWidth=uni.upx2px(150);
 			this.pixelRatio=uni.upx2px(150)/150;
 			this.getStandarDetail("examine_0",1,1)
-			this.getStandarDetail("examine_1",2,3)
+			this.getStandarDetail("examine_1",3,3)
 			this.getStandarDetail("examine_2",5,2)
 			this.getStandarDetail("examine_3",6,2)
 		},
@@ -244,7 +244,7 @@
 					month:date[1]
 				}
 				this.getStandarDetail("examine_0",1,this.type["examine_0"])
-				this.getStandarDetail("examine_1",2,this.type["examine_1"])
+				this.getStandarDetail("examine_1",3,this.type["examine_1"])
 				this.getStandarDetail("examine_2",5,this.type["examine_2"])
 				this.getStandarDetail("examine_3",6,this.type["examine_3"])
 			},

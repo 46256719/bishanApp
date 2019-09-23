@@ -80,6 +80,7 @@
 						onTask.splice(onTask.indexOf(this.taskId))
 						uni.setStorageSync("onTask",onTask);
 						util.unUpLoction(this.taskId)
+						uni.navigateBack({})
 					}
 				},(results)=>{
 					this.missions=uni.getStorageSync("taskDetailsTaskProcess"+this.taskId)?uni.getStorageSync("taskDetailsTaskProcess"+this.taskId):[]
@@ -146,6 +147,7 @@
 			},
 			toLocation(data){
 				util.pollutionInfo=data
+				// console.log(data)
 				uni.navigateTo({
 					url:"/pages/location/location"
 				})

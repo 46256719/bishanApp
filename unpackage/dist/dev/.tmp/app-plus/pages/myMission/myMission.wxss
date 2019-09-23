@@ -59,6 +59,9 @@
 .nav_list > text.data-v-eff5ad74 {
   min-width: 25rpx;
   height: 25rpx;
+  padding: 0rpx 5rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 50%;
   background-color: red;
   color: #fff;

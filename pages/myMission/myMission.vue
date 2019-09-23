@@ -289,6 +289,8 @@
 	.nav_list>text {
 		min-width: 25upx;
 		height: 25upx;
+		padding: 0upx 5upx;
+		box-sizing:border-box;
 		border-radius: 50%;
 		background-color: red;
 		color: #fff;

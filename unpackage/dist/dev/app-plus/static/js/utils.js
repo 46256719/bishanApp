@@ -424,6 +424,38 @@ function getWryTypeName(type){
 	return name
 }
 
+function downLoadFile(url){//下载APP
+	var downloadTask=uni.downloadFile({
+		url:URL.url+"/downLoad/downLoadAppFile",
+		complete(res){
+			console.log(res)
+			if(res.statusCode==200){
+				plus.runtime.install(res.tempFilePath, {
+					force: false
+				}, function() {
+					plus.runtime.restart();
+				}, (e) => {
+					console.log(e);
+					// this.success = false
+					uni.showToast({
+						title: '安装升级包失败',
+						icon: 'none'
+					})
+				});
+			}
+		}
+	})
+	var num=0
+	downloadTask.onProgressUpdate((res) => {
+		if(num!=res.progress){
+			num=res.progress
+			console.log('下载进度' + res.progress);
+			console.log('已经下载的数据长度' + res.totalBytesWritten);
+			console.log('预期需要下载的数据总长度' + res.totalBytesExpectedToWrite);
+		}
+	    // 测试条件，取消下载任务。
+	});
+}
 
 // function getWryMap(){
 // 	for (var i=0;i<arrWry.length;i++) {
@@ -461,5 +493,6 @@ module.exports={
 	unTaskNum:0,
 	situationDate,
 	toNavigation,
-	getWryTypeName
+	getWryTypeName,
+	downLoadFile
 }

@@ -5,6 +5,7 @@
   "bounce": "none",
   "usingComponents": {
     "bw-swiper": "/components/bw-swiper/bw-swiper",
-    "pick-date": "/components/lanxiujuan-dyDate/lanxiujuan-dyDate"
+    "pick-date": "/components/lanxiujuan-dyDate/lanxiujuan-dyDate",
+    "cmd-progress": "/components/cmd-progress/cmd-progress"
   }
 }

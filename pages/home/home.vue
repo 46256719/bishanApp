@@ -124,6 +124,7 @@
 				</view>
 			</view>
 		</view>
+		<cmd-progress v-if="isUpApp" type="circle" stroke-color="#C40000" :percent="progress"></cmd-progress>
 	</view> 
 </template>
  
@@ -132,6 +133,8 @@
 	import util from "../../static/js/utils.js"
 	import BwSwiper from '../../components/bw-swiper/bw-swiper'
 	import pickDate from "../../components/lanxiujuan-dyDate/lanxiujuan-dyDate"
+	import cmdProgress from "../../components/cmd-progress/cmd-progress"
+	
 	export default {
 		data() {
 			var date=new Date()
@@ -184,10 +187,12 @@
 					url:"../../static/images/home/picture8.png"
 				},{
 					url:"../../static/images/home/picture9.png"
-				}]
+				}],
+				progress:0,
+				isUpApp:false
 			}
 		},
-		components:{BwSwiper,pickDate},
+		components:{BwSwiper,pickDate,cmdProgress},
 		created(){ 
 			this.userInfo=uni.getStorageSync("userInfo")
 			var getH=uni.getSystemInfoSync().windowHeight
@@ -200,6 +205,8 @@
 			uni.onSocketMessage(function (res) {
 				that.covers=JSON.parse(res.data)
 			}); 
+			// util.downLoadFile()
+			
 		},
 		onShow() {
 			this.getTask()
@@ -209,7 +216,7 @@
 			}else{
 				this.getSituation("examine_1",1,2)
 				this.getSituation("examine_2",5,2)
-				this.getSituation("examine_3",2,2)
+				this.getSituation("examine_3",3,3)
 				this.getSituation("examine_4",6,2)
 				this.getTongji()
 			}
@@ -236,7 +243,7 @@
 					}
 					this.getSituation("examine_1",1,2)
 					this.getSituation("examine_2",5,2)
-					this.getSituation("examine_3",2,2)
+					this.getSituation("examine_3",3,3)
 					this.getSituation("examine_4",6,2)
 					this.getTongji()
 					this.isGetTime=false
@@ -244,7 +251,7 @@
 					// console.log(results)
 					this.getSituation("examine_1",1,2)
 					this.getSituation("examine_2",5,2)
-					this.getSituation("examine_3",2,2)
+					this.getSituation("examine_3",3,3)
 					this.getSituation("examine_4",6,2)
 					this.getTongji()
 					this.isGetTime=false
@@ -298,7 +305,7 @@
 				}
 				this.getSituation("examine_1",1,2)
 				this.getSituation("examine_2",5,2)
-				this.getSituation("examine_3",2,2)
+				this.getSituation("examine_3",3,3)
 				this.getSituation("examine_4",6,2)
 				// this.getTongji()
 				// this.checkType(this.type)
@@ -337,6 +344,50 @@
 				uni.navigateTo({
 					url:"/pages/standardDetail/standardDetail"
 				})
+			},
+			chooseUpApp(){
+				uni.showModal({
+				    title: '提示',
+				    content: '检测到有最新版本，是否下载？',
+				    success:(res)=> {
+				        if (res.confirm) {
+				            this.isUpApp=true
+				            this.upApp()
+				        } else if (res.cancel) {
+				            console.log('用户点击取消');
+				        }
+				    }
+				});
+			},
+			upApp(){//下载APP
+				var downloadTask=uni.downloadFile({
+					url:URL.url+"/downLoad/downLoadAppFile",
+					complete(res){
+						console.log(res)
+						if(res.statusCode==200){
+							plus.runtime.install(res.tempFilePath, {
+								force: false
+							}, (e) => {
+								this.isUpApp=false
+								plus.runtime.restart();
+							}, (e) => {
+								console.log(e);
+								// this.success = false
+								this.isUpApp=false
+								uni.showToast({
+									title: '安装升级包失败',
+									icon: 'none'
+								})
+							});
+						}
+					}
+				})
+				downloadTask.onProgressUpdate((res) => {
+					this.progress=res.progress
+					// console.log('下载进度' + res.progress);
+					// console.log('已经下载的数据长度' + res.totalBytesWritten);
+					// console.log('预期需要下载的数据总长度' + res.totalBytesExpectedToWrite);
+				});
 			}
 		}
 	}

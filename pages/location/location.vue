@@ -3,10 +3,10 @@
 		<map id="locationMap" style="width: 100%;height: 100vh;" :controls="controls" @controltap="bindControltap" :scale="20" :show-location="true" :markers="covers" :circles="circles" :latitude="latitude" :longitude="longitude">
 			<cover-view id="navigation"></cover-view>
 			<cover-view id="address">重庆市</cover-view>
-			<cover-view id="address_msg">{{pointInfo.address}}</cover-view>	
+			<cover-view v-if="pointInfo.address" id="address_msg">{{pointInfo.address}}</cover-view>	
 			<cover-view id="distance">{{distance}}km</cover-view>
 			<!-- <cover-image id="toNavigation" @click="toNavigation()" src="../../static/images/icon_navigation.png"></cover-image> -->
-			<cover-view id="reset" @click="toReport()">重新定位</cover-view>
+			<cover-view v-if="pointInfo.pollutionCode" id="reset" @click="toReport()">重新定位</cover-view>
 		</map>
 	</view>
 </template>
