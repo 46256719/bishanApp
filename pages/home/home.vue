@@ -206,7 +206,7 @@
 				that.covers=JSON.parse(res.data)
 			}); 
 			// util.downLoadFile()
-			
+			this.chooseUpApp()
 		},
 		onShow() {
 			this.getTask()
