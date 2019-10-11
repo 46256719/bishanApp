@@ -22,7 +22,7 @@
 			<text>污染源分布</text>
 			<div class="upWry" @click="upWry()"><text style="color: #fff;">刷新</text></div>
 		</div>
-		<scroll-view scroll-y="true" class="pollutionSources">
+		<scroll-view :scroll-y="true" class="pollutionSources">
 			<div class="pollutionSources_list" v-for="(item,index) in wryType" :key="index">
 				<div class="pollutionSources_list_left">
 					<div class="pollutionSources_icon">

@@ -113,7 +113,9 @@
 							<image src="../../static/images/home/icon_wanchenglv.png" mode=""></image>
 							<view class="">完成率</view>
 							<view class="color_000" v-if="((tasks['已完成务个数']/tasks['全部任务个数'])*100)<1"><text class="fz30">{{xiaoyu}}</text><text class="fz20">%</text></view>
-							<view class="color_000" v-else><text class="fz30">{{(tasks["已完成务个数"]/tasks["全部任务个数"]*100).toFixed(1)}}</text><text class="fz20">%</text></view>
+							<view class="color_000" v-if="((tasks['已完成务个数']/tasks['全部任务个数'])*100)>=1"><text class="fz30">{{(tasks["已完成务个数"]/tasks["全部任务个数"]*100).toFixed(1)}}</text><text class="fz20">%</text></view>
+							<view class="color_000" v-if="!((tasks['已完成务个数']/tasks['全部任务个数'])*100)&&((tasks['已完成务个数']/tasks['全部任务个数'])*100)!=0"><text class="fz20">-</text></view>
+							
 						</view>
 						<view class="taskSituation_list" @click="toAllMission('issuesList')">
 							<image src="../../static/images/home/icon_wenti.png" mode=""></image>
@@ -206,7 +208,7 @@
 				that.covers=JSON.parse(res.data)
 			}); 
 			// util.downLoadFile()
-			this.chooseUpApp()
+			// this.chooseUpApp()
 		},
 		onShow() {
 			this.getTask()

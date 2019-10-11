@@ -84,6 +84,7 @@
 			},
 			getUserName(e){
 				this.loginInfo.username=e.detail.value
+				console.log(this.loginInfo.username)
 			},
 			getPassWord(e){
 				// console.log(e.detail.value)

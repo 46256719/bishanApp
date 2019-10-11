@@ -5,7 +5,7 @@
 			<view :class="(type=='finish'?'nav_list on_nav_list':'nav_list')" @click="checkType('finish')">已完成</view>
 			<view :class="(type=='issuesList'?'nav_list on_nav_list':'nav_list')" @click="checkType('issuesList')">问题清单</view>
 		</view>
-		<scroll-view id="missions" scroll-y="true" upper-threshold="0" lower-threshold="0" @scrolltolower="scrollTol">
+		<scroll-view id="missions" :scroll-y="true" upper-threshold="0" lower-threshold="0" @scrolltolower="scrollTol">
 			<block v-if="type!='issuesList'">
 				<view v-for="(item,index) in missions" :key="index" class="mission_list">
 					<mission-card :isProcess="type=='finish'" :result="item">

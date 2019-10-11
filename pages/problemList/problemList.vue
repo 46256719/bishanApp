@@ -1,6 +1,6 @@
 <template>
 	<view id="problemList">
-		<scroll-view id="problems" scroll-y="true">
+		<scroll-view id="problems" :scroll-y="true">
 			<view v-for="(item,index) in problems" :key="item.id" class="problem_list">
 				<problem-card :result="item">
 					<!-- <view slot="slot_bottom" class="toBind">

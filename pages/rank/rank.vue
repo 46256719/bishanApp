@@ -36,7 +36,7 @@
 			</view>
 		</view>
 		
-		<scroll-view id="ranks" upper-threshold="0" lower-threshold="0" scroll-y="true">
+		<scroll-view id="ranks" upper-threshold="0" lower-threshold="0" :scroll-y="true">
 			<block v-if="type=='department'">
 				<view @click="showDetail(item)" v-for="(item,index) in ranks" :key="item.id" class="ranks_list">
 					<view>{{item.rank}}</view>

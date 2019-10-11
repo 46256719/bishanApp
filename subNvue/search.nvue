@@ -7,7 +7,7 @@
 			</div>
 			<text style="color: #fff;" @click="close()">取消</text>
 		</div>
-		<scroll-view scroll-y="true" class="search_content">
+		<scroll-view :scroll-y="true" class="search_content">
 			<view class="search_list" v-for="(item,index) in searchs" :key="index" @click="onPollution(item)">
 				<image src="../static/images/search/position.png" style="width: 26px;height: 36px;" class="search_list_left" mode=""></image>
 				<view class="search_list_right">
