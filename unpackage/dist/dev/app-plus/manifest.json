@@ -126,6 +126,7 @@
         }
       }
     },
+    "arguments": "{\"name\":\"\",\"path\":\"\",\"query\":\"\",\"id\":0}",
     "allowsInlineMediaPlayback": true,
     "safearea": {
       "background": "#ffffff",
@@ -134,7 +135,7 @@
       }
     },
     "uni-app": {
-      "compilerVersion": "2.3.2",
+      "compilerVersion": "2.3.3",
       "control": "v8",
       "nvueCompiler": "weex",
       "renderer": "auto"

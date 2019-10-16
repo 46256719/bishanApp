@@ -127,7 +127,7 @@ function postRequest(url,data,call,error){
 function completeTask(data){//完成巡查污染源任务
 	upImgTeams(data.pointPhoto,function(results,index){
 		data.pointPhoto=results
-		console.log(data)
+		// console.log(data)
 		toCompleteTask(URL.TASK_PATROL_POINT_UPDATE,data)
 	},1,(results)=>{
 		completeTask(data)
@@ -207,6 +207,7 @@ function uploadFile(url,data,call,error){//上传图片
 			token
 		},
 		success: (res) => { 
+			// console.log(res)
 			if(res.data!="000000"){
 				typeof call=="function"?call(res.data):""
 			}else{
@@ -214,6 +215,7 @@ function uploadFile(url,data,call,error){//上传图片
 			}
 		},
 		fail(res){
+			console.log(res)
 			typeof error=="function"?error(data):""
 		}
 	})

@@ -124,13 +124,15 @@
 				    success:(res)=> {
 				        if (res.confirm) {
 				            util.getRequest(URL.TASK_PATROL_POINT_UPDATE_WRY_ADDRESS_DETAILED,data,(results)=>{
-				            	// console.log("成功")
+				            	console.log("重新定位成功")
 				            	this.pointInfo.longitude=this.userLocation.longitude
 				            	this.pointInfo.latitude=this.userLocation.latitude
 				            	this.initMap(this.pointInfo)
 								uni.$emit("refreshPollutionPage",true)
 				            	this.getDistance()
-				            })
+				            },(res)=>{
+								console.log(res)
+							})
 				        } else if (res.cancel) {
 				            console.log('用户点击取消');
 				        }

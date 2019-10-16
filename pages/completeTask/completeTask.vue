@@ -39,7 +39,8 @@
 				covers:[],
 				circles:[],
 				imgUrl:"",
-				mapContext:""
+				mapContext:"",
+				userLocation:{}
 			}
 		},
 		components:{waterMark},
@@ -50,6 +51,10 @@
 			this.mapContext=uni.createMapContext("completeMap")
 			var locationMapInfo=this.mapContext.$getAppMap()
 			locationMapInfo.showUserLocation(true)
+			this.userLocation={
+				longitude:uni.getStorageSync("userLocation").longitude,
+				latitude:uni.getStorageSync("userLocation").latitude
+			}
 			// locationMapInfo.show()
 			this.userInfo=uni.getStorageSync("userInfo")
 			this.taskInfo=util.pollutionInfo
@@ -100,14 +105,19 @@
 					})
 					return
 				}
-				if(!this.taskInfo.longitude){
+				if(!this.taskInfo.longitude||!this.taskInfo.latitude){
 					uni.showToast({
 						icon:"none",
 						title:"污染源位置信息不完整，请重新定位再试！"
 					})
 					return
 				}
-				var point1 = new plus.maps.Point(uni.getStorageSync("userLocation").longitude,uni.getStorageSync("userLocation").latitude);
+				if(this.taskInfo.distanceMeter==0){
+					data.inRange=1
+					this.confirm(data)
+					return
+				}
+				var point1 = new plus.maps.Point(this.userLocation.longitude,this.userLocation.latitude);
 				var point2 = new plus.maps.Point(this.taskInfo.longitude,this.taskInfo.latitude)
 				plus.maps.Map.calculateDistance(point1,point2,(res)=>{
 					if(res.distance>this.taskInfo.distanceLimit){
@@ -150,6 +160,7 @@
 				uni.chooseImage({
 					count: 1, //可以选择图片的张数
 					sizeType: ['original', 'compressed'], //可以指定是原图还是压缩图，默认二者都有
+					// sourceType: ['camera','album'], //从相册选择  默认是两个都有
 					sourceType: ['camera'], //从相册选择  默认是两个都有
 					success: (res) => {
 						// console.log(res);
@@ -187,8 +198,8 @@
 					z:1,
 					inRange:data.inRange
 				}
-				util.completeTask(obj)
 				uni.showLoading({mask:true})
+				util.completeTask(obj)
 				setTimeout(function(){
 					uni.hideLoading()
 					uni.$emit("refreshPollutionPage",true)

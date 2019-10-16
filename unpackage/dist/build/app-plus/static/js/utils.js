@@ -1,36 +1,13 @@
 import URL from "./interface.js"
 import {mapTool} from "./mapTool.js"
-var timer_getLoction=null
-var timer_upLoction={}
-var upLoctionData={}
-var subNvue={}
-var taskInfo={}
-var pollutionInfo={}
-var upTimeNum=300000
-var situationDate={}
-// var arrWry=[
-// 	"WRY_BZ_LIST",
-// 	"WRY_COMPANY_LIST",
-// 	"WRY_RHKPWK_LIST",
-// 	"WRY_RHKPWD_LIST",
-// 	"WRY_JZGD_LIST",
-// 	"WRY_QTHY_LIST",
-// 	"WRY_JCDW_LIST",
-// 	"WRY_YLJG_LIST",
-// 	"WRY_XQYZ_LIST",
-// 	"WRY_TZC_LIST",
-// 	"WRY_SHUIKU_LIST",
-// 	"WRY_SPT_LIST",
-// 	"WRY_YYC_LIST",
-// 	"WRY_JMJZJZD_LIST",
-// 	"WRY_XSLW_LIST",
-// 	"WRY_XCC_LIST",
-// 	"WRY_CYHY_LIST",
-// 	"WRY_NMSC_LIST",
-// 	"WRY_WSCLC_LIST",
-// 	"WRY_ZZYFLDJD_LIST",
-// 	"WRY_SMYSYZDH_LIST"
-// ]
+var timer_getLoction=null//获取经纬度的线程
+var timer_upLoction={}//进行任务上传点位的线程集群
+var upLoctionData={}//进行任务上传的点位详细信息集群
+var subNvue={}//原生子窗体的对象集群
+var taskInfo={}//任务的详细信息
+var pollutionInfo={}//污染源的详细信息
+var upTimeNum=300000//上传经纬度的时间间隔
+var situationDate={}//各类考核标准情况选择的日期
 function getRequest(url,data,call,error){
 	uni.showLoading({mask:true})
 	var token=uni.getStorageSync("token")||""
@@ -150,7 +127,7 @@ function postRequest(url,data,call,error){
 function completeTask(data){//完成巡查污染源任务
 	upImgTeams(data.pointPhoto,function(results,index){
 		data.pointPhoto=results
-		console.log(data)
+		// console.log(data)
 		toCompleteTask(URL.TASK_PATROL_POINT_UPDATE,data)
 	},1,(results)=>{
 		completeTask(data)
@@ -230,6 +207,7 @@ function uploadFile(url,data,call,error){//上传图片
 			token
 		},
 		success: (res) => { 
+			// console.log(res)
 			if(res.data!="000000"){
 				typeof call=="function"?call(res.data):""
 			}else{
@@ -237,6 +215,7 @@ function uploadFile(url,data,call,error){//上传图片
 			}
 		},
 		fail(res){
+			console.log(res)
 			typeof error=="function"?error(data):""
 		}
 	})
@@ -248,9 +227,9 @@ function showSuccess(msg,call){
 	})
 	typeof call=="function"?setTimeout(call,1500):""
 }
-const isRefreshTasksPage=true
+const isRefreshTasksPage=true//是否更新正在进行的任务页面
 
-const isRefreshPollutionPage=true
+const isRefreshPollutionPage=true//是否更新任务里面的需要巡查的污染源页面
 
 const webSocket=function(id){
 	uni.connectSocket({
@@ -265,12 +244,12 @@ uni.onSocketOpen(function (res) {
 	console.log('WebSocket连接已打开！');
 });
 
-var getLocation=function(){
+var getLocation=function(){//获取当前的经纬度
 	timer_getLoction=setInterval(function(){
 		uni.getLocation({
 			type:"wgs84",
 			success(res){
-				uni.setStorageSync("userLocation",{longitude:res.longitude,latitude:res.latitude})
+				uni.setStorageSync("userLocation",{longitude:(res.longitude?res.longitude:uni.getStorageSync("userLocation").longitude),latitude:(res.latitude?res.latitude:uni.getStorageSync("userLocation").latitude)})
 			},
 			fail(res){
 				console.log(res) 
@@ -293,15 +272,15 @@ var getLocation=function(){
 	},5000)
 }
 
-var unUpLoction=function(id){
+var unUpLoction=function(id){//取消某个任务的经纬度的上传
 	if(!!timer_upLoction[id]){
 		clearInterval(timer_upLoction[id])
 	}
 }
-var unGetLocation=function(){
+var unGetLocation=function(){//停止经纬度的获取
 	clearInterval(timer_getLoction)
 }
-var upLoction=function(id){
+var upLoction=function(id){//在任务进行时上传当前的经纬度
 	timer_upLoction[id]=setInterval(function(){
 		var userLocation=uni.getStorageSync("userLocation")
 		var data={
@@ -357,7 +336,7 @@ function toNavigation(longitude,latitude){//导航
 	}
 }
 
-function getWryTypeName(type){
+function getWryTypeName(type){//根据各类污染源的类型获取其中文名字
 	var name="-"
 	switch(type){
 		case "bengzhan":
@@ -370,7 +349,7 @@ function getWryTypeName(type){
 			name="工业企业"
 		break;
 		case "xqyz":
-			name="禽畜养殖"
+			name="畜禽养殖"
 		break;
 		case "jcdw":
 			name="监测点位"
@@ -424,16 +403,38 @@ function getWryTypeName(type){
 	return name
 }
 
-
-// function getWryMap(){
-// 	for (var i=0;i<arrWry.length;i++) {
-// 		(function(url){
-// 			getRequestPc(URL[url],"",(results)=>{
-// 				uni.setStorageSync(url,results)
-// 			})	
-// 		})(arrWry[i])
-// 	}
-// }
+function downLoadFile(url){//下载APP
+	var downloadTask=uni.downloadFile({
+		url:URL.url+"/downLoad/downLoadAppFile",
+		complete(res){
+			console.log(res)
+			if(res.statusCode==200){
+				plus.runtime.install(res.tempFilePath, {
+					force: false
+				}, function() {
+					plus.runtime.restart();
+				}, (e) => {
+					console.log(e);
+					// this.success = false
+					uni.showToast({
+						title: '安装升级包失败',
+						icon: 'none'
+					})
+				});
+			}
+		}
+	})
+	var num=0
+	downloadTask.onProgressUpdate((res) => {
+		if(num!=res.progress){
+			num=res.progress
+			console.log('下载进度' + res.progress);
+			console.log('已经下载的数据长度' + res.totalBytesWritten);
+			console.log('预期需要下载的数据总长度' + res.totalBytesExpectedToWrite);
+		}
+	    // 测试条件，取消下载任务。
+	});
+}
 module.exports={  
 	getRequest,
 	getRequestNo,
@@ -461,5 +462,6 @@ module.exports={
 	unTaskNum:0,
 	situationDate,
 	toNavigation,
-	getWryTypeName
+	getWryTypeName,
+	downLoadFile
 }

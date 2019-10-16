@@ -3,7 +3,7 @@
 		<view class="missionCard_list"><view class="missionCard_list_left">任务类别：</view><view class="missionCard_list_rigth">巡查任务</view></view>
 		<view class="missionCard_list"><view class="missionCard_list_left">点位名称：</view><view class="missionCard_list_rigth">{{result.pollutionName}}</view></view>
 		<view class="missionCard_list"><view class="missionCard_list_left">污染源类型：</view><view class="missionCard_list_rigth">{{getWryTypeName(result.wryType)}}</view></view>
-		<view class="missionCard_list" :style="result.distanceMeter?'':'border: 0'">
+		<view class="missionCard_list" :style="result.distanceMeter||result.distanceMeter==0?'':'border: 0'">
 			<view class="missionCard_list_left">污染源地址：</view>
 			<view class="missionCard_list_rigth" @click="toLocation(result)">
 				<image class="icon_localtion" src="../../static/images/icon_localtion.png" mode=""></image>
@@ -11,7 +11,7 @@
 				<image class="icon_right" src="../../static/images/icon_unfold.png" mode=""></image>
 			</view>
 		</view>		
-		<view style="border: 0;" class="missionCard_list" v-if="result.distanceMeter"><view class="">距离(大约)：</view><view class="">{{result.distanceMeter>1000?((result.distanceMeter/1000).toFixed(1))+"K":result.distanceMeter}}m</view></view>
+		<view style="border: 0;" class="missionCard_list" v-if="result.distanceMeter||result.distanceMeter==0"><view class="">距离(大约)：</view><view class="">{{result.distanceMeter>1000?((result.distanceMeter/1000).toFixed(1))+"K":result.distanceMeter}}m</view></view>
 		<slot name="slot_bottom"></slot>
 	</view>
 </template>

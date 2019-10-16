@@ -24,7 +24,7 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-#nav.data-v-3be3a33c {
+#nav.data-v-164df790 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -38,7 +38,7 @@
   position: absolute;
   width: 100%;
 }
-.nav_list.data-v-3be3a33c {
+.nav_list.data-v-164df790 {
   width: 164rpx;
   border-bottom: 4rpx solid #ffffff;
   padding: 18rpx 0rpx 36rpx;
@@ -48,11 +48,11 @@
   position: relative;
   font-size: 30rpx;
 }
-.on_nav_list.data-v-3be3a33c {
+.on_nav_list.data-v-164df790 {
   border-bottom-color: #5087FB;
   color: #5087FB;
 }
-.nav_list > text.data-v-3be3a33c {
+.nav_list > text.data-v-164df790 {
   width: 25rpx;
   height: 25rpx;
   border-radius: 50%;
@@ -65,20 +65,20 @@
   right: 0rpx;
   top: 0rpx;
 }
-#missions.data-v-3be3a33c {
+#missions.data-v-164df790 {
   background-color: #f5f5f5;
   padding-top: 110rpx;
   height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.mission_list.data-v-3be3a33c {
+.mission_list.data-v-164df790 {
   padding: 20rpx 20rpx 0rpx;
 }
-.mission_list.data-v-3be3a33c:last-child {
+.mission_list.data-v-164df790:last-child {
   padding-bottom: 20rpx;
 }
-.toBind.data-v-3be3a33c {
+.toBind.data-v-164df790 {
   margin: 0rpx -32rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -91,7 +91,7 @@
   padding: 10rpx 32rpx;
   border-top: 1rpx solid lightgray;
 }
-.startMission.data-v-3be3a33c {
+.startMission.data-v-164df790 {
   width: 140rpx;
   height: 50rpx;
   line-height: 50rpx;
